@@ -1,0 +1,8 @@
+{
+  "entry": "place-datum",
+  "params": {"reference_id": "robotis.xm430-w350-r.drawing/mount/case-side-positive-y", "z_mm": 5},
+  "expect": {
+    "model": {"body_count": 0},
+    "reply": {"result": {"asset_id": "robotis.xm430-w350-r.drawing", "representation": "mounting-pattern"}}
+  }
+}

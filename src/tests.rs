@@ -23,11 +23,17 @@ struct Host {
     model: bool,
     fallback_names: bool,
     sequential_sketch_ids: bool,
+    feature_names: Vec<String>,
 }
 
 impl Runner for Host {
     fn run(&mut self, command: &str, args: Value) -> Result<Value, Error> {
         self.calls.push((command.into(), args.clone()));
+        if command == "sketch.create"
+            && let Some(name) = args["name"].as_str()
+        {
+            self.feature_names.push(name.into());
+        }
         if self.model && command == "solid.move" {
             return Ok(
                 json!({"feature":self.calls.len(),"created_bodies":[],"changed_bodies":args["bodies"],"removed_bodies":[]}),
@@ -51,6 +57,9 @@ impl Runner for Host {
             };
         }
         Ok(match command {
+            "document.inspect" => {
+                json!({"timeline":self.feature_names.iter().map(|name| json!({"name":name})).collect::<Vec<_>>()})
+            }
             "solid.box" => {
                 let index = self.calls.iter().filter(|(command, _)| command == "solid.box").count();
                 let body = if index == 1 {
@@ -79,6 +88,7 @@ fn source_snapshot(host: &Host, reply: &Value) -> Value {
     let (_, blob) = host
         .calls
         .iter()
+        .rev()
         .find(|(id, _)| id == "storage.put_blob")
         .expect("snapshot");
     let bytes = STANDARD
@@ -97,6 +107,76 @@ fn documentary_conflicts_do_not_become_production_revisions() {
     assert!(asset.dimensions["housing_height"].tolerance_mm.is_none());
     assert!(!asset.observations.is_empty());
     assert!(asset.mount_groups.is_empty());
+}
+
+#[test]
+fn catalog_lookup_accepts_natural_names_and_skus_without_selecting_a_variant() {
+    let catalog = Catalog::embedded().expect("catalog");
+    let ids = |query: &str, field: &str| {
+        catalog.search(query).expect("search")[field]
+            .as_array()
+            .expect("result list")
+            .iter()
+            .map(|row| row["id"].as_str().expect("canonical ID").to_owned())
+            .collect::<Vec<_>>()
+    };
+    let sg90 = ids("SG90", "assets");
+    assert_eq!(sg90.len(), 2);
+    assert!(sg90.iter().any(|id| id == "towerpro.sg90-analog.configure"));
+    assert!(sg90.iter().any(|id| id == "aus-electronics-direct.sg90.ta0132"));
+    assert_eq!(ids("sG-90", "assets"), sg90);
+    assert_eq!(ids("SG 90", "assets"), sg90);
+    for query in ["108761", "Akizuki 108 761", "tower pro sg-90 analog"] {
+        assert_eq!(ids(query, "assets"), ["towerpro.sg90-analog.configure"]);
+    }
+    let c001 = vec!["feetech.sts3215-c001.a0", "feetech.sts3215-c001.lightguide"];
+    for query in ["STS3215 C001", "fEeTeCh STS-3215 C001", "Akizuki 116312"] {
+        assert_eq!(ids(query, "assets"), c001);
+    }
+    for query in ["XL330 M288", "m288 robotis xl330"] {
+        assert_eq!(ids(query, "assets"), ["robotis.xl330-m288-t.brochure"]);
+    }
+    assert!(catalog.asset("SG-90").is_err());
+    assert!(catalog.asset("STS3215 C001").is_err());
+    assert!(catalog.asset("116312").is_err());
+
+    // Exact identities must win even when a partial model occurs earlier in the pack.
+    let mut reversed = catalog.clone();
+    reversed.assets.reverse();
+    for query in ["FS90", "feetech.fs90.akizuki-drawing", "FEETECH FS-90"] {
+        assert_eq!(
+            reversed.search(query).expect("ranked search")["assets"][0]["id"],
+            "feetech.fs90.akizuki-drawing"
+        );
+    }
+    assert_eq!(ids("ROBOTIS HN12 N101", "horns"), ["robotis.hn12-n101.normal-2019"]);
+    let hn12 = ids("hn-12", "horns");
+    assert_eq!(hn12.len(), 2);
+    assert!(hn12.iter().any(|id| id == "robotis.hn12-n101.normal-2019"));
+    assert!(hn12.iter().any(|id| id == "robotis.hn12-i101.idler-2019"));
+    let double_arms = ids("hitec double arm", "horns");
+    assert_eq!(double_arms.len(), 2);
+    assert!(double_arms.iter().any(|id| id == "hitec.fs-il15.rev-d-20230428"));
+    assert!(double_arms.iter().any(|id| id == "hitec.m-i24.rev-d-20230428"));
+
+    let empty = catalog.search("").expect("empty search");
+    assert_eq!(
+        empty
+            .as_object()
+            .expect("unchanged reply shape")
+            .keys()
+            .map(String::as_str)
+            .collect::<Vec<_>>(),
+        ["assets", "catalog_release", "horn_catalog_release", "horns"]
+    );
+    assert_eq!(
+        ids("", "assets"),
+        catalog.assets.iter().map(|asset| asset.id.clone()).collect::<Vec<_>>()
+    );
+    assert_eq!(ids("", "assets"), ids(" -- . ", "assets"));
+    assert!(ids("FS90 missing-unrelated-token", "assets").is_empty());
+    assert!(catalog.search(&"x".repeat(129)).is_err());
+    assert!(catalog.search(&"界".repeat(43)).is_err());
 }
 
 fn cable_params() -> crate::cables::CableSpaceParams {
@@ -607,53 +687,140 @@ fn default_outlet_markers_are_short_and_connectors_require_explicit_opt_in() {
 fn manifest_keeps_host_forms_bounded_when_contributors_expand_the_catalog() {
     let mut catalog = Catalog::embedded().expect("catalog");
     let current = crate::manifest::manifest(&catalog).expect("current manifest");
-    let properties = |manifest: &Value| {
-        manifest["runtime"]["entries"]
-            .as_array()
-            .expect("entries")
-            .iter()
-            .find(|entry| entry["name"] == "servo-reference")
-            .expect("servo entry")["input_schema"]["properties"]
-            .clone()
-    };
-    let original_properties = properties(&current);
+    let original = entry_schema(&current, "place-servo");
+    let original_choice = &original["properties"]["asset_id"];
     assert_eq!(
-        original_properties["asset_id"]["oneOf"]
-            .as_array()
-            .expect("model picker")
-            .len(),
+        listed_values(original_choice).len(),
         catalog
             .assets
             .iter()
             .filter(|asset| asset.reference_model.is_some())
             .count()
     );
-    assert!(serde_json::to_vec(&current).expect("encoded manifest").len() < 16 * 1024);
+    assert!(original_choice.get("default").is_none());
+    let budget = if cfg!(feature = "legacy-host") {
+        crate::manifest::LEGACY_MANIFEST_BYTES
+    } else {
+        crate::manifest::MODERN_MANIFEST_BYTES
+    };
+    assert!(serde_json::to_vec(&current).expect("encoded manifest").len() < budget);
 
     // Synthetic metadata tests the host ABI limit, without inventing new hardware facts.
     let template = catalog.asset("feetech.fs90.akizuki-drawing").expect("FS90").clone();
-    for index in 0..200 {
+    for index in 0..400 {
         let mut asset = template.clone();
         asset.id = format!("test.catalog-growth-{index}");
         asset.model = format!("Synthetic selector {index}: {}", "long metadata ".repeat(12));
         catalog.assets.push(asset);
     }
     let expanded = crate::manifest::manifest(&catalog).expect("bounded expanded manifest");
-    assert!(serde_json::to_vec(&expanded).expect("encoded expanded manifest").len() < 16 * 1024);
-    let expanded_properties = properties(&expanded);
-    assert_eq!(expanded_properties["asset_id"]["type"], "string");
-    assert!(expanded_properties["asset_id"].get("oneOf").is_none());
-    assert_eq!(
-        expanded_properties["asset_id"]["default"],
-        "feetech.fs90.akizuki-drawing"
-    );
-    assert_eq!(
-        expanded_properties["include_cable"],
-        original_properties["include_cable"]
-    );
+    assert!(serde_json::to_vec(&expanded).expect("encoded expanded manifest").len() < budget);
+    let expanded_choice = &entry_schema(&expanded, "place-servo")["properties"]["asset_id"];
+    assert_eq!(expanded_choice["type"], "string");
+    assert!(expanded_choice.get("oneOf").is_none() && expanded_choice.get("enum").is_none());
+    assert_eq!(entry_schema(&expanded, "place-servo")["required"], original["required"]);
     assert_eq!(expanded["capabilities"], current["capabilities"]);
     assert_eq!(expanded["runtime"]["commands"], current["runtime"]["commands"]);
     assert_eq!(expanded["runtime"]["limits"], current["runtime"]["limits"]);
+}
+
+fn entry_schema<'a>(manifest: &'a Value, name: &str) -> &'a Value {
+    &manifest["runtime"]["entries"]
+        .as_array()
+        .expect("entries")
+        .iter()
+        .find(|entry| entry["name"] == name)
+        .expect("entry")["input_schema"]
+}
+
+fn listed_values(field: &Value) -> Vec<&str> {
+    if let Some(options) = field["oneOf"].as_array() {
+        return options
+            .iter()
+            .map(|option| option["const"].as_str().expect("choice value"))
+            .collect();
+    }
+    field["enum"]
+        .as_array()
+        .expect("enumerated picker")
+        .iter()
+        .map(|option| option.as_str().expect("choice value"))
+        .collect()
+}
+
+#[test]
+fn every_quick_picker_option_resolves_to_an_available_reference() {
+    use crate::workflow::{place_datum, place_horn, place_servo};
+
+    let catalog = Catalog::embedded().expect("catalog");
+    let horns = crate::horns::HornCatalog::embedded().expect("horns");
+    let manifest = crate::manifest::manifest(&catalog).expect("manifest");
+    for (name, key) in [
+        ("place-servo", "asset_id"),
+        ("place-horn", "reference_id"),
+        ("place-datum", "reference_id"),
+    ] {
+        let schema = entry_schema(&manifest, name);
+        assert_eq!(schema["required"], json!([key]));
+        let options = listed_values(&schema["properties"][key]);
+        assert!(options.len() > 1);
+        for option in options {
+            let mut host = Host {
+                model: true,
+                sequential_sketch_ids: true,
+                ..Host::default()
+            };
+            let params = json!({key:option});
+            let result = match name {
+                "place-servo" => place_servo(
+                    &mut host,
+                    &catalog,
+                    serde_json::from_value(params).expect("servo parameters"),
+                ),
+                "place-horn" => place_horn(
+                    &mut host,
+                    &horns,
+                    &serde_json::from_value(params).expect("horn parameters"),
+                ),
+                _ => place_datum(
+                    &mut host,
+                    &catalog,
+                    &serde_json::from_value(params).expect("datum parameters"),
+                ),
+            };
+            assert!(result.is_ok(), "{name} / {option}: {result:?}");
+        }
+    }
+}
+
+#[test]
+fn repeated_datum_insertion_keeps_the_source_caption_and_owns_a_new_sketch() {
+    let catalog = Catalog::embedded().expect("catalog");
+    let mut host = Host {
+        sequential_sketch_ids: true,
+        ..Host::default()
+    };
+    let first = crate::workflow::Placement {
+        reference_id: "feetech.fs90.akizuki-drawing/mount/case-ears".into(),
+        x_mm: 0.0,
+        y_mm: 0.0,
+        z_mm: 0.0,
+    };
+    let a = crate::workflow::place_datum(&mut host, &catalog, &first).expect("first mount");
+    let second = crate::workflow::Placement { x_mm: 40.0, ..first };
+    let b = crate::workflow::place_datum(&mut host, &catalog, &second).expect("another mount");
+    assert_eq!(host.feature_names.len(), 2);
+    assert!(host.feature_names[0].contains("FS90 mounting-pattern"));
+    assert_eq!(host.feature_names[1], format!("{} (2)", host.feature_names[0]));
+    assert_ne!(a["feature"], b["feature"]);
+    let snapshot = source_snapshot(&host, &b);
+    assert!(
+        snapshot["recipe"]
+            .as_array()
+            .expect("recipe")
+            .iter()
+            .all(|step| step["command"] != "document.inspect")
+    );
 }
 
 #[test]
@@ -772,7 +939,12 @@ fn oriented_mount_groups_keep_their_plane_thread_callouts_and_selection() {
     p.mount_group_id = Some("case-far-side".into());
     let mut host = Host::default();
     let reply = insert(&mut host, &catalog, &p).expect("selected face");
-    assert_eq!(host.calls[0].1["plane"]["origin"], json!([112.0, 212.2, 307.0]));
+    let (_, created) = host
+        .calls
+        .iter()
+        .find(|(name, _)| name == "sketch.create")
+        .expect("mount sketch");
+    assert_eq!(created["plane"]["origin"], json!([112.0, 212.2, 307.0]));
     let snapshot = source_snapshot(&host, &reply);
     assert_eq!(snapshot["parameters"]["mount_group_id"], "case-far-side");
     let thread = &snapshot["asset"]["mount_groups"][1]["holes"][0]["thread"];

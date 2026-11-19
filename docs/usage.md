@@ -1,10 +1,14 @@
 # Servo Assets for SolidCraft
 
+For the three primary insertion forms and the search workflow, see
+[Insert a servo, horn or datum](insertion-workflow.md). The commands below also
+serve the detailed setup forms and existing automation callers.
+
 An offline Rust/WebAssembly plugin for placing source-labelled servo references
 through ordinary SolidCraft commands. It supplies schema-drawn forms and CLI/agent
 entries, and creates editable features with one undo per call.
 
-Version **0.9.1**, catalog **`2026-11-19.10`**, includes **28 integrated models and
+Version **0.10.0**, catalog **`2026-11-19.10`**, includes **28 integrated models and
 29 source profiles** across eight catalog packs. The additional SG90 TA0132 profile
 provides separate envelopes and an output-axis reference. These servo packs contain
 78 source records. Four separate horn packs add **18 horn source variants and 28
@@ -238,11 +242,11 @@ SOLIDCRAFT_CLI=/path/to/current/solidcraft-cli
 
 The component wrapper uses the permissively licensed `wit-component` crate; no
 global `wasm-tools` installation is required. The current archive is
-`dist/servo-assets-0.9.1.zip`. It requires a host supporting `commands@0.2` and
+`dist/servo-assets-0.10.0.zip`. It requires a host supporting `commands@0.2` and
 `storage@0.1`. Host fixtures are included under `tests/` in the archive.
 
 For an older host, `bash build-legacy.sh` creates
-`dist/servo-assets-legacy-0.9.1.zip` using `commands@0.1`. It creates the same
+`dist/servo-assets-legacy-0.10.0.zip` using `commands@0.1`. It creates the same
 geometry and returns the source snapshot in its command reply. That host cannot
 save plugin storage in the design: `metadata_saved_in_design` is false. Keep the
 returned snapshot or source package alongside the design. Both editions have the

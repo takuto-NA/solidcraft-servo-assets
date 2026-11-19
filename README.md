@@ -30,19 +30,25 @@ Choose the ZIP matching your SolidCraft host's command SDK:
 
 | Package | Host capability | Source snapshots |
 | --- | --- | --- |
-| `servo-assets-VERSION.zip` | `commands@0.2` and `storage@0.1` | Embedded in the saved design |
+| `servo-assets-VERSION.zip` | `commands@0.2`, `storage@0.1` and support for 64 KiB manifests | Embedded in the saved design |
 | `servo-assets-legacy-VERSION.zip` | `commands@0.1` | Returned to the caller; not embedded by the older host |
 
 Install the matching ZIP through SolidCraft's plugin manager. The release also
 provides a source ZIP and SHA-256 checksums. Packages are sandboxed and need no
 network or filesystem permissions at runtime.
 
-Use **Servo reference** to insert an integrated model. The default fixed-cable
-representation shows a short entrance marker with three conductors and no end
-connector. Serial servos show their detachable sockets without invented attached
-cables. **Mount pattern**, **Output reference** and **Cable space** expose separate
-datums or caller-sized routing allowances. **Horn reference** provides explicit
-`dimensions`, `source-solid` and `photo-solid` modes.
+Open **Insert → Servo Assets → Insert servo** and choose the full model and
+variant. The default fixed cable shows three short conductors at the entry.
+Serial servos show their detachable sockets. **Insert horn** lets you choose a
+loose horn and its available representation together. In **Inspect**, use
+**Insert mounts or axis** for a source-defined mounting face or axis.
+
+Use **Preview** to check the placement before committing. Hosts with the catalog
+form extension also show a search box, a summary of the selection and an
+**Advanced** section for optional offsets. Existing hosts show the same catalog
+choices and the offset fields in a regular form. The Plugins menu has **Find
+assets**, **Read servo sources**, and the detailed setup commands.
+[Insertion guide and UX research](docs/insertion-workflow.md).
 
 Amber parts and PREVIEW/APPROX labels identify planning geometry. These are
 reference assets, with model-specific missing details; a partial model is not a
@@ -71,8 +77,9 @@ SOLIDCRAFT_CLI=/absolute/path/to/solidcraft-cli cargo xtask ci
 
 `./build.sh` and `./build-legacy.sh` build either edition separately. Artifacts go
 in `dist/`. See [releasing](docs/releasing.md) for reproducible packaging, source
-archives and tag/release verification. Catalog growth beyond the host form budget
-falls back to canonical-ID fields; runtime validation remains in place.
+archives and tag/release verification. The forms are generated from the same
+catalog as the geometry. Fields switch to text input if their catalog exceeds
+the host manifest budget.
 
 ## Contribute
 

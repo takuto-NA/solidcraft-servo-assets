@@ -1,0 +1,8 @@
+{
+  "entry": "place-horn",
+  "params": {"reference_id": "unidentified.photo-se22ca210.double-arm/photo-solid"},
+  "expect": {
+    "model": {"body_count": 1, "total": {"volume_mm3": 320.369705960778}},
+    "reply": {"result": {"asset_id": "unidentified.photo-se22ca210.double-arm", "representation": "horn-reference"}}
+  }
+}

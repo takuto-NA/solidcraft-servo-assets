@@ -39,13 +39,13 @@ committed checkout.
 
 ## Release files
 
-For version `0.9.1`, the generated files are:
+For version `0.10.0`, the generated files are:
 
 | File | Contents |
 | --- | --- |
-| `servo-assets-0.9.1.zip` | Modern `commands@0.2` and `storage@0.1` plugin; package files at ZIP root |
-| `servo-assets-legacy-0.9.1.zip` | `commands@0.1` plugin, with the existing `servo-assets/` ZIP wrapper |
-| `servo-assets-source-0.9.1.zip` | Explicit source tree under `solidcraft-servo-assets-0.9.1/` |
+| `servo-assets-0.10.0.zip` | Modern `commands@0.2` and `storage@0.1` plugin; package files at ZIP root |
+| `servo-assets-legacy-0.10.0.zip` | `commands@0.1` plugin, with the existing `servo-assets/` ZIP wrapper |
+| `servo-assets-source-0.10.0.zip` | Explicit source tree under `solidcraft-servo-assets-0.10.0/` |
 | Each ZIP's `.zip.sha256` file | SHA256 of that ZIP |
 | `SHA256SUMS.txt` | Checksums for all three ZIPs |
 | `release-provenance.json` | Source commit and ZIP hashes for the batch |
@@ -53,8 +53,8 @@ For version `0.9.1`, the generated files are:
 Plugin packages contain the Wasm component, compact manifest, licenses,
 attribution, README, contribution instructions when present, documentation,
 catalog JSON and test fixtures. Each contains `BUILD-INFO.json` with SDK edition,
-version, commit/dirty state, source-file hashes and payload hashes. Manifests must
-remain at most 16 KiB. Legacy packages request no design storage commands;
+version, commit/dirty state, source-file hashes and payload hashes. Manifests can
+use up to 64 KiB on the modern host and 16 KiB on the older host. Legacy packages request no design storage commands;
 their source snapshots are returned to callers rather than embedded in designs.
 
 The source archive includes Cargo manifests and both lockfiles, all `src/*.rs`
