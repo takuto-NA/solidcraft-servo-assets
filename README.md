@@ -4,7 +4,7 @@ An offline Rust/WebAssembly plugin that inserts editable servo and horn referenc
 using ordinary SolidCraft commands. Body shapes, mounting references, output axes
 and cable entrances have separate evidence and explicit unknowns.
 
-**28 integrated servo models, 29 source profiles and 18 horn variants** are
+**28 integrated servo references, 29 source profiles and 18 horn variants** are
 included. The catalog covers SG90, SG92R, MG90S, other common TowerPro/FEETECH/Hitec
 servos, STS3215 variants, XL330/XC330, XM430 and XM540. Horns include dimension
 references, supported partial solids and two explicitly photo-estimated SG90-style
@@ -14,11 +14,15 @@ arms. Vendor, document and physical revisions remain separate identities.
 · [Usage and model limits](docs/usage.md)
 · [Add a servo or horn](docs/adding-assets.md)
 
-![Two photo-estimated SG90-style horns inserted and rendered in SolidCraft](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/sg90-photo-iso.png)
+![Servo Assets overview: eight servo references at the same scale, mounting and output datums, cable entrance and rear socket details, and separately labelled horn evidence levels](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.png)
 
-The image is an actual SolidCraft capture of the two photo reconstructions. Their
-contours and linkage holes are inferred from an identified photograph; spline fit
-and installed seating are unknown. [Evidence and calibration](docs/sg90-photo-reconstruction.md).
+Actual SolidCraft captures from v0.9.1: eight representative servo references use
+the same orthographic scale. Interface and horn details are enlarged separately.
+The captions distinguish source datums, planning geometry and photo estimates;
+the 18 horn variants include nine dimension-only records, seven partial source
+solids and two photo reconstructions. Outlet/socket geometry remains approximate;
+the photo horn's identity, spline fit and installed seat remain unknown.
+[Image provenance and reproduction](docs/intro-image.md).
 
 ## Install and use
 
