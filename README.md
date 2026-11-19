@@ -14,22 +14,24 @@ servos, STS3215 variants, XL330/XC330, XM430 and XM540. Horns include dimension
 references, supported partial solids and two explicitly photo-estimated SG90-style
 arms. Vendor, document and physical revisions remain separate identities.
 
-[Download a release](https://github.com/takuto-NA/solidcraft-servo-assets/releases)
+[Download and install](#install-and-use)
 · [Usage and model limits](docs/usage.md)
 · [Add a servo or horn](docs/adding-assets.md)
 
 ## Install and use
 
-Choose the ZIP matching your SolidCraft host's command SDK:
+If SolidCraft reports `manifest size exceeds 16 KiB`, use the **Compatibility
+ZIP** below. It includes the same servo and horn catalog.
 
-| Package | Host capability | Source snapshots |
+| SolidCraft build | Download v0.10.0 | Source snapshots |
 | --- | --- | --- |
-| `servo-assets-VERSION.zip` | `commands@0.2`, `storage@0.1` and support for 64 KiB manifests | Embedded in the saved design |
-| `servo-assets-legacy-VERSION.zip` | `commands@0.1` | Returned to the caller; not embedded by the older host |
+| Plugin hosts with a 16 KiB manifest limit, including 0.41.0 and 0.44.0 | [Compatibility ZIP (`servo-assets-legacy-0.10.0.zip`)](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-legacy-0.10.0.zip) | Available in command results |
+| SolidCraft 0.45.0 or a build with 64 KiB manifest support, `commands@0.2` and `storage@0.1` | [Modern ZIP (`servo-assets-0.10.0.zip`)](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-0.10.0.zip) | Embedded in the saved design |
 
-Install the matching ZIP through SolidCraft's plugin manager. The release also
-provides a source ZIP and SHA-256 checksums. Packages are sandboxed and need no
-network or filesystem permissions at runtime.
+In SolidCraft, open **Preferences → Plugins → Install plugin…** and select the
+ZIP. [GitHub Releases](https://github.com/takuto-NA/solidcraft-servo-assets/releases)
+also provides a source ZIP and SHA-256 checksums. Packages are sandboxed and need
+no network or filesystem permissions at runtime.
 
 Open **Insert → Servo Assets → Insert servo** and choose the full model and
 variant. The default fixed cable shows three short conductors at the entry.
