@@ -5,7 +5,9 @@ use std::collections::{BTreeMap, BTreeSet};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 
-use crate::catalog::{Asset, Catalog, Dimension, Evidence, MountHole, Observation, Source, selector_key, valid_id};
+use crate::catalog::{
+    Asset, Catalog, Dimension, Evidence, LookupQuery, MountHole, Observation, Source, selector_key, valid_id,
+};
 use crate::models::{ModelParams, Part, Primitive};
 use crate::{Error, invalid};
 
@@ -350,8 +352,21 @@ impl HornCatalog {
     }
 
     pub fn search(&self, query: &str) -> Vec<Value> {
-        let query = query.to_lowercase();
-        self.horns.iter().filter(|horn| format!("{} {} {} {}",horn.id,horn.manufacturer,horn.model,horn.shape).to_lowercase().contains(&query))
+        let query = LookupQuery::new(query);
+        let mut matches: Vec<_> = self
+            .horns
+            .iter()
+            .filter_map(|horn| {
+                query
+                    .rank(
+                        &[&horn.id, &horn.model],
+                        &[&horn.manufacturer, &horn.shape, &horn.status],
+                    )
+                    .map(|rank| (rank, horn))
+            })
+            .collect();
+        matches.sort_by_key(|(rank, _)| *rank);
+        matches.into_iter().map(|(_, horn)| horn)
             .map(|horn| json!({"id":horn.id,"model":horn.model,"manufacturer":horn.manufacturer,"shape":horn.shape,"status":horn.status,
                 "candidate_assets":self.mounts.iter().filter(|mount| mount.horn_id == horn.id).map(|mount| json!({"asset_id":mount.asset_id,"compatibility":mount.compatibility,"placement_basis":mount.placement_basis,"automatic_assembly_available":automatic_assembly_available(horn,mount)})).collect::<Vec<_>>()})).collect()
     }

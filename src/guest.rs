@@ -16,6 +16,7 @@ use crate::catalog::Catalog;
 use crate::horns::{HornCatalog, HornParams, insert_horn};
 use crate::models::{ModelParams, insert_model};
 use crate::outputs::{OutputParams, insert_output_reference};
+use crate::workflow::{Placement, ServoPlacement, place_datum, place_horn, place_servo};
 use crate::{Error, InsertParams, Runner, insert, invalid};
 
 #[derive(Deserialize)]
@@ -104,7 +105,10 @@ impl Guest for Servos {
         let result = (|| match entry.as_str() {
             "catalog" => catalog.search(&parse::<Query>(&params)?.query),
             "describe" => catalog.describe(&parse::<Describe>(&params)?.asset_id),
+            "place-servo" => place_servo(&mut host, &catalog, parse::<ServoPlacement>(&params)?),
             "servo-reference" => insert_model(&mut host, &catalog, &parse::<ModelParams>(&params)?),
+            "place-horn" => place_horn(&mut host, &HornCatalog::embedded()?, &parse::<Placement>(&params)?),
+            "place-datum" => place_datum(&mut host, &catalog, &parse::<Placement>(&params)?),
             "horn-reference" => insert_horn(&mut host, &HornCatalog::embedded()?, &parse::<HornParams>(&params)?),
             "cable-space" => insert_cable_space(&mut host, &catalog, &parse::<CableSpaceParams>(&params)?),
             "output-reference" => insert_output_reference(&mut host, &catalog, &parse::<OutputParams>(&params)?),

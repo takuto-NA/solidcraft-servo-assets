@@ -4,7 +4,7 @@
 use base64::{Engine as _, engine::general_purpose::STANDARD};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, BTreeSet};
 
 use crate::catalog::{Catalog, valid_id};
 use crate::{Error, invalid};
@@ -248,6 +248,86 @@ fn persisted_body_name(
     Ok(name)
 }
 
+fn planned_sketch_names(runner: &mut impl Runner, steps: &[Value]) -> Result<BTreeMap<usize, String>, Error> {
+    const MAX_NAMES: usize = 10_000;
+    const MAX_NAME_BYTES: usize = 4096;
+    const MAX_TOTAL_NAME_BYTES: usize = 2 * 1024 * 1024;
+
+    let requested = steps
+        .iter()
+        .enumerate()
+        .filter(|(_, step)| step.get("command").and_then(Value::as_str) == Some("sketch.create"))
+        .map(|(index, step)| {
+            let name = step
+                .get("params")
+                .and_then(|params| params.get("name"))
+                .and_then(Value::as_str)
+                .ok_or_else(|| invalid("recipe", "owned sketches must have a source caption"))?
+                .trim();
+            if name.is_empty() || name.len() > MAX_NAME_BYTES {
+                return Err(invalid("recipe", "sketch captions must contain 1 to 4096 bytes"));
+            }
+            Ok((index, name))
+        })
+        .collect::<Result<Vec<_>, Error>>()?;
+    if requested.is_empty() {
+        return Ok(BTreeMap::new());
+    }
+    if requested.len() > MAX_NAMES {
+        return Err(invalid("recipe", "too many owned sketches"));
+    }
+    // Read once before geometry changes. Existing design names are used only for
+    // allocation, never copied into the source snapshot or its executed recipe.
+    let inspected = runner.run(
+        "document.inspect",
+        json!({"measure":false,"sketch_counts":false,"timeline":"summary","bodies":false}),
+    )?;
+    let timeline = inspected
+        .get("timeline")
+        .and_then(Value::as_array)
+        .ok_or_else(|| invalid("host.reply", "document.inspect must return a timeline array"))?;
+    if timeline.len() > MAX_NAMES {
+        return Err(invalid("host.reply", "feature-name inventory exceeds 10000 rows"));
+    }
+    let mut taken = BTreeSet::new();
+    let mut total_bytes = 0usize;
+    for row in timeline {
+        let name = row
+            .get("name")
+            .and_then(Value::as_str)
+            .ok_or_else(|| invalid("host.reply", "each timeline feature must have a name"))?;
+        total_bytes = total_bytes.saturating_add(name.len());
+        if name.len() > MAX_NAME_BYTES || total_bytes > MAX_TOTAL_NAME_BYTES {
+            return Err(invalid("host.reply", "feature-name inventory exceeds its byte limits"));
+        }
+        taken.insert(name.trim().to_ascii_lowercase());
+    }
+    let mut allocated = BTreeMap::new();
+    for (index, name) in requested {
+        if taken.len() >= MAX_NAMES {
+            return Err(invalid(
+                "recipe",
+                "feature-name inventory has no room for another sketch",
+            ));
+        }
+        let allocated_name = if !taken.contains(&name.to_ascii_lowercase()) {
+            name.to_string()
+        } else {
+            (2..=taken.len().saturating_add(2))
+                .map(|copy| format!("{name} ({copy})"))
+                .find(|candidate| !taken.contains(&candidate.to_ascii_lowercase()))
+                .ok_or_else(|| invalid("recipe", "could not allocate a unique sketch caption"))?
+        };
+        total_bytes = total_bytes.saturating_add(allocated_name.len());
+        if allocated_name.len() > MAX_NAME_BYTES || total_bytes > MAX_TOTAL_NAME_BYTES {
+            return Err(invalid("recipe", "allocated sketch captions exceed their byte limits"));
+        }
+        taken.insert(allocated_name.to_ascii_lowercase());
+        allocated.insert(index, allocated_name);
+    }
+    Ok(allocated)
+}
+
 pub(crate) fn execute_plan_context(
     runner: &mut impl Runner,
     catalog: &Catalog,
@@ -294,6 +374,7 @@ pub(crate) fn execute_asset_plan(
         object.insert("asset_id".into(), json!(asset_id));
     }
     let steps = plan.as_array().ok_or_else(|| invalid("recipe", "expected commands"))?;
+    let sketch_names = planned_sketch_names(runner, steps)?;
     let mut feature = None;
     let mut features = Vec::new();
     let mut bodies = Vec::new();
@@ -301,7 +382,7 @@ pub(crate) fn execute_asset_plan(
     let mut roles: BTreeMap<String, String> = BTreeMap::new();
     let mut notes = Vec::new();
     let mut executed = Vec::new();
-    for step in steps {
+    for (index, step) in steps.iter().enumerate() {
         let command = step
             .get("command")
             .and_then(Value::as_str)
@@ -310,6 +391,11 @@ pub(crate) fn execute_asset_plan(
             .get("params")
             .ok_or_else(|| invalid("recipe", "missing parameters"))?
             .clone();
+        if let Some(name) = sketch_names.get(&index) {
+            args.as_object_mut()
+                .ok_or_else(|| invalid("recipe", "parameters must be an object"))?
+                .insert("name".into(), json!(name));
+        }
         if let Some(binding) = step.get("use_last_sketch") {
             let binding = binding
                 .as_bool()

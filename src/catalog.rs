@@ -154,6 +154,96 @@ pub struct Catalog {
     pub assets: Vec<Asset>,
 }
 
+/// Search metadata without turning a human-readable name into a selected variant.
+pub(crate) struct LookupQuery {
+    compact: String,
+    terms: Vec<String>,
+}
+
+fn lookup_text(value: &str) -> String {
+    value
+        .chars()
+        .flat_map(char::to_lowercase)
+        .filter(|character| character.is_alphanumeric())
+        .collect()
+}
+
+impl LookupQuery {
+    pub(crate) fn new(query: &str) -> Self {
+        Self {
+            compact: lookup_text(query),
+            terms: query
+                .split(|character: char| !character.is_alphanumeric())
+                .filter(|term| !term.is_empty())
+                .map(lookup_text)
+                .collect(),
+        }
+    }
+
+    fn contains_identity(&self, identity: &str) -> bool {
+        !identity.is_empty()
+            && self.terms.iter().enumerate().any(|(start, _)| {
+                let mut remaining = identity;
+                for term in self.terms.iter().skip(start) {
+                    let Some(tail) = remaining.strip_prefix(term) else {
+                        break;
+                    };
+                    if tail.is_empty() {
+                        return true;
+                    }
+                    remaining = tail;
+                }
+                false
+            })
+    }
+
+    /// Identities are the canonical ID, model, then seller SKUs, in that order.
+    pub(crate) fn rank(&self, identities: &[&str], fields: &[&str]) -> Option<(u8, usize)> {
+        if self.compact.is_empty() {
+            return Some((0, 0));
+        }
+        let identities: Vec<_> = identities.iter().map(|value| lookup_text(value)).collect();
+        let fields: Vec<_> = fields.iter().map(|value| lookup_text(value)).collect();
+        if !self
+            .terms
+            .iter()
+            .all(|term| identities.iter().chain(&fields).any(|field| field.contains(term)))
+        {
+            return None;
+        }
+        if let Some(index) = identities.iter().position(|value| value == &self.compact) {
+            return Some((
+                match index {
+                    0 => 0,
+                    1 => 1,
+                    _ => 2,
+                },
+                0,
+            ));
+        }
+        if identities.iter().any(|identity| self.contains_identity(identity)) {
+            return Some((3, 0));
+        }
+        for (rank, prefix) in [(4, true), (5, false)] {
+            if let Some(extra) = identities
+                .iter()
+                .filter(|identity| {
+                    if prefix {
+                        identity.starts_with(&self.compact)
+                    } else {
+                        identity.contains(&self.compact)
+                    }
+                })
+                .map(|identity| identity.len().saturating_sub(self.compact.len()))
+                .min()
+            {
+                return Some((rank, extra));
+            }
+        }
+        Some((6, 0))
+    }
+}
+
 impl Catalog {
     pub fn embedded() -> Result<Self, Error> {
         let catalog = Self::merge_packs(
@@ -458,11 +548,22 @@ impl Catalog {
         if query.len() > 128 {
             return Err(invalid("query", "use at most 128 bytes"));
         }
-        let query = query.to_lowercase();
+        let lookup = LookupQuery::new(query);
         let horns = crate::horns::HornCatalog::embedded()?;
-        let assets: Vec<_> = self.assets.iter().filter(|asset| {
-            format!("{} {} {} {}", asset.id, asset.manufacturer, asset.model, asset.family).to_lowercase().contains(&query)
-        }).map(|asset| json!({
+        let mut matches: Vec<_> = self
+            .assets
+            .iter()
+            .enumerate()
+            .filter_map(|(index, asset)| {
+                let mut identities = vec![asset.id.as_str(), asset.model.as_str()];
+                identities.extend(asset.seller_items.iter().map(|item| item.sku.as_str()));
+                let mut fields = vec![asset.manufacturer.as_str(), asset.family.as_str()];
+                fields.extend(asset.seller_items.iter().map(|item| item.seller.as_str()));
+                lookup.rank(&identities, &fields).map(|rank| (rank, index, asset))
+            })
+            .collect();
+        matches.sort_by_key(|(rank, index, _)| (*rank, *index));
+        let assets: Vec<_> = matches.into_iter().map(|(_, _, asset)| json!({
             "id": asset.id, "model": asset.model, "manufacturer": asset.manufacturer,
             "product_revision": asset.product_revision, "data_revision": asset.data_revision,
             "representations": asset.representations.keys().collect::<Vec<_>>(),
@@ -475,7 +576,7 @@ impl Catalog {
             "horn_ids": horns.mounts.iter().filter(|mount| mount.asset_id == asset.id).map(|mount| &mount.horn_id).collect::<Vec<_>>()
         })).collect();
         Ok(
-            json!({"catalog_release": self.release, "assets": assets, "horn_catalog_release":horns.release, "horns":horns.search(&query)}),
+            json!({"catalog_release": self.release, "assets": assets, "horn_catalog_release":horns.release, "horns":horns.search(query)}),
         )
     }
 
