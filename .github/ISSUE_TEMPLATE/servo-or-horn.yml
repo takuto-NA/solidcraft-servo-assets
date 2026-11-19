@@ -1,0 +1,66 @@
+name: Servo or horn source
+description: Suggest an asset, add evidence, or request help with a variant.
+title: "[Asset] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A source link, identified specimen or useful photograph can start an addition.
+        You do not need a finished model or Rust experience. Write "unknown" where needed.
+        Link vendor documents instead of uploading copies; you may attach your own measurements or photos.
+  - type: dropdown
+    id: asset_kind
+    attributes:
+      label: What would you like to add?
+      options:
+        - Servo or actuator
+        - Servo horn or idler
+        - Vendor or production variant
+        - Additional evidence for an existing asset
+    validations:
+      required: true
+  - type: input
+    id: identity
+    attributes:
+      label: Manufacturer and exact model
+      description: Include the printed part number, or say unknown if the photo has no identity.
+      placeholder: Manufacturer, model, horn part number or existing catalog ID
+    validations:
+      required: true
+  - type: textarea
+    id: revision
+    attributes:
+      label: Variant, revision or specimen
+      description: Seller SKU/link, document revision/date, batch markings and physical differences if known.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source links or measurements
+      description: Prefer manufacturer information or an identified measured specimen. Include page/figure references and measurement method if available.
+      placeholder: Source URL and relevant page, or what evidence you would like help finding
+  - type: textarea
+    id: useful_interfaces
+    attributes:
+      label: Dimensions and interfaces needed
+      description: Describe the intended use and which body, mounting, shaft, cable entrance, socket/contact or horn details matter.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence_status
+    attributes:
+      label: Given values, photo estimates and unknowns
+      description: Separate printed/measured numbers from inferred shape. Unknowns and conflicting labels are useful to record.
+  - type: textarea
+    id: images
+    attributes:
+      label: Your photos or CAD evidence
+      description: Paste your own images here if useful. For an existing model, show the relevant output, rear or cable view. Remove private details.
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: How would you like to help?
+      options:
+        - I can provide sources or measurements
+        - I would like help adding the JSON
+        - I plan to submit a pull request
+        - I am requesting the asset

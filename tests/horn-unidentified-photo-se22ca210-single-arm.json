@@ -1,0 +1,16 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "unidentified.photo-se22ca210.single-arm"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "unidentified.photo-se22ca210.single-arm"
+      }
+    }
+  }
+}

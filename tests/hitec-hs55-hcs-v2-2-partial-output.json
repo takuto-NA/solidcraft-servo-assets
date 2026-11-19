@@ -1,0 +1,16 @@
+{
+  "entry": "output-reference",
+  "params": {
+    "asset_id": "hitec.hs55.hcs-v2-2"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "representation": "output-reference"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "entry": "output-reference",
+  "params": {
+    "asset_id": "aus-electronics-direct.sg90.ta0132"
+  },
+  "expect": {
+    "reply": {
+      "result": {
+        "representation": "output-reference"
+      }
+    },
+    "model": {
+      "body_count": 1,
+      "total": {
+        "volume_mm3": 7443.556999999999
+      }
+    }
+  }
+}

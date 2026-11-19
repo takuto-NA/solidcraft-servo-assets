@@ -1,0 +1,2490 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.9",
+  "sources": [
+    {
+      "id": "horn-540-drawing-20190318",
+      "publisher": "ROBOTIS; manufacturer drawing mirrored by BestTechnology",
+      "title": "XM540/XH540/XD540 (HINGE), 2019-03-18, sheet 1 of 2",
+      "url": "https://www.besttechnology.co.jp/modules/knowledge/gate.php/XM%2CH%2CD-540.N101.I101.pdf?_noumb=&openfile=X540_dimension.pdf&refer=Dynamixel+XM540-W150&way=attach",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-normal-product",
+      "publisher": "ROBOTIS Japan",
+      "title": "HN13-N101 Set, 903-0276-000: compatibility and package",
+      "url": "https://e-shop.robotis.co.jp/product.php?id=476",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-idler-product",
+      "publisher": "ROBOTIS Japan",
+      "title": "HN13-I101 Set, 903-0267-000: compatibility and assembly",
+      "url": "https://e-shop.robotis.co.jp/product.php?id=146",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-assembly-manual",
+      "publisher": "ROBOTIS",
+      "title": "XM540-W270 assembly: normal horn and opposite-side idler",
+      "url": "https://emanual.robotis.com/docs/en/dxl/x/xm540-w270/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-sts-c001-accessories",
+      "publisher": "FEETECH; manufacturer PDF hosted by Akizuki Denshi",
+      "title": "STS3215-C001 specification A/0: printed accessory page 7/8",
+      "url": "https://akizukidenshi.com/goodsaffix/STS3215-C001%20SEPC.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-sts-c018-accessories",
+      "publisher": "FEETECH; manufacturer PDF hosted by Akizuki Denshi",
+      "title": "STS3215-C018 specification A/0: accessory page 7/8",
+      "url": "https://akizukidenshi.com/goodsaffix/STS3215-C018.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-sts-c044-accessories",
+      "publisher": "FEETECH; manufacturer PDF hosted by Akizuki Denshi",
+      "title": "ST-3215-C044 specification A/0: physical page 11, printed accessory page 7/8",
+      "url": "https://akizukidenshi.com/goodsaffix/ST-3215-C044%20SEPC.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-sts-c046-accessories",
+      "publisher": "FEETECH; manufacturer PDF hosted by Akizuki Denshi",
+      "title": "ST-3215-C046 specification A/0: physical page 12, printed accessory page 7/8",
+      "url": "https://akizukidenshi.com/goodsaffix/ST-3215-C046%20SEPC.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-sts-lightguide-notice",
+      "publisher": "Akizuki Denshi; FEETECH product change notice",
+      "title": "STS3215-C001 mold/lightguide change, 2025-12-29",
+      "url": "https://akizukidenshi.com/goodsaffix/STS3215_design_change_20251229.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-official-horn-index",
+      "publisher": "ROBOTIS",
+      "title": "Official Horn drawing index: HN13-N101 PDF download 1737 and HN13-I101 PDF download 1753",
+      "url": "https://www.robotis.com/service/downloadpage.php?ca_id=7020",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-normal-part-20190522",
+      "publisher": "ROBOTIS",
+      "title": "HN13_N101 individual part drawing, 22-May-2019, sheet 1 of 1; manufacturer download wrapper links its PDF",
+      "url": "https://www.robotis.com/service/download.php?no=1737",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-540-idler-part-20190522",
+      "publisher": "ROBOTIS",
+      "title": "HN13-i101 individual part drawing, 22-May-2019, sheet 1 of 1; manufacturer download wrapper links its PDF",
+      "url": "https://www.robotis.com/service/download.php?no=1753",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "horns": [
+    {
+      "id": "robotis.hn13-n101.reference-20190318",
+      "manufacturer": "ROBOTIS",
+      "model": "HN13-N101",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "flange_outer_diameter": {
+          "nominal_mm": 26,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Explicit diameter 26 for the individual horn flange."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Individual-part section explicitly dimensions the flange thickness; this is no longer inferred from an installed projection."
+          }
+        },
+        "frame_hole_pitch_circle_diameter": {
+          "nominal_mm": 22,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Eight M2.5 x 0.45 holes are located on the published diameter 22 pitch circle."
+          }
+        },
+        "assembled_outer_flange_projection": {
+          "nominal_mm": 2.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-drawing-20190318",
+            "locator": "2019-03-18 HINGE side view, 2.6 front and 2.5 rear callouts",
+            "method": "drawing",
+            "note": "Distance from the case face to the installed outer flange face. It is not an independently verified free-part thickness or inner seating datum."
+          }
+        },
+        "assembly_frame_hole_depth_max_20190318": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-drawing-20190318",
+            "locator": "2019-03-18 HINGE sheet 1 of 2, normal and idler horn callouts",
+            "method": "drawing",
+            "note": "Historical 2019-03-18 assembled drawing states TAP DP2.5 (Max.). Preserve this source-specific callout; it is not substituted for the later individual-part hole specification."
+          }
+        },
+        "overall_axial_extent": {
+          "nominal_mm": 4.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Published total axial extent of the individual part."
+          }
+        },
+        "outward_boss_diameter": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Explicit central boss outside diameter; the unlabelled retaining clearance is omitted from the outer-profile reference."
+          }
+        },
+        "outward_boss_projection": {
+          "nominal_mm": 2.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Derived from total 4.9 minus flange 2.6. The section places this boss on the outer side of the flange."
+          }
+        },
+        "spline_pocket_depth": {
+          "nominal_mm": 3.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Published section depth from the mating-side opening to the serration pocket floor. The pocket is omitted from the 3D outer-profile reference."
+          }
+        },
+        "serration_reference_major_diameter": {
+          "nominal_mm": 8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, DC13 SERRATION inset",
+            "method": "drawing",
+            "note": "Explicit diameter 8 in the separately labelled DC13 serration inset; not a smooth bore substitution."
+          }
+        },
+        "serration_reference_minor_diameter": {
+          "nominal_mm": 7.4,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, DC13 SERRATION inset",
+            "method": "drawing",
+            "note": "Explicit diameter 7.4 in the DC13 serration inset; no tooth fit or root fillet is inferred."
+          }
+        },
+        "pin_hole_pitch_circle_diameter": {
+          "nominal_mm": 16,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Four plain diameter 2 holes are explicitly called HOLE THRU on pitch circle 16."
+          }
+        },
+        "assembly_pin_hole_depth_max_20190318": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-drawing-20190318",
+            "locator": "2019-03-18 HINGE sheet 1 of 2, normal and idler horn callouts",
+            "method": "drawing",
+            "note": "Historical 2019-03-18 assembly drawing states HOLE DP2.5 (Max.); the 22-May-2019 individual part instead states HOLE THRU. This difference is not evidence of a physical revision."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "frame-m2p5-1",
+          "center_mm": [
+            11,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-2",
+          "center_mm": [
+            7.7781745930520225,
+            7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-3",
+          "center_mm": [
+            0,
+            11
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-4",
+          "center_mm": [
+            -7.7781745930520225,
+            7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-5",
+          "center_mm": [
+            -11,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-6",
+          "center_mm": [
+            -7.7781745930520225,
+            -7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-7",
+          "center_mm": [
+            0,
+            -11
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m2p5-8",
+          "center_mm": [
+            7.7781745930520225,
+            -7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-normal-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "pin-d2-1",
+          "center_mm": [
+            8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Explicit diameter 2 plain hole, called THRU in this individual drawing."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": null
+        },
+        {
+          "id": "pin-d2-2",
+          "center_mm": [
+            0,
+            8
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Explicit diameter 2 plain hole, called THRU in this individual drawing."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": null
+        },
+        {
+          "id": "pin-d2-3",
+          "center_mm": [
+            -8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Explicit diameter 2 plain hole, called THRU in this individual drawing."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": null
+        },
+        {
+          "id": "pin-d2-4",
+          "center_mm": [
+            0,
+            -8
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-normal-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Explicit diameter 2 plain hole, called THRU in this individual drawing."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-normal-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral. The individual drawing explicitly specifies through holes."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "HN13-N101 / PUBLISHED MAJOR OUTER PROFILE",
+          "basis": "published_major_outer_profile_with_explicitly_omitted_cavities",
+          "note": "All exterior primitive sizes come from the 22-May-2019 individual part drawing: flange diameter 26 x 2.6, boss diameter 10 with projection 4.9 - 2.6 = 2.3. The eight M2.5 major-diameter cylinders and four diameter 2 plain holes follow the explicit through patterns. The central retaining clearance, rear lip/recess details, DC13 serration, small edge treatments and retaining hardware are omitted. This is a partial outer-profile reference, not the complete horn or a thread/fit model.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2.6
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 26,
+            "height_mm": 2.6
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  0
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 10,
+                "height_mm": 2.3
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  11,
+                  0,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  7.7781745930520225,
+                  7.7781745930520225,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  11,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -7.7781745930520225,
+                  7.7781745930520225,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -11,
+                  0,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -7.7781745930520225,
+                  -7.7781745930520225,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -11,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  7.7781745930520225,
+                  -7.7781745930520225,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.5,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  8,
+                  0,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  8,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -8,
+                  0,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -8,
+                  -2.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.6
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "No estimated numerical geometry is emitted. This partial solid contains only the published major flange/boss profile and the explicit through-hole reference patterns.",
+        "Local Z0 is the outer flange face. The published section puts the diameter 10 boss on the outward positive-Z side.",
+        "The central retaining cavity, rear lip/recess, serration teeth, small edge treatments, washer and retaining screw are omitted. The resulting solid is not a complete manufactured part.",
+        "Tapped holes use nominal thread-major-diameter cylinders. Helical surfaces and tap-drill/minor diameters are not reconstructed.",
+        "The 2019-03-18 assembly depth limits and 22-May-2019 through callouts remain distinct source statements; no physical revision is inferred.",
+        "Angular phase is an explicit user orientation, not a verified servo neutral or tooth index."
+      ],
+      "observations": [
+        {
+          "source": "horn-540-normal-part-20190522",
+          "note": "The individual drawing is dated 22-May-2019. N101 has eight M2.5 x 0.45 TAP THRU holes on PCD22 and four diameter 2 HOLE THRU on PCD16. The DC13 inset gives 32 teeth, a 90-degree angle, diameter 8 and diameter 7.4; those facts do not authorize an invented smooth mating bore or tooth fillet."
+        },
+        {
+          "source": "horn-540-official-horn-index",
+          "note": "The official Horn index maps HN13-N101 PDF to download 1737. Its wrapper publishes https://www.dropbox.com/s/ry89g6jkfavwr6l/HN13_N101.pdf?dl=1, which was downloaded and rendered for this audit."
+        },
+        {
+          "source": "horn-540-drawing-20190318",
+          "note": "The older 2019-03-18 assembled HINGE drawing remains the source for case-relative outer-flange placement. Its maximum-depth callouts are not silently merged with the individual-part specifications or interpreted as proven physical revisions."
+        },
+        {
+          "source": "horn-540-normal-product",
+          "note": "Named SKU 903-0276-000 explicitly supports XM540 normal-output use. Compatibility does not make omitted cavities or neutral phase known."
+        },
+        {
+          "source": "horn-540-assembly-manual",
+          "note": "The normal thrust washer and separately installed opposite-side idler are distinct interfaces. A documented outer flange plane does not define every internal contact surface."
+        }
+      ],
+      "unknown": [
+        "Retaining-bore diameter and complete central cavity topology",
+        "Complete rear lip/recess dimensions and small edge treatments",
+        "Full DC13 mating tooth surface and fit tolerances",
+        "Washer/contact stack and actual usable thread engagement",
+        "Verified neutral angular phase and tooth index",
+        "Whether different dated drawing callouts correspond to any physical production change"
+      ]
+    },
+    {
+      "id": "robotis.hn13-i101.reference-20190318",
+      "manufacturer": "ROBOTIS",
+      "model": "HN13-I101",
+      "data_revision": 2,
+      "shape": "idler_disc",
+      "status": "dimensions_only",
+      "dimensions": {
+        "flange_outer_diameter": {
+          "nominal_mm": 26,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Explicit diameter 26 for the individual horn flange."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Individual-part section explicitly dimensions the flange thickness; this is no longer inferred from an installed projection."
+          }
+        },
+        "frame_hole_pitch_circle_diameter": {
+          "nominal_mm": 22,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Eight M2.5 x 0.45 holes are located on the published diameter 22 pitch circle."
+          }
+        },
+        "assembled_outer_flange_projection": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-drawing-20190318",
+            "locator": "2019-03-18 HINGE side view, 2.6 front and 2.5 rear callouts",
+            "method": "drawing",
+            "note": "Distance from the case face to the installed outer flange face. It is not an independently verified free-part thickness or inner seating datum."
+          }
+        },
+        "assembly_frame_hole_depth_max_20190318": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-drawing-20190318",
+            "locator": "2019-03-18 HINGE sheet 1 of 2, normal and idler horn callouts",
+            "method": "drawing",
+            "note": "Historical 2019-03-18 assembled drawing states TAP DP2.5 (Max.). Preserve this source-specific callout; it is not substituted for the later individual-part hole specification."
+          }
+        },
+        "frame_hole_specified_depth": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Individual drawing states TAP DP. 2.5, without the earlier assembly drawing maximum qualifier. No minimum usable engagement is established."
+          }
+        },
+        "central_plain_bore_diameter": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Section explicitly shows the diameter 10 central passage. The old diameter 12 assumed passage was incorrect."
+          }
+        },
+        "tube_outer_diameter": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Diameter 12 identifies the outside of the hollow tube in the section; it is not the passage diameter."
+          }
+        },
+        "section_diameter_18p2": {
+          "nominal_mm": 18.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Diameter 18.2 is published in the annular section. This record does not assign an unshown axial span or bearing fit to that callout."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "frame-m2p5-1",
+          "center_mm": [
+            11,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-2",
+          "center_mm": [
+            7.7781745930520225,
+            7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-3",
+          "center_mm": [
+            0,
+            11
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-4",
+          "center_mm": [
+            -7.7781745930520225,
+            7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-5",
+          "center_mm": [
+            -11,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-6",
+          "center_mm": [
+            -7.7781745930520225,
+            -7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-7",
+          "center_mm": [
+            0,
+            -11
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        },
+        {
+          "id": "frame-m2p5-8",
+          "center_mm": [
+            7.7781745930520225,
+            -7.7781745930520225
+          ],
+          "diameter": {
+            "nominal_mm": 2.5,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-540-idler-part-20190522",
+              "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+              "method": "drawing",
+              "note": "Nominal M2.5 thread major diameter, retained as a thread reference rather than an actual tap-drill diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-540-idler-part-20190522",
+            "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+            "method": "drawing",
+            "note": "Centers follow the explicit pitch circle and drawn cardinal/45-degree pattern. Angular phase is a drawing convention, not servo neutral."
+          },
+          "thread": {
+            "designation": "M2.5 x 0.45",
+            "pitch_mm": {
+              "nominal_mm": 0.45,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Explicit M2.5 x 0.45 pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2.5,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-540-idler-part-20190522",
+                "locator": "22-May-2019, sheet 1 of 1, front view and SECTION A-A",
+                "method": "drawing",
+                "note": "Published TAP DP. 2.5."
+              }
+            }
+          }
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No 3D part is emitted because the individual drawing does not dimension the hollow tube axial length and complete stepped profile.",
+        "The published diameter 10 passage, diameter 12 tube exterior and flange thickness 2.5 remain dimensions, not an estimated assembly envelope.",
+        "Any standalone circles are labelled dimensional references; they do not reconstruct the missing tube, bearing or hook topology.",
+        "No overall height, bearing fit, cap envelope, seating stack or angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-540-idler-part-20190522",
+          "note": "The individual drawing is dated 22-May-2019. I101 has a diameter 10 passage inside a diameter 12 tube, flange thickness 2.5, and eight M2.5 x 0.45 holes with published depth 2.5 on PCD22. The tube has no published axial length, so no 3D idler shape is emitted."
+        },
+        {
+          "source": "horn-540-official-horn-index",
+          "note": "The official Horn index maps HN13-I101 PDF to download 1753. Its wrapper publishes https://www.dropbox.com/s/v6cza08i9oxrv5h/HN13_I101.pdf?dl=1, which was downloaded and rendered for this audit."
+        },
+        {
+          "source": "horn-540-drawing-20190318",
+          "note": "The older 2019-03-18 assembled HINGE drawing remains the source for case-relative outer-flange placement. Its maximum-depth callouts are not silently merged with the individual-part specifications or interpreted as proven physical revisions."
+        },
+        {
+          "source": "horn-540-idler-product",
+          "note": "Named SKU 903-0267-000 supports the opposite-side X540 idler. It is an idler/bearing interface, not a second driven spline."
+        },
+        {
+          "source": "horn-540-assembly-manual",
+          "note": "The normal thrust washer and separately installed opposite-side idler are distinct interfaces. A documented outer flange plane does not define every internal contact surface."
+        }
+      ],
+      "unknown": [
+        "Hollow tube axial length and complete stepped/hook profile",
+        "All axial positions of bearing and shoulder interfaces",
+        "Complete cap, bearing and contact/retention stack",
+        "Tolerances and actual usable thread engagement",
+        "Verified neutral angular phase or installed orientation index"
+      ]
+    },
+    {
+      "id": "feetech.sts3215-main-disc.a0",
+      "manufacturer": "FEETECH",
+      "model": "STS3215 main disc, accessory drawing A/0",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "flange_outer_diameter": {
+          "nominal_mm": 19.95,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Published maximum outside diameter; the illustrated main perimeter is faceted."
+          }
+        },
+        "frame_hole_pitch_circle_diameter": {
+          "nominal_mm": 14,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Four M3 holes at the four cardinal positions on the diameter 14 pitch circle."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 9,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Published diameter 9 for the raised mating-side hub; local polygonal details are simplified."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Explicit plate thickness from the side/section views."
+          }
+        },
+        "overall_height": {
+          "nominal_mm": 4.5,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Total axial height including the mating-side hub."
+          }
+        },
+        "unspecified_chamfer_size": {
+          "nominal_mm": 0.3,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "General note specifies 0.3 mm for unmarked chamfers. Chamfers are omitted from the primitive reference."
+          }
+        },
+        "central_clearance_diameter": {
+          "nominal_mm": 3.2,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Central plain clearance bore on the flat outer side."
+          }
+        },
+        "spline_pocket_depth": {
+          "nominal_mm": 3.6,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Section X-X depth is from the mating-side hub face into the blind pocket."
+          }
+        },
+        "serration_nominal_size_reference": {
+          "nominal_mm": 5.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "The drawing prints 25T (5.9, copper teeth). This is a nominal serration size reference, not a specified smooth bore, tooth-root diameter or fit tolerance."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "frame-m3-1",
+          "center_mm": [
+            7,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-2",
+          "center_mm": [
+            0,
+            7
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-3",
+          "center_mm": [
+            -7,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-4",
+          "center_mm": [
+            0,
+            -7
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "STS3215 MAIN / PUBLISHED MAJOR OUTER PROFILE",
+          "basis": "literal_published_diameters_and_axial_dimensions_with_listed_omissions",
+          "note": "Literal diameter callouts define the major circular reference: outer diameter 19.95, hub diameter 9, plate 2.5, total 4.5; hub projection is derived as 4.5 - 2.5 = 2. Four nominal M3 major-diameter reference cuts follow PCD14 and the sectioned through-plate topology. The 25T serration pocket and central clearance cavity are omitted entirely; no guessed smooth diameter 5.9 pocket is used. The source raster polygonizes its pitch circles as well as the outside views. No physical facet count, flat angle or polygon vertex is inferred. General-note chamfers and helical thread surfaces are omitted.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2.5
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 19.95,
+            "height_mm": 2.5
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.5
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 9,
+                "height_mm": 2.0
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  7,
+                  0,
+                  -2.5
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.5
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  7,
+                  -2.5
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.5
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -7,
+                  0,
+                  -2.5
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.5
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -7,
+                  -2.5
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.5
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "This partial local solid uses the literal diameter and axial dimension callouts. It is a major-profile reference rather than the complete manufactured horn.",
+        "Rasterized source contours are polygonal, including the diameter 14 pitch circle and nominally round holes. That rendering does not specify physical facets; no polygon count, flats or vertex coordinates are inferred.",
+        "Local outer flange face is Z0. The hub extends toward negative Z by the published total height minus plate thickness; no extra overlap or guessed hub length is used.",
+        "The 25T pocket and central clearance cavity are omitted. A nominal 5.9 size label is not substituted by a smooth bore or an invented tooth profile.",
+        "M3 cut cylinders are thread-major-diameter references. Pitch, helical surfaces, thread class, usable engagement and general-note chamfers are omitted.",
+        "All installed STS poses remain unknown. A local source-backed profile does not establish case-relative XY, seat height or angular phase."
+      ],
+      "observations": [
+        {
+          "source": "horn-sts-c001-accessories",
+          "note": "Independently inspected physical page 7, printed 7/8, dated 2020-03-28, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c018-accessories",
+          "note": "Independently inspected physical page 7, printed 7/8, dated 2023-07-20, section 11 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c044-accessories",
+          "note": "Independently inspected physical page 11, printed 7/8, dated 2025-04-15, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c046-accessories",
+          "note": "Independently inspected physical page 12, printed 7/8, dated 2025-04-15, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-lightguide-notice",
+          "note": "The C001 case/lightguide change notice provides no horn interface or seat dimensions. No compatibility binding is published for that changed case."
+        }
+      ],
+      "unknown": [
+        "Manufacturer standalone reorder SKU for the supplied disc",
+        "Complete mating serration/tooth form and fit tolerances",
+        "M3 pitch, thread class and usable engagement",
+        "Complete edge treatment and unmarked small-feature topology",
+        "Source confirmation of any physical flats; raster polygonization is not a facet specification",
+        "Installed case-relative XY axis, outer-flange height and seating/contact plane",
+        "Verified neutral angular phase or tooth index",
+        "Compatibility and dimensions of the changed C001 lightguide case"
+      ]
+    },
+    {
+      "id": "feetech.sts3215-rear-disc.a0",
+      "manufacturer": "FEETECH",
+      "model": "STS3215 rear disc, accessory drawing A/0",
+      "data_revision": 2,
+      "shape": "idler_disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "flange_outer_diameter": {
+          "nominal_mm": 19.95,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Published maximum outside diameter; the illustrated main perimeter is faceted."
+          }
+        },
+        "frame_hole_pitch_circle_diameter": {
+          "nominal_mm": 14,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Four M3 holes at the four cardinal positions on the diameter 14 pitch circle."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 9,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Published diameter 9 for the raised mating-side hub; local polygonal details are simplified."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.1,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Explicit plate thickness from the side/section views."
+          }
+        },
+        "overall_height": {
+          "nominal_mm": 3.1,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Total axial height including the mating-side hub."
+          }
+        },
+        "unspecified_chamfer_size": {
+          "nominal_mm": 0.3,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "General note specifies 0.3 mm for unmarked chamfers. Chamfers are omitted from the primitive reference."
+          }
+        },
+        "central_plain_bore_diameter": {
+          "nominal_mm": 6.05,
+          "tolerance_mm": 0.03,
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Plain rear-disc central bore; not a spline."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "frame-m3-1",
+          "center_mm": [
+            7,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-2",
+          "center_mm": [
+            0,
+            7
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-3",
+          "center_mm": [
+            -7,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "frame-m3-4",
+          "center_mm": [
+            0,
+            -7
+          ],
+          "diameter": {
+            "nominal_mm": 3,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-sts-c001-accessories",
+              "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+              "method": "drawing",
+              "note": "Nominal major diameter from the printed 4-M3 thread designation, not a tap-drill or measured clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-sts-c001-accessories",
+            "locator": "Physical page 7, printed page 7/8, section 10 Accessories, main/rear disc views and sections X-X",
+            "method": "drawing",
+            "note": "Nominal centers are the four cardinal positions at radius 14/2 = 7. Section X-X depicts the threaded penetrations across the plate. Pitch, thread class and usable engagement are not specified."
+          },
+          "thread": {
+            "designation": "M3",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "STS3215 REAR / PUBLISHED MAJOR PROFILE",
+          "basis": "literal_published_diameters_and_axial_dimensions_with_listed_omissions",
+          "note": "Literal diameter callouts define the major circular reference: outer diameter 19.95, hub diameter 9, plate 2.1, total 3.1; hub projection is derived as 3.1 - 2.1 = 1. Four nominal M3 major-diameter reference cuts follow PCD14 and the sectioned through-plate topology. The diameter 6.05 plain central through passage is explicitly dimensioned and sectioned. The source raster polygonizes its pitch circles as well as the outside views. No physical facet count, flat angle or polygon vertex is inferred. General-note chamfers and helical thread surfaces are omitted.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2.1
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 19.95,
+            "height_mm": 2.1
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -3.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 9,
+                "height_mm": 1.0
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -3.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 6.05,
+                "height_mm": 3.1
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  7,
+                  0,
+                  -2.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.1
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  7,
+                  -2.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.1
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -7,
+                  0,
+                  -2.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.1
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -7,
+                  -2.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 3,
+                "height_mm": 2.1
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "This partial local solid uses the literal diameter and axial dimension callouts. It is a major-profile reference rather than the complete manufactured horn.",
+        "Rasterized source contours are polygonal, including the diameter 14 pitch circle and nominally round holes. That rendering does not specify physical facets; no polygon count, flats or vertex coordinates are inferred.",
+        "Local outer flange face is Z0. The hub extends toward negative Z by the published total height minus plate thickness; no extra overlap or guessed hub length is used.",
+        "The dimensioned and sectioned diameter 6.05 plain passage is retained; it is not a driven spline.",
+        "M3 cut cylinders are thread-major-diameter references. Pitch, helical surfaces, thread class, usable engagement and general-note chamfers are omitted.",
+        "All installed STS poses remain unknown. A local source-backed profile does not establish case-relative XY, seat height or angular phase."
+      ],
+      "observations": [
+        {
+          "source": "horn-sts-c001-accessories",
+          "note": "Independently inspected physical page 7, printed 7/8, dated 2020-03-28, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c018-accessories",
+          "note": "Independently inspected physical page 7, printed 7/8, dated 2023-07-20, section 11 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c044-accessories",
+          "note": "Independently inspected physical page 11, printed 7/8, dated 2025-04-15, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-c046-accessories",
+          "note": "Independently inspected physical page 12, printed 7/8, dated 2025-04-15, section 10 Accessories. Both dimensioned discs explicitly call diameter 19.95, hub diameter 9 and four M3 holes on PCD14. Main plate/total are 2.5/4.5 with a 25T pocket; rear plate/total are 2.1/3.1 with a plain diameter 6.05 bore. The matching accessory page, not a shared tooth count, supports the documented profile binding."
+        },
+        {
+          "source": "horn-sts-lightguide-notice",
+          "note": "The C001 case/lightguide change notice provides no horn interface or seat dimensions. No compatibility binding is published for that changed case."
+        }
+      ],
+      "unknown": [
+        "Manufacturer standalone reorder SKU for the supplied disc",
+        "Rear retaining stack and installed bore/shaft fit",
+        "M3 pitch, thread class and usable engagement",
+        "Complete edge treatment and unmarked small-feature topology",
+        "Source confirmation of any physical flats; raster polygonization is not a facet specification",
+        "Installed case-relative XY axis, outer-flange height and seating/contact plane",
+        "Verified neutral angular phase or tooth index",
+        "Compatibility and dimensions of the changed C001 lightguide case"
+      ]
+    }
+  ],
+  "mounts": [
+    {
+      "asset_id": "robotis.xm540-w270-t.reference-20190318",
+      "horn_id": "robotis.hn13-n101.reference-20190318",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-540-normal-product",
+        "locator": "Compatible Products and accessory Features",
+        "method": "specification",
+        "note": "Official X540/XM540 compatibility is stated for this named accessory, independently of the drawing placement."
+      },
+      "origin_mm": [
+        13.75,
+        16.75,
+        46.6
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-540-drawing-20190318",
+        "locator": "2019-03-18 HINGE side and front/rear views: case depth 44, axis 13.75 and centered width 33.5, front flange 2.6 / rear flange 2.5",
+        "method": "drawing",
+        "note": "Model case frame is near-end X0, width Y0, rear case Z0. Axis X13.75, Y33.5/2 = 16.75. Installed outer flange is 44+2.6 = 46.6 on main or -2.5 on idler. This documents the outer-face pose only; no inner seating plane or indexed neutral phase is inferred."
+      },
+      "replace_model_parts": [
+        "main-output-reference"
+      ],
+      "note": "Named accessory compatibility and the case-relative OUTER flange plane are documented by the cited product and assembled drawing. This does not establish every omitted mating cavity, washer/bearing contact or neutral phase. Only the published major normal-horn outer profile and through patterns are available."
+    },
+    {
+      "asset_id": "robotis.xm540-w270-t.reference-20190318",
+      "horn_id": "robotis.hn13-i101.reference-20190318",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-540-idler-product",
+        "locator": "Compatible Products and accessory Features",
+        "method": "specification",
+        "note": "Official X540/XM540 compatibility is stated for this named accessory, independently of the drawing placement."
+      },
+      "origin_mm": [
+        13.75,
+        16.75,
+        -2.5
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-540-drawing-20190318",
+        "locator": "2019-03-18 HINGE side and front/rear views: case depth 44, axis 13.75 and centered width 33.5, front flange 2.6 / rear flange 2.5",
+        "method": "drawing",
+        "note": "Model case frame is near-end X0, width Y0, rear case Z0. Axis X13.75, Y33.5/2 = 16.75. Installed outer flange is 44+2.6 = 46.6 on main or -2.5 on idler. This documents the outer-face pose only; no inner seating plane or indexed neutral phase is inferred."
+      },
+      "replace_model_parts": [
+        "rear-routing-cap"
+      ],
+      "note": "Named accessory compatibility and the case-relative OUTER flange plane are documented by the cited product and assembled drawing. This does not establish every omitted mating cavity, washer/bearing contact or neutral phase. The individual idler profile lacks tube axial length; dimensions-only status prevents 3D attachment."
+    },
+    {
+      "asset_id": "robotis.xm540-w270-r.reference-20190318",
+      "horn_id": "robotis.hn13-n101.reference-20190318",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-540-normal-product",
+        "locator": "Compatible Products and accessory Features",
+        "method": "specification",
+        "note": "Official X540/XM540 compatibility is stated for this named accessory, independently of the drawing placement."
+      },
+      "origin_mm": [
+        13.75,
+        16.75,
+        46.6
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-540-drawing-20190318",
+        "locator": "2019-03-18 HINGE side and front/rear views: case depth 44, axis 13.75 and centered width 33.5, front flange 2.6 / rear flange 2.5",
+        "method": "drawing",
+        "note": "Model case frame is near-end X0, width Y0, rear case Z0. Axis X13.75, Y33.5/2 = 16.75. Installed outer flange is 44+2.6 = 46.6 on main or -2.5 on idler. This documents the outer-face pose only; no inner seating plane or indexed neutral phase is inferred."
+      },
+      "replace_model_parts": [
+        "main-output-reference"
+      ],
+      "note": "Named accessory compatibility and the case-relative OUTER flange plane are documented by the cited product and assembled drawing. This does not establish every omitted mating cavity, washer/bearing contact or neutral phase. Only the published major normal-horn outer profile and through patterns are available."
+    },
+    {
+      "asset_id": "robotis.xm540-w270-r.reference-20190318",
+      "horn_id": "robotis.hn13-i101.reference-20190318",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-540-idler-product",
+        "locator": "Compatible Products and accessory Features",
+        "method": "specification",
+        "note": "Official X540/XM540 compatibility is stated for this named accessory, independently of the drawing placement."
+      },
+      "origin_mm": [
+        13.75,
+        16.75,
+        -2.5
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-540-drawing-20190318",
+        "locator": "2019-03-18 HINGE side and front/rear views: case depth 44, axis 13.75 and centered width 33.5, front flange 2.6 / rear flange 2.5",
+        "method": "drawing",
+        "note": "Model case frame is near-end X0, width Y0, rear case Z0. Axis X13.75, Y33.5/2 = 16.75. Installed outer flange is 44+2.6 = 46.6 on main or -2.5 on idler. This documents the outer-face pose only; no inner seating plane or indexed neutral phase is inferred."
+      },
+      "replace_model_parts": [
+        "rear-routing-cap"
+      ],
+      "note": "Named accessory compatibility and the case-relative OUTER flange plane are documented by the cited product and assembled drawing. This does not establish every omitted mating cavity, washer/bearing contact or neutral phase. The individual idler profile lacks tube axial length; dimensions-only status prevents 3D attachment."
+    },
+    {
+      "asset_id": "feetech.sts3215-c001.a0",
+      "horn_id": "feetech.sts3215-main-disc.a0",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c001-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c001.a0",
+      "horn_id": "feetech.sts3215-rear-disc.a0",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c001-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c044.a0",
+      "horn_id": "feetech.sts3215-main-disc.a0",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c044-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c044.a0",
+      "horn_id": "feetech.sts3215-rear-disc.a0",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c044-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c046.a0",
+      "horn_id": "feetech.sts3215-main-disc.a0",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c046-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c046.a0",
+      "horn_id": "feetech.sts3215-rear-disc.a0",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c046-accessories",
+        "locator": "Section 10 Accessories, printed page 7/8 in this specific variant specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c018.a0",
+      "horn_id": "feetech.sts3215-main-disc.a0",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c018-accessories",
+        "locator": "Section 11 Accessories, physical page 7, printed page 7/8 in the C018 specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    },
+    {
+      "asset_id": "feetech.sts3215-c018.a0",
+      "horn_id": "feetech.sts3215-rear-disc.a0",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-sts-c018-accessories",
+        "locator": "Section 11 Accessories, physical page 7, printed page 7/8 in the C018 specification",
+        "method": "drawing",
+        "note": "This variant specification independently includes the matching main and rear disc drawings. Binding is not inferred from a 25T label alone."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "replace_model_parts": [],
+      "note": "This exact A/0 variant specification includes the matching accessory, so compatibility is documented. Installed case-relative XY, outer flange height, seating stack and angular phase are not established. No numeric installed origin or automatic assembly is published."
+    }
+  ]
+}

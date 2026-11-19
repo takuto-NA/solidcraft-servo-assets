@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "hitec.m-o24.rev-d-20230428",
+    "mode": "dimensions"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "hitec.m-o24.rev-d-20230428",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

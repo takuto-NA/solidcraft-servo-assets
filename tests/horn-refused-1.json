@@ -1,0 +1,13 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "unidentified.photo-se22ca210.double-arm",
+    "mode": "source-solid"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

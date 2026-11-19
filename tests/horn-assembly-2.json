@@ -1,0 +1,24 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xm430-w350-r.drawing",
+    "horn_id": "robotis.hn12-n101.normal-2019"
+  },
+  "expect": {
+    "model": {
+      "body_count": 15
+    },
+    "reply": {
+      "result": {
+        "accessories": [
+          {
+            "mount": {
+              "placement_basis": "documented",
+              "compatibility": "documented"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

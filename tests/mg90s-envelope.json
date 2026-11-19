@@ -1,0 +1,5 @@
+{
+  "entry": "insert",
+  "params": {"asset_id": "towerpro.mg90s.configure"},
+  "expect": {"model": {"body_count": 1, "total": {"volume_mm3": 8029.248}}}
+}

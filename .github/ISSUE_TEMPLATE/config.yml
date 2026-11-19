@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to add an asset
+    url: https://github.com/takuto-NA/solidcraft-servo-assets/blob/main/docs/adding-assets.md
+    about: JSON additions, evidence, photo estimates and validation.

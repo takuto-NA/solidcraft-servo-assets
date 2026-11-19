@@ -1,0 +1,13 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "feetech.fs90.akizuki-drawing",
+    "include_connector": true,
+    "wire_length_mm": 20
+  },
+  "expect": {
+    "model": {
+      "body_count": 9
+    }
+  }
+}

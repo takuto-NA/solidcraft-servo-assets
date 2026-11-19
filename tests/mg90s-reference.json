@@ -1,0 +1,16 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "towerpro.mg90s.configure"
+  },
+  "expect": {
+    "model": {
+      "body_count": 8
+    },
+    "reply": {
+      "result": {
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

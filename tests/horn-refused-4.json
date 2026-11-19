@@ -1,0 +1,13 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "hitec.hs311.hcs-v2-2",
+    "horn_id": "hitec.m-o24.rev-d-20230428"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

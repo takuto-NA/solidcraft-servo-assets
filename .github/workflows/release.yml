@@ -1,0 +1,151 @@
+name: Release archives
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag to build, for example v0.9.1
+        required: true
+        type: string
+
+permissions: {}
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    env:
+      RUSTUP_TOOLCHAIN: stable
+      CARGO_TERM_COLOR: always
+    outputs:
+      version: ${{ steps.metadata.outputs.version }}
+      tag: ${{ steps.metadata.outputs.tag }}
+      commit: ${{ steps.metadata.outputs.commit }}
+    steps:
+      # Full commits verified against the official actions repositories.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check version tag and source commit
+        id: metadata
+        env:
+          RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+        run: |
+          python3 tools/package-release.py validate-tag "$RELEASE_TAG" --require-clean > "$RUNNER_TEMP/servo-release-metadata.json"
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          metadata = json.loads((Path(os.environ['RUNNER_TEMP']) / 'servo-release-metadata.json').read_text())
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              for key in ('version', 'tag', 'commit'):
+                  output.write(f'{key}={metadata[key]}\n')
+          PY
+      - name: Install Rust components
+        run: rustup toolchain install stable --profile minimal --component rustfmt --component clippy --target wasm32-unknown-unknown
+      - name: Fetch locked dependencies
+        run: |
+          cargo fetch --locked
+          cargo fetch --locked --manifest-path tools/componentize/Cargo.toml
+      - name: Run the complete gate and build both SDK editions
+        run: cargo xtask ci
+      - name: Package and verify the release batch
+        env:
+          CHECKED_COMMIT: ${{ steps.metadata.outputs.commit }}
+        run: |
+          python3 tools/package-release.py source --require-clean --commit "$CHECKED_COMMIT"
+          python3 tools/package-release.py checksums --require-clean --commit "$CHECKED_COMMIT"
+          python3 tools/package-release.py verify --require-clean --commit "$CHECKED_COMMIT" --require-checksums
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: servo-assets-${{ steps.metadata.outputs.version }}
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+          path: |
+            dist/servo-assets-${{ steps.metadata.outputs.version }}.zip
+            dist/servo-assets-${{ steps.metadata.outputs.version }}.zip.sha256
+            dist/servo-assets-legacy-${{ steps.metadata.outputs.version }}.zip
+            dist/servo-assets-legacy-${{ steps.metadata.outputs.version }}.zip.sha256
+            dist/servo-assets-source-${{ steps.metadata.outputs.version }}.zip
+            dist/servo-assets-source-${{ steps.metadata.outputs.version }}.zip.sha256
+            dist/SHA256SUMS.txt
+            dist/release-provenance.json
+
+  draft-release:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ needs.build.outputs.tag }}
+      RELEASE_VERSION: ${{ needs.build.outputs.version }}
+      CHECKED_COMMIT: ${{ needs.build.outputs.commit }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ needs.build.outputs.tag }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: servo-assets-${{ needs.build.outputs.version }}
+          path: ${{ runner.temp }}/servo-release-assets
+      - name: Verify the downloaded batch and unchanged tag
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$CHECKED_COMMIT"
+          remote_commit="$(gh api "repos/$GITHUB_REPOSITORY/commits/$RELEASE_TAG" --jq .sha)"
+          test "$remote_commit" = "$CHECKED_COMMIT"
+          python3 tools/package-release.py --out "$RUNNER_TEMP/servo-release-assets" verify --require-clean --commit "$CHECKED_COMMIT" --require-checksums
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "A release already exists for $RELEASE_TAG. No release or asset will be overwritten." >&2
+            exit 1
+          fi
+      - name: Create a new draft release
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          version = os.environ['RELEASE_VERSION']
+          commit = os.environ['CHECKED_COMMIT']
+          repo = os.environ['GITHUB_REPOSITORY']
+          notes = (
+              f'Servo Assets {version}\n\n'
+              f'Built from commit `{commit}` after the complete check gate.\n\n'
+              '- `servo-assets-<version>.zip`: commands@0.2 with embedded design source snapshots.\n'
+              '- `servo-assets-legacy-<version>.zip`: commands@0.1 compatibility edition.\n'
+              '- `servo-assets-source-<version>.zip`: source, locked dependencies and contribution templates.\n\n'
+              'Verify the ZIPs with `SHA256SUMS.txt`. This draft remains unpublished until its artifacts are reviewed.\n\n'
+              f'[Release verification instructions](https://github.com/{repo}/blob/{commit}/docs/releasing.md)\n'
+          )
+          (Path(os.environ['RUNNER_TEMP']) / 'servo-release-notes.md').write_text(notes, encoding='utf-8')
+          PY
+          assets="$RUNNER_TEMP/servo-release-assets"
+          gh release create "$RELEASE_TAG" \
+            "$assets/servo-assets-$RELEASE_VERSION.zip" \
+            "$assets/servo-assets-$RELEASE_VERSION.zip.sha256" \
+            "$assets/servo-assets-legacy-$RELEASE_VERSION.zip" \
+            "$assets/servo-assets-legacy-$RELEASE_VERSION.zip.sha256" \
+            "$assets/servo-assets-source-$RELEASE_VERSION.zip" \
+            "$assets/servo-assets-source-$RELEASE_VERSION.zip.sha256" \
+            "$assets/SHA256SUMS.txt" "$assets/release-provenance.json" \
+            --repo "$GITHUB_REPOSITORY" --verify-tag --target "$CHECKED_COMMIT" \
+            --draft --title "Servo Assets $RELEASE_VERSION" \
+            --notes-file "$RUNNER_TEMP/servo-release-notes.md"

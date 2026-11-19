@@ -1,0 +1,5 @@
+{
+  "entry": "insert",
+  "params": {"asset_id": "unlisted.servo"},
+  "expect": {"error": "invalid_input", "model": {"body_count": 0}}
+}

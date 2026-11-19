@@ -1,0 +1,17 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xm430-w350-r.drawing"
+  },
+  "expect": {
+    "model": {
+      "body_count": 14
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.xm430-w350-r.drawing",
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

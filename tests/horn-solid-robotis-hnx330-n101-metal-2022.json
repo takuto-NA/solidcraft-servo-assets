@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "robotis.hnx330-n101.metal-2022",
+    "mode": "source-solid"
+  },
+  "expect": {
+    "model": {
+      "body_count": 1
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.hnx330-n101.metal-2022",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

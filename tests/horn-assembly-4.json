@@ -1,0 +1,24 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xm540-w270-r.reference-20190318",
+    "horn_id": "robotis.hn13-n101.reference-20190318"
+  },
+  "expect": {
+    "model": {
+      "body_count": 13
+    },
+    "reply": {
+      "result": {
+        "accessories": [
+          {
+            "mount": {
+              "placement_basis": "documented",
+              "compatibility": "documented"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

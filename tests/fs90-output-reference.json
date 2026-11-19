@@ -1,0 +1,19 @@
+{
+  "entry": "output-reference",
+  "params": {
+    "asset_id": "feetech.fs90.akizuki-drawing"
+  },
+  "expect": {
+    "reply": {
+      "result": {
+        "representation": "output-reference"
+      }
+    },
+    "model": {
+      "body_count": 1,
+      "total": {
+        "volume_mm3": 55.65237138054711
+      }
+    }
+  }
+}

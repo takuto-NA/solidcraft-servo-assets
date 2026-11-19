@@ -1,0 +1,4453 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.7",
+  "sources": [
+    {
+      "id": "robotis-xm430-case-drawing",
+      "publisher": "ROBOTIS",
+      "title": "XM430/XH430 HINGE reference drawing, 2019-03-19, official download 157",
+      "url": "https://www.robotis.com/service/download.php?no=157",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-internal-header-photo",
+      "publisher": "ROBOTIS",
+      "title": "Official X-series internal-header and back-case cable routing photograph",
+      "url": "https://emanual.robotis.com/assets/images/dxl/x/assembly/common/x-series_cable_assembly.png",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-w210-manual",
+      "publisher": "ROBOTIS",
+      "title": "XM430-W210-T/R official e-manual, shared X 430 drawing link",
+      "url": "https://emanual.robotis.com/docs/en/dxl/x/xm430-w210/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-w350-manual",
+      "publisher": "ROBOTIS",
+      "title": "XM430-W350-T/R official e-manual",
+      "url": "https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-w350-r-shop",
+      "publisher": "ROBOTIS",
+      "title": "XM430-W350-R official product record 902-0118-000",
+      "url": "https://en.robotis.com/shop_en/item.php?it_id=902-0118-000",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-w350-t-shop",
+      "publisher": "ROBOTIS",
+      "title": "XM430-W350-T official product record 902-0124-000",
+      "url": "https://en.robotis.com/shop_en/item.php?it_id=902-0124-000",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "robotis-xm430-wiring-illustration",
+      "publisher": "ROBOTIS",
+      "title": "Official X-series wiring through back-case illustration",
+      "url": "https://emanual.robotis.com/assets/images/dxl/x/wiring_through_back_case.jpg",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "assets": [
+    {
+      "id": "robotis.xm430-w350-t.drawing",
+      "manufacturer": "ROBOTIS",
+      "model": "XM430-W350-T",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "serial-bus-servo",
+      "seller_items": [
+        {
+          "seller": "ROBOTIS",
+          "sku": "902-0124-000",
+          "url": "https://en.robotis.com/shop_en/item.php?it_id=902-0124-000"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 46.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 46.5 long body dimension",
+            "method": "drawing",
+            "note": "Bare case length; drawing installed accessories are excluded from this case box."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 28.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 28.5 body width",
+            "method": "drawing",
+            "note": "Case width; no horn or cable included."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 34,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Side elevation 34 body depth",
+            "method": "drawing",
+            "note": "Case depth between rear and front body planes; installed horns protrude outside this dimension."
+          }
+        },
+        "axis_from_near_end": {
+          "nominal_mm": 11.25,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 11.25 from case edge to output centerline",
+            "method": "drawing",
+            "note": "Direct case edge dimension; shared main/idler axis."
+          }
+        },
+        "case_thread_major_diameter": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Case callouts M2.5 x .45 TAP",
+            "method": "drawing",
+            "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+          }
+        },
+        "case_thread_pitch": {
+          "nominal_mm": 0.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "All case tap callouts, M2.5 x .45",
+            "method": "drawing",
+            "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+          }
+        },
+        "case_tap_depth_max": {
+          "nominal_mm": 3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Case tap callouts, DP 3.0(MAX.)",
+            "method": "drawing",
+            "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+          }
+        },
+        "front_tap_transverse_pitch": {
+          "nominal_mm": 22,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 22 column spacing",
+            "method": "drawing",
+            "note": "Case-column spacing; excludes the accessory 8 x M2 horn pattern."
+          }
+        },
+        "side_tap_longitudinal_pitch": {
+          "nominal_mm": 24,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Long-side elevation 24 between mounting rows",
+            "method": "drawing",
+            "note": "Long-side case mounting rows."
+          }
+        },
+        "side_tap_axial_pitch": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Long-side elevation 12 between depth columns",
+            "method": "drawing",
+            "note": "Case-depth mounting columns."
+          }
+        },
+        "far_end_tap_transverse_pitch": {
+          "nominal_mm": 16,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Far-end elevation 16 between mounting columns",
+            "method": "drawing",
+            "note": "Transverse far-end tap columns."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Bare case envelope, no horns",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Main and idler horns",
+            "Bare output coupling mating form",
+            "Cables and mating plugs",
+            "Edge radii",
+            "Manufacturing tolerance"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "case front M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-front",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-side-negative-y": {
+          "title": "case side-negative-y M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-side-negative-y",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-side-positive-y": {
+          "title": "case side-positive-y M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-side-positive-y",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-end-far": {
+          "title": "case end-far M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-end-far",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-front",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              0,
+              34
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              1,
+              0
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front elevation, case face and 11.25 / 8 / 22 dimensions",
+              "method": "drawing",
+              "note": "XY plane at front case surface Z 34; +normal is main-side +Z."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-front-1",
+              "center_mm": [
+                19.25,
+                3.25
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Front: shaft axis 11.25 from near edge; case taps 8 farther along long axis;22 transverse column spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-front-2",
+              "center_mm": [
+                19.25,
+                25.25
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Front: shaft axis 11.25 from near edge; case taps 8 farther along long axis;22 transverse column spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Two case M2.5 x 0.45 taps below the main axis, separate from the 8-hole accessory horn pattern. X=11.25+8=19.25; transverse columns are centered 22 apart in 28.5 width. Depth callout is 3 MAX, not guaranteed engagement."
+        },
+        {
+          "id": "case-side-negative-y",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Long-side elevation, 4 x M2.5 TAP and 4 / 24 / 11 / 12 chain",
+              "method": "drawing",
+              "note": "Localu is case +X, localv is case +Z; outward plane normal -Y."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-side-negative-y-1",
+              "center_mm": [
+                15.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-2",
+              "center_mm": [
+                15.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-3",
+              "center_mm": [
+                39.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-4",
+              "center_mm": [
+                39.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on the Y 0 side. World X=11.25+4 and+24; Z columns 11 / 23 are the drawing 11 / 12 chain in 34 case depth. DP 3 MAX is not a minimum engagement depth."
+        },
+        {
+          "id": "case-side-positive-y",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              28.5,
+              34
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              -1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Opposite long-side elevation, 4 x M2.5 TAP",
+              "method": "drawing",
+              "note": "Localu is case +X and localv is case Z from Z 34; outward normal +Y."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-side-positive-y-1",
+              "center_mm": [
+                15.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-2",
+              "center_mm": [
+                15.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-3",
+              "center_mm": [
+                39.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-4",
+              "center_mm": [
+                39.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on the Y 28.5 side. Localv reverses caseZ, preserving the same 11 / 23 pair. This is a separate physical mounting plane, not an XY projection onto the main face."
+        },
+        {
+          "id": "case-end-far",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              46.5,
+              0,
+              0
+            ],
+            "x_dir": [
+              0,
+              1,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Far short-end elevation,4 x M2.5 TAP with 16 / 11 / 12 dimensions",
+              "method": "drawing",
+              "note": "Localu is case +Y and localv is case +Z; outward normal +X."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-end-far-1",
+              "center_mm": [
+                6.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-2",
+              "center_mm": [
+                6.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-3",
+              "center_mm": [
+                22.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-4",
+              "center_mm": [
+                22.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on X 46.5 far end. Columns are centered 16 apart in 28.5 case width; axial-plane coordinates 11 / 23 follow the dimensioned 11 / 12 chain. DP 3 MAX does not guarantee minimum engagement."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "bus-negative-y",
+          "attachment": "detachable",
+          "bundle_count": null,
+          "conductors_per_bundle": null,
+          "lead_length": null,
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "robotis-xm430-wiring-illustration",
+              "locator": "Two opposed-side headers depicted in back-case wiring sequence",
+              "method": "drawing",
+              "note": "One receptacle per port; attached accessories are not intrinsic bundles."
+            }
+          },
+          "contact_count": {
+            "value": 3,
+            "evidence": {
+              "source": "robotis-xm430-w350-manual",
+              "locator": "Connector Information: TTL / JST B3B-EH-A",
+              "method": "specification",
+              "note": "Contact count of each PCB header. No attached wire/conductor count is inferred."
+            }
+          },
+          "exit_observation": {
+            "source": "robotis-xm430-wiring-illustration",
+            "note": "Two headers are accessible through opposite long-side rear-cover windows; the hollow back case also permits routing a detachable cable through the idler opening. A routing opening is not a third electrical receptacle."
+          },
+          "unknown": [
+            "Case-relative connector shell coordinates and exact pose",
+            "Mating plug insertion/latch clearance",
+            "Socket shell envelope and key geometry",
+            "Pin depth and cross-section",
+            "Attached cable selection, direction and bend clearance"
+          ]
+        },
+        {
+          "id": "bus-positive-y",
+          "attachment": "detachable",
+          "bundle_count": null,
+          "conductors_per_bundle": null,
+          "lead_length": null,
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "robotis-xm430-wiring-illustration",
+              "locator": "Two opposed-side headers depicted in back-case wiring sequence",
+              "method": "drawing",
+              "note": "One receptacle per port; attached accessories are not intrinsic bundles."
+            }
+          },
+          "contact_count": {
+            "value": 3,
+            "evidence": {
+              "source": "robotis-xm430-w350-manual",
+              "locator": "Connector Information: TTL / JST B3B-EH-A",
+              "method": "specification",
+              "note": "Contact count of each PCB header. No attached wire/conductor count is inferred."
+            }
+          },
+          "exit_observation": {
+            "source": "robotis-xm430-wiring-illustration",
+            "note": "Two headers are accessible through opposite long-side rear-cover windows; the hollow back case also permits routing a detachable cable through the idler opening. A routing opening is not a third electrical receptacle."
+          },
+          "unknown": [
+            "Case-relative connector shell coordinates and exact pose",
+            "Mating plug insertion/latch clearance",
+            "Socket shell envelope and key geometry",
+            "Pin depth and cross-section",
+            "Attached cable selection, direction and bend clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "envelope_minimum",
+            "origin_mm": [
+              11.25,
+              14.25,
+              34
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front/rear elevations: case edge 11.25, transverse body centerline, side body depth 34",
+              "method": "derived",
+              "note": "Axis X 11.25 is directly dimensioned; Y=28.5 / 2=14.25 follows the drawn transverse centerline. Z 34 chooses the front case plane as a point on the axis line, not a physical shaft-root or seating height. Opposed output/idler views share the source centerline."
+            }
+          },
+          "housing_top_dimension": null,
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Bare shaft/spline and rear retention mating profiles",
+            "Physical shaft roots and protruding heights without accessory horns",
+            "Horn/idler seating planes",
+            "Neutral angular phase",
+            "Coordinate tolerances"
+          ]
+        },
+        {
+          "id": "idler",
+          "axis": {
+            "frame": "envelope_minimum",
+            "origin_mm": [
+              11.25,
+              14.25,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front/rear elevations: case edge 11.25, transverse body centerline, side body depth 34",
+              "method": "derived",
+              "note": "Axis X 11.25 is directly dimensioned; Y=28.5 / 2=14.25 follows the drawn transverse centerline. Z 0 chooses the rear case plane as a point on the axis line, not a physical shaft-root or seating height. Opposed output/idler views share the source centerline."
+            }
+          },
+          "housing_top_dimension": null,
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Bare shaft/spline and rear retention mating profiles",
+            "Physical shaft roots and protruding heights without accessory horns",
+            "Horn/idler seating planes",
+            "Neutral angular phase",
+            "Coordinate tolerances"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "Bare actuator model: NO main horn, idler horn, bracket, spacer, mounting screw, cable or mating plug is installed. The published HINGE drawing depicts accessory horns; its 8 x M2 x 0.4/PCD 16 circles are deliberately excluded from bare-case mount groups and geometry.",
+          "Case frame is long X 0 .. 46.5, width Y 0 .. 28.5, rear/idler face Z 0 and main face Z 34. Source axis is 11.25 from the near short edge and on the transverse centerline Y 14.25. Axis plane origins are reference points on the same line, not measured physical shaft roots.",
+          "Four formal mounting planes expose 14 source-backed M2.5 x 0.45 case tap centers. DP 3.0(MAX.) is a maximum source callout only; no minimum safe engagement or allowed screw length is inferred. Visible 1.2 mm shallow major-diameter pockets are illustrative markers, not thread/tap-drill geometry.",
+          "The near short end shows two extra taps, but its transverse registration is not separately dimensioned in that view. These two visual pockets use the opposite-end column spacing as a PREVIEW assumption and have no published mount group.",
+          "Main coupling D 6 x 2.6 at Z 32.6 and rear annulus D 15/D 10 x 1.2 are provisional visual markers only. Horn seating, bare spline/tooth form, rear retention interface and all formal shaft height extents remain unknown.",
+          "Two detachable bus receptacles occupy opposed long-side rear-cover windows. Shell dimensions/coordinates, contact marker 2.5 pitch and latch/key/insertion clearances are PREVIEW planning geometry; contact counts are sourced. No intrinsic cable bundles or conductors are asserted.",
+          "The grey body and amber markers are display colors for feature visibility, not an assertion of factory material/finish. Edge radii, cover seams, screw-head shapes and rear cover details are simplified."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "DRAWING CASE / THREAD-LOCATION MARKERS",
+            "basis": "source_body_envelope_and_mount_centers_with_simplified_detail",
+            "note": "Body 46.5 x 28.5 x 34 and 14 published case tap centers are sourced. Visible D 2.5 shallow 1.2 mm pockets use THREAD MAJOR diameter for location only, not factory drill/thread geometry. Near-end 2 pockets, corner screw recesses, edge radii, socket windows and output recess profiles are simplified; no screw engagement is established by a preview pocket.",
+            "color": "#596778",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                46.5,
+                28.5,
+                34
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    -0.1,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    28.6,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    -0.1,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    28.6,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    -0.1,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    28.6,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    -0.1,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    28.6,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    6.25,
+                    11
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    6.25,
+                    23
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    22.25,
+                    11
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    22.25,
+                    23
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -0.1,
+                    6.25,
+                    23
+                  ],
+                  "axis": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -0.1,
+                    22.25,
+                    23
+                  ],
+                  "axis": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    3.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    25.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    3.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    25.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    32.6
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 11,
+                  "height_mm": 1.5
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 16,
+                  "height_mm": 1.4
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 10,
+                  "height_mm": 3.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    22,
+                    10.25,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    7,
+                    8,
+                    1.1
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    35.8,
+                    10.55,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    5.4,
+                    7.4,
+                    0.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    23.4,
+                    -0.1,
+                    1
+                  ],
+                  "size_mm": [
+                    11.2,
+                    3.2,
+                    6.5
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    23.4,
+                    25.4,
+                    1
+                  ],
+                  "size_mm": [
+                    11.2,
+                    3.2,
+                    6.5
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "main-shaft",
+            "label": "BARE MAIN COUPLING MARKER / APPROX",
+            "basis": "source_axis_with_preview_bare_coupling_outline",
+            "note": "AxisXY11.25 / 14.25 follows the case drawing. This D 6 x 2.6 cylinder at Z 32.6 is an illustrative bare coupling marker, not an installed HN12 horn or a sourced spline/shaft envelope. Mating diameter, tooth form, axial seating height and neutral angle remain unknown.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                11.25,
+                14.25,
+                32.6
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6,
+              "height_mm": 2.6
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    32.5
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.8
+                }
+              }
+            ]
+          },
+          {
+            "id": "idler-seat",
+            "label": "BARE REAR IDLER SEAT / APPROX",
+            "basis": "source_coaxial_axis_with_preview_unoccupied_seat_outline",
+            "note": "The rear case opening is unoccupied: NO idler horn is installed. D 15/D 10 annular marker and 1.2 depth show the location only; bore/retention geometry and axial fit are not sourced. Formal axis is on the rear case plane and points -Z.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                11.25,
+                14.25,
+                0
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 15,
+              "height_mm": 1.2
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 10,
+                  "height_mm": 1.4
+                }
+              }
+            ]
+          },
+          {
+            "id": "status-window",
+            "label": "STATUS WINDOW / APPROX",
+            "basis": "photo_topology_with_preview_envelope",
+            "note": "Small rear cover/status detail is a visual planning marker; exact size and position are not dimensioned by the body drawing.",
+            "color": "#b8c9ce",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                36,
+                10.75,
+                0
+              ],
+              "size_mm": [
+                5,
+                7,
+                0.4
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-socket",
+            "label": "BUS-NEGATIVE-Y / APPROX",
+            "basis": "source_two_receptacle_topology_with_preview_shell_and_pose",
+            "note": "One of two detachable opposed-side JST EH receptacles, with 3 contacts. Shell dimensions and pose are planning values. It sits in the rear-cover side window, not on the output face. No mating plug or wire is attached.",
+            "color": "#e5d9b6",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                24,
+                0,
+                1.5
+              ],
+              "size_mm": [
+                10,
+                2.5,
+                5.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    24.6,
+                    -0.1,
+                    2.1
+                  ],
+                  "size_mm": [
+                    8.8,
+                    1.9,
+                    4.3
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "bus-negative-y-contact-1",
+            "label": "BUS-NEGATIVE-Y CONTACT 1 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                26.5,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-contact-2",
+            "label": "BUS-NEGATIVE-Y CONTACT 2 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                29.0,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-contact-3",
+            "label": "BUS-NEGATIVE-Y CONTACT 3 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                31.5,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-socket",
+            "label": "BUS-POSITIVE-Y / APPROX",
+            "basis": "source_two_receptacle_topology_with_preview_shell_and_pose",
+            "note": "One of two detachable opposed-side JST EH receptacles, with 3 contacts. Shell dimensions and pose are planning values. It sits in the rear-cover side window, not on the output face. No mating plug or wire is attached.",
+            "color": "#e5d9b6",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                24,
+                26.0,
+                1.5
+              ],
+              "size_mm": [
+                10,
+                2.5,
+                5.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    24.6,
+                    26.7,
+                    2.1
+                  ],
+                  "size_mm": [
+                    8.8,
+                    1.9,
+                    4.3
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "bus-positive-y-contact-1",
+            "label": "BUS-POSITIVE-Y CONTACT 1 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                26.5,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-contact-2",
+            "label": "BUS-POSITIVE-Y CONTACT 2 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                29.0,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-contact-3",
+            "label": "BUS-POSITIVE-Y CONTACT 3 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                31.5,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [],
+        "notes": [
+          {
+            "anchor_mm": [
+              11.25,
+              14.25,
+              35.2
+            ],
+            "text": "MAIN AXIS / +Z\nSource XY 11.25 / 14.25; bare coupling outline APPROX\nNO installed horn or horn-hole pattern"
+          },
+          {
+            "anchor_mm": [
+              11.25,
+              14.25,
+              0
+            ],
+            "text": "REAR IDLER AXIS / -Z\nUnoccupied case opening; idler-seat contour APPROX\nNO installed idler horn"
+          },
+          {
+            "anchor_mm": [
+              15.25,
+              0,
+              11
+            ],
+            "text": "SIDE CASE TAPS\nM2.5 x 0.45; DP 3.0 MAX source callout\nMajor-diameter markers only; no engagement guarantee"
+          },
+          {
+            "anchor_mm": [
+              29.0,
+              0,
+              4.25
+            ],
+            "text": "DETACHABLE BUS / 3 CONTACTS\nTwo opposed-side receptacles; no attached wires\nShell positions and clearances APPROX"
+          },
+          {
+            "anchor_mm": [
+              46.5,
+              6.25,
+              11
+            ],
+            "text": "FAR-END CASE TAPS\nSource 16 x 12 pattern; four M2.5 x 0.45 taps\nLocal mounting plane normal +X"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              55,
+              43
+            ],
+            "anchor_mm": [
+              11.25,
+              35.2
+            ],
+            "text": "XM430 BARE CASE - MAIN / IDLER AXES SOURCE-LOCATED",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              33
+            ],
+            "anchor_mm": [
+              19.25,
+              34
+            ],
+            "text": "Case taps M2.5 x 0.45, DP 3 MAX; shallow markers only",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              20
+            ],
+            "anchor_mm": [
+              39.25,
+              23
+            ],
+            "text": "14 sourced case centers on 4 mounting planes; no horn",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              7
+            ],
+            "anchor_mm": [
+              29.0,
+              4.25
+            ],
+            "text": "2 detachable 3-contact ports; shell pose APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              -7
+            ],
+            "anchor_mm": [
+              11.25,
+              0
+            ],
+            "text": "Bare coupling/idler profiles APPROX; no mating plug/cable",
+            "cable_port": null
+          }
+        ]
+      },
+      "missing_mount_dimensions": [
+        "Near-end two-tap transverse registration in that projection",
+        "Bare output and rear idler mating profiles/axial seating heights",
+        "Exact socket poses and mating-plug/latch clearance",
+        "Manufacturing tolerances"
+      ],
+      "observations": [
+        {
+          "source": "robotis-xm430-w350-manual",
+          "note": "W350 T and R share the published 28.5 x 46.5 x 34 case envelope; gear ratio 353.5:1. The suffix distinguishes TTL3-contact and RS-4854-contact interfaces, not an inferred geometry revision."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Official X 430 download 157 resolves to the ROBOTIS-published XM,H-430_idler.pdf, dated 2019 / 03 / 19 and titled XM430/XH430(HINGE). It depicts installed main/idler horns. Those accessory 8 x M2 x 0.4/PCD 16 holes, horn circles and protrusion dimensions are not bare-case mounting or bare shaft dimensions."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Case taps are M2.5 x 0.45 with DP 3.0(MAX.). Four declared planes expose 14 source-located body mounting centers. Nominal thread-major reference circles are not tap-drill or clearance holes; maximum depth is not minimum usable engagement."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Near-end two-tap appearance is retained as simplified geometry only; its transverse registration is not separately dimensioned in that view. No formal near-end mounting group is asserted."
+        },
+        {
+          "source": "robotis-xm430-w350-manual",
+          "note": "Connector Information identifies TTL JST B3B-EH-A PCB header and EHR-03 mating housing. Model includes two static receptacles and no attached plugs/cables."
+        },
+        {
+          "source": "robotis-xm430-wiring-illustration",
+          "note": "Official back-case wiring illustrations show the two detachable PCB headers and the rear hollow routing opening. Case-window and connector-shell positions are qualitative, not pixel-measured dimensions."
+        },
+        {
+          "source": "robotis-xm430-internal-header-photo",
+          "note": "Internal PCB/back-case photograph confirms two electrical headers; one cable may be routed through the hollow idler area. The cable path is distinct from the receptacle count."
+        },
+        {
+          "source": "robotis-xm430-w210-manual",
+          "note": "XM430-W210 manual links the identical official X 430 drawing download 157. This is a mechanical-reference crosslink only; no W210 electrical/performance identity or new W210 asset is implied."
+        },
+        {
+          "source": "robotis-xm430-w350-t-shop",
+          "note": "Official item 902-0124-000 identifies XM430-W350-T. Included HN12-N101 horn and cables are separate package components and are not modeled as installed accessories."
+        }
+      ]
+    },
+    {
+      "id": "robotis.xm430-w350-r.drawing",
+      "manufacturer": "ROBOTIS",
+      "model": "XM430-W350-R",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "serial-bus-servo",
+      "seller_items": [
+        {
+          "seller": "ROBOTIS",
+          "sku": "902-0118-000",
+          "url": "https://en.robotis.com/shop_en/item.php?it_id=902-0118-000"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 46.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 46.5 long body dimension",
+            "method": "drawing",
+            "note": "Bare case length; drawing installed accessories are excluded from this case box."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 28.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 28.5 body width",
+            "method": "drawing",
+            "note": "Case width; no horn or cable included."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 34,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Side elevation 34 body depth",
+            "method": "drawing",
+            "note": "Case depth between rear and front body planes; installed horns protrude outside this dimension."
+          }
+        },
+        "axis_from_near_end": {
+          "nominal_mm": 11.25,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 11.25 from case edge to output centerline",
+            "method": "drawing",
+            "note": "Direct case edge dimension; shared main/idler axis."
+          }
+        },
+        "case_thread_major_diameter": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Case callouts M2.5 x .45 TAP",
+            "method": "drawing",
+            "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+          }
+        },
+        "case_thread_pitch": {
+          "nominal_mm": 0.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "All case tap callouts, M2.5 x .45",
+            "method": "drawing",
+            "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+          }
+        },
+        "case_tap_depth_max": {
+          "nominal_mm": 3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Case tap callouts, DP 3.0(MAX.)",
+            "method": "drawing",
+            "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+          }
+        },
+        "front_tap_transverse_pitch": {
+          "nominal_mm": 22,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Front elevation 22 column spacing",
+            "method": "drawing",
+            "note": "Case-column spacing; excludes the accessory 8 x M2 horn pattern."
+          }
+        },
+        "side_tap_longitudinal_pitch": {
+          "nominal_mm": 24,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Long-side elevation 24 between mounting rows",
+            "method": "drawing",
+            "note": "Long-side case mounting rows."
+          }
+        },
+        "side_tap_axial_pitch": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Long-side elevation 12 between depth columns",
+            "method": "drawing",
+            "note": "Case-depth mounting columns."
+          }
+        },
+        "far_end_tap_transverse_pitch": {
+          "nominal_mm": 16,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "robotis-xm430-case-drawing",
+            "locator": "Far-end elevation 16 between mounting columns",
+            "method": "drawing",
+            "note": "Transverse far-end tap columns."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Bare case envelope, no horns",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Main and idler horns",
+            "Bare output coupling mating form",
+            "Cables and mating plugs",
+            "Edge radii",
+            "Manufacturing tolerance"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "case front M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-front",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-side-negative-y": {
+          "title": "case side-negative-y M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-side-negative-y",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-side-positive-y": {
+          "title": "case side-positive-y M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-side-positive-y",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        },
+        "mounting-end-far": {
+          "title": "case end-far M2.5 x 0.45 reference centers",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-end-far",
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Helical thread profile",
+            "Factory tap-drill diameter",
+            "Guaranteed engagement or screw length",
+            "Installed screws"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-front",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              0,
+              34
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              1,
+              0
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front elevation, case face and 11.25 / 8 / 22 dimensions",
+              "method": "drawing",
+              "note": "XY plane at front case surface Z 34; +normal is main-side +Z."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-front-1",
+              "center_mm": [
+                19.25,
+                3.25
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Front: shaft axis 11.25 from near edge; case taps 8 farther along long axis;22 transverse column spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-front-2",
+              "center_mm": [
+                19.25,
+                25.25
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Front: shaft axis 11.25 from near edge; case taps 8 farther along long axis;22 transverse column spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Two case M2.5 x 0.45 taps below the main axis, separate from the 8-hole accessory horn pattern. X=11.25+8=19.25; transverse columns are centered 22 apart in 28.5 width. Depth callout is 3 MAX, not guaranteed engagement."
+        },
+        {
+          "id": "case-side-negative-y",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Long-side elevation, 4 x M2.5 TAP and 4 / 24 / 11 / 12 chain",
+              "method": "drawing",
+              "note": "Localu is case +X, localv is case +Z; outward plane normal -Y."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-side-negative-y-1",
+              "center_mm": [
+                15.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-2",
+              "center_mm": [
+                15.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-3",
+              "center_mm": [
+                39.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-negative-y-4",
+              "center_mm": [
+                39.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Long side: first row 4 from axis, row pitch 24; depth columns 11 from case face and 12 apart",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on the Y 0 side. World X=11.25+4 and+24; Z columns 11 / 23 are the drawing 11 / 12 chain in 34 case depth. DP 3 MAX is not a minimum engagement depth."
+        },
+        {
+          "id": "case-side-positive-y",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              0,
+              28.5,
+              34
+            ],
+            "x_dir": [
+              1,
+              0,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              -1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Opposite long-side elevation, 4 x M2.5 TAP",
+              "method": "drawing",
+              "note": "Localu is case +X and localv is case Z from Z 34; outward normal +Y."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-side-positive-y-1",
+              "center_mm": [
+                15.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-2",
+              "center_mm": [
+                15.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-3",
+              "center_mm": [
+                39.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-side-positive-y-4",
+              "center_mm": [
+                39.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Opposite long side: same 4-tap source layout;24 row pitch and 12 column pitch",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on the Y 28.5 side. Localv reverses caseZ, preserving the same 11 / 23 pair. This is a separate physical mounting plane, not an XY projection onto the main face."
+        },
+        {
+          "id": "case-end-far",
+          "frame": "envelope_minimum",
+          "plane_height_dimension": null,
+          "plane": {
+            "origin_mm": [
+              46.5,
+              0,
+              0
+            ],
+            "x_dir": [
+              0,
+              1,
+              0
+            ],
+            "y_dir": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Far short-end elevation,4 x M2.5 TAP with 16 / 11 / 12 dimensions",
+              "method": "drawing",
+              "note": "Localu is case +Y and localv is case +Z; outward normal +X."
+            }
+          },
+          "holes": [
+            {
+              "id": "case-end-far-1",
+              "center_mm": [
+                6.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-2",
+              "center_mm": [
+                6.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-3",
+              "center_mm": [
+                22.25,
+                11
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            },
+            {
+              "id": "case-end-far-4",
+              "center_mm": [
+                22.25,
+                23
+              ],
+              "diameter": {
+                "nominal_mm": 2.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "robotis-xm430-case-drawing",
+                  "locator": "Case callouts M2.5 x .45 TAP",
+                  "method": "drawing",
+                  "note": "Nominal THREAD MAJOR diameter used only for reference circles and visible simplified bores. It is not the factory tap-drill or a clearance-hole diameter."
+                }
+              },
+              "evidence": {
+                "source": "robotis-xm430-case-drawing",
+                "locator": "Far end:16 transverse spacing,11 offset from case face,12 row spacing",
+                "method": "drawing",
+                "note": "Nominal source center on this declared case plane. Circles use the thread major diameter only; no helical thread or actual drill profile is generated."
+              },
+              "thread": {
+                "designation": "M2.5x0.45",
+                "pitch_mm": {
+                  "nominal_mm": 0.45,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "All case tap callouts, M2.5 x .45",
+                    "method": "drawing",
+                    "note": "Published metric thread pitch. This is not a clearance-hole or tap-drill dimension."
+                  }
+                },
+                "specified_depth_mm": {
+                  "nominal_mm": 3,
+                  "tolerance_mm": null,
+                  "evidence": {
+                    "source": "robotis-xm430-case-drawing",
+                    "locator": "Case tap callouts, DP 3.0(MAX.)",
+                    "method": "drawing",
+                    "note": "MAXIMUM callout only. It does not guarantee 3 mm minimum usable thread engagement or bore depth, and is not a screw-length recommendation."
+                  }
+                }
+              }
+            }
+          ],
+          "note": "Four M2.5 x 0.45 taps on X 46.5 far end. Columns are centered 16 apart in 28.5 case width; axial-plane coordinates 11 / 23 follow the dimensioned 11 / 12 chain. DP 3 MAX does not guarantee minimum engagement."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "bus-negative-y",
+          "attachment": "detachable",
+          "bundle_count": null,
+          "conductors_per_bundle": null,
+          "lead_length": null,
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "robotis-xm430-wiring-illustration",
+              "locator": "Two opposed-side headers depicted in back-case wiring sequence",
+              "method": "drawing",
+              "note": "One receptacle per port; attached accessories are not intrinsic bundles."
+            }
+          },
+          "contact_count": {
+            "value": 4,
+            "evidence": {
+              "source": "robotis-xm430-w350-manual",
+              "locator": "Connector Information: RS-485 / JST B4B-EH-A",
+              "method": "specification",
+              "note": "Contact count of each PCB header. No attached wire/conductor count is inferred."
+            }
+          },
+          "exit_observation": {
+            "source": "robotis-xm430-wiring-illustration",
+            "note": "Two headers are accessible through opposite long-side rear-cover windows; the hollow back case also permits routing a detachable cable through the idler opening. A routing opening is not a third electrical receptacle."
+          },
+          "unknown": [
+            "Case-relative connector shell coordinates and exact pose",
+            "Mating plug insertion/latch clearance",
+            "Socket shell envelope and key geometry",
+            "Pin depth and cross-section",
+            "Attached cable selection, direction and bend clearance"
+          ]
+        },
+        {
+          "id": "bus-positive-y",
+          "attachment": "detachable",
+          "bundle_count": null,
+          "conductors_per_bundle": null,
+          "lead_length": null,
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "robotis-xm430-wiring-illustration",
+              "locator": "Two opposed-side headers depicted in back-case wiring sequence",
+              "method": "drawing",
+              "note": "One receptacle per port; attached accessories are not intrinsic bundles."
+            }
+          },
+          "contact_count": {
+            "value": 4,
+            "evidence": {
+              "source": "robotis-xm430-w350-manual",
+              "locator": "Connector Information: RS-485 / JST B4B-EH-A",
+              "method": "specification",
+              "note": "Contact count of each PCB header. No attached wire/conductor count is inferred."
+            }
+          },
+          "exit_observation": {
+            "source": "robotis-xm430-wiring-illustration",
+            "note": "Two headers are accessible through opposite long-side rear-cover windows; the hollow back case also permits routing a detachable cable through the idler opening. A routing opening is not a third electrical receptacle."
+          },
+          "unknown": [
+            "Case-relative connector shell coordinates and exact pose",
+            "Mating plug insertion/latch clearance",
+            "Socket shell envelope and key geometry",
+            "Pin depth and cross-section",
+            "Attached cable selection, direction and bend clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "envelope_minimum",
+            "origin_mm": [
+              11.25,
+              14.25,
+              34
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front/rear elevations: case edge 11.25, transverse body centerline, side body depth 34",
+              "method": "derived",
+              "note": "Axis X 11.25 is directly dimensioned; Y=28.5 / 2=14.25 follows the drawn transverse centerline. Z 34 chooses the front case plane as a point on the axis line, not a physical shaft-root or seating height. Opposed output/idler views share the source centerline."
+            }
+          },
+          "housing_top_dimension": null,
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Bare shaft/spline and rear retention mating profiles",
+            "Physical shaft roots and protruding heights without accessory horns",
+            "Horn/idler seating planes",
+            "Neutral angular phase",
+            "Coordinate tolerances"
+          ]
+        },
+        {
+          "id": "idler",
+          "axis": {
+            "frame": "envelope_minimum",
+            "origin_mm": [
+              11.25,
+              14.25,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "evidence": {
+              "source": "robotis-xm430-case-drawing",
+              "locator": "Front/rear elevations: case edge 11.25, transverse body centerline, side body depth 34",
+              "method": "derived",
+              "note": "Axis X 11.25 is directly dimensioned; Y=28.5 / 2=14.25 follows the drawn transverse centerline. Z 0 chooses the rear case plane as a point on the axis line, not a physical shaft-root or seating height. Opposed output/idler views share the source centerline."
+            }
+          },
+          "housing_top_dimension": null,
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Bare shaft/spline and rear retention mating profiles",
+            "Physical shaft roots and protruding heights without accessory horns",
+            "Horn/idler seating planes",
+            "Neutral angular phase",
+            "Coordinate tolerances"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "Bare actuator model: NO main horn, idler horn, bracket, spacer, mounting screw, cable or mating plug is installed. The published HINGE drawing depicts accessory horns; its 8 x M2 x 0.4/PCD 16 circles are deliberately excluded from bare-case mount groups and geometry.",
+          "Case frame is long X 0 .. 46.5, width Y 0 .. 28.5, rear/idler face Z 0 and main face Z 34. Source axis is 11.25 from the near short edge and on the transverse centerline Y 14.25. Axis plane origins are reference points on the same line, not measured physical shaft roots.",
+          "Four formal mounting planes expose 14 source-backed M2.5 x 0.45 case tap centers. DP 3.0(MAX.) is a maximum source callout only; no minimum safe engagement or allowed screw length is inferred. Visible 1.2 mm shallow major-diameter pockets are illustrative markers, not thread/tap-drill geometry.",
+          "The near short end shows two extra taps, but its transverse registration is not separately dimensioned in that view. These two visual pockets use the opposite-end column spacing as a PREVIEW assumption and have no published mount group.",
+          "Main coupling D 6 x 2.6 at Z 32.6 and rear annulus D 15/D 10 x 1.2 are provisional visual markers only. Horn seating, bare spline/tooth form, rear retention interface and all formal shaft height extents remain unknown.",
+          "Two detachable bus receptacles occupy opposed long-side rear-cover windows. Shell dimensions/coordinates, contact marker 2.5 pitch and latch/key/insertion clearances are PREVIEW planning geometry; contact counts are sourced. No intrinsic cable bundles or conductors are asserted.",
+          "The grey body and amber markers are display colors for feature visibility, not an assertion of factory material/finish. Edge radii, cover seams, screw-head shapes and rear cover details are simplified."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "DRAWING CASE / THREAD-LOCATION MARKERS",
+            "basis": "source_body_envelope_and_mount_centers_with_simplified_detail",
+            "note": "Body 46.5 x 28.5 x 34 and 14 published case tap centers are sourced. Visible D 2.5 shallow 1.2 mm pockets use THREAD MAJOR diameter for location only, not factory drill/thread geometry. Near-end 2 pockets, corner screw recesses, edge radii, socket windows and output recess profiles are simplified; no screw engagement is established by a preview pocket.",
+            "color": "#596778",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                46.5,
+                28.5,
+                34
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    -0.1,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    28.6,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    -0.1,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    15.25,
+                    28.6,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    -0.1,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    28.6,
+                    11
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    -0.1,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    39.25,
+                    28.6,
+                    23
+                  ],
+                  "axis": [
+                    0,
+                    -1,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    6.25,
+                    11
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    6.25,
+                    23
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    22.25,
+                    11
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    46.6,
+                    22.25,
+                    23
+                  ],
+                  "axis": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -0.1,
+                    6.25,
+                    23
+                  ],
+                  "axis": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -0.1,
+                    22.25,
+                    23
+                  ],
+                  "axis": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "diameter_mm": 2.5,
+                  "height_mm": 1.3
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    3.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    3.25,
+                    25.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    3.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    3.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    25.25,
+                    34.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    43.25,
+                    25.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.6,
+                  "height_mm": 1.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    32.6
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 11,
+                  "height_mm": 1.5
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 16,
+                  "height_mm": 1.4
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 10,
+                  "height_mm": 3.1
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    22,
+                    10.25,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    7,
+                    8,
+                    1.1
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    35.8,
+                    10.55,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    5.4,
+                    7.4,
+                    0.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    22.15,
+                    -0.1,
+                    1
+                  ],
+                  "size_mm": [
+                    13.7,
+                    3.2,
+                    6.5
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    22.15,
+                    25.4,
+                    1
+                  ],
+                  "size_mm": [
+                    13.7,
+                    3.2,
+                    6.5
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "main-shaft",
+            "label": "BARE MAIN COUPLING MARKER / APPROX",
+            "basis": "source_axis_with_preview_bare_coupling_outline",
+            "note": "AxisXY11.25 / 14.25 follows the case drawing. This D 6 x 2.6 cylinder at Z 32.6 is an illustrative bare coupling marker, not an installed HN12 horn or a sourced spline/shaft envelope. Mating diameter, tooth form, axial seating height and neutral angle remain unknown.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                11.25,
+                14.25,
+                32.6
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6,
+              "height_mm": 2.6
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    32.5
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.8
+                }
+              }
+            ]
+          },
+          {
+            "id": "idler-seat",
+            "label": "BARE REAR IDLER SEAT / APPROX",
+            "basis": "source_coaxial_axis_with_preview_unoccupied_seat_outline",
+            "note": "The rear case opening is unoccupied: NO idler horn is installed. D 15/D 10 annular marker and 1.2 depth show the location only; bore/retention geometry and axial fit are not sourced. Formal axis is on the rear case plane and points -Z.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                11.25,
+                14.25,
+                0
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 15,
+              "height_mm": 1.2
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.25,
+                    14.25,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 10,
+                  "height_mm": 1.4
+                }
+              }
+            ]
+          },
+          {
+            "id": "status-window",
+            "label": "STATUS WINDOW / APPROX",
+            "basis": "photo_topology_with_preview_envelope",
+            "note": "Small rear cover/status detail is a visual planning marker; exact size and position are not dimensioned by the body drawing.",
+            "color": "#b8c9ce",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                36,
+                10.75,
+                0
+              ],
+              "size_mm": [
+                5,
+                7,
+                0.4
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-socket",
+            "label": "BUS-NEGATIVE-Y / APPROX",
+            "basis": "source_two_receptacle_topology_with_preview_shell_and_pose",
+            "note": "One of two detachable opposed-side JST EH receptacles, with 4 contacts. Shell dimensions and pose are planning values. It sits in the rear-cover side window, not on the output face. No mating plug or wire is attached.",
+            "color": "#e5d9b6",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                22.75,
+                0,
+                1.5
+              ],
+              "size_mm": [
+                12.5,
+                2.5,
+                5.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    23.35,
+                    -0.1,
+                    2.1
+                  ],
+                  "size_mm": [
+                    11.3,
+                    1.9,
+                    4.3
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "bus-negative-y-contact-1",
+            "label": "BUS-NEGATIVE-Y CONTACT 1 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                25.25,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-contact-2",
+            "label": "BUS-NEGATIVE-Y CONTACT 2 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                27.75,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-contact-3",
+            "label": "BUS-NEGATIVE-Y CONTACT 3 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                30.25,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-negative-y-contact-4",
+            "label": "BUS-NEGATIVE-Y CONTACT 4 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                32.75,
+                0.2,
+                4.25
+              ],
+              "axis": [
+                0,
+                1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-socket",
+            "label": "BUS-POSITIVE-Y / APPROX",
+            "basis": "source_two_receptacle_topology_with_preview_shell_and_pose",
+            "note": "One of two detachable opposed-side JST EH receptacles, with 4 contacts. Shell dimensions and pose are planning values. It sits in the rear-cover side window, not on the output face. No mating plug or wire is attached.",
+            "color": "#e5d9b6",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                22.75,
+                26.0,
+                1.5
+              ],
+              "size_mm": [
+                12.5,
+                2.5,
+                5.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    23.35,
+                    26.7,
+                    2.1
+                  ],
+                  "size_mm": [
+                    11.3,
+                    1.9,
+                    4.3
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "bus-positive-y-contact-1",
+            "label": "BUS-POSITIVE-Y CONTACT 1 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                25.25,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-contact-2",
+            "label": "BUS-POSITIVE-Y CONTACT 2 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                27.75,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-contact-3",
+            "label": "BUS-POSITIVE-Y CONTACT 3 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                30.25,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          },
+          {
+            "id": "bus-positive-y-contact-4",
+            "label": "BUS-POSITIVE-Y CONTACT 4 / APPROX",
+            "basis": "source_contact_count_with_preview_pin_geometry",
+            "note": "Count matches the official interface connector. Contact pitch 2.5, D 0.5 marker and exact shell-relative registration are visual planning values in this model, not a full connector mating definition or electrical pin-order map.",
+            "color": "#bda360",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                32.75,
+                28.3,
+                4.25
+              ],
+              "axis": [
+                0,
+                -1,
+                0
+              ],
+              "diameter_mm": 0.5,
+              "height_mm": 1.6
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [],
+        "notes": [
+          {
+            "anchor_mm": [
+              11.25,
+              14.25,
+              35.2
+            ],
+            "text": "MAIN AXIS / +Z\nSource XY 11.25 / 14.25; bare coupling outline APPROX\nNO installed horn or horn-hole pattern"
+          },
+          {
+            "anchor_mm": [
+              11.25,
+              14.25,
+              0
+            ],
+            "text": "REAR IDLER AXIS / -Z\nUnoccupied case opening; idler-seat contour APPROX\nNO installed idler horn"
+          },
+          {
+            "anchor_mm": [
+              15.25,
+              0,
+              11
+            ],
+            "text": "SIDE CASE TAPS\nM2.5 x 0.45; DP 3.0 MAX source callout\nMajor-diameter markers only; no engagement guarantee"
+          },
+          {
+            "anchor_mm": [
+              29.0,
+              0,
+              4.25
+            ],
+            "text": "DETACHABLE BUS / 4 CONTACTS\nTwo opposed-side receptacles; no attached wires\nShell positions and clearances APPROX"
+          },
+          {
+            "anchor_mm": [
+              46.5,
+              6.25,
+              11
+            ],
+            "text": "FAR-END CASE TAPS\nSource 16 x 12 pattern; four M2.5 x 0.45 taps\nLocal mounting plane normal +X"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              55,
+              43
+            ],
+            "anchor_mm": [
+              11.25,
+              35.2
+            ],
+            "text": "XM430 BARE CASE - MAIN / IDLER AXES SOURCE-LOCATED",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              33
+            ],
+            "anchor_mm": [
+              19.25,
+              34
+            ],
+            "text": "Case taps M2.5 x 0.45, DP 3 MAX; shallow markers only",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              20
+            ],
+            "anchor_mm": [
+              39.25,
+              23
+            ],
+            "text": "14 sourced case centers on 4 mounting planes; no horn",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              7
+            ],
+            "anchor_mm": [
+              29.0,
+              4.25
+            ],
+            "text": "2 detachable 4-contact ports; shell pose APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55,
+              -7
+            ],
+            "anchor_mm": [
+              11.25,
+              0
+            ],
+            "text": "Bare coupling/idler profiles APPROX; no mating plug/cable",
+            "cable_port": null
+          }
+        ]
+      },
+      "missing_mount_dimensions": [
+        "Near-end two-tap transverse registration in that projection",
+        "Bare output and rear idler mating profiles/axial seating heights",
+        "Exact socket poses and mating-plug/latch clearance",
+        "Manufacturing tolerances"
+      ],
+      "observations": [
+        {
+          "source": "robotis-xm430-w350-manual",
+          "note": "W350 T and R share the published 28.5 x 46.5 x 34 case envelope; gear ratio 353.5:1. The suffix distinguishes TTL3-contact and RS-4854-contact interfaces, not an inferred geometry revision."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Official X 430 download 157 resolves to the ROBOTIS-published XM,H-430_idler.pdf, dated 2019 / 03 / 19 and titled XM430/XH430(HINGE). It depicts installed main/idler horns. Those accessory 8 x M2 x 0.4/PCD 16 holes, horn circles and protrusion dimensions are not bare-case mounting or bare shaft dimensions."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Case taps are M2.5 x 0.45 with DP 3.0(MAX.). Four declared planes expose 14 source-located body mounting centers. Nominal thread-major reference circles are not tap-drill or clearance holes; maximum depth is not minimum usable engagement."
+        },
+        {
+          "source": "robotis-xm430-case-drawing",
+          "note": "Near-end two-tap appearance is retained as simplified geometry only; its transverse registration is not separately dimensioned in that view. No formal near-end mounting group is asserted."
+        },
+        {
+          "source": "robotis-xm430-w350-manual",
+          "note": "Connector Information identifies RS-485 JST B4B-EH-A PCB header and EHR-04 mating housing. Model includes two static receptacles and no attached plugs/cables."
+        },
+        {
+          "source": "robotis-xm430-wiring-illustration",
+          "note": "Official back-case wiring illustrations show the two detachable PCB headers and the rear hollow routing opening. Case-window and connector-shell positions are qualitative, not pixel-measured dimensions."
+        },
+        {
+          "source": "robotis-xm430-internal-header-photo",
+          "note": "Internal PCB/back-case photograph confirms two electrical headers; one cable may be routed through the hollow idler area. The cable path is distinct from the receptacle count."
+        },
+        {
+          "source": "robotis-xm430-w210-manual",
+          "note": "XM430-W210 manual links the identical official X 430 drawing download 157. This is a mechanical-reference crosslink only; no W210 electrical/performance identity or new W210 asset is implied."
+        },
+        {
+          "source": "robotis-xm430-w350-r-shop",
+          "note": "Official item 902-0118-000 identifies XM430-W350-R. Included HN12-N101 horn and cables are separate package components and are not modeled as installed accessories."
+        }
+      ]
+    }
+  ]
+}

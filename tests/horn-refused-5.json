@@ -1,0 +1,13 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "feetech.sts3215-c001.a0",
+    "horn_id": "feetech.sts3215-rear-disc.a0"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

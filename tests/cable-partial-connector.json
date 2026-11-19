@@ -1,0 +1,10 @@
+{
+  "entry": "cable-space",
+  "params": {
+    "asset_id": "towerpro.sg90-analog.configure", "port_id": "servo-lead",
+    "exit_x_mm": 0, "exit_y_mm": 0, "exit_z_mm": 0, "direction": "positive_z",
+    "bundle_width_mm": 3, "bundle_height_mm": 1, "straight_length_mm": 20,
+    "connector_width_mm": 8, "connector_height_mm": 0, "connector_length_mm": 10
+  },
+  "expect": {"error": "invalid_input", "model": {"body_count": 0}}
+}

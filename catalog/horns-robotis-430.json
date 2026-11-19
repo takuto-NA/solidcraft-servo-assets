@@ -1,0 +1,2292 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.9",
+  "sources": [
+    {
+      "id": "horn-rbt-330-metal-pdf",
+      "publisher": "ROBOTIS",
+      "title": "HNX330-N101 reference drawing, 2022-12-21",
+      "url": "https://en.robotis.com/service/download.php?no=2163",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-330-plastic-pdf",
+      "publisher": "ROBOTIS",
+      "title": "XL330/XC330 Horn, DC15_A01_HORN2 reference drawing, 2022-08-22",
+      "url": "https://en.robotis.com/service/download.php?no=2129",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-430-normal-pdf",
+      "publisher": "ROBOTIS",
+      "title": "HN12_N101 reference drawing, 2019-05-22",
+      "url": "https://en.robotis.com/service/download.php?no=1735",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-430-idler-pdf",
+      "publisher": "ROBOTIS",
+      "title": "HN12-I101 reference drawing, 2019-05-22",
+      "url": "https://en.robotis.com/service/download.php?no=1757",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-330-metal-item",
+      "publisher": "ROBOTIS",
+      "title": "HNX330-N101 Set, official item 903-0314-000",
+      "url": "https://en.robotis.com/shop_en/item.php?it_id=903-0314-000",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-430-normal-item",
+      "publisher": "ROBOTIS",
+      "title": "HN12-N101 Set, official item 903-0238-000",
+      "url": "https://en.robotis.com/shop_en/item.php?it_id=903-0238-000",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-430-idler-item",
+      "publisher": "ROBOTIS",
+      "title": "HN12-I101 Set, official item 903-0240-000",
+      "url": "https://en.robotis.com/shop_en/item.php?it_id=903-0240-000",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-rbt-430-assembly-pdf",
+      "publisher": "ROBOTIS",
+      "title": "XM430/XH430 (HINGE) installed N101/I101 reference drawing, 2019-03-19",
+      "url": "https://www.robotis.com/service/download.php?no=157",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "horns": [
+    {
+      "id": "robotis.hnx330-n101.metal-2022",
+      "manufacturer": "ROBOTIS",
+      "model": "HNX330-N101 metal normal horn",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "outer_diameter": {
+          "nominal_mm": 16,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view, diameter 16",
+            "method": "drawing",
+            "note": "Outer flange diameter."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Section A-A, 2.7",
+            "method": "drawing",
+            "note": "Thickness of the outer plate."
+          }
+        },
+        "axial_span": {
+          "nominal_mm": 5.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Section A-A, 5.6",
+            "method": "drawing",
+            "note": "Outer flange face to rear hub end."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 7.4,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Section A-A, diameter 7.4",
+            "method": "drawing",
+            "note": "Rear mating-hub outside diameter; no fit class is published."
+          }
+        },
+        "counterbore_diameter": {
+          "nominal_mm": 5.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view, diameter 5.6",
+            "method": "drawing",
+            "note": "Front screw-head recess diameter."
+          }
+        },
+        "counterbore_depth": {
+          "nominal_mm": 1.65,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Section A-A, 1.65",
+            "method": "drawing",
+            "note": "Depth from outer plate face to the front recess step."
+          }
+        },
+        "bolt_clearance_diameter": {
+          "nominal_mm": 2.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view, diameter 2.6",
+            "method": "drawing",
+            "note": "Central through opening; the relief makes the full outline noncircular."
+          }
+        },
+        "index_relief_diameter": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view, diameter 1.5",
+            "method": "drawing",
+            "note": "Small indexing/relief circle joined to the central opening."
+          }
+        },
+        "index_relief_offset": {
+          "nominal_mm": 1.53,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view, 1.53 offset",
+            "method": "drawing",
+            "note": "Center-to-center offset toward the depicted +Y direction."
+          }
+        },
+        "serration_major_diameter": {
+          "nominal_mm": 4.95,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "X 330(DC15) Serration detail, diameter 4.95",
+            "method": "drawing",
+            "note": "Published nominal envelope only; teeth are not modeled."
+          }
+        },
+        "serration_minor_diameter": {
+          "nominal_mm": 4.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "X 330(DC15) Serration detail, diameter 4.5",
+            "method": "drawing",
+            "note": "Published nominal envelope only; teeth are not modeled."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "flange-hole-1",
+          "center_mm": [
+            6.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-metal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-330-metal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-2",
+          "center_mm": [
+            0,
+            6.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-metal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-330-metal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-3",
+          "center_mm": [
+            -6.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-metal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-330-metal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-4",
+          "center_mm": [
+            0,
+            -6.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-metal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-metal-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-330-metal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "PARTIAL SOURCE OUTER VOLUME",
+          "basis": "published_outer_profile_and_thread_major_references",
+          "note": "Published diameter 16 plate, thickness 2.7, rear hub diameter 7.4 and total span 5.6 mm. Local outer flange face Z 0; rear hub reaches Z -5.6. Only the source diameter 2.6 axial opening, diameter 5.6/depth 1.65 front counterbore and four nominal thread-major references are cut. The female serration, its undimensioned transition depth, the offset relief and chamfer are omitted. Filled omitted cavities make this a partial outer-volume reference, not a mating solid.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2.7
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 16,
+            "height_mm": 2.7
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -5.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 7.4,
+                "height_mm": 5.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -5.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.6,
+                "height_mm": 5.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -1.65
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 5.6,
+                "height_mm": 1.65
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  6.0,
+                  0,
+                  -2.7
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.7
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  6.0,
+                  -2.7
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.7
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -6.0,
+                  0,
+                  -2.7
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.7
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -6.0,
+                  -2.7
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2.7
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "Local outer flange face Z 0; plate occupies Z -2.7 .. 0 and source rear hub reaches Z -5.6. This accessory coordinate convention is not an assembled actuator seating measurement.",
+        "The solid retains only source-dimensioned outer cylinders and confirmed opening references. Undimensioned cavity steps, the offset relief depth, female-serration teeth, C0.5 transition and edge radii are omitted rather than assigned estimated geometry.",
+        "Four M2 x 0.4 TAP THRU holes are displayed at nominal thread-major diameter 2, not at factory tap-drill diameter and without a helical thread. This is a reference convention, not a machining instruction.",
+        "The source specifies 20 serrations, a 92 degree detail angle and diameters 4.95/4.5. These facts do not define the complete mating tooth or axial profile. No smooth cylindrical replacement cavity is fabricated.",
+        "Series compatibility is documented, but the outer flange-face offset on current X330 cases is unknown. No automatic attachment, stock-face replacement or physical part-removal policy is supported by this record."
+      ],
+      "observations": [
+        {
+          "source": "horn-rbt-330-metal-pdf",
+          "note": "Published aluminum reference drawing dated 21-Dec-22. Four M2 x 0.4 TAP THRU holes are on PCD 12; the flange is diameter 16 with 2.7 mm plate thickness and a rear hub."
+        },
+        {
+          "source": "horn-rbt-330-metal-item",
+          "note": "Official compatibility is XL330 and XC330 series. The product excludes AX/MX, XM/XH430 and XM/XH540. Its exploded assembly view does not dimension the installed case-to-flange offset or establish the identity of the current stock output face."
+        },
+        {
+          "source": "horn-rbt-330-metal-pdf",
+          "note": "The retaining screw differs by family in the assembly sketch: XC330 BHS M2.5 x 06 NYLOC, XL330 BHS M2.6 x 06 TAP. These screws are not included in model geometry."
+        }
+      ],
+      "unknown": [
+        "Assembled outer flange-face position relative to each current X330 case",
+        "Female-serration axial transition depth, full tooth contour and fit tolerances",
+        "Offset relief axial span and exact edge radii",
+        "Mechanical/electrical neutral-angle registration",
+        "Exact factory identity and revision of the displayed X330 base output face"
+      ]
+    },
+    {
+      "id": "robotis.x330-plastic-normal.dc15-a01-2022",
+      "manufacturer": "ROBOTIS",
+      "model": "X330 plastic normal horn (DC15_A01 drawing)",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "outer_diameter": {
+          "nominal_mm": 16,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view and section, diameter 16 +0/-0.2",
+            "method": "drawing",
+            "note": "Asymmetric tolerance is +0/-0.2 mm; tolerance_mm remains null because that field is symmetric."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, 2.9",
+            "method": "drawing",
+            "note": "Outer plate thickness."
+          }
+        },
+        "axial_span": {
+          "nominal_mm": 5.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, 5.6 +0/-0.15",
+            "method": "drawing",
+            "note": "Asymmetric tolerance is +0/-0.15 mm; tolerance_mm remains null."
+          }
+        },
+        "hub_reference_diameter": {
+          "nominal_mm": 7.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, parenthesized diameter 7.45",
+            "method": "drawing",
+            "note": "Parenthesized reference dimension, not an independently toleranced mating specification."
+          }
+        },
+        "counterbore_diameter": {
+          "nominal_mm": 5.6,
+          "tolerance_mm": 0.2,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, diameter 5.6 +/-0.2",
+            "method": "drawing",
+            "note": "Published front counterbore diameter."
+          }
+        },
+        "counterbore_depth": {
+          "nominal_mm": 1.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, 1.6",
+            "method": "drawing",
+            "note": "Front recess step depth."
+          }
+        },
+        "bolt_clearance_diameter": {
+          "nominal_mm": 2.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view, diameter 2.6 HOLE THRU",
+            "method": "drawing",
+            "note": "Central opening; keyed relief dimensions do not define its entire axial profile."
+          }
+        },
+        "pilot_hole_diameter": {
+          "nominal_mm": 1.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "4-diameter 1.6 HOLE THRU(Self Tap), PCD 12",
+            "method": "drawing",
+            "note": "Pilot holes for a self-tapping fastener, not M2 machine-tapped holes."
+          }
+        },
+        "serration_major_reference_diameter": {
+          "nominal_mm": 5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Rear view, parenthesized diameter 5",
+            "method": "drawing",
+            "note": "Reference-only rear serration envelope; teeth are omitted."
+          }
+        },
+        "serration_depth": {
+          "nominal_mm": 2.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Section A-A, 2.6 between rear hub end and internal serration-start plane",
+            "method": "drawing",
+            "note": "Published axial cavity/serration reference; not the previous guessed 2.75 mm cavity. The noncircular cavity is omitted from the solid."
+          }
+        },
+        "serration_minor_reference_diameter": {
+          "nominal_mm": 4.52,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Rear serration detail, parenthesized diameter 4.52",
+            "method": "drawing",
+            "note": "Parenthesized source reference diameter; not a smooth bore or a mating tolerance."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "flange-hole-1",
+          "center_mm": [
+            6.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.6,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-plastic-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Published through pilot-hole diameter, intended for self-tapping fasteners."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2 self tapping screw",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-2",
+          "center_mm": [
+            0,
+            6.0
+          ],
+          "diameter": {
+            "nominal_mm": 1.6,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-plastic-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Published through pilot-hole diameter, intended for self-tapping fasteners."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2 self tapping screw",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-3",
+          "center_mm": [
+            -6.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.6,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-plastic-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Published through pilot-hole diameter, intended for self-tapping fasteners."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2 self tapping screw",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-4",
+          "center_mm": [
+            0,
+            -6.0
+          ],
+          "diameter": {
+            "nominal_mm": 1.6,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-330-plastic-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Published through pilot-hole diameter, intended for self-tapping fasteners."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-330-plastic-pdf",
+            "locator": "Front view: 4 equally depicted holes on PCD 12",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2 self tapping screw",
+            "pitch_mm": null,
+            "specified_depth_mm": null
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "PARTIAL SOURCE OUTER VOLUME",
+          "basis": "published_outer_profile_and_pilot_holes",
+          "note": "Published diameter 16 plate, thickness 2.9 and total span 5.6 mm; parenthesized hub diameter 7.45 is a source reference. Source diameter 2.6 HOLE THRU, diameter 5.6/depth 1.6 counterbore and four diameter 1.6 pilot holes are cut. Rear rib pockets, keyed relief and noncircular female serration are omitted; the published 2.6 mm cavity depth is metadata only. Filled omitted pockets are not an actual mating surface.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2.9
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 16,
+            "height_mm": 2.9
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -5.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 7.45,
+                "height_mm": 5.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -5.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.6,
+                "height_mm": 5.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -1.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 5.6,
+                "height_mm": 1.6
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  6.0,
+                  0,
+                  -2.9
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.6,
+                "height_mm": 2.9
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  6.0,
+                  -2.9
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.6,
+                "height_mm": 2.9
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -6.0,
+                  0,
+                  -2.9
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.6,
+                "height_mm": 2.9
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -6.0,
+                  -2.9
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.6,
+                "height_mm": 2.9
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "The separately indexed XL330/XC330 Horn drawing depicts a plastic normal horn, not a rear idler. No exact current SKU or factory-fitted part identity is asserted.",
+        "Local outer flange face Z 0; plate occupies Z -2.9 .. 0 and hub reaches Z -5.6. Source asymmetrical tolerances remain in evidence notes because tolerance_mm only supports symmetric values.",
+        "The solid follows published outer dimensions, the parenthesized hub reference and confirmed through holes/counterbore. Rib pockets, keyed relief, female serrations and detailed edge profiles are omitted instead of receiving new guessed dimensions.",
+        "Four diameter 1.6 HOLE THRU pilot holes on PCD 12 are distinct from M2 machine threads. Thread pitch after self tapping and usable engagement are not supplied.",
+        "The section directly gives rear cavity/serration depth 2.6; the prior 2.75 mm smooth cavity was unsupported and has been removed. Parenthesized diameters 5/4.52 are not modeled as a cylindrical mating bore.",
+        "The current X330 case-to-horn seat and exact stock-face identity remain unregistered. No automatic attachment or stock display-part replacement is supported."
+      ],
+      "observations": [
+        {
+          "source": "horn-rbt-330-plastic-pdf",
+          "note": "Official XL330/XC330 Horn drawing dated 2022.08.22, material engineering plastic. Its file is DC15_A01_HORN2.pdf and depicts a serrated normal output horn, not the rear idler."
+        },
+        {
+          "source": "horn-rbt-330-plastic-pdf",
+          "note": "The drawing gives four diameter 1.6 through self-tapping pilot holes on PCD 12, a diameter 16 +0/-0.2 envelope, overall span 5.6 +0/-0.15 and a directly dimensioned 2.6 rear cavity depth. It does not identify a current sales SKU or assembled case offset."
+        }
+      ],
+      "unknown": [
+        "Current commercial SKU and factory-fitted revision corresponding exactly to DC15_A01_HORN2",
+        "Assembled flange-face offset relative to each current X330 case",
+        "Complete serration, rib-pocket, key and edge geometry with fit tolerances",
+        "Thread pitch after self tapping and usable engagement",
+        "Angular phase relative to actuator neutral"
+      ]
+    },
+    {
+      "id": "robotis.hn12-n101.normal-2019",
+      "manufacturer": "ROBOTIS",
+      "model": "HN12-N101 normal output horn",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "outer_diameter": {
+          "nominal_mm": 19.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view, diameter 19.5",
+            "method": "drawing",
+            "note": "Outer flange diameter."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Section A-A, 2",
+            "method": "drawing",
+            "note": "Outer plate thickness."
+          }
+        },
+        "axial_reference_span": {
+          "nominal_mm": 4.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Section A-A, 4.2",
+            "method": "drawing",
+            "note": "Dimensioned span from front central-boss face to the rear flange datum. Small lip/edge details are not fully defined."
+          }
+        },
+        "inner_axial_step": {
+          "nominal_mm": 3.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Section A-A, 3.45",
+            "method": "drawing",
+            "note": "Inner step-to-rear datum dimension; this is not an installed seat offset."
+          }
+        },
+        "front_boss_outer_diameter": {
+          "nominal_mm": 8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Section A-A, diameter 8",
+            "method": "drawing",
+            "note": "Central boss projects in front of the outer plate face, away from the actuator."
+          }
+        },
+        "serration_major_diameter": {
+          "nominal_mm": 5.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "DC12 serration detail, diameter 5.8",
+            "method": "drawing",
+            "note": "Nominal envelope only; mating teeth are not generated."
+          }
+        },
+        "serration_minor_diameter": {
+          "nominal_mm": 5.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "DC12 serration detail, diameter 5.2",
+            "method": "drawing",
+            "note": "Nominal envelope only; no fit tolerance is provided."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "flange-hole-1",
+          "center_mm": [
+            8.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-2",
+          "center_mm": [
+            5.656854249492,
+            5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-3",
+          "center_mm": [
+            0,
+            8.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-4",
+          "center_mm": [
+            -5.656854249492,
+            5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-5",
+          "center_mm": [
+            -8.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-6",
+          "center_mm": [
+            -5.656854249492,
+            -5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-7",
+          "center_mm": [
+            0,
+            -8.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        },
+        {
+          "id": "flange-hole-8",
+          "center_mm": [
+            5.656854249492,
+            -5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-normal-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-normal-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-normal-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": null
+          }
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "PARTIAL SOURCE OUTER VOLUME",
+          "basis": "published_outer_profile_and_thread_major_references",
+          "note": "Published diameter 19.5 plate, thickness 2, with outward diameter 8 boss and source axial span 4.2. Local plate Z -2 .. 0; boss tip Z +2.2 follows 4.2 - 2. Only eight M2 x 0.4 nominal thread-major reference holes are cut. The undimensioned central bolt passage, serrated cavity, small rear lip, chamfers and edge radii are omitted; no fabricated diameter 2.8 opening remains. The solid is an outer-volume reference, not a spline-fit model.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -2
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 19.5,
+            "height_mm": 2
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 8,
+                "height_mm": 4.2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  8.0,
+                  0,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  5.656854249492,
+                  5.656854249492,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  8.0,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -5.656854249492,
+                  5.656854249492,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -8.0,
+                  0,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -5.656854249492,
+                  -5.656854249492,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -8.0,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  5.656854249492,
+                  -5.656854249492,
+                  -2
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2,
+                "height_mm": 2
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "Local outer wide-flange face Z 0; flange occupies Z -2 .. 0. The diameter 8 central boss is on the outward side and reaches Z +2.2, derived from the source axial span 4.2 minus plate thickness 2.",
+        "Eight M2 x 0.4 TAP THRU holes on PCD 16 are shown only as nominal thread-major cylindrical references. Thread helices, factory tap-drill diameter and usable engagement are not represented.",
+        "The central retaining-bolt passage diameter is not dimensioned. Its previous guessed 2.8 mm bore is removed. Female serration, undimensioned rear lip and edge treatments are omitted without substitute geometry.",
+        "DC12 serration facts (20 repetitions, 92 degree detail, diameters 5.8/5.2 and section step 3.45) are metadata, not a smooth mating bore or a fit claim.",
+        "The installed XM430/XH430 HINGE sheet independently fixes the outer flange face 2 mm beyond the main case face and the diameter 8 boss another 2.2 mm outward. That establishes nominal assembly placement for this named family, without using a preview shaft tip or plate-stacking rule.",
+        "Retaining bolt and thrust washer are excluded. The sourced outer-face pose does not establish the omitted inner mating surfaces, manufacturing tolerance, screw engagement or calibrated angular zero."
+      ],
+      "observations": [
+        {
+          "source": "horn-rbt-430-normal-pdf",
+          "note": "Dedicated HN12_N101 drawing dated 22-May-19: diameter 19.5, outer plate 2, axial reference span 4.2, front boss diameter 8, 8 M2 x 0.4 TAP THRU on PCD 16."
+        },
+        {
+          "source": "horn-rbt-430-normal-item",
+          "note": "Official normal output horn for XH/XM430. The set contains the horn, a WB M2.5 x 6 retaining bolt, WB M2 x 3 frame bolts and a thrust washer. The product excludes MX and XL430 compatibility."
+        },
+        {
+          "source": "horn-rbt-430-assembly-pdf",
+          "note": "Installed XM430/XH430 (HINGE) sheet: the main outer flange face is 2 mm outside the case face; the diameter 8 boss is another 2.2 mm outward. The opposite idler outer face is 2 mm outside its case face. These witness lines agree with HN12-N101 section 4.2 = 2 + 2.2."
+        }
+      ],
+      "unknown": [
+        "Central bolt-passage diameter",
+        "Complete female tooth, rear-lip and edge profiles with mating tolerances",
+        "Thrust-washer and retaining-hardware geometry",
+        "Angular phase relative to calibrated actuator neutral",
+        "Manufacturing tolerances on the assembled nominal pose"
+      ]
+    },
+    {
+      "id": "robotis.hn12-i101.idler-2019",
+      "manufacturer": "ROBOTIS",
+      "model": "HN12-I101 rear idler reference",
+      "data_revision": 2,
+      "shape": "idler_disc",
+      "status": "dimensions_only",
+      "dimensions": {
+        "outer_diameter": {
+          "nominal_mm": 19.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view, diameter 19.5",
+            "method": "drawing",
+            "note": "Outer flange diameter."
+          }
+        },
+        "plate_thickness": {
+          "nominal_mm": 2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Section A-A, 2",
+            "method": "drawing",
+            "note": "Outer flange thickness."
+          }
+        },
+        "sleeve_bore_diameter": {
+          "nominal_mm": 9.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Section A-A, diameter 9.5",
+            "method": "drawing",
+            "note": "Open axial bore of the illustrated idler/bearing assembly."
+          }
+        },
+        "section_diameter_12_2": {
+          "nominal_mm": 12.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Section A-A, diameter 12.2",
+            "method": "drawing",
+            "note": "Published local bearing/neck section dimension, not an inferred mating fit."
+          }
+        },
+        "bearing_outer_diameter": {
+          "nominal_mm": 13,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Section A-A, diameter 13 and PLASTIC BEARING label",
+            "method": "drawing",
+            "note": "Published outer bearing-region dimension; axial bearing-seat lengths are not specified."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "flange-hole-1",
+          "center_mm": [
+            8.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-2",
+          "center_mm": [
+            5.656854249492,
+            5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-3",
+          "center_mm": [
+            0,
+            8.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-4",
+          "center_mm": [
+            -5.656854249492,
+            5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-5",
+          "center_mm": [
+            -8.0,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-6",
+          "center_mm": [
+            -5.656854249492,
+            -5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-7",
+          "center_mm": [
+            0,
+            -8.0
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        },
+        {
+          "id": "flange-hole-8",
+          "center_mm": [
+            5.656854249492,
+            -5.656854249492
+          ],
+          "diameter": {
+            "nominal_mm": 2,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-rbt-430-idler-pdf",
+              "locator": "Flange hole callout and pitch-circle pattern",
+              "method": "drawing",
+              "note": "Nominal thread MAJOR diameter for reference only; not a tap-drill or clearance diameter."
+            }
+          },
+          "evidence": {
+            "source": "horn-rbt-430-idler-pdf",
+            "locator": "Front view: 8 equally depicted holes on PCD 16",
+            "method": "drawing",
+            "note": "XY centers are derived from the published pitch-circle diameter with the depicted cardinal pattern orientation. This local angle is not an actuator neutral-angle datum."
+          },
+          "thread": {
+            "designation": "M2x0.4",
+            "pitch_mm": {
+              "nominal_mm": 0.4,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "M2 x 0.4 tap callout",
+                "method": "drawing",
+                "note": "Published thread pitch."
+              }
+            },
+            "specified_depth_mm": {
+              "nominal_mm": 2,
+              "tolerance_mm": null,
+              "evidence": {
+                "source": "horn-rbt-430-idler-pdf",
+                "locator": "HN12-I101 literal callout: TAP DP.2",
+                "method": "drawing",
+                "note": "The source writes DP.2, interpreted as depth 2 mm, consistent with the 2 mm flange and the separate assembled drawing DP 2.0(MAX.) callout. No additional engagement or screw length is inferred."
+              }
+            }
+          }
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "This record contains sourced dimensions and a nominal hole-pattern reference only. No complete idler solid is emitted because the source does not dimension the overall sleeve/bearing axial length or the complete multi-part contour.",
+        "The former 8 mm total span and combined diameter 13 sleeve body are removed. The idler, plastic bearing and cap are distinct source components; they must not be fused into an invented assembly.",
+        "Eight M2 x 0.4 holes on PCD 16 have literal source TAP DP.2, corroborated as DP2.0(MAX.) by the installed family sheet. These are nominal thread-major sketch references, not tap-drill circles or a screw-length/engagement guarantee.",
+        "The installed XM430/XH430 HINGE side view fixes this outer flange face 2 mm outside the rear case plane. That source-backed pose does not supply the missing internal sleeve extent or turn this dimensions-only record into an attachable solid.",
+        "The bore diameter 9.5, section diameter 12.2 and plastic-bearing diameter 13 are retained as source facts. No axial distribution is invented from the image scale."
+      ],
+      "observations": [
+        {
+          "source": "horn-rbt-430-idler-pdf",
+          "note": "Dedicated HN12-I101 drawing dated 22-May-19: diameter 19.5, plate 2, 8 M2 x 0.4 holes on PCD 16, open bore diameter 9.5, section diameters 12.2 and 13. No total axial length is dimensioned."
+        },
+        {
+          "source": "horn-rbt-430-idler-item",
+          "note": "Official idler set attaches opposite the output shaft using a hook-retained hollow structure; its enclosed screws fasten a frame to the idler. The set contains plastic bearing, idler and cap. Compatible with XH/XM430; not MX or XL430."
+        },
+        {
+          "source": "horn-rbt-430-assembly-pdf",
+          "note": "The installed family side view dimensions the rear idler outer flange face 2 mm outside the rear case plane. It does not dimension the complete hidden sleeve/bearing axial profile, so a complete solid remains unavailable."
+        }
+      ],
+      "unknown": [
+        "Overall idler/sleeve/bearing axial length and complete step contour",
+        "Separate bearing, hooks and retaining-cap geometry with fit tolerances",
+        "Thread form, factory drill diameter and usable engagement",
+        "Calibrated angular phase and manufacturing tolerance of the nominal assembled pose"
+      ]
+    }
+  ],
+  "mounts": [
+    {
+      "asset_id": "robotis.xl330-m077-t.brochure",
+      "horn_id": "robotis.hnx330-n101.metal-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-metal-item",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "specification",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xl330-m077-t.brochure",
+      "horn_id": "robotis.x330-plastic-normal.dc15-a01-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-plastic-pdf",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "drawing",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xl330-m288-t.brochure",
+      "horn_id": "robotis.hnx330-n101.metal-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-metal-item",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "specification",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xl330-m288-t.brochure",
+      "horn_id": "robotis.x330-plastic-normal.dc15-a01-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-plastic-pdf",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "drawing",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xc330-t288-t.brochure",
+      "horn_id": "robotis.hnx330-n101.metal-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-metal-item",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "specification",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xc330-t288-t.brochure",
+      "horn_id": "robotis.x330-plastic-normal.dc15-a01-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-plastic-pdf",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "drawing",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xc330-m288-t.brochure",
+      "horn_id": "robotis.hnx330-n101.metal-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-metal-item",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "specification",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xc330-m288-t.brochure",
+      "horn_id": "robotis.x330-plastic-normal.dc15-a01-2022",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-330-plastic-pdf",
+        "locator": "Official XL330/XC330 compatibility or drawing title",
+        "method": "drawing",
+        "note": "The named series covers this actuator profile; no cross-series interchangeability is inferred."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Official series compatibility does not locate this exact horn outer flange face on the current actuator case. No preview-shaft-plus-plate rule, inherited stock-face coordinate or display-part replacement is retained. Automatic attachment is unavailable until a source registers this accessory revision to the case. Angular phase remains unknown.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xm430-w350-t.drawing",
+      "horn_id": "robotis.hn12-n101.normal-2019",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-430-normal-item",
+        "locator": "Official compatible products: XH/XM430 series",
+        "method": "specification",
+        "note": "Compatibility is documented for the named accessory family; the exact simplified mating geometry is not certified."
+      },
+      "origin_mm": [
+        11.25,
+        14.25,
+        36
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-rbt-430-assembly-pdf",
+        "locator": "XM430/XH430 (HINGE), side view: case span 34; main plate outer face 2 outside case and diameter 8 boss another 2.2 outward; front/rear views: output center 11.25 from short end on width 28.5 centerline",
+        "method": "derived",
+        "note": "Existing case frame has rear Z 0 and main case Z 34. Outer flange Z = 34 + 2 = 36, boss tip Z = 36 + 2.2 = 38.2. XY is [11.25, 28.5/2]. This uses dimension witness lines, not the preview coupling tip."
+      },
+      "note": "Source nominal assembly: outer flange [11.25, 14.25, 36], direction +Z; plate underside at case Z 34 and diameter 8 boss tip Z 38.2. The standalone partial outer-volume reference omits unlocated mating/central-bore details, retaining bolt and thrust washer. No preview shaft stacking or calibrated phase is asserted.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xm430-w350-t.drawing",
+      "horn_id": "robotis.hn12-i101.idler-2019",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-430-idler-item",
+        "locator": "Official compatible products: XH/XM430 series",
+        "method": "specification",
+        "note": "Compatibility is documented for the named accessory family; the exact simplified mating geometry is not certified."
+      },
+      "origin_mm": [
+        11.25,
+        14.25,
+        -2
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-rbt-430-assembly-pdf",
+        "locator": "XM430/XH430 (HINGE), side view: case span 34; rear idler outer flange face 2 outside rear case; front/rear views: output center 11.25 from short end on width 28.5 centerline",
+        "method": "derived",
+        "note": "Existing rear case plane is Z 0, so the documented outward 2 mm outer flange face is Z -2. XY is [11.25, 28.5/2]. Missing sleeve length prevents a complete accessory solid."
+      },
+      "note": "Source nominal assembly: rear outer flange [11.25, 14.25, -2], direction -Z, from the explicit installed 2 mm projection. This dimensions-only record cannot be automatically attached as a solid; no 8 mm sleeve or bearing fit is inferred. No base display part is removed.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xm430-w350-r.drawing",
+      "horn_id": "robotis.hn12-n101.normal-2019",
+      "output_id": "main",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-430-normal-item",
+        "locator": "Official compatible products: XH/XM430 series",
+        "method": "specification",
+        "note": "Compatibility is documented for the named accessory family; the exact simplified mating geometry is not certified."
+      },
+      "origin_mm": [
+        11.25,
+        14.25,
+        36
+      ],
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-rbt-430-assembly-pdf",
+        "locator": "XM430/XH430 (HINGE), side view: case span 34; main plate outer face 2 outside case and diameter 8 boss another 2.2 outward; front/rear views: output center 11.25 from short end on width 28.5 centerline",
+        "method": "derived",
+        "note": "Existing case frame has rear Z 0 and main case Z 34. Outer flange Z = 34 + 2 = 36, boss tip Z = 36 + 2.2 = 38.2. XY is [11.25, 28.5/2]. This uses dimension witness lines, not the preview coupling tip."
+      },
+      "note": "Source nominal assembly: outer flange [11.25, 14.25, 36], direction +Z; plate underside at case Z 34 and diameter 8 boss tip Z 38.2. The standalone partial outer-volume reference omits unlocated mating/central-bore details, retaining bolt and thrust washer. No preview shaft stacking or calibrated phase is asserted.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "robotis.xm430-w350-r.drawing",
+      "horn_id": "robotis.hn12-i101.idler-2019",
+      "output_id": "idler",
+      "frame": "envelope_minimum",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-rbt-430-idler-item",
+        "locator": "Official compatible products: XH/XM430 series",
+        "method": "specification",
+        "note": "Compatibility is documented for the named accessory family; the exact simplified mating geometry is not certified."
+      },
+      "origin_mm": [
+        11.25,
+        14.25,
+        -2
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "placement_basis": "documented",
+      "placement_evidence": {
+        "source": "horn-rbt-430-assembly-pdf",
+        "locator": "XM430/XH430 (HINGE), side view: case span 34; rear idler outer flange face 2 outside rear case; front/rear views: output center 11.25 from short end on width 28.5 centerline",
+        "method": "derived",
+        "note": "Existing rear case plane is Z 0, so the documented outward 2 mm outer flange face is Z -2. XY is [11.25, 28.5/2]. Missing sleeve length prevents a complete accessory solid."
+      },
+      "note": "Source nominal assembly: rear outer flange [11.25, 14.25, -2], direction -Z, from the explicit installed 2 mm projection. This dimensions-only record cannot be automatically attached as a solid; no 8 mm sleeve or bearing fit is inferred. No base display part is removed.",
+      "replace_model_parts": []
+    }
+  ]
+}

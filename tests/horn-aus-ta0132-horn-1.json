@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "aus.ta0132.horn-1",
+    "mode": "dimensions"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "aus.ta0132.horn-1",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

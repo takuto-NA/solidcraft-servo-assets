@@ -1,0 +1,16 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "feetech.sts3215-c001.a0"
+  },
+  "expect": {
+    "model": {
+      "body_count": 11
+    },
+    "reply": {
+      "result": {
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

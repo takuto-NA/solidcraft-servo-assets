@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "feetech.sts3215-main-disc.a0",
+    "mode": "source-solid"
+  },
+  "expect": {
+    "model": {
+      "body_count": 1
+    },
+    "reply": {
+      "result": {
+        "asset_id": "feetech.sts3215-main-disc.a0",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "entry": "mount-pattern",
+  "params": {
+    "asset_id": "robotis.xl330-m288-t.brochure",
+    "mount_group_id": "case-end-far"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

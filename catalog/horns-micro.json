@@ -1,0 +1,3406 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.9",
+  "sources": [
+    {
+      "id": "horn-micro-aus-ta0132",
+      "publisher": "Aus Electronics Direct",
+      "title": "TA0132 SG90 Servo Horns - Dimensions, page 5",
+      "url": "https://www.auselectronicsdirect.com.au/assets/brochures/TA0132.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-hitec-revd-20230428",
+      "publisher": "Hitec RCD Korea / Multiplex",
+      "title": "HITEC ALL SERVO HORN, Revision D, 2023-04-28",
+      "url": "https://shop.multiplex-rc.de/userdata/files/HITEC%20ALL%20SERVO%20HORN_Rev%20D_230428.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-hitec-compat-japan",
+      "publisher": "Hitec Multiplex Japan",
+      "title": "Servo horn compatibility classes and accessory numbers",
+      "url": "https://hitecrcd.co.jp/products/servo_horn/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-hitec-2012",
+      "publisher": "Hitec Multiplex Japan",
+      "title": "Servo horn dimension list, older 2012 drawing set",
+      "url": "https://hitecrcd.co.jp/material/spec_sheet/servo/servohorn.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-towerpro-sg90-kit",
+      "publisher": "TowerPro",
+      "title": "SG90 Analog official product-gallery arm photograph; topology only",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/Servo-arm-set-7.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-towerpro-sg92r-kit",
+      "publisher": "TowerPro",
+      "title": "SG92R official product-gallery arm photograph; topology only",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/Servo-arm-set-8B.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "horn-micro-towerpro-mg90s-kit",
+      "publisher": "TowerPro",
+      "title": "MG90S official product-gallery arm photograph; topology only",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/Servo-arm-set-6.jpg",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "horns": [
+    {
+      "id": "aus.ta0132.horn-1",
+      "manufacturer": "Aus Electronics Direct source profile",
+      "model": "TA0132 Horn #1 - Double arm",
+      "data_revision": 2,
+      "shape": "double_arm",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Direct plate-thickness callout."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 6.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Direct boss-diameter callout; not the mating bore."
+          }
+        },
+        "boss_projection": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Projection beyond one plate face. The preview orients this boss toward the actuator."
+          }
+        },
+        "total_thickness": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Derived as plate 1.5 + boss projection 2.5; no tolerance is stated."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan, typical hole note",
+            "method": "drawing",
+            "note": "The page marks peripheral linkage holes as diameter 1.0 typical."
+          }
+        },
+        "overall_length": {
+          "nominal_mm": 32.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Direct 32.0 total and 16.0 each-side callouts."
+          }
+        },
+        "arm_reach": {
+          "nominal_mm": 16.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 side elevation",
+            "method": "drawing",
+            "note": "Axis-to-end reach on each side."
+          }
+        },
+        "link_radius_1": {
+          "nominal_mm": 4,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        },
+        "link_radius_2": {
+          "nominal_mm": 6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        },
+        "link_radius_3": {
+          "nominal_mm": 8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        },
+        "link_radius_4": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        },
+        "link_radius_5": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        },
+        "link_radius_6": {
+          "nominal_mm": 14,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each side's axial linkage-hole radius."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -4,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            -6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            -8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            -10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            -12,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            -14,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-7",
+          "center_mm": [
+            4,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-8",
+          "center_mm": [
+            6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-9",
+          "center_mm": [
+            8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-10",
+          "center_mm": [
+            10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-11",
+          "center_mm": [
+            12,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-12",
+          "center_mm": [
+            14,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #1 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "Page 5 explicitly numbers this double arm profile as Horn #1. Dimensions identify this vendor drawing, not every similarly named SG90 kit."
+        },
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "The 6.3 degree included taper is shown but is omitted from the constant-width planning contour."
+        }
+      ],
+      "unknown": [
+        "Manufacturer and production revision of the horn specimen behind the AU drawing",
+        "Spline tooth count, tooth form, major/minor bore sizes and fit tolerances",
+        "Retaining screw diameter, thread, head recess and engagement",
+        "Installed horn seating plane, insertion depth and neutral angular phase",
+        "Unlabelled arm edge dimensions, end radii and detailed fillets",
+        "Drawing tolerances and cross-vendor compatibility",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "aus.ta0132.horn-2",
+      "manufacturer": "Aus Electronics Direct source profile",
+      "model": "TA0132 Horn #2 - Cross",
+      "data_revision": 2,
+      "shape": "cross",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 side elevation",
+            "method": "drawing",
+            "note": "Direct plate-thickness callout."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 6.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 side elevation",
+            "method": "drawing",
+            "note": "Direct boss-diameter callout; not the mating bore."
+          }
+        },
+        "boss_projection": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 side elevation",
+            "method": "drawing",
+            "note": "Projection beyond one plate face. The preview orients this boss toward the actuator."
+          }
+        },
+        "total_thickness": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 side elevation",
+            "method": "drawing",
+            "note": "Derived as plate 1.5 + boss projection 2.5; no tolerance is stated."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan, typical hole note",
+            "method": "drawing",
+            "note": "The page marks peripheral linkage holes as diameter 1.0 typical."
+          }
+        },
+        "overall_length": {
+          "nominal_mm": 20.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 side elevation",
+            "method": "drawing",
+            "note": "Direct total span; preserved separately from rounded 10.2 half-span callouts."
+          }
+        },
+        "overall_width": {
+          "nominal_mm": 20.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan",
+            "method": "drawing",
+            "note": "Direct vertical total span; 10.2 half-spans do not sum to this number exactly."
+          }
+        },
+        "half_span_as_drawn": {
+          "nominal_mm": 10.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan and side elevation",
+            "method": "drawing",
+            "note": "Direct half-span label, retained without silently reconciling 2 x 10.2 = 20.4 with the 20.3 total."
+          }
+        },
+        "link_radius_1": {
+          "nominal_mm": 4.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each of four arms."
+          }
+        },
+        "link_radius_2": {
+          "nominal_mm": 6.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each of four arms."
+          }
+        },
+        "link_radius_3": {
+          "nominal_mm": 8.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 plan",
+            "method": "drawing",
+            "note": "Direct R callout for each of four arms."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -4.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            -6.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            -8.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            4.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            6.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            8.3,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-7",
+          "center_mm": [
+            0,
+            -4.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-8",
+          "center_mm": [
+            0,
+            -6.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-9",
+          "center_mm": [
+            0,
+            -8.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-10",
+          "center_mm": [
+            0,
+            4.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-11",
+          "center_mm": [
+            0,
+            6.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-12",
+          "center_mm": [
+            0,
+            8.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #2 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "Page 5 explicitly numbers this cross profile as Horn #2. Dimensions identify this vendor drawing, not every similarly named SG90 kit."
+        },
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "The source contains a 0.1 mm total-versus-halves discrepancy: 20.3 differs from 10.2 + 10.2. Formal linkage radii do not use either inferred half-span."
+        }
+      ],
+      "unknown": [
+        "Manufacturer and production revision of the horn specimen behind the AU drawing",
+        "Spline tooth count, tooth form, major/minor bore sizes and fit tolerances",
+        "Retaining screw diameter, thread, head recess and engagement",
+        "Installed horn seating plane, insertion depth and neutral angular phase",
+        "Unlabelled arm edge dimensions, end radii and detailed fillets",
+        "Drawing tolerances and cross-vendor compatibility",
+        "Exact resolution of the 20.3 total versus two 10.2 half-spans",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "aus.ta0132.horn-3",
+      "manufacturer": "Aus Electronics Direct source profile",
+      "model": "TA0132 Horn #3 - Asymmetric cross",
+      "data_revision": 2,
+      "shape": "asymmetric_cross",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Direct plate-thickness callout."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 6.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Direct boss-diameter callout; not the mating bore."
+          }
+        },
+        "boss_projection": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Projection beyond one plate face. The preview orients this boss toward the actuator."
+          }
+        },
+        "total_thickness": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Derived as plate 1.5 + boss projection 2.5; no tolerance is stated."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan, typical hole note",
+            "method": "drawing",
+            "note": "The page marks peripheral linkage holes as diameter 1.0 typical."
+          }
+        },
+        "overall_length": {
+          "nominal_mm": 34.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Direct total; 16.0 left reach + 18.5 right reach."
+          }
+        },
+        "negative_arm_reach": {
+          "nominal_mm": 16.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Axis-to-left-end callout in the chosen local frame."
+          }
+        },
+        "positive_arm_reach": {
+          "nominal_mm": 18.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 side elevation",
+            "method": "drawing",
+            "note": "Axis-to-right-end callout in the chosen local frame."
+          }
+        },
+        "overall_width": {
+          "nominal_mm": 16.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct short-arm overall span."
+          }
+        },
+        "negative_long_link_radius_1": {
+          "nominal_mm": 4,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "negative_long_link_radius_2": {
+          "nominal_mm": 6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "negative_long_link_radius_3": {
+          "nominal_mm": 8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "negative_long_link_radius_4": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "negative_long_link_radius_5": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "negative_long_link_radius_6": {
+          "nominal_mm": 14,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_1": {
+          "nominal_mm": 4.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_2": {
+          "nominal_mm": 6.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_3": {
+          "nominal_mm": 8.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_4": {
+          "nominal_mm": 10.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_5": {
+          "nominal_mm": 12.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_6": {
+          "nominal_mm": 14.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "positive_long_link_radius_7": {
+          "nominal_mm": 16.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "short_link_radius_1": {
+          "nominal_mm": 4.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        },
+        "short_link_radius_2": {
+          "nominal_mm": 6.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 plan",
+            "method": "drawing",
+            "note": "Direct R callout; axis alignment follows the drawing centerlines."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -4,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            -6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            -8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            -10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            -12,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            -14,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-7",
+          "center_mm": [
+            4.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-8",
+          "center_mm": [
+            6.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-9",
+          "center_mm": [
+            8.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-10",
+          "center_mm": [
+            10.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-11",
+          "center_mm": [
+            12.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-12",
+          "center_mm": [
+            14.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-13",
+          "center_mm": [
+            16.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-14",
+          "center_mm": [
+            0,
+            -4.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-15",
+          "center_mm": [
+            0,
+            -6.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-16",
+          "center_mm": [
+            0,
+            4.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-17",
+          "center_mm": [
+            0,
+            6.3
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #3 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "Page 5 explicitly numbers this asymmetric cross profile as Horn #3. Dimensions identify this vendor drawing, not every similarly named SG90 kit."
+        },
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "Long-arm included taper callouts are 6.3 degrees on the shorter side and 9.8 degrees on the longer side. The preview retains asymmetric reach and holes while simplifying the contour."
+        }
+      ],
+      "unknown": [
+        "Manufacturer and production revision of the horn specimen behind the AU drawing",
+        "Spline tooth count, tooth form, major/minor bore sizes and fit tolerances",
+        "Retaining screw diameter, thread, head recess and engagement",
+        "Installed horn seating plane, insertion depth and neutral angular phase",
+        "Unlabelled arm edge dimensions, end radii and detailed fillets",
+        "Drawing tolerances and cross-vendor compatibility",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "aus.ta0132.horn-4",
+      "manufacturer": "Aus Electronics Direct source profile",
+      "model": "TA0132 Horn #4 - Single arm",
+      "data_revision": 2,
+      "shape": "single_arm",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Direct plate-thickness callout."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 6.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Direct boss-diameter callout; not the mating bore."
+          }
+        },
+        "boss_projection": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Projection beyond one plate face. The preview orients this boss toward the actuator."
+          }
+        },
+        "total_thickness": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Derived as plate 1.5 + boss projection 2.5; no tolerance is stated."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan, typical hole note",
+            "method": "drawing",
+            "note": "The page marks peripheral linkage holes as diameter 1.0 typical."
+          }
+        },
+        "overall_length": {
+          "nominal_mm": 19.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Direct overall label; retained even though 16.0 + 6.9/2 gives 19.45."
+          }
+        },
+        "arm_reach": {
+          "nominal_mm": 16.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Axis-to-arm-end distance; the preview rotates the arm into +X."
+          }
+        },
+        "back_reach_as_drawn": {
+          "nominal_mm": 3.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 side elevation",
+            "method": "drawing",
+            "note": "Direct rear reach, slightly different from half the stated 6.9 diameter."
+          }
+        },
+        "link_radius_1": {
+          "nominal_mm": 4,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        },
+        "link_radius_2": {
+          "nominal_mm": 6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        },
+        "link_radius_3": {
+          "nominal_mm": 8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        },
+        "link_radius_4": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        },
+        "link_radius_5": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        },
+        "link_radius_6": {
+          "nominal_mm": 14,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 plan",
+            "method": "drawing",
+            "note": "Direct R linkage callout; rotated into +X for this horn's local frame."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            4,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            8,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            12,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            14,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "horn-micro-aus-ta0132",
+              "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-aus-ta0132",
+            "locator": "Page 5, Horn #4 linkage-radius leaders and diameter 1.0 typical",
+            "method": "drawing",
+            "note": "Centers use the explicitly drawn axial R callouts; local orientation is stated in the model notes."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "Page 5 explicitly numbers this single arm profile as Horn #4. Dimensions identify this vendor drawing, not every similarly named SG90 kit."
+        },
+        {
+          "source": "horn-micro-aus-ta0132",
+          "note": "The 6.3 degree included taper is not reproduced. The 19.5/16.0/3.5 labels and 6.9 diameter contain a 0.05 mm radius-level rounding inconsistency."
+        }
+      ],
+      "unknown": [
+        "Manufacturer and production revision of the horn specimen behind the AU drawing",
+        "Spline tooth count, tooth form, major/minor bore sizes and fit tolerances",
+        "Retaining screw diameter, thread, head recess and engagement",
+        "Installed horn seating plane, insertion depth and neutral angular phase",
+        "Unlabelled arm edge dimensions, end radii and detailed fillets",
+        "Drawing tolerances and cross-vendor compatibility",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "hitec.fs-il15.rev-d-20230428",
+      "manufacturer": "Hitec",
+      "model": "FS-IL15 (Revision D 2023-04-28)",
+      "data_revision": 2,
+      "shape": "double_arm",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A coordinate chain",
+            "method": "drawing",
+            "note": "Derived plate thickness: 3.5 - 2.0 mm. Coordinate tolerances are not silently treated as a direct thickness tolerance."
+          }
+        },
+        "rear_face_to_plate_face": {
+          "nominal_mm": 3.5,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Direct source coordinate of the outer plate face measured from the rear mating face."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Rear hub outside diameter; distinct from the nominal spline class."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, front view diameter leader",
+            "method": "drawing",
+            "note": "Source linkage-hole diameter."
+          }
+        },
+        "spline_nominal_diameter": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 2, SERVO HORN INFORMATION, F15T row",
+            "method": "drawing",
+            "note": "Nominal named spline class, not a complete tooth profile or cylindrical mating-bore definition."
+          }
+        },
+        "spline_recess_depth": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Depth from the rear face to the drawn spline-pocket limit; no fitted seating height is derived."
+          }
+        },
+        "central_through_diameter": {
+          "nominal_mm": 1.8,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Central through-hole diameter; does not specify a retaining screw thread."
+          }
+        },
+        "outer_link_span": {
+          "nominal_mm": 27.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Direct span of the outermost linkage pair."
+          }
+        },
+        "middle_link_span": {
+          "nominal_mm": 21.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Direct middle linkage-pair span."
+          }
+        },
+        "inner_link_span": {
+          "nominal_mm": 15.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A",
+            "method": "drawing",
+            "note": "Direct innermost linkage-pair span."
+          }
+        },
+        "end_radius": {
+          "nominal_mm": 1.8,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, front R1.8 leader",
+            "method": "drawing",
+            "note": "Rounded arm-end radius."
+          }
+        },
+        "overall_length_derived": {
+          "nominal_mm": 30.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, outer pitch and end radius",
+            "method": "drawing",
+            "note": "Derived nominal extent 27 + 2 x 1.8 = 30.6. It is not a direct overall callout."
+          }
+        },
+        "section_spline_callout": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, section A-A diameter 4.0",
+            "method": "drawing",
+            "note": "Literal section callout; the serration still needs a complete mating profile."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -7.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            -10.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            -13.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            7.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            10.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            13.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 3, FS-IL15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 3, FS-IL15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "Revision D dated 2023-04-28; numeric facts come from PDF page 3. Page 2 explicitly lists FS-IL15 and HS-55 under F15T diameter 4.0."
+        },
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "The drawing title block gives general dimensional tolerances: 0.5-8.99 mm +/-0.05; 9.0-119.9 mm +/-0.1; 120-315 mm +/-0.2. Derived dimensions and nominal compatibility classes retain separate uncertainty notes."
+        },
+        {
+          "source": "horn-micro-hitec-2012",
+          "note": "The older Japan sheet gives FS-IL a 31.0 mm total and 0.9 mm linkage holes. This profile uses the newer FS-IL15 Revision D drawing with R1.8 ends and diameter 1.0 holes; it does not merge the two revisions."
+        }
+      ],
+      "unknown": [
+        "Complete spline tooth form, minor/major fit limits and manufacturing tolerances",
+        "Installed horn seating plane and actual fitted height for the selected actuator profile",
+        "Neutral angular phase and retaining screw thread/engagement",
+        "Exact as-moulded fillets, draft and unmodelled lettering",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "hitec.fs-x15.rev-d-20230428",
+      "manufacturer": "Hitec",
+      "model": "FS-X15 (Revision D 2023-04-28)",
+      "data_revision": 2,
+      "shape": "cross",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A coordinate chain",
+            "method": "drawing",
+            "note": "Derived plate thickness: 3.2 - 2.2 mm. Coordinate tolerances are not silently treated as a direct thickness tolerance."
+          }
+        },
+        "rear_face_to_plate_face": {
+          "nominal_mm": 3.2,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A",
+            "method": "drawing",
+            "note": "Direct source coordinate of the outer plate face measured from the rear mating face."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 5.6,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A",
+            "method": "drawing",
+            "note": "Rear hub outside diameter; distinct from the nominal spline class."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, front view diameter leader",
+            "method": "drawing",
+            "note": "Source linkage-hole diameter."
+          }
+        },
+        "spline_nominal_diameter": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 2, SERVO HORN INFORMATION, F15T row",
+            "method": "drawing",
+            "note": "Nominal named spline class, not a complete tooth profile or cylindrical mating-bore definition."
+          }
+        },
+        "spline_recess_depth": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A",
+            "method": "drawing",
+            "note": "Depth from the rear face to the drawn spline-pocket limit; no fitted seating height is derived."
+          }
+        },
+        "central_through_diameter": {
+          "nominal_mm": 1.8,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A",
+            "method": "drawing",
+            "note": "Central through-hole diameter; does not specify a retaining screw thread."
+          }
+        },
+        "horizontal_link_span": {
+          "nominal_mm": 13.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, front upper dimension",
+            "method": "drawing",
+            "note": "Direct left/right linkage-center span."
+          }
+        },
+        "vertical_link_span": {
+          "nominal_mm": 14.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, front right dimension",
+            "method": "drawing",
+            "note": "Direct top/bottom linkage-center span."
+          }
+        },
+        "end_radius": {
+          "nominal_mm": 1.6,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, front R1.6 leader",
+            "method": "drawing",
+            "note": "Arm-end radius."
+          }
+        },
+        "overall_length_derived": {
+          "nominal_mm": 16.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, horizontal pitch and end radius",
+            "method": "drawing",
+            "note": "Derived 13 + 2 x 1.6 = 16.2."
+          }
+        },
+        "overall_width_derived": {
+          "nominal_mm": 17.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, vertical pitch and end radius",
+            "method": "drawing",
+            "note": "Derived 14 + 2 x 1.6 = 17.2."
+          }
+        },
+        "section_spline_callout": {
+          "nominal_mm": 3.2,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, section A-A diameter 3.2",
+            "method": "drawing",
+            "note": "Literal internal section callout; kept distinct from the nominal F15T diameter 4.0 class."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -6.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 5, FS-X15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, FS-X15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            6.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 5, FS-X15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, FS-X15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            0,
+            -7
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 5, FS-X15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, FS-X15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            0,
+            7
+          ],
+          "diameter": {
+            "nominal_mm": 1.0,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 5, FS-X15 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 5, FS-X15 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "Revision D dated 2023-04-28; numeric facts come from PDF page 5. Page 2 explicitly lists FS-X15 and HS-55 under F15T diameter 4.0."
+        },
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "The drawing title block gives general dimensional tolerances: 0.5-8.99 mm +/-0.05; 9.0-119.9 mm +/-0.1; 120-315 mm +/-0.2. Derived dimensions and nominal compatibility classes retain separate uncertainty notes."
+        }
+      ],
+      "unknown": [
+        "Complete spline tooth form, minor/major fit limits and manufacturing tolerances",
+        "Installed horn seating plane and actual fitted height for the selected actuator profile",
+        "Neutral angular phase and retaining screw thread/engagement",
+        "Exact as-moulded fillets, draft and unmodelled lettering",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "hitec.m-i24.rev-d-20230428",
+      "manufacturer": "Hitec",
+      "model": "M-I24 (Revision D 2023-04-28)",
+      "data_revision": 2,
+      "shape": "double_arm",
+      "status": "dimensions_only",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A coordinate chain",
+            "method": "drawing",
+            "note": "Derived plate thickness: 4.1 - 2.5 mm. Coordinate tolerances are not silently treated as a direct thickness tolerance."
+          }
+        },
+        "rear_face_to_plate_face": {
+          "nominal_mm": 4.1,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Direct source coordinate of the outer plate face measured from the rear mating face."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 8.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Rear hub outside diameter; distinct from the nominal spline class."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.2,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, front view diameter leader",
+            "method": "drawing",
+            "note": "Source linkage-hole diameter."
+          }
+        },
+        "spline_nominal_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 2, SERVO HORN INFORMATION, H24T row",
+            "method": "drawing",
+            "note": "Nominal named spline class, not a complete tooth profile or cylindrical mating-bore definition."
+          }
+        },
+        "spline_recess_depth": {
+          "nominal_mm": 3.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Depth from the rear face to the drawn spline-pocket limit; no fitted seating height is derived."
+          }
+        },
+        "central_through_diameter": {
+          "nominal_mm": 2.8,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Central through-hole diameter; does not specify a retaining screw thread."
+          }
+        },
+        "outer_link_span": {
+          "nominal_mm": 25.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Direct outermost linkage-pair span."
+          }
+        },
+        "middle_link_span": {
+          "nominal_mm": 20.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Direct middle linkage-pair span."
+          }
+        },
+        "inner_link_span": {
+          "nominal_mm": 15.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A",
+            "method": "drawing",
+            "note": "Direct innermost linkage-pair span."
+          }
+        },
+        "end_radius": {
+          "nominal_mm": 2.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, front R2.0 leader",
+            "method": "drawing",
+            "note": "Rounded arm-end radius."
+          }
+        },
+        "overall_length_derived": {
+          "nominal_mm": 29.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, outer pitch and end radius",
+            "method": "drawing",
+            "note": "Derived 25 + 2 x 2.0 = 29.0; not a direct overall callout."
+          }
+        },
+        "front_boss_outer_diameter": {
+          "nominal_mm": 7.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A diameter 7.0",
+            "method": "drawing",
+            "note": "Raised front annulus outside diameter."
+          }
+        },
+        "front_boss_projection": {
+          "nominal_mm": 0.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A coordinates 5.0 and 4.1",
+            "method": "drawing",
+            "note": "Derived 5.0 - 4.1 = 0.9 mm above the outer plate face."
+          }
+        },
+        "front_counterbore_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A diameter 6.0",
+            "method": "drawing",
+            "note": "Front recess diameter, distinct from the rear spline class."
+          }
+        },
+        "front_counterbore_depth": {
+          "nominal_mm": 1.3,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, section A-A 1.3",
+            "method": "drawing",
+            "note": "Front recess depth from the raised annulus face."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -7.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            -10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            -12.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            7.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-5",
+          "center_mm": [
+            10,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-6",
+          "center_mm": [
+            12.5,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 12, M-I24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 12, M-I24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [],
+      "assumptions": [
+        "No solid contour is supplied: the source does not completely constrain the arm flanks and end transitions.",
+        "The source linkage-hole pattern and published dimensions are retained independently of a complete contour.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "Revision D dated 2023-04-28; numeric facts come from PDF page 12. Page 2 explicitly lists M-I24 and HS-311 under H24T diameter 6.0."
+        },
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "The drawing title block gives general dimensional tolerances: 0.5-8.99 mm +/-0.05; 9.0-119.9 mm +/-0.1; 120-315 mm +/-0.2. Derived dimensions and nominal compatibility classes retain separate uncertainty notes."
+        }
+      ],
+      "unknown": [
+        "Complete spline tooth form, minor/major fit limits and manufacturing tolerances",
+        "Installed horn seating plane and actual fitted height for the selected actuator profile",
+        "Neutral angular phase and retaining screw thread/engagement",
+        "Exact as-moulded fillets, draft and unmodelled lettering",
+        "Complete dimensioned arm outline needed before a source solid can be constructed."
+      ]
+    },
+    {
+      "id": "hitec.m-o24.rev-d-20230428",
+      "manufacturer": "Hitec",
+      "model": "M-O24 (Revision D 2023-04-28)",
+      "data_revision": 2,
+      "shape": "disc",
+      "status": "partial_dimensions",
+      "dimensions": {
+        "plate_thickness": {
+          "nominal_mm": 1.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A coordinate chain",
+            "method": "drawing",
+            "note": "Derived plate thickness: 4.1 - 2.5 mm. Coordinate tolerances are not silently treated as a direct thickness tolerance."
+          }
+        },
+        "rear_face_to_plate_face": {
+          "nominal_mm": 4.1,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A",
+            "method": "drawing",
+            "note": "Direct source coordinate of the outer plate face measured from the rear mating face."
+          }
+        },
+        "hub_outer_diameter": {
+          "nominal_mm": 8.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A",
+            "method": "drawing",
+            "note": "Rear hub outside diameter; distinct from the nominal spline class."
+          }
+        },
+        "link_hole_diameter": {
+          "nominal_mm": 1.2,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, front view diameter leader",
+            "method": "drawing",
+            "note": "Source linkage-hole diameter."
+          }
+        },
+        "spline_nominal_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 2, SERVO HORN INFORMATION, H24T row",
+            "method": "drawing",
+            "note": "Nominal named spline class, not a complete tooth profile or cylindrical mating-bore definition."
+          }
+        },
+        "spline_recess_depth": {
+          "nominal_mm": 3.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A",
+            "method": "drawing",
+            "note": "Depth from the rear face to the drawn spline-pocket limit; no fitted seating height is derived."
+          }
+        },
+        "central_through_diameter": {
+          "nominal_mm": 2.8,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A",
+            "method": "drawing",
+            "note": "Central through-hole diameter; does not specify a retaining screw thread."
+          }
+        },
+        "disc_outer_diameter": {
+          "nominal_mm": 17.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A diameter 17.0",
+            "method": "drawing",
+            "note": "Direct disc outside diameter."
+          }
+        },
+        "side_hole_pitch_circle": {
+          "nominal_mm": 12.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, front P.C.D. diameter 12.0",
+            "method": "drawing",
+            "note": "Side cardinal linkage holes lie on this pitch circle."
+          }
+        },
+        "upper_lower_hole_pitch_circle": {
+          "nominal_mm": 13.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, front P.C.D. diameter 13.0",
+            "method": "drawing",
+            "note": "Upper/lower groups lie on this pitch circle; angular locations of oblique members are not called out."
+          }
+        },
+        "front_boss_outer_diameter": {
+          "nominal_mm": 7.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A diameter 7.0",
+            "method": "drawing",
+            "note": "Raised front annulus outside diameter."
+          }
+        },
+        "front_boss_projection": {
+          "nominal_mm": 0.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A coordinates 5.0 and 4.1",
+            "method": "drawing",
+            "note": "Derived 5.0 - 4.1 = 0.9 mm above the outer plate face."
+          }
+        },
+        "front_counterbore_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A diameter 6.0",
+            "method": "drawing",
+            "note": "Front recess diameter, distinct from the rear spline class."
+          }
+        },
+        "front_counterbore_depth": {
+          "nominal_mm": 1.3,
+          "tolerance_mm": 0.05,
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, section A-A 1.3",
+            "method": "drawing",
+            "note": "Front recess depth from the raised annulus face."
+          }
+        }
+      },
+      "holes": [
+        {
+          "id": "link-1",
+          "center_mm": [
+            -6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 14, M-O24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, M-O24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-2",
+          "center_mm": [
+            6,
+            0
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 14, M-O24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, M-O24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-3",
+          "center_mm": [
+            0,
+            -6.5
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 14, M-O24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, M-O24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        },
+        {
+          "id": "link-4",
+          "center_mm": [
+            0,
+            6.5
+          ],
+          "diameter": {
+            "nominal_mm": 1.2,
+            "tolerance_mm": 0.05,
+            "evidence": {
+              "source": "horn-micro-hitec-revd-20230428",
+              "locator": "PDF page 14, M-O24 front and section A-A",
+              "method": "drawing",
+              "note": "Linkage hole diameter; not the shaft bore or retaining screw."
+            }
+          },
+          "evidence": {
+            "source": "horn-micro-hitec-revd-20230428",
+            "locator": "PDF page 14, M-O24 front and section A-A",
+            "method": "drawing",
+            "note": "Axial/cardinal centers are obtained from the drawn centerlines and half the source pair spans or pitch-circle diameters. Symmetric registration is an explicit derivation."
+          },
+          "thread": null
+        }
+      ],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "M-O24 partial outer profile / mating spline omitted",
+          "basis": "partial_dimensions",
+          "note": "Revision D circular flange, rear hub, front boss and axial section; four sourced cardinal linkage holes only. Four oblique holes and the rear toothed mating pocket are omitted, rather than cut at invented angles or replaced by a nominal circular fit.",
+          "color": "#5fbcc9",
+          "geometry": {
+            "kind": "cylinder",
+            "base_mm": [
+              0,
+              0,
+              -4.1
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "diameter_mm": 8.0,
+            "height_mm": 4.1
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -1.6
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 17,
+                "height_mm": 1.6
+              }
+            },
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -0.1
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 7.0,
+                "height_mm": 1.0
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -6,
+                  0,
+                  -1.7000000000000002
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.2,
+                "height_mm": 1.8
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  6,
+                  0,
+                  -1.7000000000000002
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.2,
+                "height_mm": 1.8
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  -6.5,
+                  -1.7000000000000002
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.2,
+                "height_mm": 1.8
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  6.5,
+                  -1.7000000000000002
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.2,
+                "height_mm": 1.8
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.199999999999999
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.8,
+                "height_mm": 5.199999999999999
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -0.4
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 6,
+                "height_mm": 1.4
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "Partial outer profile; the unmodelled rear spline pocket leaves material in the displayed solid.",
+        "Only four cardinal linkage holes have sourced angular positions; four other visible holes are omitted.",
+        "No installed height or neutral angular phase is inferred."
+      ],
+      "observations": [
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "Revision D dated 2023-04-28; numeric facts come from PDF page 14. Page 2 explicitly lists M-O24 and HS-311 under H24T diameter 6.0."
+        },
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "The drawing title block gives general dimensional tolerances: 0.5-8.99 mm +/-0.05; 9.0-119.9 mm +/-0.1; 120-315 mm +/-0.2. Derived dimensions and nominal compatibility classes retain separate uncertainty notes."
+        },
+        {
+          "source": "horn-micro-hitec-revd-20230428",
+          "note": "Page 14 depicts eight peripheral holes. Four cardinal centers use drawn centerlines and PCD 12/13; the other four angles remain unknown. Their preview positions are explicitly assumed."
+        }
+      ],
+      "unknown": [
+        "Complete spline tooth form, minor/major fit limits and manufacturing tolerances",
+        "Installed horn seating plane and actual fitted height for the selected actuator profile",
+        "Neutral angular phase and retaining screw thread/engagement",
+        "Exact as-moulded fillets, draft and unmodelled lettering",
+        "Angular positions of the four oblique disc linkage holes",
+        "No automatic servo assembly: installed plate-face height is unknown."
+      ]
+    }
+  ],
+  "mounts": [
+    {
+      "asset_id": "hitec.hs55.hcs-v2-2",
+      "horn_id": "hitec.fs-il15.rev-d-20230428",
+      "output_id": "main",
+      "frame": "near_mount_center",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-micro-hitec-revd-20230428",
+        "locator": "PDF page 2, SERVO HORN INFORMATION",
+        "method": "drawing",
+        "note": "The manufacturer explicitly lists FS-IL15 in the F15T diameter 4.0 class with HS-55. This is a named compatibility statement, not a reconstruction of the spline surfaces."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Named Hitec compatibility is documented. Installed plate-face height and insertion stop are unknown; no automatic assembly position is supplied.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "hitec.hs55.hcs-v2-2",
+      "horn_id": "hitec.fs-x15.rev-d-20230428",
+      "output_id": "main",
+      "frame": "near_mount_center",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-micro-hitec-revd-20230428",
+        "locator": "PDF page 2, SERVO HORN INFORMATION",
+        "method": "drawing",
+        "note": "The manufacturer explicitly lists FS-X15 in the F15T diameter 4.0 class with HS-55. This is a named compatibility statement, not a reconstruction of the spline surfaces."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Named Hitec compatibility is documented. Installed plate-face height and insertion stop are unknown; no automatic assembly position is supplied.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "hitec.hs311.hcs-v2-2",
+      "horn_id": "hitec.m-i24.rev-d-20230428",
+      "output_id": "main",
+      "frame": "near_mount_center",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-micro-hitec-revd-20230428",
+        "locator": "PDF page 2, SERVO HORN INFORMATION",
+        "method": "drawing",
+        "note": "The manufacturer explicitly lists M-I24 in the H24T diameter 6.0 class with HS-311. This is a named compatibility statement, not a reconstruction of the spline surfaces."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Named Hitec compatibility is documented. Installed plate-face height and insertion stop are unknown; no automatic assembly position is supplied.",
+      "replace_model_parts": []
+    },
+    {
+      "asset_id": "hitec.hs311.hcs-v2-2",
+      "horn_id": "hitec.m-o24.rev-d-20230428",
+      "output_id": "main",
+      "frame": "near_mount_center",
+      "compatibility": "documented",
+      "compatibility_evidence": {
+        "source": "horn-micro-hitec-revd-20230428",
+        "locator": "PDF page 2, SERVO HORN INFORMATION",
+        "method": "drawing",
+        "note": "The manufacturer explicitly lists M-O24 in the H24T diameter 6.0 class with HS-311. This is a named compatibility statement, not a reconstruction of the spline surfaces."
+      },
+      "origin_mm": null,
+      "direction": [
+        0,
+        0,
+        1
+      ],
+      "placement_basis": "unknown",
+      "placement_evidence": null,
+      "note": "Named Hitec compatibility is documented. Installed plate-face height and insertion stop are unknown; no automatic assembly position is supplied.",
+      "replace_model_parts": []
+    }
+  ]
+}

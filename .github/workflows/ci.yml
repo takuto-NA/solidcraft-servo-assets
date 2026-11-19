@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Native checks and Wasm packages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CARGO_TERM_COLOR: always
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Install stable Rust and Wasm target
+        run: |
+          rustup toolchain install stable --profile minimal --component rustfmt --component clippy --target wasm32-unknown-unknown
+          rustup default stable
+          rustc --version
+          cargo --version
+
+      - name: Cache Cargo dependencies and build outputs
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/git/db
+            target
+            tools/componentize/target
+          key: ${{ runner.os }}-rust-stable-${{ hashFiles('Cargo.lock', 'tools/componentize/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-rust-stable-
+
+      - name: Fetch locked dependencies
+        run: |
+          cargo fetch --locked
+          cargo fetch --locked --manifest-path tools/componentize/Cargo.toml
+
+      - name: Run the pre-commit gate
+        run: cargo xtask ci
+
+      # No SolidCraft CLI is downloaded here. The gate reports host checks as
+      # NOT RUN unless SOLIDCRAFT_CLI is supplied in a trusted local environment.
+      - name: Upload checked Wasm packages
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: servo-assets-packages
+          path: |
+            dist/*.zip
+            dist/*.zip.sha256
+          if-no-files-found: error
+          retention-days: 14

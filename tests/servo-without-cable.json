@@ -1,0 +1,17 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "feetech.fs90.akizuki-drawing",
+    "include_cable": false
+  },
+  "expect": {
+    "model": {
+      "body_count": 5
+    },
+    "reply": {
+      "result": {
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

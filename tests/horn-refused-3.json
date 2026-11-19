@@ -1,0 +1,13 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xl330-m288-t.brochure",
+    "horn_id": "robotis.hnx330-n101.metal-2022"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

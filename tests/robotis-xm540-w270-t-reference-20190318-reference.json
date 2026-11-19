@@ -1,0 +1,17 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xm540-w270-t.reference-20190318"
+  },
+  "expect": {
+    "model": {
+      "body_count": 11
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.xm540-w270-t.reference-20190318",
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

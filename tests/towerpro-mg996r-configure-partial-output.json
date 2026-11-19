@@ -1,0 +1,16 @@
+{
+  "entry": "output-reference",
+  "params": {
+    "asset_id": "towerpro.mg996r.configure"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "representation": "output-reference"
+      }
+    }
+  }
+}

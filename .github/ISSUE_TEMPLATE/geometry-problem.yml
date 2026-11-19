@@ -1,0 +1,62 @@
+name: Geometry or interface problem
+description: Report a wrong dimension, missing interface, insertion failure or saved-model problem.
+title: "[Geometry] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A small reproduction and actual CAD view help distinguish a source error from a modeling problem.
+        Please include what you know; no local build or completed fix is required to report a problem.
+  - type: input
+    id: versions
+    attributes:
+      label: Plugin and SolidCraft versions
+      description: Include current or legacy package edition, if known.
+      placeholder: Servo Assets version, SolidCraft version, operating system
+  - type: input
+    id: asset_ids
+    attributes:
+      label: Servo and horn IDs or names
+      description: Include the exact variant and selected reference mode if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and parameters
+      description: Provide a minimal sequence, entry parameters or command script. Remove tokens and private paths.
+      placeholder: Entry, selected profile, horn mode, placement and other changed parameters
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+      description: State the affected dimension, frame, hole, shaft, cable entrance, socket/contact count, label or saved behavior. Include units.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source or specimen evidence
+      description: Link the dimensioned source and page, or describe your specimen and measurement. Note any uncertainty or photo inference.
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Actual CAD screenshots
+      description: Paste your screenshots here. Show the affected output, rear or cable interface and labels; before/after views can help. Avoid vendor media and private designs.
+  - type: dropdown
+    id: saved_result
+    attributes:
+      label: Does saving and reopening affect the problem?
+      options:
+        - Not checked or not relevant
+        - The problem is the same after reopening
+        - The problem appears only after reopening
+        - The problem changes after reopening
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant error or validation output
+      description: Include only relevant lines and remove secrets. If you ran checks, give the exact command and result.
+      render: text

@@ -1,0 +1,13 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "towerpro.sg90-analog.configure",
+    "horn_id": "robotis.hn13-n101.reference-20190318"
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}

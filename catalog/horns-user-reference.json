@@ -1,0 +1,1437 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.10",
+  "sources": [
+    {
+      "id": "horn-user-aliexpress-photo",
+      "publisher": "Unidentified seller; reference supplied by the user",
+      "title": "Annotated photographs of two micro-servo horns and screws; manual measurements, unspecified error",
+      "url": "https://ae-pic-a1.aliexpress-media.com/kf/Se22ca210d021427aafa90dafb6c79844N.jpg?has_lang=1&ver=3",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "horns": [
+    {
+      "id": "unidentified.photo-se22ca210.double-arm",
+      "manufacturer": "Unknown",
+      "model": "SG90-style double arm / photo estimate",
+      "data_revision": 2,
+      "shape": "double-arm",
+      "status": "photo_estimate",
+      "dimensions": {
+        "reported_length": {
+          "nominal_mm": 31.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm annotated photo: overall length",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_plate_span": {
+          "nominal_mm": 2.36,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm annotated photo: plate thickness",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_axial_span": {
+          "nominal_mm": 4.72,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm annotated photo: total thickness",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_hub_span": {
+          "nominal_mm": 6.74,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm annotated photo: reported hub span",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_link_opening_span": {
+          "nominal_mm": 1.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm photograph: bracket across a small linkage opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_center_opening_span": {
+          "nominal_mm": 2.36,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm photograph: bracket at the central clear opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_inner_hub_span": {
+          "nominal_mm": 4.65,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm photograph: bracket inside the toothed hub opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_local_hole_spacing": {
+          "nominal_mm": 2.43,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "double-arm photograph: bracket between two tip-side linkage centers",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        }
+      },
+      "holes": [],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "tapered photo reconstruction / inferred holes and cup",
+          "basis": "photo_estimate",
+          "note": "Printed major dimensions constrain a calibrated tapered line/arc contour. Hole centers and cup interpretation are source-linked estimates, not arbitrary constant-width strips. The hollow boss faces the actuator; its floor is inferred at the plate underside. Spline teeth and cosmetic molding dimples are omitted.",
+          "color": "#c99545",
+          "geometry": {
+            "kind": "profile",
+            "z_mm": -2.36,
+            "height_mm": 2.36,
+            "segments": [
+              {
+                "kind": "line",
+                "start_mm": [
+                  0,
+                  2.6785855071156863
+                ],
+                "end_mm": [
+                  -13.807385215515845,
+                  1.8969629452070524
+                ]
+              },
+              {
+                "kind": "arc",
+                "center_mm": [
+                  -13.7,
+                  0
+                ],
+                "start_mm": [
+                  -13.807385215515845,
+                  1.8969629452070524
+                ],
+                "end_mm": [
+                  -13.807385215515845,
+                  -1.8969629452070524
+                ],
+                "ccw": true
+              },
+              {
+                "kind": "line",
+                "start_mm": [
+                  -13.807385215515845,
+                  -1.8969629452070524
+                ],
+                "end_mm": [
+                  0,
+                  -2.6785855071156863
+                ]
+              },
+              {
+                "kind": "line",
+                "start_mm": [
+                  0,
+                  -2.6785855071156863
+                ],
+                "end_mm": [
+                  13.807385215515845,
+                  -1.8969629452070524
+                ]
+              },
+              {
+                "kind": "arc",
+                "center_mm": [
+                  13.7,
+                  0
+                ],
+                "start_mm": [
+                  13.807385215515845,
+                  -1.8969629452070524
+                ],
+                "end_mm": [
+                  13.807385215515845,
+                  1.8969629452070524
+                ],
+                "ccw": true
+              },
+              {
+                "kind": "line",
+                "start_mm": [
+                  13.807385215515845,
+                  1.8969629452070524
+                ],
+                "end_mm": [
+                  0,
+                  2.6785855071156863
+                ]
+              }
+            ]
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.72
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 6.74,
+                "height_mm": 4.72
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -4.41,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -6.17,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -8.04,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -9.95,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -11.82,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  -13.73,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  4.41,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  6.17,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  8.04,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  9.95,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  11.82,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  13.73,
+                  0,
+                  -2.36
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.36
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.72
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.36,
+                "height_mm": 4.72
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.72
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 4.65,
+                "height_mm": 2.36
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "Photo-based reconstruction, not a manufacturer-controlled drawing or a verified replacement part. Printed decimal places do not establish physical accuracy.",
+        "Major length, plate span, axial span and hub span use the photo annotations; tapered contour and hole centers are calibrated inferences recorded per feature.",
+        "The printed2.43 local spacing is retained as an annotation, not repeated as a global pitch: it would conflict with the visible hole counts and available arm reach.",
+        "The hollow boss opens toward negative localZ, the actuator side. The smooth cup omits teeth; depth and retaining clearance interpretation remain inferred.",
+        "Neutral phase, installed shaft height, specimen identity and compatibility with a particular SG90/SG92R/MG90S remain unverified."
+      ],
+      "observations": [
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "This photographed specimen is distinct from the AU TA0132 drawing. Double has6 openings per arm; single has7. Paired off-axis dimples are not additional through holes."
+        },
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "Original pixel anchors, lateral hub-span calibration, independent axial normalization and each derived parameter are retained in estimates. No physical error bound is assigned."
+        },
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "The local2.43 label cannot be used as a common pitch with all visible openings and the reported overall length. Single21.3 minus hub6.76 gives14.54 exposed reach, differing from printed14.3 by0.24. These inconsistencies remain explicit rather than silently merging dimensions."
+        }
+      ],
+      "unknown": [
+        "Exact manufacturer, SKU, physical revision and particular SG90 compatibility.",
+        "True spline tooth count/profile, major/minor dimensions, axial stop and mating fit.",
+        "Physical uncertainty of the manual photo measurements and perspective-derived contour/centers.",
+        "Cosmetic molding dimple depths, edge fillets/draft, true cup floor and installed seating height."
+      ],
+      "estimates": {
+        "tip_radius": {
+          "value": 1.9,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Rounded end silhouette relative to hub span",
+            "method": "photo_trace",
+            "note": "Fit circular tips to the photographed rounded silhouette after lateral calibration by reported hub span; regularized to1.90mm(double) or1.96mm(single). Perspective and physical error are not bounded."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "arm_reach": {
+          "value": 15.6,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed overall length and chosen shaft-centered reconstruction",
+            "method": "photo_inference",
+            "note": "Double assumes centered equal reaches L/2. Single assumes the rear plan extremity is the reported circular hub radius, so reach=L-D/2."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "tip_center": {
+          "value": 13.7,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Analytic tangent tip construction",
+            "method": "photo_inference",
+            "note": "Tip-center X = inferred reach minus photo-calibrated tip radius."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "half_taper": {
+          "value": 3.24,
+          "unit": "deg",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Arm width samples along original photograph",
+            "method": "photo_trace",
+            "note": "Double half-angle3.24deg fitted to observed widths. Single fitted4.89deg is regularized to the common external tangent of hubR3.38 and tipR1.96 at X15.96, about5.10deg. This preserves smooth joins and reported major spans."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "flank_intercept": {
+          "value": 2.6785855071156863,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Analytic tangent line",
+            "method": "photo_inference",
+            "note": "Double b=C*tan(alpha)+r/cos(alpha); single b=Rhub/cos(alpha). The arm is tapered, not a constant-width capsule."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_hole_diameter": {
+          "value": 1.45,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed1.45 opening span plus visibly repeated openings",
+            "method": "photo_inference",
+            "note": "Interpret the printed opening span as a circular linkage-hole diameter and apply it to the visible repeated holes. Diameter convention and physical fit remain unverified."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_hole_count": {
+          "value": 12,
+          "unit": "count",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Plan and side views of this photograph",
+            "method": "photo_trace",
+            "note": "Double has six through openings per arm; single has seven. Paired off-axis molded dimples are not through holes."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "center_clearance": {
+          "value": 2.36,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed central opening span",
+            "method": "photo_inference",
+            "note": "Interpret as a coaxial circular retaining-clearance opening. No screw thread or fit is inferred."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "cup_diameter": {
+          "value": 4.65,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed inner hub opening span",
+            "method": "photo_inference",
+            "note": "Represent the visible toothed opening by a smooth visual circular envelope at the annotated span. Teeth, spline major/minor definitions and mating fit are not reconstructed."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "cup_depth": {
+          "value": 2.36,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Side-view plate and total-height annotations",
+            "method": "photo_inference",
+            "note": "Cup opens on the mating side and stops at the underside of the arm plate: depth=reported total height minus reported plate span. Its true floor depth is not measured."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_radius_1": {
+          "value": 4.41,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              588.0
+            ],
+            [
+              398.0,
+              788.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_2": {
+          "value": 6.17,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              551.7
+            ],
+            [
+              398.0,
+              832.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_3": {
+          "value": 8.04,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              510.0
+            ],
+            [
+              398.0,
+              875.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_4": {
+          "value": 9.95,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              468.4
+            ],
+            [
+              398.0,
+              920.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_5": {
+          "value": 11.82,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              426.5
+            ],
+            [
+              398.0,
+              963.1
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_6": {
+          "value": 13.73,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Mirror-average of upper/lower aperture radii after separate affine scales: top15.6/(689.5-344), bottom15.6/(1052-689.5)mm/pixel. Regularized to two decimal places, not a manufacturing tolerance."
+          },
+          "source_pixel_points": [
+            [
+              398.0,
+              689.5
+            ],
+            [
+              398.0,
+              385.0
+            ],
+            [
+              398.0,
+              1007.8
+            ]
+          ],
+          "uncertainty_mm": null
+        }
+      }
+    },
+    {
+      "id": "unidentified.photo-se22ca210.single-arm",
+      "manufacturer": "Unknown",
+      "model": "SG90-style single arm / photo estimate",
+      "data_revision": 2,
+      "shape": "single-arm",
+      "status": "photo_estimate",
+      "dimensions": {
+        "reported_length": {
+          "nominal_mm": 21.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm annotated photo: overall length",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_plate_span": {
+          "nominal_mm": 2.08,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm annotated photo: plate thickness",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_axial_span": {
+          "nominal_mm": 4.82,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm annotated photo: total thickness",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_hub_span": {
+          "nominal_mm": 6.76,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm annotated photo: reported hub span",
+            "method": "photo_annotation",
+            "note": "Transcribed printed photo annotation, not a verified physical dimension or an independent measurement. Support surfaces and error bound are unspecified. No installed seat or mating diameter is inferred."
+          }
+        },
+        "reported_link_opening_span": {
+          "nominal_mm": 1.45,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm photograph: bracket across a small linkage opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_center_opening_span": {
+          "nominal_mm": 2.36,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm photograph: bracket at the central clear opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_inner_hub_span": {
+          "nominal_mm": 4.54,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm photograph: bracket inside the toothed hub opening",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        },
+        "reported_local_hole_spacing": {
+          "nominal_mm": 2.43,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "single-arm photograph: bracket between two tip-side linkage centers",
+            "method": "photo_annotation",
+            "note": "Printed manual-measurement annotation; support convention and measurement error are unspecified. Its model interpretation is recorded separately in estimates."
+          }
+        }
+      },
+      "holes": [],
+      "parts": [
+        {
+          "id": "horn",
+          "label": "tapered photo reconstruction / inferred holes and cup",
+          "basis": "photo_estimate",
+          "note": "Printed major dimensions constrain a calibrated tapered line/arc contour. Hole centers and cup interpretation are source-linked estimates, not arbitrary constant-width strips. The hollow boss faces the actuator; its floor is inferred at the plate underside. Spline teeth and cosmetic molding dimples are omitted.",
+          "color": "#c99545",
+          "geometry": {
+            "kind": "profile",
+            "z_mm": -2.08,
+            "height_mm": 2.08,
+            "segments": [
+              {
+                "kind": "arc",
+                "center_mm": [
+                  0,
+                  0
+                ],
+                "start_mm": [
+                  0.3007268170426065,
+                  3.3665952209185206
+                ],
+                "end_mm": [
+                  0.3007268170426065,
+                  -3.3665952209185206
+                ],
+                "ccw": true
+              },
+              {
+                "kind": "line",
+                "start_mm": [
+                  0.3007268170426065,
+                  -3.3665952209185206
+                ],
+                "end_mm": [
+                  16.13438596491228,
+                  -1.9522268144971304
+                ]
+              },
+              {
+                "kind": "arc",
+                "center_mm": [
+                  15.96,
+                  0
+                ],
+                "start_mm": [
+                  16.13438596491228,
+                  -1.9522268144971304
+                ],
+                "end_mm": [
+                  16.13438596491228,
+                  1.9522268144971304
+                ],
+                "ccw": true
+              },
+              {
+                "kind": "line",
+                "start_mm": [
+                  16.13438596491228,
+                  1.9522268144971304
+                ],
+                "end_mm": [
+                  0.3007268170426065,
+                  3.3665952209185206
+                ]
+              }
+            ]
+          },
+          "modifiers": [
+            {
+              "operation": "join",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.82
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 6.76,
+                "height_mm": 4.82
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  4.65,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  6.56,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  8.44,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  10.32,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  12.26,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  14.2,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  16.12,
+                  0,
+                  -2.08
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 1.45,
+                "height_mm": 2.08
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.82
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 2.36,
+                "height_mm": 4.82
+              }
+            },
+            {
+              "operation": "cut",
+              "geometry": {
+                "kind": "cylinder",
+                "base_mm": [
+                  0,
+                  0,
+                  -4.82
+                ],
+                "axis": [
+                  0,
+                  0,
+                  1
+                ],
+                "diameter_mm": 4.54,
+                "height_mm": 2.74
+              }
+            }
+          ]
+        }
+      ],
+      "assumptions": [
+        "Photo-based reconstruction, not a manufacturer-controlled drawing or a verified replacement part. Printed decimal places do not establish physical accuracy.",
+        "Major length, plate span, axial span and hub span use the photo annotations; tapered contour and hole centers are calibrated inferences recorded per feature.",
+        "The printed2.43 local spacing is retained as an annotation, not repeated as a global pitch: it would conflict with the visible hole counts and available arm reach.",
+        "The hollow boss opens toward negative localZ, the actuator side. The smooth cup omits teeth; depth and retaining clearance interpretation remain inferred.",
+        "Neutral phase, installed shaft height, specimen identity and compatibility with a particular SG90/SG92R/MG90S remain unverified."
+      ],
+      "observations": [
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "This photographed specimen is distinct from the AU TA0132 drawing. Double has6 openings per arm; single has7. Paired off-axis dimples are not additional through holes."
+        },
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "Original pixel anchors, lateral hub-span calibration, independent axial normalization and each derived parameter are retained in estimates. No physical error bound is assigned."
+        },
+        {
+          "source": "horn-user-aliexpress-photo",
+          "note": "The local2.43 label cannot be used as a common pitch with all visible openings and the reported overall length. Single21.3 minus hub6.76 gives14.54 exposed reach, differing from printed14.3 by0.24. These inconsistencies remain explicit rather than silently merging dimensions."
+        }
+      ],
+      "unknown": [
+        "Exact manufacturer, SKU, physical revision and particular SG90 compatibility.",
+        "True spline tooth count/profile, major/minor dimensions, axial stop and mating fit.",
+        "Physical uncertainty of the manual photo measurements and perspective-derived contour/centers.",
+        "Cosmetic molding dimple depths, edge fillets/draft, true cup floor and installed seating height."
+      ],
+      "estimates": {
+        "tip_radius": {
+          "value": 1.96,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Rounded end silhouette relative to hub span",
+            "method": "photo_trace",
+            "note": "Fit circular tips to the photographed rounded silhouette after lateral calibration by reported hub span; regularized to1.90mm(double) or1.96mm(single). Perspective and physical error are not bounded."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "arm_reach": {
+          "value": 17.92,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed overall length and chosen shaft-centered reconstruction",
+            "method": "photo_inference",
+            "note": "Double assumes centered equal reaches L/2. Single assumes the rear plan extremity is the reported circular hub radius, so reach=L-D/2."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "tip_center": {
+          "value": 15.96,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Analytic tangent tip construction",
+            "method": "photo_inference",
+            "note": "Tip-center X = inferred reach minus photo-calibrated tip radius."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "half_taper": {
+          "value": 5.104494569924323,
+          "unit": "deg",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Arm width samples along original photograph",
+            "method": "photo_trace",
+            "note": "Double half-angle3.24deg fitted to observed widths. Single fitted4.89deg is regularized to the common external tangent of hubR3.38 and tipR1.96 at X15.96, about5.10deg. This preserves smooth joins and reported major spans."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "flank_intercept": {
+          "value": 3.393458152917783,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Analytic tangent line",
+            "method": "photo_inference",
+            "note": "Double b=C*tan(alpha)+r/cos(alpha); single b=Rhub/cos(alpha). The arm is tapered, not a constant-width capsule."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_hole_diameter": {
+          "value": 1.45,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed1.45 opening span plus visibly repeated openings",
+            "method": "photo_inference",
+            "note": "Interpret the printed opening span as a circular linkage-hole diameter and apply it to the visible repeated holes. Diameter convention and physical fit remain unverified."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_hole_count": {
+          "value": 7,
+          "unit": "count",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Plan and side views of this photograph",
+            "method": "photo_trace",
+            "note": "Double has six through openings per arm; single has seven. Paired off-axis molded dimples are not through holes."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "center_clearance": {
+          "value": 2.36,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed central opening span",
+            "method": "photo_inference",
+            "note": "Interpret as a coaxial circular retaining-clearance opening. No screw thread or fit is inferred."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "cup_diameter": {
+          "value": 4.54,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Printed inner hub opening span",
+            "method": "photo_inference",
+            "note": "Represent the visible toothed opening by a smooth visual circular envelope at the annotated span. Teeth, spline major/minor definitions and mating fit are not reconstructed."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "cup_depth": {
+          "value": 2.74,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Side-view plate and total-height annotations",
+            "method": "photo_inference",
+            "note": "Cup opens on the mating side and stops at the underside of the arm plate: depth=reported total height minus reported plate span. Its true floor depth is not measured."
+          },
+          "source_pixel_points": [],
+          "uncertainty_mm": null
+        },
+        "link_radius_1": {
+          "value": 4.65,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1615.9
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_2": {
+          "value": 6.56,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1664.3
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_3": {
+          "value": 8.44,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1712.2
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_4": {
+          "value": 10.32,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1759.9
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_5": {
+          "value": 12.26,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1809.2
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_6": {
+          "value": 14.2,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1858.6
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        },
+        "link_radius_7": {
+          "value": 16.12,
+          "unit": "mm",
+          "evidence": {
+            "source": "horn-user-aliexpress-photo",
+            "locator": "Original1600x2706 image centerline aperture centroids",
+            "method": "photo_trace",
+            "note": "Map aperture centroid using x=(pixel_y-1497.7)*17.92/(1953-1497.7). Perspective remains uncorrected; these are inferred centers, not source-dimensioned datums."
+          },
+          "source_pixel_points": [
+            [
+              413.0,
+              1497.7
+            ],
+            [
+              413.0,
+              1907.2
+            ],
+            [
+              413.0,
+              1953.0
+            ]
+          ],
+          "uncertainty_mm": null
+        }
+      }
+    }
+  ],
+  "mounts": []
+}

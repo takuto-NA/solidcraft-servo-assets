@@ -1,0 +1,3074 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.5",
+  "sources": [
+    {
+      "id": "akizuki-exp-fs0307-photo",
+      "publisher": "Akizuki Denshi",
+      "title": "FS0307 Akizuki SKU 114807 product photograph",
+      "url": "https://akizukidenshi.com/img/goods/L/114807.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs0307-product",
+      "publisher": "Akizuki Denshi",
+      "title": "FS0307 Akizuki SKU 114807 product listing",
+      "url": "https://akizukidenshi.com/catalog/g/g114807/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs0307-sheet",
+      "publisher": "FEETECH / Akizuki Denshi",
+      "title": "FS0307 FEETECH specification and dimensional drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/fs0307.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs5103b-photo",
+      "publisher": "Akizuki Denshi",
+      "title": "FS5103B Akizuki SKU 114802 product photograph",
+      "url": "https://akizukidenshi.com/img/goods/L/114802.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs5103b-product",
+      "publisher": "Akizuki Denshi",
+      "title": "FS5103B Akizuki SKU 114802 product listing",
+      "url": "https://akizukidenshi.com/catalog/g/g114802/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs5103b-sheet",
+      "publisher": "FEETECH / Akizuki Denshi",
+      "title": "FS5103B FEETECH specification and dimensional drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/fs5103b.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs90r-photo",
+      "publisher": "Akizuki Denshi",
+      "title": "FS90R Akizuki SKU 113206 product photograph",
+      "url": "https://akizukidenshi.com/img/goods/L/113206.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs90r-product",
+      "publisher": "Akizuki Denshi",
+      "title": "FS90R Akizuki SKU 113206 product listing",
+      "url": "https://akizukidenshi.com/catalog/g/g113206/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-fs90r-sheet",
+      "publisher": "FEETECH / Akizuki Denshi",
+      "title": "FS90R FEETECH specification and dimensional drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/fs90r_20201214.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft1117m-photo",
+      "publisher": "Akizuki Denshi",
+      "title": "FT1117M Akizuki SKU 114803 product photograph",
+      "url": "https://akizukidenshi.com/img/goods/L/114803.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft1117m-product",
+      "publisher": "Akizuki Denshi",
+      "title": "FT1117M Akizuki SKU 114803 product listing",
+      "url": "https://akizukidenshi.com/catalog/g/g114803/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft1117m-sheet",
+      "publisher": "FEETECH / Akizuki Denshi",
+      "title": "FT1117M FEETECH specification and dimensional drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/ft1117m.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft90b-photo",
+      "publisher": "Akizuki Denshi",
+      "title": "FT90B Akizuki SKU 114693 product photograph",
+      "url": "https://akizukidenshi.com/img/goods/L/114693.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft90b-product",
+      "publisher": "Akizuki Denshi",
+      "title": "FT90B Akizuki SKU 114693 product listing",
+      "url": "https://akizukidenshi.com/catalog/g/g114693/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-exp-ft90b-sheet",
+      "publisher": "FEETECH / Akizuki Denshi",
+      "title": "FT90B FEETECH specification and dimensional drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/ft90b.pdf",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "assets": [
+    {
+      "id": "feetech.fs90r.akizuki-drawing",
+      "manufacturer": "FEETECH",
+      "model": "FS90R",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "micro-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "113206",
+          "url": "https://akizukidenshi.com/catalog/g/g113206/"
+        }
+      ],
+      "dimensions": {
+        "axis_from_near_mount": {
+          "nominal_mm": 8.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 8.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "case_length": {
+          "nominal_mm": 22.5,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 22.5 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "case_width": {
+          "nominal_mm": 12.1,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 12.1 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 32.3,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 32.3 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 27.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 27.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_pitch": {
+          "nominal_mm": 27.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 27.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_slot_diameter": {
+          "nominal_mm": 2.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: diameter 2.2 open slot",
+            "method": "drawing",
+            "note": "Circular reference portion of an open slot; no diameter tolerance is supplied."
+          }
+        },
+        "mount_top_height": {
+          "nominal_mm": 19.2,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 19.2 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 16.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 16.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "overall_height": {
+          "nominal_mm": 30.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 30.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "shaft_outer_diameter": {
+          "nominal_mm": 4.86,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: diameter 4.86",
+            "method": "drawing",
+            "note": "No diameter tolerance or mating tooth form is supplied; 21T does not establish horn compatibility."
+          }
+        },
+        "shoulder_height": {
+          "nominal_mm": 23.4,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-fs90r-sheet",
+            "locator": "Page 2, section 6: 23.4 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Manufacturing tolerance stack"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "Screw reference circles for open mounting slots",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-ears",
+          "frame": "near_mount_center",
+          "omitted": [
+            "Actual open slot contour",
+            "Case outline",
+            "Output shaft",
+            "Horn"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-ears",
+          "frame": "near_mount_center",
+          "holes": [
+            {
+              "id": "near-hole",
+              "center_mm": [
+                0,
+                0
+              ],
+              "diameter": {
+                "nominal_mm": 2.2,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-exp-fs90r-sheet",
+                  "locator": "Page 2, diameter 2.2 callout",
+                  "method": "drawing",
+                  "note": "Reference circle for an open slot; tolerance is not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-exp-fs90r-sheet",
+                "locator": "Page 2, mounting slot centerline",
+                "method": "drawing",
+                "note": "The first mounting center defines the local origin."
+              }
+            },
+            {
+              "id": "far-hole",
+              "center_mm": [
+                27.7,
+                0
+              ],
+              "diameter": {
+                "nominal_mm": 2.2,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-exp-fs90r-sheet",
+                  "locator": "Page 2, diameter 2.2 callout",
+                  "method": "drawing",
+                  "note": "Reference circle for an open slot; tolerance is not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-exp-fs90r-sheet",
+                "locator": "Page 2, 27.7 +/-0.1 pitch",
+                "method": "drawing",
+                "note": "Near to far center along +X; nominal pitch tolerance +/-0.1 mm."
+              }
+            }
+          ],
+          "note": "Two screw reference circles, not closed holes in the servo: the drawing depicts open mounting slots. Origin is the near mounting center in the ear underside plane; +X points to the far center; +Z points toward output shaft. Pattern does not register envelope boxes automatically.",
+          "plane_height_dimension": null
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Hole-to-case-end registration and explicit symmetry datum",
+        "Complete ear perimeter and open slot mouth width",
+        "Mounting slot diameter tolerance",
+        "Full output spline tooth profile and horn compatibility",
+        "Exact cable exit pose, conductor/bundle dimensions, bend radius and connector envelope"
+      ],
+      "observations": [
+        {
+          "source": "akizuki-exp-fs90r-sheet",
+          "note": "Page 2 provides this model-specific mounting pattern and height datums; no dimensions have been inherited solely from the similar FS90 name. Linear callouts explicitly carry +/-0.1 mm; diameter callouts do not. Case registration between mounting centers assumes symmetry."
+        },
+        {
+          "source": "akizuki-exp-fs90r-sheet",
+          "note": "Page 1 specifies 21T(4.8 mm), whereas the updated page 2 drawing labels diameter 4.86 mm. This profile uses the drawing value and records the disagreement without inventing a physical revision."
+        },
+        {
+          "source": "akizuki-exp-fs90r-photo",
+          "note": "One connected harness, three insulated conductors and one lead-end connector are visible. These are photograph counts, not a guarantee about every seller or manufacturing revision."
+        },
+        {
+          "source": "akizuki-exp-fs90r-product",
+          "note": "Akizuki SKU 113206 is the seller-specific observation linked to this manufacturer sheet and photograph. Seller SKU, source-document labels and unknown physical product revision are separate identities."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs90r-photo",
+              "locator": "Product photograph: one connected three-conductor harness",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "akizuki-exp-fs90r-photo",
+              "locator": "Product photograph: three individually insulated brown/red/orange conductors",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs90r-photo",
+              "locator": "Product photograph: one lead-end three-contact connector",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 250,
+            "tolerance_mm": 5,
+            "evidence": {
+              "source": "akizuki-exp-fs90r-sheet",
+              "locator": "Page 1, mechanical specification 3-11: Connector wire",
+              "method": "specification",
+              "note": "Endpoint convention and inclusion of connector length are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "akizuki-exp-fs90r-photo",
+            "note": "The photograph shows one three-conductor lead; the actual housing exit edge is partly concealed. No numeric exit pose is established."
+          },
+          "unknown": [
+            "Exact cable exit position and direction in the model frame",
+            "Conductor outside diameter and insulation thickness",
+            "Bundle width and thickness",
+            "Strain relief shape and envelope",
+            "Minimum bend radius",
+            "Connector envelope dimensions and mating clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "near_mount_center",
+            "origin_mm": [
+              8.7,
+              0,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              0.1,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "akizuki-exp-fs90r-sheet",
+              "locator": "Page 2, 8.7 +/-0.1 and shared mounting/shaft centerline",
+              "method": "drawing",
+              "note": "X=8.7 +/-0.1 mm from near slot center; Y=0 follows the common centerline. Z=0 is the ear underside datum. Height conversions subtract the source 16.7 +/-0.1 mm underside height."
+            }
+          },
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": "overall_height",
+          "frame_height_dimension": "mount_underside_height",
+          "shaft_diameter_dimension": "shaft_outer_diameter",
+          "unknown": [
+            "Full spline mating tooth form",
+            "Horn seating plane and fitted horn height",
+            "Neutral angular phase",
+            "Shaft diameter tolerance"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "near_mount_center",
+        "assumptions": [
+          "Case and mounting ears are placed symmetrically between the two mounting centers. This registration is an explicit assumption, not a directly dimensioned coordinate.",
+          "Ear perimeter and narrow open slot mouths are simplified. Circular pockets and center pitch use the drawing.",
+          "Upper turret uses a simplified two-lobe outline; it is not a conservative full housing envelope.",
+          "Cable exit pose is not dimensioned. The model places an explicit planning outlet at the lower shaft-near short end, facing -X; this pose must be checked against the purchased sample.",
+          "Default three-conductor outlet-marker length 3 mm, outlet height 2 mm, wire diameter 1 mm and pitch 1.1 mm are editable planning values. These are separate from the published full lead length.",
+          "The optional connector box is a planning 10 x 8 x 4 mm block, omitted by default. No factory connector envelope or bend radius is claimed.",
+          "No horn, spline tooth form, angular phase, cable strain relief or manufacturing tolerance envelope is modelled. Source scalar dimensions do not verify the entire simplified silhouette."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "HOUSING",
+            "basis": "nominal_with_assumed_alignment",
+            "note": "Published 22.5 x 12.1 x 23.4 mm shoulder box; symmetric case registration in mounting frame is an assumption.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                2.6,
+                -6.05,
+                -16.7
+              ],
+              "size_mm": [
+                22.5,
+                12.1,
+                23.4
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "NEAR MOUNT SLOT",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "27.7 center pitch and diameter2.2 are dimensioned; rectangular ear outline, symmetric placement and1mm mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -2.3,
+                -6.05,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                12.1,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    0,
+                    0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -2.4,
+                    -0.5,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.4,
+                    1,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "FAR MOUNT SLOT",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "27.7 center pitch and diameter2.2 are dimensioned; rectangular ear outline, symmetric placement and1mm mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                25.1,
+                -6.05,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                12.1,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    27.7,
+                    0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    27.7,
+                    -0.5,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.4,
+                    1,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "approximate_contour",
+            "note": "Source shoulder/top heights constrain the vertical span; the two-lobe contour and diameter choices are approximations.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8.7,
+                0,
+                6.7
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 12.1,
+              "height_mm": 4.3
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    13.2,
+                    0,
+                    6.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 6,
+                  "height_mm": 4.3
+                }
+              }
+            ]
+          },
+          {
+            "id": "shaft",
+            "label": "OUTPUT SHAFT",
+            "basis": "nominal_envelope",
+            "note": "Axis8.7,0; outside diameter4.86; housing-top to shaft-top3mm. Spline teeth, horn seat and angular phase are not modelled.",
+            "color": "#e4b44c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8.7,
+                0,
+                11
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 4.86,
+              "height_mm": 3
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              2.6,
+              0,
+              -16.7
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#ee9437"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              8.7,
+              0,
+              14
+            ],
+            "text": "FS90R OUTPUT\nSource axis X8.7 / Y0, diameter4.86 mm; shaft top Z14 in mounting frame"
+          },
+          {
+            "anchor_mm": [
+              27.7,
+              0,
+              2.5
+            ],
+            "text": "MOUNT SLOTS\nSource pitch27.7 mm and circular pockets diameter2.2 mm; mouths and ear outline approximate"
+          },
+          {
+            "anchor_mm": [
+              25.1,
+              6.05,
+              6.7
+            ],
+            "text": "HOUSING\n22.5 x12.1 x23.4 mm shoulder box; symmetric case alignment assumed"
+          },
+          {
+            "anchor_mm": [
+              2.6,
+              0,
+              -14.7
+            ],
+            "text": "PLANNING CABLE OUTLET\nOne harness /3 conductors; default displayed segment3 mm, connector omitted"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              35,
+              20
+            ],
+            "anchor_mm": [
+              8.7,
+              14
+            ],
+            "text": "FS90R: sourced axis X8.7 / Y0 / D4.86 mm",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              9
+            ],
+            "anchor_mm": [
+              27.7,
+              2.5
+            ],
+            "text": "MOUNT: pitch27.7 / circular pocket D2.2 mm",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              -1
+            ],
+            "anchor_mm": [
+              25.1,
+              -4
+            ],
+            "text": "HOUSING: 22.5 x12.1 x23.4 mm; alignment APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              -11
+            ],
+            "anchor_mm": [
+              2.6,
+              -14.7
+            ],
+            "text": "CABLE: 1 harness /3 wires; APPROX exit /3 mm marker",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              35,
+              -21
+            ],
+            "anchor_mm": [
+              15,
+              11
+            ],
+            "text": "UPPER COVER / EAR OUTLINE / SLOT MOUTHS: APPROX",
+            "cable_port": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "feetech.ft90b.akizuki-drawing",
+      "manufacturer": "FEETECH",
+      "model": "FT90B",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "micro-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "114693",
+          "url": "https://akizukidenshi.com/catalog/g/g114693/"
+        }
+      ],
+      "dimensions": {
+        "axis_from_near_mount": {
+          "nominal_mm": 8.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 8.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "case_length": {
+          "nominal_mm": 22.5,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 22.5 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "case_width": {
+          "nominal_mm": 12.1,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 12.1 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 32.3,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 32.3 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 26.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 26.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_pitch": {
+          "nominal_mm": 27.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 27.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_slot_diameter": {
+          "nominal_mm": 2.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: diameter 2.2 open slot",
+            "method": "drawing",
+            "note": "Circular reference portion of an open slot; no diameter tolerance is supplied."
+          }
+        },
+        "mount_top_height": {
+          "nominal_mm": 18.2,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 18.2 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 15.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 15.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "overall_height": {
+          "nominal_mm": 29.7,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 29.7 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "shaft_outer_diameter": {
+          "nominal_mm": 4.86,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: diameter 4.86",
+            "method": "drawing",
+            "note": "No diameter tolerance or mating tooth form is supplied; 21T does not establish horn compatibility."
+          }
+        },
+        "shoulder_height": {
+          "nominal_mm": 22.4,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "akizuki-exp-ft90b-sheet",
+            "locator": "Page 2, section 6: 22.4 +/-0.1 mm",
+            "method": "drawing",
+            "note": ""
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Manufacturing tolerance stack"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "Screw reference circles for open mounting slots",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-ears",
+          "frame": "near_mount_center",
+          "omitted": [
+            "Actual open slot contour",
+            "Case outline",
+            "Output shaft",
+            "Horn"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-ears",
+          "frame": "near_mount_center",
+          "holes": [
+            {
+              "id": "near-hole",
+              "center_mm": [
+                0,
+                0
+              ],
+              "diameter": {
+                "nominal_mm": 2.2,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-exp-ft90b-sheet",
+                  "locator": "Page 2, diameter 2.2 callout",
+                  "method": "drawing",
+                  "note": "Reference circle for an open slot; tolerance is not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-exp-ft90b-sheet",
+                "locator": "Page 2, mounting slot centerline",
+                "method": "drawing",
+                "note": "The first mounting center defines the local origin."
+              }
+            },
+            {
+              "id": "far-hole",
+              "center_mm": [
+                27.7,
+                0
+              ],
+              "diameter": {
+                "nominal_mm": 2.2,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-exp-ft90b-sheet",
+                  "locator": "Page 2, diameter 2.2 callout",
+                  "method": "drawing",
+                  "note": "Reference circle for an open slot; tolerance is not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-exp-ft90b-sheet",
+                "locator": "Page 2, 27.7 +/-0.1 pitch",
+                "method": "drawing",
+                "note": "Near to far center along +X; nominal pitch tolerance +/-0.1 mm."
+              }
+            }
+          ],
+          "note": "Two screw reference circles, not closed holes in the servo: the drawing depicts open mounting slots. Origin is the near mounting center in the ear underside plane; +X points to the far center; +Z points toward output shaft. Pattern does not register envelope boxes automatically.",
+          "plane_height_dimension": null
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Hole-to-case-end registration and explicit symmetry datum",
+        "Complete ear perimeter and open slot mouth width",
+        "Mounting slot diameter tolerance",
+        "Full output spline tooth profile and horn compatibility",
+        "Exact cable exit pose, conductor/bundle dimensions, bend radius and connector envelope"
+      ],
+      "observations": [
+        {
+          "source": "akizuki-exp-ft90b-sheet",
+          "note": "Page 2 provides this model-specific mounting pattern and height datums; no dimensions have been inherited solely from the similar FS90 name. Linear callouts explicitly carry +/-0.1 mm; diameter callouts do not. Case registration between mounting centers assumes symmetry."
+        },
+        {
+          "source": "akizuki-exp-ft90b-sheet",
+          "note": "The Akizuki listing is FT90B; the linked manufacturer sheet identifies FT90B-C001 and document V1.0. Those identifiers do not prove a physical revision of every FT90B unit."
+        },
+        {
+          "source": "akizuki-exp-ft90b-photo",
+          "note": "One connected harness, three insulated conductors and one lead-end connector are visible. These are photograph counts, not a guarantee about every seller or manufacturing revision."
+        },
+        {
+          "source": "akizuki-exp-ft90b-product",
+          "note": "Akizuki SKU 114693 is the seller-specific observation linked to this manufacturer sheet and photograph. Seller SKU, source-document labels and unknown physical product revision are separate identities."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-ft90b-photo",
+              "locator": "Product photograph: one connected three-conductor harness",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "akizuki-exp-ft90b-photo",
+              "locator": "Product photograph: three individually insulated brown/red/orange conductors",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-ft90b-photo",
+              "locator": "Product photograph: one lead-end three-contact connector",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 250,
+            "tolerance_mm": 5,
+            "evidence": {
+              "source": "akizuki-exp-ft90b-sheet",
+              "locator": "Page 1, mechanical specification 3-11: Connector wire",
+              "method": "specification",
+              "note": "Endpoint convention and inclusion of connector length are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "akizuki-exp-ft90b-photo",
+            "note": "The photograph shows one lead leaving a lower short housing end at the shaft-near end; this is qualitative only and does not establish millimeter coordinates."
+          },
+          "unknown": [
+            "Exact cable exit position and direction in the model frame",
+            "Conductor outside diameter and insulation thickness",
+            "Bundle width and thickness",
+            "Strain relief shape and envelope",
+            "Minimum bend radius",
+            "Connector envelope dimensions and mating clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "near_mount_center",
+            "origin_mm": [
+              8.7,
+              0,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              0.1,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "akizuki-exp-ft90b-sheet",
+              "locator": "Page 2, 8.7 +/-0.1 and shared mounting/shaft centerline",
+              "method": "drawing",
+              "note": "X=8.7 +/-0.1 mm from near slot center; Y=0 follows the common centerline. Z=0 is the ear underside datum. Height conversions subtract the source 15.7 +/-0.1 mm underside height."
+            }
+          },
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": "overall_height",
+          "frame_height_dimension": "mount_underside_height",
+          "shaft_diameter_dimension": "shaft_outer_diameter",
+          "unknown": [
+            "Full spline mating tooth form",
+            "Horn seating plane and fitted horn height",
+            "Neutral angular phase",
+            "Shaft diameter tolerance"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "near_mount_center",
+        "assumptions": [
+          "Case and mounting ears are placed symmetrically between the two mounting centers. This registration is an explicit assumption, not a directly dimensioned coordinate.",
+          "Ear perimeter and narrow open slot mouths are simplified. Circular pockets and center pitch use the drawing.",
+          "Upper turret uses a simplified two-lobe outline; it is not a conservative full housing envelope.",
+          "Cable exit pose is not dimensioned. The model places an explicit planning outlet at the lower shaft-near short end, facing -X; this pose must be checked against the purchased sample.",
+          "Default three-conductor outlet-marker length 3 mm, outlet height 2 mm, wire diameter 1 mm and pitch 1.1 mm are editable planning values. These are separate from the published full lead length.",
+          "The optional connector box is a planning 10 x 8 x 4 mm block, omitted by default. No factory connector envelope or bend radius is claimed.",
+          "No horn, spline tooth form, angular phase, cable strain relief or manufacturing tolerance envelope is modelled. Source scalar dimensions do not verify the entire simplified silhouette."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "HOUSING",
+            "basis": "nominal_with_assumed_alignment",
+            "note": "Published 22.5 x 12.1 x 22.4 mm shoulder box; symmetric case registration in mounting frame is an assumption.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                2.6,
+                -6.05,
+                -15.7
+              ],
+              "size_mm": [
+                22.5,
+                12.1,
+                22.4
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "NEAR MOUNT SLOT",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "27.7 center pitch and diameter2.2 are dimensioned; rectangular ear outline, symmetric placement and1mm mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -2.3,
+                -6.05,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                12.1,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    0,
+                    0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -2.4,
+                    -0.5,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.4,
+                    1,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "FAR MOUNT SLOT",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "27.7 center pitch and diameter2.2 are dimensioned; rectangular ear outline, symmetric placement and1mm mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                25.1,
+                -6.05,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                12.1,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    27.7,
+                    0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.2,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    27.7,
+                    -0.5,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.4,
+                    1,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "approximate_contour",
+            "note": "Source shoulder/top heights constrain the vertical span; the two-lobe contour and diameter choices are approximations.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8.7,
+                0,
+                6.7
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 12.1,
+              "height_mm": 4.3
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    13.2,
+                    0,
+                    6.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 6,
+                  "height_mm": 4.3
+                }
+              }
+            ]
+          },
+          {
+            "id": "shaft",
+            "label": "OUTPUT SHAFT",
+            "basis": "nominal_envelope",
+            "note": "Axis8.7,0; outside diameter4.86; housing-top to shaft-top3mm. Spline teeth, horn seat and angular phase are not modelled.",
+            "color": "#e4b44c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8.7,
+                0,
+                11
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 4.86,
+              "height_mm": 3
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              2.6,
+              0,
+              -15.7
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#ee9437"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              8.7,
+              0,
+              14
+            ],
+            "text": "FT90B OUTPUT\nSource axis X8.7 / Y0, diameter4.86 mm; shaft top Z14 in mounting frame"
+          },
+          {
+            "anchor_mm": [
+              27.7,
+              0,
+              2.5
+            ],
+            "text": "MOUNT SLOTS\nSource pitch27.7 mm and circular pockets diameter2.2 mm; mouths and ear outline approximate"
+          },
+          {
+            "anchor_mm": [
+              25.1,
+              6.05,
+              6.7
+            ],
+            "text": "HOUSING\n22.5 x12.1 x22.4 mm shoulder box; symmetric case alignment assumed"
+          },
+          {
+            "anchor_mm": [
+              2.6,
+              0,
+              -13.7
+            ],
+            "text": "PLANNING CABLE OUTLET\nOne harness /3 conductors; default displayed segment3 mm, connector omitted"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              35,
+              20
+            ],
+            "anchor_mm": [
+              8.7,
+              14
+            ],
+            "text": "FT90B: sourced axis X8.7 / Y0 / D4.86 mm",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              9
+            ],
+            "anchor_mm": [
+              27.7,
+              2.5
+            ],
+            "text": "MOUNT: pitch27.7 / circular pocket D2.2 mm",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              -1
+            ],
+            "anchor_mm": [
+              25.1,
+              -4
+            ],
+            "text": "HOUSING: 22.5 x12.1 x22.4 mm; alignment APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35,
+              -11
+            ],
+            "anchor_mm": [
+              2.6,
+              -13.7
+            ],
+            "text": "CABLE: 1 harness /3 wires; APPROX exit /3 mm marker",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              35,
+              -21
+            ],
+            "anchor_mm": [
+              15,
+              11
+            ],
+            "text": "UPPER COVER / EAR OUTLINE / SLOT MOUTHS: APPROX",
+            "cable_port": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "feetech.fs0307.akizuki-drawing",
+      "manufacturer": "FEETECH",
+      "model": "FS0307",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "submicro-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "114807",
+          "url": "https://akizukidenshi.com/catalog/g/g114807/"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 20,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs0307-sheet",
+            "locator": "Page 1 item 3-1 and page 2 section 6: A",
+            "method": "specification",
+            "note": "Page 2 A/B/C key shows the housing span, excluding the fitted horn. No dimensional tolerance is supplied."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 8.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs0307-sheet",
+            "locator": "Page 1 item 3-1 and page 2 section 6: B",
+            "method": "specification",
+            "note": "Page 2 A/B/C key shows the housing span, excluding the fitted horn. No dimensional tolerance is supplied."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 17.3,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs0307-sheet",
+            "locator": "Page 1 item 3-1 and page 2 section 6: C",
+            "method": "specification",
+            "note": "Page 2 A/B/C key shows the housing span, excluding the fitted horn. No dimensional tolerance is supplied."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "A/B/C housing reference box; excludes horn and exposed shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Exposed output shaft",
+            "Horn",
+            "Cable and connector",
+            "Detailed shoulder, upper cover and corner contours"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs0307-photo",
+              "locator": "Product photograph: one connected three-conductor harness",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "akizuki-exp-fs0307-photo",
+              "locator": "Product photograph: three individually insulated brown/red/orange conductors",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs0307-photo",
+              "locator": "Product photograph: one lead-end three-contact connector",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 150,
+            "tolerance_mm": 5,
+            "evidence": {
+              "source": "akizuki-exp-fs0307-sheet",
+              "locator": "Page 1, mechanical specification 3-11: Connector wire",
+              "method": "specification",
+              "note": "Endpoint convention and inclusion of connector length are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "akizuki-exp-fs0307-photo",
+            "note": "The photograph shows one three-conductor harness and one three-contact connector. Exit geometry is partly hidden; no millimeter coordinates are established."
+          },
+          "unknown": [
+            "Exact cable exit position and direction in the model frame",
+            "Conductor outside diameter and insulation thickness",
+            "Bundle width and thickness",
+            "Strain relief shape and envelope",
+            "Minimum bend radius",
+            "Connector envelope dimensions and mating clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Output-axis XY position and exact registration in case frame",
+            "Exposed shaft top height",
+            "Horn seating datum and fitted horn height",
+            "Complete spline tooth profile, angular phase and horn compatibility",
+            "Exposed shaft outside diameter"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "REFERENCE PREVIEW: source A/B/C fixes only the20 x8.3 x17.3 mm housing box. All ear, slot, turret, output-axis and bare-shaft geometry is explicitly planning.",
+          "Planning ears span X-3..23, underside Z12, thickness1.5 mm; four diameter1.6 circular pockets at X-1.5/21.5 and Y2/6.3 with1 mm open mouths. These values are not source measurements.",
+          "Planning turret axis X5/Y4.15, diameter7 mm, height1 mm; planning shaft diameter3 mm and height2 mm. Source20T alone does not establish horn compatibility.",
+          "Cable exit pose is not dimensioned. The model places an explicit planning outlet at the lower shaft-near short end, facing -X; this pose must be checked against the purchased sample.",
+          "Default three-conductor outlet-marker length 3 mm, outlet height 2 mm, wire diameter 1 mm and pitch 1.1 mm are editable planning values. These are separate from the published full lead length.",
+          "The optional connector box is a planning 10 x 8 x 4 mm block, omitted by default. No factory connector envelope or bend radius is claimed.",
+          "No horn, spline tooth form, angular phase, cable strain relief or manufacturing tolerance envelope is modelled. Source scalar dimensions do not verify the entire simplified silhouette."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "HOUSING REFERENCE",
+            "basis": "nominal_envelope",
+            "note": "Source A/B/C housing reference box 20 x8.3 x17.3 mm. Sloping shoulder, corner radii and cover detail are omitted.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                20,
+                8.3,
+                17.3
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "APPROX NEAR EAR / SLOTS",
+            "basis": "planning",
+            "note": "All slot positions, diameters, ear dimensions and height are planning; the source only depicts four open slots.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -3.0,
+                0,
+                12
+              ],
+              "size_mm": [
+                3.0,
+                8.3,
+                1.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -1.5,
+                    2,
+                    11.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 1.6,
+                  "height_mm": 1.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -3.1,
+                    1.5,
+                    11.9
+                  ],
+                  "size_mm": [
+                    1.6,
+                    1,
+                    1.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -1.5,
+                    6.3,
+                    11.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 1.6,
+                  "height_mm": 1.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -3.1,
+                    5.8,
+                    11.9
+                  ],
+                  "size_mm": [
+                    1.6,
+                    1,
+                    1.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "APPROX FAR EAR / SLOTS",
+            "basis": "planning",
+            "note": "All slot positions, diameters, ear dimensions and height are planning; the source only depicts four open slots.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                20,
+                0,
+                12
+              ],
+              "size_mm": [
+                3.0,
+                8.3,
+                1.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    21.5,
+                    2,
+                    11.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 1.6,
+                  "height_mm": 1.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    21.5,
+                    1.5,
+                    11.9
+                  ],
+                  "size_mm": [
+                    1.6,
+                    1,
+                    1.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    21.5,
+                    6.3,
+                    11.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 1.6,
+                  "height_mm": 1.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    21.5,
+                    5.8,
+                    11.9
+                  ],
+                  "size_mm": [
+                    1.6,
+                    1,
+                    1.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "planning",
+            "note": "Circular turret is approximate; planning center X5/Y4.15 and diameter7 mm. Its upper Z18.3 mm is a planning value.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                5,
+                4.15,
+                17.3
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 7,
+              "height_mm": 1.0
+            },
+            "modifiers": []
+          },
+          {
+            "id": "shaft",
+            "label": "APPROX OUTPUT SHAFT",
+            "basis": "planning",
+            "note": "Planning cylinder: axis X5/Y4.15, diameter3 mm and exposed height2 mm are round-number visualization choices. Source only specifies20T, not diameter, profile or position.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                5,
+                4.15,
+                18.3
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 3,
+              "height_mm": 2
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              4.15,
+              0
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#ee9437"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              5,
+              4.15,
+              20.3
+            ],
+            "text": "FS0307 PREVIEW OUTPUT\nAxis and exposed height are planning; full source datums are separate from this silhouette."
+          },
+          {
+            "anchor_mm": [
+              21.5,
+              4.15,
+              13.5
+            ],
+            "text": "PREVIEW MOUNTING\nAmber ear/slot geometry includes unverified dimensions; do not use as a verified drilling template."
+          },
+          {
+            "anchor_mm": [
+              0,
+              4.15,
+              2
+            ],
+            "text": "PLANNING CABLE OUTLET\nOne harness /3 conductors; default displayed segment3 mm, connector omitted"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              32,
+              28.3
+            ],
+            "anchor_mm": [
+              5,
+              20.3
+            ],
+            "text": "FS0307: PREVIEW shaft pose / height APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              32,
+              18.3
+            ],
+            "anchor_mm": [
+              21.5,
+              13.5
+            ],
+            "text": "MOUNT: amber dimensions / registration need measurement",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              32,
+              8.3
+            ],
+            "anchor_mm": [
+              20,
+              8.65
+            ],
+            "text": "SOURCE housing spans: 20 x8.3 mm; see height datum",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              32,
+              -1.7
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "CABLE: 1 harness /3 wires; APPROX exit /3 mm marker",
+            "cable_port": "servo-lead"
+          }
+        ]
+      },
+      "missing_mount_dimensions": [
+        "Mounting hole pitches and diameters",
+        "Ear underside height, thickness, overall length and slot contours",
+        "Output-axis XY location and exposed shaft diameter/height",
+        "Housing shoulder and cover contour",
+        "Exact cable exit pose, conductor/bundle dimensions, bend radius and connector envelope"
+      ],
+      "observations": [
+        {
+          "source": "akizuki-exp-fs0307-sheet",
+          "note": "Page 1 identifies FS0307 while the page 2 model line is shortened to FS307. Only A/B/C housing spans are supplied. Four open ear slots are depicted, but no hole pitch, diameter, ear heights, output-axis location or bare shaft dimensions are numerically specified."
+        },
+        {
+          "source": "akizuki-exp-fs0307-sheet",
+          "note": "Document version V1.0 is a source-document label. Physical product revision remains unknown; this profile does not establish equivalence to another vendor, clone, revision or similarly named model."
+        },
+        {
+          "source": "akizuki-exp-fs0307-photo",
+          "note": "One harness, three insulated conductors and one lead-end connector are observed on the exact linked SKU photograph. Bundle count is not conductor count; no dimensions are inferred from pixels."
+        },
+        {
+          "source": "akizuki-exp-fs0307-product",
+          "note": "Akizuki SKU 114807 is the seller-specific observation linked to this manufacturer sheet and photograph. Seller SKU, source-document labels and unknown physical product revision are separate identities."
+        }
+      ]
+    },
+    {
+      "id": "feetech.fs5103b.akizuki-drawing",
+      "manufacturer": "FEETECH",
+      "model": "FS5103B",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "standard-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "114802",
+          "url": "https://akizukidenshi.com/catalog/g/g114802/"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 40.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: A",
+            "method": "drawing",
+            "note": "No dimensional tolerance is supplied."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 20.1,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: B",
+            "method": "drawing",
+            "note": "No dimensional tolerance is supplied."
+          }
+        },
+        "drawing_c_height": {
+          "nominal_mm": 38,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: C=38 mm",
+            "method": "drawing",
+            "note": "Base to upper output-boss/collar datum shown by the dimension line; excludes exposed splined stem. This is not an overall height including shaft or horn."
+          }
+        },
+        "mount_longitudinal_pitch": {
+          "nominal_mm": 49.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: 49.5 mm between opposite slot-center rows",
+            "method": "drawing",
+            "note": "Dimension D is mounting pitch, not ear overall length. Slot diameter and hole-to-case registration remain unknown."
+          }
+        },
+        "mount_transverse_pitch": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: 10.0 mm between two slots on one ear",
+            "method": "drawing",
+            "note": "No dimensional tolerance or slot diameter is supplied."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 26.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-fs5103b-sheet",
+            "locator": "Page 2, section 6: 26.8 mm",
+            "method": "drawing",
+            "note": "Case base to underside of mounting ears; no dimensional tolerance is supplied."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "A/B/C housing reference box; excludes horn and exposed shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "drawing_c_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Exposed output shaft",
+            "Horn",
+            "Cable and connector",
+            "Detailed shoulder, upper cover and corner contours"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs5103b-photo",
+              "locator": "Product photograph: one connected three-conductor harness",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "akizuki-exp-fs5103b-photo",
+              "locator": "Product photograph: three individually insulated black/red/white conductors",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-fs5103b-photo",
+              "locator": "Product photograph: one lead-end three-contact connector",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 300,
+            "tolerance_mm": 5,
+            "evidence": {
+              "source": "akizuki-exp-fs5103b-sheet",
+              "locator": "Page 1, mechanical specification 3-11: Connector wire",
+              "method": "specification",
+              "note": "Endpoint convention and inclusion of connector length are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "akizuki-exp-fs5103b-photo",
+            "note": "The photograph shows one three-conductor harness and one three-contact connector. Exit geometry is partly hidden; no millimeter coordinates are established."
+          },
+          "unknown": [
+            "Exact cable exit position and direction in the model frame",
+            "Conductor outside diameter and insulation thickness",
+            "Bundle width and thickness",
+            "Strain relief shape and envelope",
+            "Minimum bend radius",
+            "Connector envelope dimensions and mating clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "drawing_c_height",
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Output-axis XY position and exact registration in case frame",
+            "Exposed shaft top height",
+            "Horn seating datum and fitted horn height",
+            "Complete spline tooth profile, angular phase and horn compatibility",
+            "Exposed shaft outside diameter"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "REFERENCE PREVIEW: source case length40.8, width20.1 and upper-boss datum38 mm are retained; main box height35 mm and circular turret shape are planning.",
+          "Four slot centers preserve source pitches49.5 x10 mm, but are registered symmetrically to the case as an assumption. Diameter4 mm,1 mm slot mouths, ear thickness3 mm and overall ear length57.5 mm are planning.",
+          "Planning output axis X10/Y10.05 and exposed shaft diameter6 mm/height4 mm are unverified round-number choices. Source25T alone does not establish horn compatibility.",
+          "Cable exit pose is not dimensioned. The model places an explicit planning outlet at the lower shaft-near short end, facing -X; this pose must be checked against the purchased sample.",
+          "Default three-conductor outlet-marker length 3 mm, outlet height 2 mm, wire diameter 1 mm and pitch 1.1 mm are editable planning values. These are separate from the published full lead length.",
+          "The optional connector box is a planning 10 x 8 x 4 mm block, omitted by default. No factory connector envelope or bend radius is claimed.",
+          "No horn, spline tooth form, angular phase, cable strain relief or manufacturing tolerance envelope is modelled. Source scalar dimensions do not verify the entire simplified silhouette."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "APPROX HOUSING",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source length40.8 and width20.1; body-box height35 mm is a round-number planning split below the sourced upper-boss datum38 mm. Actual shoulder/cover profile is not dimensioned.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                40.8,
+                20.1,
+                35
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "APPROX NEAR EAR / SLOTS",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source pitches49.5 x10 mm and underside26.8 mm are retained; symmetric case registration, diameter4 mm, ear outline, thickness3 mm and mouths are planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -8.35,
+                0,
+                26.8
+              ],
+              "size_mm": [
+                8.35,
+                20.1,
+                3
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -4.35,
+                    5.05,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 3.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -8.45,
+                    4.55,
+                    26.7
+                  ],
+                  "size_mm": [
+                    4.1,
+                    1,
+                    3.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -4.35,
+                    15.05,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 3.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -8.45,
+                    14.55,
+                    26.7
+                  ],
+                  "size_mm": [
+                    4.1,
+                    1,
+                    3.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "APPROX FAR EAR / SLOTS",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source pitches49.5 x10 mm and underside26.8 mm are retained; symmetric case registration, diameter4 mm, ear outline, thickness3 mm and mouths are planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                40.8,
+                0,
+                26.8
+              ],
+              "size_mm": [
+                8.35,
+                20.1,
+                3
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    45.15,
+                    5.05,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 3.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    45.15,
+                    4.55,
+                    26.7
+                  ],
+                  "size_mm": [
+                    4.1,
+                    1,
+                    3.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    45.15,
+                    15.05,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 3.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    45.15,
+                    14.55,
+                    26.7
+                  ],
+                  "size_mm": [
+                    4.1,
+                    1,
+                    3.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Circular turret is approximate; planning center X10/Y10.05 and diameter16 mm. Upper Z38 mm follows the source upper-boss/collar datum, while lower split Z35 mm is planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10,
+                10.05,
+                35
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 16,
+              "height_mm": 3
+            },
+            "modifiers": []
+          },
+          {
+            "id": "shaft",
+            "label": "APPROX OUTPUT SHAFT",
+            "basis": "planning",
+            "note": "Planning axis X10/Y10.05, diameter6 mm, exposed height4 mm. Source specifies25T but does not numerically locate this axis or supply stem diameter/height.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10,
+                10.05,
+                38
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6,
+              "height_mm": 4
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              10.05,
+              0
+            ],
+            "conductor_colors": [
+              "#242424",
+              "#df4242",
+              "#e6e6df"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              10,
+              10.05,
+              42
+            ],
+            "text": "FS5103B PREVIEW OUTPUT\nAxis and exposed height are planning; full source datums are separate from this silhouette."
+          },
+          {
+            "anchor_mm": [
+              45.15,
+              10.05,
+              29.8
+            ],
+            "text": "PREVIEW MOUNTING\nAmber ear/slot geometry includes unverified dimensions; do not use as a verified drilling template."
+          },
+          {
+            "anchor_mm": [
+              0,
+              10.05,
+              2
+            ],
+            "text": "PLANNING CABLE OUTLET\nOne harness /3 conductors; default displayed segment3 mm, connector omitted"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              52.8,
+              48
+            ],
+            "anchor_mm": [
+              10,
+              42
+            ],
+            "text": "FS5103B: PREVIEW shaft pose / height APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              52.8,
+              38
+            ],
+            "anchor_mm": [
+              45.15,
+              29.8
+            ],
+            "text": "MOUNT: amber dimensions / registration need measurement",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              52.8,
+              28
+            ],
+            "anchor_mm": [
+              40.8,
+              17.5
+            ],
+            "text": "SOURCE housing spans: 40.8 x20.1 mm; see height datum",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              52.8,
+              18
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "CABLE: 1 harness /3 wires; APPROX exit /3 mm marker",
+            "cable_port": "servo-lead"
+          }
+        ]
+      },
+      "missing_mount_dimensions": [
+        "Mounting slot diameter and contour",
+        "Explicit hole-to-case registration and overall ear length",
+        "Ear thickness and perimeter",
+        "Output-axis XY location and exposed shaft diameter/height",
+        "Exact cable exit pose, conductor/bundle dimensions, bend radius and connector envelope"
+      ],
+      "observations": [
+        {
+          "source": "akizuki-exp-fs5103b-sheet",
+          "note": "The four open slots have documented center pitches49.5 x10.0 mm and underside datum26.8 mm, but no slot diameter or explicit hole-to-case-edge registration. No factual mount_group is emitted because a complete circle pattern requires a verified diameter. C38 ends at the upper output boss, below the exposed spline; exposed shaft height and diameter are unknown. Page 1 specifies25T only."
+        },
+        {
+          "source": "akizuki-exp-fs5103b-sheet",
+          "note": "Document version V1.0 is a source-document label. Physical product revision remains unknown; this profile does not establish equivalence to another vendor, clone, revision or similarly named model."
+        },
+        {
+          "source": "akizuki-exp-fs5103b-photo",
+          "note": "One harness, three insulated conductors and one lead-end connector are observed on the exact linked SKU photograph. Bundle count is not conductor count; no dimensions are inferred from pixels."
+        },
+        {
+          "source": "akizuki-exp-fs5103b-product",
+          "note": "Akizuki SKU 114802 is the seller-specific observation linked to this manufacturer sheet and photograph. Seller SKU, source-document labels and unknown physical product revision are separate identities."
+        }
+      ]
+    },
+    {
+      "id": "feetech.ft1117m.akizuki-drawing",
+      "manufacturer": "FEETECH",
+      "model": "FT1117M",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "mini-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "114803",
+          "url": "https://akizukidenshi.com/catalog/g/g114803/"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 30,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 2, section 6: 30 mm case length",
+            "method": "drawing",
+            "note": "No dimensional tolerance is supplied."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 2, section 6: 12 mm",
+            "method": "drawing",
+            "note": "No dimensional tolerance is supplied."
+          }
+        },
+        "drawing_c_height": {
+          "nominal_mm": 31.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 2, section 6: 31.7 mm",
+            "method": "drawing",
+            "note": "Base to upper output-boss/collar datum shown by the dimension line; excludes exposed splined stem. This is not an overall height including shaft or horn."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 40.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 2, section 6: 40.5 mm overall ear length",
+            "method": "drawing",
+            "note": "Overall ear length is not hole-center pitch. No dimensional tolerance is supplied."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 20,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 2, section 6: 20 mm",
+            "method": "drawing",
+            "note": "Case base to underside of mounting ears; no dimensional tolerance is supplied."
+          }
+        },
+        "shaft_outer_diameter": {
+          "nominal_mm": 5.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-exp-ft1117m-sheet",
+            "locator": "Page 1, mechanical specification 3-8: 25T(5.8 mm)",
+            "method": "specification",
+            "note": "Spline outside-diameter specification only. Axis location, bare stem height and mating tooth form are not supplied; no horn compatibility follows from25T."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "A/B/C housing reference box; excludes horn and exposed shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "drawing_c_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Exposed output shaft",
+            "Horn",
+            "Cable and connector",
+            "Detailed shoulder, upper cover and corner contours"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-ft1117m-photo",
+              "locator": "Product photograph: one connected three-conductor harness",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "akizuki-exp-ft1117m-photo",
+              "locator": "Product photograph: three individually insulated black/red/white conductors",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "akizuki-exp-ft1117m-photo",
+              "locator": "Product photograph: one lead-end three-contact connector",
+              "method": "photo_observation",
+              "note": "Observed on this SKU photograph only; no dimensions are inferred from pixels."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 180,
+            "tolerance_mm": 5,
+            "evidence": {
+              "source": "akizuki-exp-ft1117m-sheet",
+              "locator": "Page 1, mechanical specification 3-11: Connector wire",
+              "method": "specification",
+              "note": "Endpoint convention and inclusion of connector length are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "akizuki-exp-ft1117m-photo",
+            "note": "The photograph shows the lead leaving a lower short housing end at the shaft-near end. This qualitative observation does not establish millimeter coordinates."
+          },
+          "unknown": [
+            "Exact cable exit position and direction in the model frame",
+            "Conductor outside diameter and insulation thickness",
+            "Bundle width and thickness",
+            "Strain relief shape and envelope",
+            "Minimum bend radius",
+            "Connector envelope dimensions and mating clearance"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "drawing_c_height",
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": "shaft_outer_diameter",
+          "unknown": [
+            "Output-axis XY position and exact registration in case frame",
+            "Exposed shaft top height",
+            "Horn seating datum and fitted horn height",
+            "Complete spline tooth profile, angular phase and horn compatibility",
+            "Shaft diameter tolerance"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "REFERENCE PREVIEW: source case length30, width12 and upper-output-collar datum31.7 mm are retained; main box height26 mm and circular turret shape are planning.",
+          "Source overall ear length40.5 mm and underside20 mm are retained, but case alignment assumes symmetry. Slot pitch36 mm, diameter3 mm,1 mm mouths and ear thickness2 mm are unverified planning.",
+          "Source spline outside diameter5.8 mm is retained. Output axis X8/Y6 and exposed shaft height4 mm are planning choices;25T does not establish horn compatibility.",
+          "Cable exit pose is not dimensioned. The model places an explicit planning outlet at the lower shaft-near short end, facing -X; this pose must be checked against the purchased sample.",
+          "Default three-conductor outlet-marker length 3 mm, outlet height 2 mm, wire diameter 1 mm and pitch 1.1 mm are editable planning values. These are separate from the published full lead length.",
+          "The optional connector box is a planning 10 x 8 x 4 mm block, omitted by default. No factory connector envelope or bend radius is claimed.",
+          "No horn, spline tooth form, angular phase, cable strain relief or manufacturing tolerance envelope is modelled. Source scalar dimensions do not verify the entire simplified silhouette."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "APPROX HOUSING",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source length30 and width12; body-box height26 mm is a round-number planning split below the sourced upper-boss datum31.7 mm. Actual shoulder/cover profile is not dimensioned.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                30,
+                12,
+                26
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "APPROX NEAR EAR / SLOTS",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source overall40.5 mm and underside20 mm are retained; symmetric case registration, pitch36 mm, diameter3 mm, ear thickness2 mm and mouths are planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -5.25,
+                0,
+                20
+              ],
+              "size_mm": [
+                5.25,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -3.0,
+                    6,
+                    19.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -5.35,
+                    5.5,
+                    19.9
+                  ],
+                  "size_mm": [
+                    2.35,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "APPROX FAR EAR / SLOTS",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source overall40.5 mm and underside20 mm are retained; symmetric case registration, pitch36 mm, diameter3 mm, ear thickness2 mm and mouths are planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                30,
+                0,
+                20
+              ],
+              "size_mm": [
+                5.25,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    33.0,
+                    6,
+                    19.9
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    33.0,
+                    5.5,
+                    19.9
+                  ],
+                  "size_mm": [
+                    2.35,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Circular turret is approximate; planning center X8/Y6 and diameter10 mm. Upper Z31.7 mm follows the source upper-boss/collar datum, while lower split Z26 mm is planning.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8,
+                6.0,
+                26
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 10,
+              "height_mm": 5.7
+            },
+            "modifiers": []
+          },
+          {
+            "id": "shaft",
+            "label": "APPROX OUTPUT SHAFT",
+            "basis": "mixed_dimensioned_and_approximate",
+            "note": "Source spline outside diameter5.8 mm; planning axis X8/Y6 and exposed height4 mm. No source axis registration, stem height, teeth or horn fit is claimed.",
+            "color": "#bd873c",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                8,
+                6.0,
+                31.7
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 5.8,
+              "height_mm": 4
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              6.0,
+              0
+            ],
+            "conductor_colors": [
+              "#242424",
+              "#df4242",
+              "#e6e6df"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              8,
+              6.0,
+              35.7
+            ],
+            "text": "FT1117M PREVIEW OUTPUT\nAxis and exposed height are planning; full source datums are separate from this silhouette."
+          },
+          {
+            "anchor_mm": [
+              33.0,
+              6.0,
+              22
+            ],
+            "text": "PREVIEW MOUNTING\nAmber ear/slot geometry includes unverified dimensions; do not use as a verified drilling template."
+          },
+          {
+            "anchor_mm": [
+              0,
+              6.0,
+              2
+            ],
+            "text": "PLANNING CABLE OUTLET\nOne harness /3 conductors; default displayed segment3 mm, connector omitted"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              42,
+              41.7
+            ],
+            "anchor_mm": [
+              8,
+              35.7
+            ],
+            "text": "FT1117M: PREVIEW shaft pose / height APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              42,
+              31.7
+            ],
+            "anchor_mm": [
+              33.0,
+              22
+            ],
+            "text": "MOUNT: amber dimensions / registration need measurement",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              42,
+              21.7
+            ],
+            "anchor_mm": [
+              30,
+              13.0
+            ],
+            "text": "SOURCE housing spans: 30 x12 mm; see height datum",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              42,
+              11.7
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "CABLE: 1 harness /3 wires; APPROX exit /3 mm marker",
+            "cable_port": "servo-lead"
+          }
+        ]
+      },
+      "missing_mount_dimensions": [
+        "Mounting hole-center pitch and slot diameter",
+        "Ear thickness and perimeter",
+        "Output-axis XY location and exposed shaft height",
+        "Full spline mating profile and horn compatibility",
+        "Exact cable exit pose, conductor/bundle dimensions, bend radius and connector envelope"
+      ],
+      "observations": [
+        {
+          "source": "akizuki-exp-ft1117m-sheet",
+          "note": "Page 2 documents case30 x12 mm, base-to-upper-output-collar datum31.7 mm, ear underside20 mm and overall ear length40.5 mm. The40.5 dimension is not mounting-center pitch. Hole diameter/pitch, shaft axis position, ear thickness and exposed spline height remain unknown. Page 1 supplies25T(5.8 mm), without mating spline geometry."
+        },
+        {
+          "source": "akizuki-exp-ft1117m-sheet",
+          "note": "Document version V1.0 is a source-document label. Physical product revision remains unknown; this profile does not establish equivalence to another vendor, clone, revision or similarly named model."
+        },
+        {
+          "source": "akizuki-exp-ft1117m-photo",
+          "note": "One harness, three insulated conductors and one lead-end connector are observed on the exact linked SKU photograph. Bundle count is not conductor count; no dimensions are inferred from pixels."
+        },
+        {
+          "source": "akizuki-exp-ft1117m-product",
+          "note": "Akizuki SKU 114803 is the seller-specific observation linked to this manufacturer sheet and photograph. Seller SKU, source-document labels and unknown physical product revision are separate identities."
+        }
+      ]
+    }
+  ]
+}

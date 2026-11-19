@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "robotis.hn13-i101.reference-20190318",
+    "mode": "dimensions"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.hn13-i101.reference-20190318",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

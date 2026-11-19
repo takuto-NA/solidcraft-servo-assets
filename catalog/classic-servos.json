@@ -1,0 +1,1427 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.5",
+  "sources": [
+    {
+      "id": "hitec-hs311-hcs-v22",
+      "publisher": "Hitec Commercial Solutions",
+      "title": "HS-311 General Specification, Ver2.2, dimension drawing and connector diagram",
+      "url": "https://www.hiteccs.com/public/uploads/data_sheet/HCS_HS-311_Specsheetv2.2_102-1729889658.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "hitec-hs55-hcs-v22",
+      "publisher": "Hitec Commercial Solutions",
+      "title": "HS-55 General Specification, Ver2.2, dimension drawing and connector diagram",
+      "url": "https://www.hiteccs.com/public/uploads/data_sheet/HCS_HS-55_Specsheetv2.2_1026-1729887855.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "hitec-hs55-japan-sheet",
+      "publisher": "Hitec Multiplex Japan",
+      "title": "HS-55 announced specification supplied by Hitec Japan",
+      "url": "https://hitecrcd.co.jp/material/spec_sheet/servo/31055.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "hitec-hs311-product",
+      "publisher": "Hitec Commercial Solutions",
+      "title": "HS-311 product specifications, part31311S",
+      "url": "https://www.hiteccs.com/actuators/product-details/HS-311",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "hitec-hs55-product",
+      "publisher": "Hitec Commercial Solutions",
+      "title": "HS-55 product specifications, part31055S",
+      "url": "https://www.hiteccs.com/actuators/product-details/HS-55",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "assets": [
+    {
+      "id": "hitec.hs311.hcs-v2-2",
+      "manufacturer": "Hitec",
+      "model": "HS-311",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "standard-servo",
+      "seller_items": [
+        {
+          "seller": "Hitec Commercial Solutions",
+          "sku": "31311S",
+          "url": "https://www.hiteccs.com/actuators/product-details/HS-311"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 40.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Physical specifications and side-view case length",
+            "method": "drawing",
+            "note": "Case length excludes ears."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 20.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Physical specifications and top-view case width",
+            "method": "drawing",
+            "note": "Case width and drawn centerline; no additional alignment tolerance is inferred."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 36.5,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Physical specifications and side-view height to upper gear housing",
+            "method": "drawing",
+            "note": "The height callout ends at the gear housing, not the fitted horn or a verified bare-shaft tip."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 52.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Top-view overall ear length",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 26.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Side-view base-to-ear-underside height",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "ear_thickness": {
+          "nominal_mm": 2.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Side-view flange thickness",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_pitch": {
+          "nominal_mm": 47.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Top-view mounting-column spacing",
+            "method": "drawing",
+            "note": "47.8 = 33.9 + 13.9."
+          }
+        },
+        "mount_pocket_diameter": {
+          "nominal_mm": 4.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Top-view mounting-pocket diameter",
+            "method": "drawing",
+            "note": "HS-311 pockets are open-sided; mouth width and ear perimeter are not fully dimensioned."
+          }
+        },
+        "axis_from_near_mount": {
+          "nominal_mm": 13.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Top-view shaft-axis offset from the shaft-near mounting column",
+            "method": "drawing",
+            "note": "X increases from the shaft-near column toward the far column."
+          }
+        },
+        "shaft_outer_diameter": {
+          "nominal_mm": 6.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Physical specifications: Horn Gear Spline",
+            "method": "drawing",
+            "note": "Nominal outside diameter only:24T(D6) for HS-311 or15T(D4) for HS-55. No tooth form, horn seating plane or fit guarantee is established."
+          }
+        },
+        "shaft_endview_protrusion": {
+          "nominal_mm": 3.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "End-view bare spline protrusion",
+            "method": "drawing",
+            "note": "The local protrusion is dimensioned; the absolute Z of its support collar is not established by this record. Do not silently add it to the housing height."
+          }
+        },
+        "mount_row_pitch": {
+          "nominal_mm": 10.2,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs311-hcs-v22",
+            "locator": "Top-view transverse mounting-hole center spacing",
+            "method": "drawing",
+            "note": ""
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope; excludes ears, bare shaft and horn",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Bare output shaft",
+            "Horn",
+            "Cable",
+            "Rounded and stepped housing contours"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "Documented mounting-pocket centers and diameters",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-mounts",
+          "frame": "near_mount_center",
+          "omitted": [
+            "Exact ear perimeter",
+            "Exact slot mouth contour",
+            "Case registration",
+            "Horn"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-mounts",
+          "frame": "near_mount_center",
+          "holes": [
+            {
+              "id": "near-1",
+              "center_mm": [
+                0.0,
+                -5.1
+              ],
+              "diameter": {
+                "nominal_mm": 4.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs311-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs311-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            },
+            {
+              "id": "near-2",
+              "center_mm": [
+                0.0,
+                5.1
+              ],
+              "diameter": {
+                "nominal_mm": 4.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs311-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs311-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            },
+            {
+              "id": "far-1",
+              "center_mm": [
+                47.8,
+                -5.1
+              ],
+              "diameter": {
+                "nominal_mm": 4.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs311-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs311-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            },
+            {
+              "id": "far-2",
+              "center_mm": [
+                47.8,
+                5.1
+              ],
+              "diameter": {
+                "nominal_mm": 4.5,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs311-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs311-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            }
+          ],
+          "note": "Origin is the shaft-near column midpoint on the ear underside; +X toward the far column, +Z toward the output. Source pocket centers and diameters do not establish a complete ear contour or a fitted fastener clearance."
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Exact case registration relative to the mounting columns",
+        "Full housing and ear contours",
+        "Absolute spline-collar height and bare-shaft-top height",
+        "Full output spline tooth form",
+        "Horn seating surface and neutral angular phase",
+        "Cable outlet coordinates and strain-relief geometry"
+      ],
+      "observations": [
+        {
+          "source": "hitec-hs311-hcs-v22",
+          "note": "Ver2.2 is a source-document revision, not an identified physical production revision. The nominal dimensions row declares general tolerance+/-0.1mm; this record applies that to its three quoted case dimensions and leaves other callout tolerances unspecified."
+        },
+        {
+          "source": "hitec-hs311-hcs-v22",
+          "note": "Housing-top height excludes the bare spline and fitted horn. The side view includes a fitted horn: its top or underside dimensions must not become a bare-shaft-top dimension. The preview illustrates a shaft above the housing while declaring that absolute height registration unverified."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "hitec-hs311-hcs-v22",
+              "locator": "Connector diagram and dimension drawing",
+              "method": "photo_observation",
+              "note": "One attached flat lead is depicted."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "hitec-hs311-hcs-v22",
+              "locator": "Connector diagram:1.SIGNAL,2.VCC,3.GND",
+              "method": "specification",
+              "note": "Three insulated yellow/red/black conductors are individually depicted and the three contacts are identified."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "hitec-hs311-hcs-v22",
+              "locator": "Connector diagram and dimension drawing",
+              "method": "photo_observation",
+              "note": "One lead-end three-contact housing is depicted."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 300.0,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "hitec-hs311-hcs-v22",
+              "locator": "Physical specifications: Connector Wire Length and side-view lead length",
+              "method": "specification",
+              "note": "Endpoint convention and usable free length remain unspecified."
+            }
+          },
+          "exit_observation": {
+            "source": "hitec-hs311-hcs-v22",
+            "note": "The dimension drawing and photograph show a low exit on the shaft-near short end. Exact XYZ, strain relief and wire cross-section remain unknown."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Outlet direction and strain-relief shape",
+            "Insulated wire outside diameter and pitch",
+            "Minimum bend radius",
+            "Connector width and height",
+            "Lead-length measurement endpoint convention"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "near_mount_center",
+            "origin_mm": [
+              13.9,
+              0,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "hitec-hs311-hcs-v22",
+              "locator": "Top-view shaft-axis-to-mounting-column chain and shared centerline",
+              "method": "drawing",
+              "note": "X is directly dimensioned from the shaft-near mounting column. Y=0 is the drawn centerline and Z=0 defines the ear-underside datum; these zeros are not manufacturing tolerances."
+            }
+          },
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": null,
+          "frame_height_dimension": "mount_underside_height",
+          "shaft_diameter_dimension": "shaft_outer_diameter",
+          "unknown": [
+            "Absolute spline-collar support plane and bare-shaft-tip height",
+            "Complete mating tooth profile",
+            "Horn seating plane",
+            "Neutral angular phase"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "near_mount_center",
+        "assumptions": [
+          "Source mounting centers, pocket diameters, shaft-axis XY offset, nominal case size and flange heights are retained. The case is registered symmetrically between mounting columns as an explicit assumption.",
+          "The housing and mounting-ear outlines are simplified original primitives; they are not conservative interference bounds. Ear ends are symmetrically placed about the documented column pitch.",
+          "PREVIEW SHAFT Z: the local end-view spline protrusion is placed above the nominal housing-top plane as an illustrative registration. The absolute collar support plane and bare-shaft-top height remain unknown in the factual output record. Amber marks this uncertain Z placement.",
+          "PREVIEW CABLE: the three-conductor outlet marker is placed on the shaft-near short face2mm above the case base, with1mm insulated wire diameter,1.1mm pitch and3mm visible length. These are planning values, not measured outlet coordinates or a full lead.",
+          "The optional connector uses14mm displayed length and illustrative8x4mm width/height. It is omitted by default. No horn or spline tooth geometry is generated.",
+          "PREVIEW SHOULDER: the rectangular body ends4mm below the source housing-top height. The two-lobe upper-cover contour and this4mm partition are illustrative."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "HOUSING",
+            "basis": "nominal_with_assumed_alignment",
+            "note": "Source case width/length; symmetric case registration assumed. Shoulder partition is sourced only for HS-55.",
+            "color": "#303640",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                3.8999999999999986,
+                -10.0,
+                -26.5
+              ],
+              "size_mm": [
+                40.0,
+                20.0,
+                32.5
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "NEAR MOUNT",
+            "basis": "dimensioned_pockets_with_approximate_ear_outline",
+            "note": "Pocket centers/diameters and ear thickness are dimensioned. Rectangular perimeter and any3mm slot mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -2.5,
+                -10.0,
+                0
+              ],
+              "size_mm": [
+                6.399999999999999,
+                20.0,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    0,
+                    -5.1,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4.5,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -2.6,
+                    -6.6,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.6,
+                    3.0,
+                    2.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    0,
+                    5.1,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4.5,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -2.6,
+                    3.5999999999999996,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.6,
+                    3.0,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "FAR MOUNT",
+            "basis": "dimensioned_pockets_with_approximate_ear_outline",
+            "note": "Pocket centers/diameters and ear thickness are dimensioned. Rectangular perimeter and any3mm slot mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                43.9,
+                -10.0,
+                0
+              ],
+              "size_mm": [
+                6.399999999999999,
+                20.0,
+                2.5
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    47.8,
+                    -5.1,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4.5,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    47.8,
+                    -6.6,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.6,
+                    3.0,
+                    2.7
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    47.8,
+                    5.1,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4.5,
+                  "height_mm": 2.7
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    47.8,
+                    3.5999999999999996,
+                    -0.1
+                  ],
+                  "size_mm": [
+                    2.6,
+                    3.0,
+                    2.7
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "approximate_contour",
+            "note": "Vertical housing-top extent uses the source, while this two-lobe contour is illustrative.",
+            "color": "#303640",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                13.9,
+                0,
+                6.0
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 20.0,
+              "height_mm": 4.0
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    20.9,
+                    0,
+                    6.0
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 10.0,
+                  "height_mm": 4.0
+                }
+              }
+            ]
+          },
+          {
+            "id": "shaft",
+            "label": "SHAFT XY DOCUMENTED - Z APPROX",
+            "basis": "nominal_diameter_with_assumed_height_registration",
+            "note": "Nominal outside diameter and local protrusion use source callouts; placing the protrusion directly above housing-top is an explicit unverified height registration. No tooth profile or horn fit is asserted.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                13.9,
+                0,
+                10.0
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6.0,
+              "height_mm": 3.2
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              3.8999999999999986,
+              0,
+              -26.5
+            ],
+            "conductor_colors": [
+              "#25282d",
+              "#df4242",
+              "#ead432"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              14,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              13.9,
+              0,
+              13.2
+            ],
+            "text": "OUTPUT AXIS: X13.9,Y0,+Z from near mounting column.\nXY documented; shaft absoluteZ registration APPROX."
+          },
+          {
+            "anchor_mm": [
+              0,
+              -5.1,
+              2.5
+            ],
+            "text": "MOUNT POCKETS: pitch47.8,D4.5; centers and diameters documented.\nEar perimeter and slot mouths simplified."
+          },
+          {
+            "anchor_mm": [
+              43.9,
+              10.0,
+              6.0
+            ],
+            "text": "HOUSING: 40.0 x20.0 x36.5.\nCase alignment in mounting frame assumes symmetry; upper outline approximate."
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              55.8,
+              16
+            ],
+            "anchor_mm": [
+              13.9,
+              13.2
+            ],
+            "text": "HS-311: AXIS XY documented / SHAFT Z APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55.8,
+              6
+            ],
+            "anchor_mm": [
+              47.8,
+              2.5
+            ],
+            "text": "MOUNTS: pitch47.8 / D4.5",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55.8,
+              -4
+            ],
+            "anchor_mm": [
+              43.9,
+              -10.25
+            ],
+            "text": "CASE alignment / contours: APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              55.8,
+              -14
+            ],
+            "anchor_mm": [
+              3.8999999999999986,
+              -24.5
+            ],
+            "text": "CABLE ENTRY: 3 conductors / APPROX position",
+            "cable_port": "servo-lead"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hitec.hs55.hcs-v2-2",
+      "manufacturer": "Hitec",
+      "model": "HS-55",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "micro-servo",
+      "seller_items": [
+        {
+          "seller": "Hitec Commercial Solutions",
+          "sku": "31055S",
+          "url": "https://www.hiteccs.com/actuators/product-details/HS-55"
+        }
+      ],
+      "dimensions": {
+        "case_length": {
+          "nominal_mm": 22.8,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Physical specifications and side-view case length",
+            "method": "drawing",
+            "note": "Case length excludes ears."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 11.6,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Physical specifications and top-view case width",
+            "method": "drawing",
+            "note": "Case width and drawn centerline; no additional alignment tolerance is inferred."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 24.0,
+          "tolerance_mm": 0.1,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Physical specifications and side-view height to upper gear housing",
+            "method": "drawing",
+            "note": "The height callout ends at the gear housing, not the fitted horn or a verified bare-shaft tip."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 32.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Top-view overall ear length",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 16.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Side-view base-to-ear-underside height",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "ear_thickness": {
+          "nominal_mm": 1.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Side-view flange thickness",
+            "method": "drawing",
+            "note": ""
+          }
+        },
+        "mount_pitch": {
+          "nominal_mm": 28.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Top-view mounting-column spacing",
+            "method": "drawing",
+            "note": "28.6 = 19.6 + 9.0; the older Japan drawing also dimensions28.6 directly."
+          }
+        },
+        "mount_pocket_diameter": {
+          "nominal_mm": 2.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Top-view mounting-pocket diameter",
+            "method": "drawing",
+            "note": "Two round mounting holes; no open slot mouth is generated."
+          }
+        },
+        "axis_from_near_mount": {
+          "nominal_mm": 9.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Top-view shaft-axis offset from the shaft-near mounting column",
+            "method": "drawing",
+            "note": "X increases from the shaft-near column toward the far column."
+          }
+        },
+        "shaft_outer_diameter": {
+          "nominal_mm": 4.0,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Physical specifications: Horn Gear Spline",
+            "method": "drawing",
+            "note": "Nominal outside diameter only:24T(D6) for HS-311 or15T(D4) for HS-55. No tooth form, horn seating plane or fit guarantee is established."
+          }
+        },
+        "shaft_endview_protrusion": {
+          "nominal_mm": 2.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "End-view bare spline protrusion",
+            "method": "drawing",
+            "note": "The local protrusion is dimensioned; the absolute Z of its support collar is not established by this record. Do not silently add it to the housing height."
+          }
+        },
+        "shoulder_height": {
+          "nominal_mm": 20.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "hitec-hs55-hcs-v22",
+            "locator": "Side-view lower-case shoulder height20.8",
+            "method": "drawing",
+            "note": ""
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope; excludes ears, bare shaft and horn",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Bare output shaft",
+            "Horn",
+            "Cable",
+            "Rounded and stepped housing contours"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "Documented mounting-pocket centers and diameters",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "case-mounts",
+          "frame": "near_mount_center",
+          "omitted": [
+            "Exact ear perimeter",
+            "Manufacturing clearance allowance",
+            "Case registration",
+            "Horn"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "case-mounts",
+          "frame": "near_mount_center",
+          "holes": [
+            {
+              "id": "near-1",
+              "center_mm": [
+                0.0,
+                0.0
+              ],
+              "diameter": {
+                "nominal_mm": 2.0,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs55-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs55-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            },
+            {
+              "id": "far-1",
+              "center_mm": [
+                28.6,
+                0.0
+              ],
+              "diameter": {
+                "nominal_mm": 2.0,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "hitec-hs55-hcs-v22",
+                  "locator": "Top-view pocket diameter",
+                  "method": "drawing",
+                  "note": ""
+                }
+              },
+              "evidence": {
+                "source": "hitec-hs55-hcs-v22",
+                "locator": "Top-view mounting chain and shared centerlines",
+                "method": "drawing",
+                "note": "Origin is the midpoint of the shaft-near hole column; the centerline definesY=0. Row offsets are half the documented10.2 pitch for HS-311, or zero for HS-55."
+              }
+            }
+          ],
+          "note": "Origin is the shaft-near column midpoint on the ear underside; +X toward the far column, +Z toward the output. Source pocket centers and diameters do not establish a complete ear contour or a fitted fastener clearance."
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Exact case registration relative to the mounting columns",
+        "Full housing and ear contours",
+        "Absolute spline-collar height and bare-shaft-top height",
+        "Full output spline tooth form",
+        "Horn seating surface and neutral angular phase",
+        "Cable outlet coordinates and strain-relief geometry"
+      ],
+      "observations": [
+        {
+          "source": "hitec-hs55-hcs-v22",
+          "note": "Ver2.2 is a source-document revision, not an identified physical production revision. The nominal dimensions row declares general tolerance+/-0.1mm; this record applies that to its three quoted case dimensions and leaves other callout tolerances unspecified."
+        },
+        {
+          "source": "hitec-hs55-hcs-v22",
+          "note": "Housing-top height excludes the bare spline and fitted horn. The side view includes a fitted horn: its top or underside dimensions must not become a bare-shaft-top dimension. The preview illustrates a shaft above the housing while declaring that absolute height registration unverified."
+        },
+        {
+          "source": "hitec-hs55-japan-sheet",
+          "note": "The older Hitec Japan HS-55 sheet specifies160mm lead length; the selected HitecCSVer2.2 sheet specifies250mm. The differing source profiles are not merged into a claimed factory revision. The older sheet does not supply the newer shaft-offset and hole-diameter callouts."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "hitec-hs55-hcs-v22",
+              "locator": "Connector diagram and dimension drawing",
+              "method": "photo_observation",
+              "note": "One attached flat lead is depicted."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "hitec-hs55-hcs-v22",
+              "locator": "Connector diagram:1.SIGNAL,2.VCC,3.GND",
+              "method": "specification",
+              "note": "Three insulated yellow/red/black conductors are individually depicted and the three contacts are identified."
+            }
+          },
+          "connector_count": {
+            "value": 1,
+            "evidence": {
+              "source": "hitec-hs55-hcs-v22",
+              "locator": "Connector diagram and dimension drawing",
+              "method": "photo_observation",
+              "note": "One lead-end three-contact housing is depicted."
+            }
+          },
+          "lead_length": {
+            "nominal_mm": 250.0,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "hitec-hs55-hcs-v22",
+              "locator": "Physical specifications: Connector Wire Length and side-view lead length",
+              "method": "specification",
+              "note": "Endpoint convention and usable free length remain unspecified."
+            }
+          },
+          "exit_observation": {
+            "source": "hitec-hs55-hcs-v22",
+            "note": "The dimension drawing and photograph show a low exit on the shaft-near short end. Exact XYZ, strain relief and wire cross-section remain unknown."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Outlet direction and strain-relief shape",
+            "Insulated wire outside diameter and pitch",
+            "Minimum bend radius",
+            "Connector width and height",
+            "Lead-length measurement endpoint convention"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "near_mount_center",
+            "origin_mm": [
+              9.0,
+              0,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "hitec-hs55-hcs-v22",
+              "locator": "Top-view shaft-axis-to-mounting-column chain and shared centerline",
+              "method": "drawing",
+              "note": "X is directly dimensioned from the shaft-near mounting column. Y=0 is the drawn centerline and Z=0 defines the ear-underside datum; these zeros are not manufacturing tolerances."
+            }
+          },
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": null,
+          "frame_height_dimension": "mount_underside_height",
+          "shaft_diameter_dimension": "shaft_outer_diameter",
+          "unknown": [
+            "Absolute spline-collar support plane and bare-shaft-tip height",
+            "Complete mating tooth profile",
+            "Horn seating plane",
+            "Neutral angular phase"
+          ]
+        }
+      ],
+      "reference_model": {
+        "frame": "near_mount_center",
+        "assumptions": [
+          "Source mounting centers, pocket diameters, shaft-axis XY offset, nominal case size and flange heights are retained. The case is registered symmetrically between mounting columns as an explicit assumption.",
+          "The housing and mounting-ear outlines are simplified original primitives; they are not conservative interference bounds. Ear ends are symmetrically placed about the documented column pitch.",
+          "PREVIEW SHAFT Z: the local end-view spline protrusion is placed above the nominal housing-top plane as an illustrative registration. The absolute collar support plane and bare-shaft-top height remain unknown in the factual output record. Amber marks this uncertain Z placement.",
+          "PREVIEW CABLE: the three-conductor outlet marker is placed on the shaft-near short face2mm above the case base, with1mm insulated wire diameter,1.1mm pitch and3mm visible length. These are planning values, not measured outlet coordinates or a full lead.",
+          "The optional connector uses14mm displayed length and illustrative8x4mm width/height. It is omitted by default. No horn or spline tooth geometry is generated.",
+          "The source shoulder height20.8 and housing-top height24 define the3.2mm upper-cover interval; the two-lobe outline remains approximate."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "HOUSING",
+            "basis": "nominal_with_assumed_alignment",
+            "note": "Source case width/length; symmetric case registration assumed. Shoulder partition is sourced only for HS-55.",
+            "color": "#303640",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                2.9000000000000004,
+                -5.8,
+                -16.7
+              ],
+              "size_mm": [
+                22.8,
+                11.6,
+                20.8
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "NEAR MOUNT",
+            "basis": "dimensioned_pockets_with_approximate_ear_outline",
+            "note": "Pocket centers/diameters and ear thickness are dimensioned. Rectangular perimeter and any3mm slot mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -2.0,
+                -5.8,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                11.6,
+                1.0
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    0,
+                    0.0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.0,
+                  "height_mm": 1.2
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "FAR MOUNT",
+            "basis": "dimensioned_pockets_with_approximate_ear_outline",
+            "note": "Pocket centers/diameters and ear thickness are dimensioned. Rectangular perimeter and any3mm slot mouth are approximations.",
+            "color": "#278a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                25.700000000000003,
+                -5.8,
+                0
+              ],
+              "size_mm": [
+                4.9,
+                11.6,
+                1.0
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    28.6,
+                    0.0,
+                    -0.1
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2.0,
+                  "height_mm": 1.2
+                }
+              }
+            ]
+          },
+          {
+            "id": "turret",
+            "label": "APPROX UPPER COVER",
+            "basis": "approximate_contour",
+            "note": "Vertical housing-top extent uses the source, while this two-lobe contour is illustrative.",
+            "color": "#303640",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                9.0,
+                0,
+                4.100000000000001
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 11.6,
+              "height_mm": 3.1999999999999993
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    13.059999999999999,
+                    0,
+                    4.100000000000001
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 5.8,
+                  "height_mm": 3.1999999999999993
+                }
+              }
+            ]
+          },
+          {
+            "id": "shaft",
+            "label": "SHAFT XY DOCUMENTED - Z APPROX",
+            "basis": "nominal_diameter_with_assumed_height_registration",
+            "note": "Nominal outside diameter and local protrusion use source callouts; placing the protrusion directly above housing-top is an explicit unverified height registration. No tooth profile or horn fit is asserted.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                9.0,
+                0,
+                7.300000000000001
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 4.0,
+              "height_mm": 2.7
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              2.9000000000000004,
+              0,
+              -16.7
+            ],
+            "conductor_colors": [
+              "#25282d",
+              "#df4242",
+              "#ead432"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              14,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              9.0,
+              0,
+              10.0
+            ],
+            "text": "OUTPUT AXIS: X9.0,Y0,+Z from near mounting column.\nXY documented; shaft absoluteZ registration APPROX."
+          },
+          {
+            "anchor_mm": [
+              0,
+              0.0,
+              1.0
+            ],
+            "text": "MOUNT POCKETS: pitch28.6,D2.0; centers and diameters documented.\nEar perimeter and slot mouths simplified."
+          },
+          {
+            "anchor_mm": [
+              25.700000000000003,
+              5.8,
+              4.100000000000001
+            ],
+            "text": "HOUSING: 22.8 x11.6 x24.0.\nCase alignment in mounting frame assumes symmetry; upper outline approximate."
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              35.6,
+              16
+            ],
+            "anchor_mm": [
+              9.0,
+              10.0
+            ],
+            "text": "HS-55: AXIS XY documented / SHAFT Z APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35.6,
+              6
+            ],
+            "anchor_mm": [
+              28.6,
+              1.0
+            ],
+            "text": "MOUNTS: pitch28.6 / D2.0",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35.6,
+              -4
+            ],
+            "anchor_mm": [
+              25.700000000000003,
+              -6.299999999999999
+            ],
+            "text": "CASE alignment / contours: APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              35.6,
+              -14
+            ],
+            "anchor_mm": [
+              2.9000000000000004,
+              -14.7
+            ],
+            "text": "CABLE ENTRY: 3 conductors / APPROX position",
+            "cable_port": "servo-lead"
+          }
+        ]
+      }
+    }
+  ]
+}

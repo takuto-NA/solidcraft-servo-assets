@@ -1,0 +1,16 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "feetech.ft1117m.akizuki-drawing"
+  },
+  "expect": {
+    "model": {
+      "body_count": 8
+    },
+    "reply": {
+      "result": {
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

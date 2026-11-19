@@ -1,0 +1,18 @@
+{
+  "entry": "horn-reference",
+  "params": {
+    "horn_id": "feetech.sts3215-rear-disc.a0",
+    "mode": "dimensions"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "feetech.sts3215-rear-disc.a0",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

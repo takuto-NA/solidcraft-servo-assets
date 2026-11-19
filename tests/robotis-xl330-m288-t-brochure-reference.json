@@ -1,0 +1,17 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "robotis.xl330-m288-t.brochure"
+  },
+  "expect": {
+    "model": {
+      "body_count": 11
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.xl330-m288-t.brochure",
+        "representation": "servo-reference"
+      }
+    }
+  }
+}

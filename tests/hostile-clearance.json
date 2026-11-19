@@ -1,0 +1,5 @@
+{
+  "entry": "insert",
+  "params": {"asset_id": "towerpro.sg90-analog.configure", "clearance_mm": -1},
+  "expect": {"error": "invalid_input", "model": {"body_count": 0}}
+}

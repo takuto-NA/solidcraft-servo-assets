@@ -1,0 +1,5 @@
+{
+  "entry": "output-reference",
+  "params": {"asset_id": "towerpro.sg92r.configure"},
+  "expect": {"error": "any", "message": "not established", "model": {"body_count": 0}}
+}

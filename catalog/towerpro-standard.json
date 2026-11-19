@@ -1,0 +1,2596 @@
+{
+  "schema_version": 1,
+  "release": "2026-11-19.5",
+  "sources": [
+    {
+      "id": "akizuki-standard-mg90d",
+      "publisher": "Akizuki Denshi",
+      "title": "MG90D seller item 113226",
+      "url": "https://akizukidenshi.com/catalog/g/g113226/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-standard-mg92b",
+      "publisher": "Akizuki Denshi",
+      "title": "MG92B seller item 113228",
+      "url": "https://akizukidenshi.com/catalog/g/g113228/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-standard-mg996r",
+      "publisher": "Akizuki Denshi",
+      "title": "MG996R seller item 112534",
+      "url": "https://akizukidenshi.com/catalog/g/g112534/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-standard-mg996r-drawing",
+      "publisher": "Akizuki Denshi",
+      "title": "MG996R datasheet and independent mounting/output top drawing",
+      "url": "https://akizukidenshi.com/goodsaffix/mg996r.pdf",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "akizuki-standard-sg5010",
+      "publisher": "Akizuki Denshi",
+      "title": "SG5010 seller item 108913",
+      "url": "https://akizukidenshi.com/catalog/g/g108913/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-dimension-key",
+      "publisher": "TowerPro",
+      "title": "Manufacturer A-F dimension-letter diagram",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/07/%E5%B0%8F%E9%A6%AC%E9%81%94%E5%B0%BA%E5%AF%B8%E6%A8%99%E7%A4%BA%E5%9C%96B.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg90d",
+      "publisher": "TowerPro",
+      "title": "MG90D product page and A-F configure table",
+      "url": "https://towerpro.com.tw/product/mg90d-2/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg90d-photo",
+      "publisher": "TowerPro",
+      "title": "MG90D manufacturer product photograph",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/MG90D-1B.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg92b",
+      "publisher": "TowerPro",
+      "title": "MG92B product page and A-F configure table",
+      "url": "https://towerpro.com.tw/?product=mg92b",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg92b-photo",
+      "publisher": "TowerPro",
+      "title": "MG92B manufacturer product photograph",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/MG92B-1B.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg996r",
+      "publisher": "TowerPro",
+      "title": "MG996R product page and A-F configure table",
+      "url": "https://towerpro.com.tw/product/mg996r/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-mg996r-photo",
+      "publisher": "TowerPro",
+      "title": "MG996R manufacturer product photograph",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/MG996R-3b.jpg",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-sg5010",
+      "publisher": "TowerPro",
+      "title": "SG5010 product page and A-F configure table",
+      "url": "https://towerpro.com.tw/product/sg5010-4/",
+      "accessed_on": "2026-11-19"
+    },
+    {
+      "id": "towerpro-standard-sg5010-photo",
+      "publisher": "TowerPro",
+      "title": "SG5010 manufacturer product photograph",
+      "url": "https://towerpro.com.tw/wp-content/uploads/2014/08/SG5010-1B.jpg",
+      "accessed_on": "2026-11-19"
+    }
+  ],
+  "assets": [
+    {
+      "id": "towerpro.mg996r.configure",
+      "manufacturer": "TowerPro",
+      "model": "MG996R",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "standard-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "112534",
+          "url": "https://akizukidenshi.com/catalog/g/g112534/"
+        }
+      ],
+      "dimensions": {
+        "overall_height": {
+          "nominal_mm": 42.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: A",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_length": {
+          "nominal_mm": 40.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: B",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 37,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: C",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 20,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: D",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 54,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: E",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 26.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg996r",
+            "locator": "Configure: F",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "mount_longitudinal_pitch": {
+          "nominal_mm": 48.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-standard-mg996r-drawing",
+            "locator": "Page 2, 48.60 longitudinal center distance",
+            "method": "drawing",
+            "note": "Between the two mounting rows; the drawing supplies no tolerance."
+          }
+        },
+        "mount_transverse_pitch": {
+          "nominal_mm": 10,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-standard-mg996r-drawing",
+            "locator": "Page 2, 10.00 transverse center distance",
+            "method": "drawing",
+            "note": "Between the two slot-pocket centers in each mounting row; no tolerance is supplied."
+          }
+        },
+        "mount_slot_pocket_diameter": {
+          "nominal_mm": 3.9,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-standard-mg996r-drawing",
+            "locator": "Page 2, diameter3.90 callout",
+            "method": "drawing",
+            "note": "Circular pocket of an open mounting slot; mouth width and diameter tolerance are not specified."
+          }
+        },
+        "shaft_from_far_mount_row": {
+          "nominal_mm": 34.35,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "akizuki-standard-mg996r-drawing",
+            "locator": "Page 2, 34.35 from far row to shaft center",
+            "method": "drawing",
+            "note": "Longitudinal distance from the mounting row opposite the output-near end to the output axis; no tolerance is supplied."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Mounting holes",
+            "Manufacturing tolerance"
+          ]
+        },
+        "mounting-pattern": {
+          "title": "Drawing mounting centers48.60 x10.00, independent datum",
+          "kind": "mounting_pattern",
+          "size_dimensions": null,
+          "mount_group": "drawing-ears",
+          "frame": "near_mount_center",
+          "omitted": [
+            "Case-edge registration",
+            "Vertical dimensions",
+            "Ear contours",
+            "Slot mouth widths",
+            "Mounting screws"
+          ]
+        }
+      },
+      "mount_groups": [
+        {
+          "id": "drawing-ears",
+          "frame": "near_mount_center",
+          "plane_height_dimension": null,
+          "holes": [
+            {
+              "id": "near-minus",
+              "center_mm": [
+                0,
+                -5
+              ],
+              "diameter": {
+                "nominal_mm": 3.9,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-standard-mg996r-drawing",
+                  "locator": "Page 2, diameter3.90 callout",
+                  "method": "drawing",
+                  "note": "Circular pocket of an open mounting slot; mouth width and diameter tolerance are not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-standard-mg996r-drawing",
+                "locator": "Page 2, four slot centers with48.60 and10.00 pitches",
+                "method": "drawing",
+                "note": "The near row midpoint defines XY origin; +X points toward the far row. Y=+/-5 follows half the10.00 transverse pitch. No case-edge registration is specified."
+              }
+            },
+            {
+              "id": "near-plus",
+              "center_mm": [
+                0,
+                5
+              ],
+              "diameter": {
+                "nominal_mm": 3.9,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-standard-mg996r-drawing",
+                  "locator": "Page 2, diameter3.90 callout",
+                  "method": "drawing",
+                  "note": "Circular pocket of an open mounting slot; mouth width and diameter tolerance are not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-standard-mg996r-drawing",
+                "locator": "Page 2, four slot centers with48.60 and10.00 pitches",
+                "method": "drawing",
+                "note": "The near row midpoint defines XY origin; +X points toward the far row. Y=+/-5 follows half the10.00 transverse pitch. No case-edge registration is specified."
+              }
+            },
+            {
+              "id": "far-minus",
+              "center_mm": [
+                48.6,
+                -5
+              ],
+              "diameter": {
+                "nominal_mm": 3.9,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-standard-mg996r-drawing",
+                  "locator": "Page 2, diameter3.90 callout",
+                  "method": "drawing",
+                  "note": "Circular pocket of an open mounting slot; mouth width and diameter tolerance are not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-standard-mg996r-drawing",
+                "locator": "Page 2, four slot centers with48.60 and10.00 pitches",
+                "method": "drawing",
+                "note": "The near row midpoint defines XY origin; +X points toward the far row. Y=+/-5 follows half the10.00 transverse pitch. No case-edge registration is specified."
+              }
+            },
+            {
+              "id": "far-plus",
+              "center_mm": [
+                48.6,
+                5
+              ],
+              "diameter": {
+                "nominal_mm": 3.9,
+                "tolerance_mm": null,
+                "evidence": {
+                  "source": "akizuki-standard-mg996r-drawing",
+                  "locator": "Page 2, diameter3.90 callout",
+                  "method": "drawing",
+                  "note": "Circular pocket of an open mounting slot; mouth width and diameter tolerance are not specified."
+                }
+              },
+              "evidence": {
+                "source": "akizuki-standard-mg996r-drawing",
+                "locator": "Page 2, four slot centers with48.60 and10.00 pitches",
+                "method": "drawing",
+                "note": "The near row midpoint defines XY origin; +X points toward the far row. Y=+/-5 follows half the10.00 transverse pitch. No case-edge registration is specified."
+              }
+            }
+          ],
+          "note": "Four reference circles for open slot pockets, not closed physical holes. Origin is the output-near row midpoint; +X runs toward the other row and +Z points toward the shaft. Z0 is a chosen mounting-plane datum only. The drawing does not give a case-edge transform or base-to-plane height; this pattern is not automatically registered to configure-table envelopes or the PREVIEW model."
+        }
+      ],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "towerpro-standard-mg996r-photo",
+              "locator": "Product photograph: one connected flat harness",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "towerpro-standard-mg996r-photo",
+              "locator": "Product photograph: three parallel insulated conductors",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "connector_count": null,
+          "lead_length": {
+            "nominal_mm": 320,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "towerpro-standard-mg996r",
+              "locator": "Product specification: servo wire length",
+              "method": "specification",
+              "note": "Published lead length in millimeters; endpoint convention and connector inclusion are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "towerpro-standard-mg996r-photo",
+            "note": "The photograph shows one three-conductor harness beside the shaft-near short end, but the actual case penetration and strain-relief details are obscured. A metrically located exit point and direction cannot be established from this photo."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Exit direction in the asset frame",
+            "Cable bundle width and thickness",
+            "Strain relief geometry",
+            "Minimum bend radius",
+            "Connector envelope dimensions",
+            "Connector count is not established by the cropped photograph"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": {
+            "frame": "near_mount_center",
+            "origin_mm": [
+              14.25,
+              0,
+              0
+            ],
+            "coordinate_tolerances_mm": [
+              null,
+              null,
+              null
+            ],
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "evidence": {
+              "source": "akizuki-standard-mg996r-drawing",
+              "locator": "Page 2, 48.60 row pitch, 34.35 far-row distance and shared centerline",
+              "method": "derived",
+              "note": "X=48.60-34.35=14.25 from the output-near row midpoint; Y0 is the drawn longitudinal centerline. Z0 defines a datum only, not the physical shaft foot. No configure F height is transferred to this independent drawing frame."
+            }
+          },
+          "housing_top_dimension": null,
+          "shaft_top_dimension": null,
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Case-edge registration of the drawing frame",
+            "Vertical position of mounting plane relative to case base",
+            "Housing top and shaft top in the drawing frame",
+            "Output shaft diameter and full spline profile",
+            "Horn seating plane",
+            "Neutral angular phase",
+            "Coordinate and pocket diameter tolerances"
+          ]
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Case-edge registration of the drawing mounting and output datums",
+        "Vertical source registration between the drawing pattern and configure-table dimensions",
+        "Ear thickness",
+        "Open-slot mouth widths",
+        "Output shaft diameter and full spline profile",
+        "Horn seating plane",
+        "Cable outlet coordinates and direction"
+      ],
+      "observations": [
+        {
+          "source": "towerpro-standard-mg996r",
+          "note": "This profile deliberately uses the six configure-table values A42.7/B40.9/C37/D20/E54/F26.8. The headline dimension 40.7 x19.7 x42.9 mm differs. No physical revision or vendor interchangeability is established."
+        },
+        {
+          "source": "towerpro-standard-dimension-key",
+          "note": "The A-F drawing defines overall shaft-top height, case length, housing-top height, case width, total ear length and ear-underside height. It does not dimension shaft XY, slot centers or slot diameters."
+        },
+        {
+          "source": "towerpro-standard-mg996r-photo",
+          "note": "The photograph depicts two open mounting pockets on each ear (four total), a top output shaft and one three-conductor cable. Photo topology does not establish pocket size or pitch."
+        },
+        {
+          "source": "akizuki-standard-mg996r",
+          "note": "Akizuki identifies seller SKU112534 as a TowerPro MG996R. The seller SKU is separate from this configure-table source profile and does not identify a physical revision."
+        },
+        {
+          "source": "towerpro-standard-mg996r",
+          "note": "Box envelopes each use their own minimum-corner placement. The integrated reference model uses the housing minimum corner; the box representations and other datum frames are not automatically registered."
+        },
+        {
+          "source": "akizuki-standard-mg996r-drawing",
+          "note": "Page2 independently locates four pockets at48.60 x10.00 and the output axis14.25 from the near row, with pocket diameter3.90. It has no case-edge datum or heights. Page1 headline40.7 x19.7 x42.9 differs from the configure-table profile. The source does not establish that the drawing and configure table describe the same physical revision."
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "PREVIEW: this integrated model is for visual layout planning. Amber ears and shaft include unverified geometry; use sourced datum representations separately where available.",
+          "Published configure B40.9/D20/C37/A42.7/E54/F26.8 constrain nominal extents only. Symmetric ear extension6.55, ear thickness2, the C-4 shoulder and the cover contour are explicit planning assumptions.",
+          "Mount pocket locations and dimensions in the integrated model are PREVIEW unless expressly identified as drawing-relative XY with assumed case registration. They are never promoted to factual dimensions or datums.",
+          "The model has no horn, mounting screws, spline teeth, strain relief, cable bend envelope or connector by default.",
+          "PREVIEW EXIT APPROX: place one three-conductor outlet marker on the shaft-near short face at X0/Y(D/2)/Z2, outward -X. Wire diameter1, pitch1.1 and displayed length3 are editable planning values; only the harness/conductor counts are photo observations.",
+          "Optional connector geometry10 x8 x4 is an illustrative planning block only and is omitted unless include_connector is explicitly enabled.",
+          "PREVIEW MG996R registration: the independent drawing XY pattern is centered on the configure B40.9/D20 case by assumption, giving rowsX-3.85/44.75 withY5/15 and axisX10.4/Y10. The factual drawing output has no vertical extents; model Z placements do not register the drawing to configure F26.8."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "PREVIEW HOUSING",
+            "basis": "nominal_envelope_with_preview_shoulder",
+            "note": "Published configure B40.9 xD20 envelope; PREVIEW shoulder at C-4=33. The 4 mm upper-cover interval is an illustrative choice.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                40.9,
+                20,
+                33
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "PREVIEW NEAR MOUNT EAR",
+            "basis": "drawing_xy_with_preview_case_registration",
+            "note": "Drawing row pitch48.60 and transverse pitch10.00, pocket D3.90. PREVIEW placement in case frame assumes the case is centered between rows; ear thickness2 and slot mouth2 are planning values. The source drawing frame is independently available and has no sourced vertical extents.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -6.55,
+                0,
+                26.8
+              ],
+              "size_mm": [
+                6.55,
+                20,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -3.85,
+                    5.0,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.9,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -6.65,
+                    4.0,
+                    26.7
+                  ],
+                  "size_mm": [
+                    2.8,
+                    2,
+                    2.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -3.85,
+                    15.0,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.9,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -6.65,
+                    14.0,
+                    26.7
+                  ],
+                  "size_mm": [
+                    2.8,
+                    2,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "PREVIEW FAR MOUNT EAR",
+            "basis": "drawing_xy_with_preview_case_registration",
+            "note": "Drawing row pitch48.60 and transverse pitch10.00, pocket D3.90. PREVIEW placement in case frame assumes the case is centered between rows; ear thickness2 and slot mouth2 are planning values. The source drawing frame is independently available and has no sourced vertical extents.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                40.9,
+                0,
+                26.8
+              ],
+              "size_mm": [
+                6.55,
+                20,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    44.75,
+                    5.0,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.9,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    44.75,
+                    4.0,
+                    26.7
+                  ],
+                  "size_mm": [
+                    2.8,
+                    2,
+                    2.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    44.75,
+                    15.0,
+                    26.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 3.9,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    44.75,
+                    14.0,
+                    26.7
+                  ],
+                  "size_mm": [
+                    2.8,
+                    2,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "upper-cover",
+            "label": "PREVIEW UPPER COVER",
+            "basis": "approximate_upper_cover_outline",
+            "note": "PREVIEW two-lobe cover with main diameter20, secondary diameter8 and center spacing9; nominal top C37. Its outline and 4 mm shoulder interval are planning choices, not a conservative measured turret envelope.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10.4,
+                10.0,
+                33
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 20,
+              "height_mm": 4
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.4,
+                    10.0,
+                    33
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 8,
+                  "height_mm": 4
+                }
+              }
+            ]
+          },
+          {
+            "id": "output-shaft",
+            "label": "PREVIEW OUTPUT SHAFT",
+            "basis": "drawing_xy_with_preview_case_registration_and_diameter",
+            "note": "PREVIEW case-frame center X10.4/Y10 follows drawing axis14.25 from near row plus assumed near-row X-3.85. D6 is illustrative. The configure A-C interval5.7 is used for appearance only; no vertical datum is transferred into the independent drawing output interface.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10.4,
+                10.0,
+                37
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6,
+              "height_mm": 5.7
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              10.0,
+              0
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#e3ad39"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              10.4,
+              10.0,
+              42.7
+            ],
+            "text": "MG996R PREVIEW OUTPUT\nAXIS/DIAMETER APPROX in the integrated model; no mating spline or horn seat"
+          },
+          {
+            "anchor_mm": [
+              -3.85,
+              5.0,
+              28.8
+            ],
+            "text": "PREVIEW MOUNTS\nDrawing-relative XY with assumed case registration; ear contour/thickness approximate"
+          },
+          {
+            "anchor_mm": [
+              40.9,
+              20,
+              33
+            ],
+            "text": "PUBLISHED CONFIGURE ENVELOPE\nB40.9 xD20, housing-top C37, shaft-top A42.7; upper outline approximate"
+          },
+          {
+            "anchor_mm": [
+              0,
+              10.0,
+              2
+            ],
+            "text": "PREVIEW CABLE ENTRANCE\nOne harness / three conductors;3mm outlet marker\nExit XYZ, direction and wire sizes are planning values; no default connector"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              59,
+              48.7
+            ],
+            "anchor_mm": [
+              10.4,
+              42.7
+            ],
+            "text": "MG996R PREVIEW - AXIS APPROX in case frame",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              59,
+              33.8
+            ],
+            "anchor_mm": [
+              44.75,
+              28.8
+            ],
+            "text": "DRAWING XY / CASE REGISTRATION APPROX; MOUNT Z APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              59,
+              31
+            ],
+            "anchor_mm": [
+              40.9,
+              33
+            ],
+            "text": "Published B40.9 xD20; COVER/SHOULDER APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              59,
+              3
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "PREVIEW EXIT APPROX -1 harness /3 wires, marker3mm",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              59,
+              -7
+            ],
+            "anchor_mm": [
+              20.45,
+              0
+            ],
+            "text": "PREVIEW - verify MOUNT / AXIS / EXIT placement",
+            "cable_port": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "towerpro.sg5010.configure",
+      "manufacturer": "TowerPro",
+      "model": "SG5010",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "standard-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "108913",
+          "url": "https://akizukidenshi.com/catalog/g/g108913/"
+        }
+      ],
+      "dimensions": {
+        "overall_height": {
+          "nominal_mm": 44.1,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: A",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_length": {
+          "nominal_mm": 40.7,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: B",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 38,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: C",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 20,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: D",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 55,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: E",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 27.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-sg5010",
+            "locator": "Configure: F",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Mounting holes",
+            "Manufacturing tolerance"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "towerpro-standard-sg5010-photo",
+              "locator": "Product photograph: one connected flat harness",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "towerpro-standard-sg5010-photo",
+              "locator": "Product photograph: three parallel insulated conductors",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "connector_count": null,
+          "lead_length": {
+            "nominal_mm": 320,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "towerpro-standard-sg5010",
+              "locator": "Product specification: servo wire length",
+              "method": "specification",
+              "note": "Published lead length in millimeters; endpoint convention and connector inclusion are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "towerpro-standard-sg5010-photo",
+            "note": "The photograph shows one three-conductor harness beside the shaft-near short end, but the actual case penetration and strain-relief details are obscured. A metrically located exit point and direction cannot be established from this photo."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Exit direction in the asset frame",
+            "Cable bundle width and thickness",
+            "Strain relief geometry",
+            "Minimum bend radius",
+            "Connector envelope dimensions",
+            "Connector count is not established by the cropped photograph"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": "overall_height",
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Output-axis center relative to a dimensioned case or mounting datum",
+            "Output shaft diameter and full spline profile",
+            "Horn seating plane",
+            "Neutral angular phase"
+          ]
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Mounting hole or slot centers",
+        "Mounting hole or slot diameter",
+        "Ear thickness",
+        "Output shaft axis location",
+        "Output interface dimensions and spline profile",
+        "Cable outlet coordinates and direction"
+      ],
+      "observations": [
+        {
+          "source": "towerpro-standard-sg5010",
+          "note": "This profile deliberately uses the six configure-table values A44.1/B40.7/C38/D20/E55/F27.8. The headline dimension 40.6 x20.5 x38 mm differs. No physical revision or vendor interchangeability is established."
+        },
+        {
+          "source": "towerpro-standard-dimension-key",
+          "note": "The A-F drawing defines overall shaft-top height, case length, housing-top height, case width, total ear length and ear-underside height. It does not dimension shaft XY, slot centers or slot diameters."
+        },
+        {
+          "source": "towerpro-standard-sg5010-photo",
+          "note": "The photograph depicts two open mounting pockets on each ear (four total), a top output shaft and one three-conductor cable. Photo topology does not establish pocket size or pitch."
+        },
+        {
+          "source": "akizuki-standard-sg5010",
+          "note": "Akizuki identifies seller SKU108913 as a TowerPro SG-5010. The seller SKU is separate from this configure-table source profile and does not identify a physical revision."
+        },
+        {
+          "source": "towerpro-standard-sg5010",
+          "note": "Box envelopes each use their own minimum-corner placement. The integrated reference model uses the housing minimum corner; the box representations and other datum frames are not automatically registered."
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "PREVIEW: this integrated model is for visual layout planning. Amber ears and shaft include unverified geometry; use sourced datum representations separately where available.",
+          "Published configure B40.7/D20/C38/A44.1/E55/F27.8 constrain nominal extents only. Symmetric ear extension7.15, ear thickness2, the C-4 shoulder and the cover contour are explicit planning assumptions.",
+          "Mount pocket locations and dimensions in the integrated model are PREVIEW unless expressly identified as drawing-relative XY with assumed case registration. They are never promoted to factual dimensions or datums.",
+          "The model has no horn, mounting screws, spline teeth, strain relief, cable bend envelope or connector by default.",
+          "PREVIEW EXIT APPROX: place one three-conductor outlet marker on the shaft-near short face at X0/Y(D/2)/Z2, outward -X. Wire diameter1, pitch1.1 and displayed length3 are editable planning values; only the harness/conductor counts are photo observations.",
+          "Optional connector geometry10 x8 x4 is an illustrative planning block only and is omitted unless include_connector is explicitly enabled.",
+          "PREVIEW AXIS APPROX: X10.0/Y10.0, diameter6, +Z; slot X-3.575/44.275 with Y5/15. These positions are visual planning choices, not sourced datums."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "PREVIEW HOUSING",
+            "basis": "nominal_envelope_with_preview_shoulder",
+            "note": "Published configure B40.7 xD20 envelope; PREVIEW shoulder at C-4=34. The 4 mm upper-cover interval is an illustrative choice.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                40.7,
+                20,
+                34
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "PREVIEW NEAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of7.15 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and quarter-width positions in Y; pocket D4 and mouth2 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -7.15,
+                0,
+                27.8
+              ],
+              "size_mm": [
+                7.15,
+                20,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -3.575,
+                    5.0,
+                    27.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -7.25,
+                    4.0,
+                    27.7
+                  ],
+                  "size_mm": [
+                    3.675,
+                    2,
+                    2.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -3.575,
+                    15.0,
+                    27.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -7.25,
+                    14.0,
+                    27.7
+                  ],
+                  "size_mm": [
+                    3.675,
+                    2,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "PREVIEW FAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of7.15 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and quarter-width positions in Y; pocket D4 and mouth2 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                40.7,
+                0,
+                27.8
+              ],
+              "size_mm": [
+                7.15,
+                20,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    44.275,
+                    5.0,
+                    27.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    44.275,
+                    4.0,
+                    27.7
+                  ],
+                  "size_mm": [
+                    3.675,
+                    2,
+                    2.2
+                  ]
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    44.275,
+                    15.0,
+                    27.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 4,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    44.275,
+                    14.0,
+                    27.7
+                  ],
+                  "size_mm": [
+                    3.675,
+                    2,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "upper-cover",
+            "label": "PREVIEW UPPER COVER",
+            "basis": "approximate_upper_cover_outline",
+            "note": "PREVIEW two-lobe cover with main diameter20, secondary diameter8 and center spacing9; nominal top C38. Its outline and 4 mm shoulder interval are planning choices, not a conservative measured turret envelope.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10.0,
+                10.0,
+                34
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 20,
+              "height_mm": 4
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    19.0,
+                    10.0,
+                    34
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 8,
+                  "height_mm": 4
+                }
+              }
+            ]
+          },
+          {
+            "id": "output-shaft",
+            "label": "PREVIEW OUTPUT SHAFT",
+            "basis": "preview_axis_and_diameter_with_published_height_interval",
+            "note": "PREVIEW axis at X10.0/Y10.0 and D6 are visual planning choices. Only the A-C=6.1 mm height interval comes from the configure dimensions; it does not define horn seating or the spline.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                10.0,
+                10.0,
+                38
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 6,
+              "height_mm": 6.1
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              10.0,
+              0
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#e3ad39"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              10.0,
+              10.0,
+              44.1
+            ],
+            "text": "SG5010 PREVIEW OUTPUT\nAXIS/DIAMETER APPROX in the integrated model; no mating spline or horn seat"
+          },
+          {
+            "anchor_mm": [
+              -3.575,
+              5.0,
+              29.8
+            ],
+            "text": "PREVIEW MOUNTS\nSlot locations and sizes are illustrative; ear contour/thickness approximate"
+          },
+          {
+            "anchor_mm": [
+              40.7,
+              20,
+              34
+            ],
+            "text": "PUBLISHED CONFIGURE ENVELOPE\nB40.7 xD20, housing-top C38, shaft-top A44.1; upper outline approximate"
+          },
+          {
+            "anchor_mm": [
+              0,
+              10.0,
+              2
+            ],
+            "text": "PREVIEW CABLE ENTRANCE\nOne harness / three conductors;3mm outlet marker\nExit XYZ, direction and wire sizes are planning values; no default connector"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              60,
+              50.1
+            ],
+            "anchor_mm": [
+              10.0,
+              44.1
+            ],
+            "text": "SG5010 PREVIEW - AXIS APPROX in case frame",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              60,
+              34.8
+            ],
+            "anchor_mm": [
+              44.275,
+              29.8
+            ],
+            "text": "PREVIEW MOUNTS APPROX - 4 slots",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              60,
+              32
+            ],
+            "anchor_mm": [
+              40.7,
+              34
+            ],
+            "text": "Published B40.7 xD20; COVER/SHOULDER APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              60,
+              3
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "PREVIEW EXIT APPROX -1 harness /3 wires, marker3mm",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              60,
+              -7
+            ],
+            "anchor_mm": [
+              20.35,
+              0
+            ],
+            "text": "PREVIEW - verify MOUNT / AXIS / EXIT placement",
+            "cable_port": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "towerpro.mg90d.configure",
+      "manufacturer": "TowerPro",
+      "model": "MG90D",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "mini-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "113226",
+          "url": "https://akizukidenshi.com/catalog/g/g113226/"
+        }
+      ],
+      "dimensions": {
+        "overall_height": {
+          "nominal_mm": 32.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: A",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_length": {
+          "nominal_mm": 22.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: B",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 28.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: C",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: D",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 31.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: E",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 19.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg90d",
+            "locator": "Configure: F",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Mounting holes",
+            "Manufacturing tolerance"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "towerpro-standard-mg90d-photo",
+              "locator": "Product photograph: one connected flat harness",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "towerpro-standard-mg90d-photo",
+              "locator": "Product photograph: three parallel insulated conductors",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "connector_count": null,
+          "lead_length": {
+            "nominal_mm": 250,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "towerpro-standard-mg90d",
+              "locator": "Product specification: servo wire length",
+              "method": "specification",
+              "note": "Published lead length in millimeters; endpoint convention and connector inclusion are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "towerpro-standard-mg90d-photo",
+            "note": "The photograph shows one three-conductor harness beside the shaft-near short end, but the actual case penetration and strain-relief details are obscured. A metrically located exit point and direction cannot be established from this photo."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Exit direction in the asset frame",
+            "Cable bundle width and thickness",
+            "Strain relief geometry",
+            "Minimum bend radius",
+            "Connector envelope dimensions",
+            "Connector count is not established by the cropped photograph"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": "overall_height",
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Output-axis center relative to a dimensioned case or mounting datum",
+            "Output shaft diameter and full spline profile",
+            "Horn seating plane",
+            "Neutral angular phase"
+          ]
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Mounting hole or slot centers",
+        "Mounting hole or slot diameter",
+        "Ear thickness",
+        "Output shaft axis location",
+        "Output interface dimensions and spline profile",
+        "Cable outlet coordinates and direction"
+      ],
+      "observations": [
+        {
+          "source": "towerpro-standard-mg90d",
+          "note": "This profile deliberately uses the six configure-table values A32.5/B22.6/C28.5/D12/E31.5/F19.8. The headline dimension 22.8 x12.2 x28.5 mm differs. No physical revision or vendor interchangeability is established."
+        },
+        {
+          "source": "towerpro-standard-dimension-key",
+          "note": "The A-F drawing defines overall shaft-top height, case length, housing-top height, case width, total ear length and ear-underside height. It does not dimension shaft XY, slot centers or slot diameters."
+        },
+        {
+          "source": "towerpro-standard-mg90d-photo",
+          "note": "The photograph depicts one mounting slot on each ear, a top output shaft and one three-conductor cable. Photo topology does not establish slot size or pitch."
+        },
+        {
+          "source": "akizuki-standard-mg90d",
+          "note": "Akizuki identifies seller SKU113226 as a TowerPro MG90D. The seller SKU is separate from this configure-table source profile and does not identify a physical revision."
+        },
+        {
+          "source": "towerpro-standard-mg90d",
+          "note": "Box envelopes each use their own minimum-corner placement. The integrated reference model uses the housing minimum corner; the box representations and other datum frames are not automatically registered."
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "PREVIEW: this integrated model is for visual layout planning. Amber ears and shaft include unverified geometry; use sourced datum representations separately where available.",
+          "Published configure B22.6/D12/C28.5/A32.5/E31.5/F19.8 constrain nominal extents only. Symmetric ear extension4.45, ear thickness2, the C-4 shoulder and the cover contour are explicit planning assumptions.",
+          "Mount pocket locations and dimensions in the integrated model are PREVIEW unless expressly identified as drawing-relative XY with assumed case registration. They are never promoted to factual dimensions or datums.",
+          "The model has no horn, mounting screws, spline teeth, strain relief, cable bend envelope or connector by default.",
+          "PREVIEW EXIT APPROX: place one three-conductor outlet marker on the shaft-near short face at X0/Y(D/2)/Z2, outward -X. Wire diameter1, pitch1.1 and displayed length3 are editable planning values; only the harness/conductor counts are photo observations.",
+          "Optional connector geometry10 x8 x4 is an illustrative planning block only and is omitted unless include_connector is explicitly enabled.",
+          "PREVIEW AXIS APPROX: X6.0/Y6.0, diameter5, +Z; slot X-2.225/24.825 with Y6.0. These positions are visual planning choices, not sourced datums."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "PREVIEW HOUSING",
+            "basis": "nominal_envelope_with_preview_shoulder",
+            "note": "Published configure B22.6 xD12 envelope; PREVIEW shoulder at C-4=24.5. The 4 mm upper-cover interval is an illustrative choice.",
+            "color": "#343b47",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                22.6,
+                12,
+                24.5
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "PREVIEW NEAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of4.45 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and the width midpoint; pocket D2 and mouth1 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -4.45,
+                0,
+                19.8
+              ],
+              "size_mm": [
+                4.45,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -2.225,
+                    6.0,
+                    19.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -4.55,
+                    5.5,
+                    19.7
+                  ],
+                  "size_mm": [
+                    2.325,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "PREVIEW FAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of4.45 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and the width midpoint; pocket D2 and mouth1 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                22.6,
+                0,
+                19.8
+              ],
+              "size_mm": [
+                4.45,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    24.825,
+                    6.0,
+                    19.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    24.825,
+                    5.5,
+                    19.7
+                  ],
+                  "size_mm": [
+                    2.325,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "upper-cover",
+            "label": "PREVIEW UPPER COVER",
+            "basis": "approximate_upper_cover_outline",
+            "note": "PREVIEW two-lobe cover with main diameter12, secondary diameter6 and center spacing5; nominal top C28.5. Its outline and 4 mm shoulder interval are planning choices, not a conservative measured turret envelope.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                6.0,
+                6.0,
+                24.5
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 12,
+              "height_mm": 4
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.0,
+                    6.0,
+                    24.5
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 6,
+                  "height_mm": 4
+                }
+              }
+            ]
+          },
+          {
+            "id": "output-shaft",
+            "label": "PREVIEW OUTPUT SHAFT",
+            "basis": "preview_axis_and_diameter_with_published_height_interval",
+            "note": "PREVIEW axis at X6.0/Y6.0 and D5 are visual planning choices. Only the A-C=4.0 mm height interval comes from the configure dimensions; it does not define horn seating or the spline.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                6.0,
+                6.0,
+                28.5
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 5,
+              "height_mm": 4.0
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              6.0,
+              0
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#e3ad39"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              6.0,
+              6.0,
+              32.5
+            ],
+            "text": "MG90D PREVIEW OUTPUT\nAXIS/DIAMETER APPROX in the integrated model; no mating spline or horn seat"
+          },
+          {
+            "anchor_mm": [
+              -2.225,
+              6.0,
+              21.8
+            ],
+            "text": "PREVIEW MOUNTS\nSlot locations and sizes are illustrative; ear contour/thickness approximate"
+          },
+          {
+            "anchor_mm": [
+              22.6,
+              12,
+              24.5
+            ],
+            "text": "PUBLISHED CONFIGURE ENVELOPE\nB22.6 xD12, housing-top C28.5, shaft-top A32.5; upper outline approximate"
+          },
+          {
+            "anchor_mm": [
+              0,
+              6.0,
+              2
+            ],
+            "text": "PREVIEW CABLE ENTRANCE\nOne harness / three conductors;3mm outlet marker\nExit XYZ, direction and wire sizes are planning values; no default connector"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              36.5,
+              38.5
+            ],
+            "anchor_mm": [
+              6.0,
+              32.5
+            ],
+            "text": "MG90D PREVIEW - AXIS APPROX in case frame",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              26.8
+            ],
+            "anchor_mm": [
+              24.825,
+              21.8
+            ],
+            "text": "PREVIEW MOUNTS APPROX - 2 slots",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              22.5
+            ],
+            "anchor_mm": [
+              22.6,
+              24.5
+            ],
+            "text": "Published B22.6 xD12; COVER/SHOULDER APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              3
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "PREVIEW EXIT APPROX -1 harness /3 wires, marker3mm",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              36.5,
+              -7
+            ],
+            "anchor_mm": [
+              11.3,
+              0
+            ],
+            "text": "PREVIEW - verify MOUNT / AXIS / EXIT placement",
+            "cable_port": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "towerpro.mg92b.configure",
+      "manufacturer": "TowerPro",
+      "model": "MG92B",
+      "product_revision": null,
+      "data_revision": 1,
+      "family": "mini-servo",
+      "seller_items": [
+        {
+          "seller": "Akizuki Denshi",
+          "sku": "113228",
+          "url": "https://akizukidenshi.com/catalog/g/g113228/"
+        }
+      ],
+      "dimensions": {
+        "overall_height": {
+          "nominal_mm": 35,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: A",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_length": {
+          "nominal_mm": 22.6,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: B",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "housing_height": {
+          "nominal_mm": 31,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: C",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "case_width": {
+          "nominal_mm": 12,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: D",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "ear_overall_length": {
+          "nominal_mm": 31.5,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: E",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        },
+        "mount_underside_height": {
+          "nominal_mm": 22.8,
+          "tolerance_mm": null,
+          "evidence": {
+            "source": "towerpro-standard-mg92b",
+            "locator": "Configure: F",
+            "method": "specification",
+            "note": "Letter meaning follows source towerpro-standard-dimension-key. Configure-table nominal; the headline dimensions differ. No tolerance or physical product revision is identified."
+          }
+        }
+      },
+      "representations": {
+        "case-envelope": {
+          "title": "Housing envelope, excludes output shaft",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "case_length",
+            "case_width",
+            "housing_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Mounting ears",
+            "Output shaft",
+            "Cable",
+            "Horn",
+            "Case shoulder detail"
+          ]
+        },
+        "overall-envelope": {
+          "title": "Nominal outer envelope, includes ears and shaft height",
+          "kind": "box_envelope",
+          "size_dimensions": [
+            "ear_overall_length",
+            "case_width",
+            "overall_height"
+          ],
+          "mount_group": null,
+          "frame": "envelope_minimum",
+          "omitted": [
+            "Cable",
+            "Horn",
+            "Mounting holes",
+            "Manufacturing tolerance"
+          ]
+        }
+      },
+      "mount_groups": [],
+      "cable_ports": [
+        {
+          "id": "servo-lead",
+          "attachment": "fixed_pigtail",
+          "bundle_count": {
+            "value": 1,
+            "evidence": {
+              "source": "towerpro-standard-mg92b-photo",
+              "locator": "Product photograph: one connected flat harness",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "conductors_per_bundle": {
+            "value": 3,
+            "evidence": {
+              "source": "towerpro-standard-mg92b-photo",
+              "locator": "Product photograph: three parallel insulated conductors",
+              "method": "photo_observation",
+              "note": "Applies to the pictured product only; no dimensions were measured from pixels."
+            }
+          },
+          "connector_count": null,
+          "lead_length": {
+            "nominal_mm": 250,
+            "tolerance_mm": null,
+            "evidence": {
+              "source": "towerpro-standard-mg92b",
+              "locator": "Product specification: servo wire length",
+              "method": "specification",
+              "note": "Published lead length in millimeters; endpoint convention and connector inclusion are not defined."
+            }
+          },
+          "exit_observation": {
+            "source": "towerpro-standard-mg92b-photo",
+            "note": "The photograph shows one three-conductor harness beside the shaft-near short end, but the actual case penetration and strain-relief details are obscured. A metrically located exit point and direction cannot be established from this photo."
+          },
+          "unknown": [
+            "Exit position in millimeters",
+            "Exit direction in the asset frame",
+            "Cable bundle width and thickness",
+            "Strain relief geometry",
+            "Minimum bend radius",
+            "Connector envelope dimensions",
+            "Connector count is not established by the cropped photograph"
+          ]
+        }
+      ],
+      "output_interfaces": [
+        {
+          "id": "main",
+          "axis": null,
+          "housing_top_dimension": "housing_height",
+          "shaft_top_dimension": "overall_height",
+          "frame_height_dimension": null,
+          "shaft_diameter_dimension": null,
+          "unknown": [
+            "Output-axis center relative to a dimensioned case or mounting datum",
+            "Output shaft diameter and full spline profile",
+            "Horn seating plane",
+            "Neutral angular phase"
+          ]
+        }
+      ],
+      "missing_mount_dimensions": [
+        "Mounting hole or slot centers",
+        "Mounting hole or slot diameter",
+        "Ear thickness",
+        "Output shaft axis location",
+        "Output interface dimensions and spline profile",
+        "Cable outlet coordinates and direction"
+      ],
+      "observations": [
+        {
+          "source": "towerpro-standard-mg92b",
+          "note": "This profile deliberately uses the six configure-table values A35/B22.6/C31/D12/E31.5/F22.8. The headline dimension 22.8 x12 x31 mm differs. No physical revision or vendor interchangeability is established."
+        },
+        {
+          "source": "towerpro-standard-dimension-key",
+          "note": "The A-F drawing defines overall shaft-top height, case length, housing-top height, case width, total ear length and ear-underside height. It does not dimension shaft XY, slot centers or slot diameters."
+        },
+        {
+          "source": "towerpro-standard-mg92b-photo",
+          "note": "The photograph depicts one mounting slot on each ear, a top output shaft and one three-conductor cable. Photo topology does not establish slot size or pitch."
+        },
+        {
+          "source": "akizuki-standard-mg92b",
+          "note": "Akizuki identifies seller SKU113228 as a TowerPro MG92B. The seller SKU is separate from this configure-table source profile and does not identify a physical revision."
+        },
+        {
+          "source": "towerpro-standard-mg92b",
+          "note": "Box envelopes each use their own minimum-corner placement. The integrated reference model uses the housing minimum corner; the box representations and other datum frames are not automatically registered."
+        }
+      ],
+      "reference_model": {
+        "frame": "envelope_minimum",
+        "assumptions": [
+          "PREVIEW: this integrated model is for visual layout planning. Amber ears and shaft include unverified geometry; use sourced datum representations separately where available.",
+          "Published configure B22.6/D12/C31/A35/E31.5/F22.8 constrain nominal extents only. Symmetric ear extension4.45, ear thickness2, the C-4 shoulder and the cover contour are explicit planning assumptions.",
+          "Mount pocket locations and dimensions in the integrated model are PREVIEW unless expressly identified as drawing-relative XY with assumed case registration. They are never promoted to factual dimensions or datums.",
+          "The model has no horn, mounting screws, spline teeth, strain relief, cable bend envelope or connector by default.",
+          "PREVIEW EXIT APPROX: place one three-conductor outlet marker on the shaft-near short face at X0/Y(D/2)/Z2, outward -X. Wire diameter1, pitch1.1 and displayed length3 are editable planning values; only the harness/conductor counts are photo observations.",
+          "Optional connector geometry10 x8 x4 is an illustrative planning block only and is omitted unless include_connector is explicitly enabled.",
+          "PREVIEW AXIS APPROX: X6.0/Y6.0, diameter5, +Z; slot X-2.225/24.825 with Y6.0. These positions are visual planning choices, not sourced datums."
+        ],
+        "parts": [
+          {
+            "id": "housing",
+            "label": "PREVIEW HOUSING",
+            "basis": "nominal_envelope_with_preview_shoulder",
+            "note": "Published configure B22.6 xD12 envelope; PREVIEW shoulder at C-4=27. The 4 mm upper-cover interval is an illustrative choice.",
+            "color": "#315a9c",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                0,
+                0,
+                0
+              ],
+              "size_mm": [
+                22.6,
+                12,
+                27
+              ]
+            },
+            "modifiers": []
+          },
+          {
+            "id": "near-ear",
+            "label": "PREVIEW NEAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of4.45 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and the width midpoint; pocket D2 and mouth1 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                -4.45,
+                0,
+                22.8
+              ],
+              "size_mm": [
+                4.45,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    -2.225,
+                    6.0,
+                    22.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    -4.55,
+                    5.5,
+                    22.7
+                  ],
+                  "size_mm": [
+                    2.325,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "far-ear",
+            "label": "PREVIEW FAR MOUNT EAR",
+            "basis": "preview_mount_locations_and_slot_geometry",
+            "note": "PREVIEW ear location assumes symmetric extensions of4.45 mm and thickness2 mm. Slot centers use the ear rectangle midpoint in X and the width midpoint; pocket D2 and mouth1 are illustrative planning choices, not manufacturer hole dimensions.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "box",
+              "corner_mm": [
+                22.6,
+                0,
+                22.8
+              ],
+              "size_mm": [
+                4.45,
+                12,
+                2
+              ]
+            },
+            "modifiers": [
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    24.825,
+                    6.0,
+                    22.7
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 2,
+                  "height_mm": 2.2
+                }
+              },
+              {
+                "operation": "cut",
+                "geometry": {
+                  "kind": "box",
+                  "corner_mm": [
+                    24.825,
+                    5.5,
+                    22.7
+                  ],
+                  "size_mm": [
+                    2.325,
+                    1,
+                    2.2
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "upper-cover",
+            "label": "PREVIEW UPPER COVER",
+            "basis": "approximate_upper_cover_outline",
+            "note": "PREVIEW two-lobe cover with main diameter12, secondary diameter6 and center spacing5; nominal top C31. Its outline and 4 mm shoulder interval are planning choices, not a conservative measured turret envelope.",
+            "color": "#30343d",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                6.0,
+                6.0,
+                27
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 12,
+              "height_mm": 4
+            },
+            "modifiers": [
+              {
+                "operation": "join",
+                "geometry": {
+                  "kind": "cylinder",
+                  "base_mm": [
+                    11.0,
+                    6.0,
+                    27
+                  ],
+                  "axis": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "diameter_mm": 6,
+                  "height_mm": 4
+                }
+              }
+            ]
+          },
+          {
+            "id": "output-shaft",
+            "label": "PREVIEW OUTPUT SHAFT",
+            "basis": "preview_axis_and_diameter_with_published_height_interval",
+            "note": "PREVIEW axis at X6.0/Y6.0 and D5 are visual planning choices. Only the A-C=4 mm height interval comes from the configure dimensions; it does not define horn seating or the spline.",
+            "color": "#b77a32",
+            "geometry": {
+              "kind": "cylinder",
+              "base_mm": [
+                6.0,
+                6.0,
+                31
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "diameter_mm": 5,
+              "height_mm": 4
+            },
+            "modifiers": []
+          }
+        ],
+        "cables": [
+          {
+            "port_id": "servo-lead",
+            "face_base_mm": [
+              0,
+              6.0,
+              0
+            ],
+            "conductor_colors": [
+              "#8b5a2b",
+              "#df4242",
+              "#e3ad39"
+            ],
+            "default_outlet_height_mm": 2,
+            "default_wire_diameter_mm": 1,
+            "default_wire_pitch_mm": 1.1,
+            "default_wire_length_mm": 3,
+            "connector_size_mm": [
+              10,
+              8,
+              4
+            ],
+            "connector_color": "#29313d"
+          }
+        ],
+        "notes": [
+          {
+            "anchor_mm": [
+              6.0,
+              6.0,
+              35
+            ],
+            "text": "MG92B PREVIEW OUTPUT\nAXIS/DIAMETER APPROX in the integrated model; no mating spline or horn seat"
+          },
+          {
+            "anchor_mm": [
+              -2.225,
+              6.0,
+              24.8
+            ],
+            "text": "PREVIEW MOUNTS\nSlot locations and sizes are illustrative; ear contour/thickness approximate"
+          },
+          {
+            "anchor_mm": [
+              22.6,
+              12,
+              27
+            ],
+            "text": "PUBLISHED CONFIGURE ENVELOPE\nB22.6 xD12, housing-top C31, shaft-top A35; upper outline approximate"
+          },
+          {
+            "anchor_mm": [
+              0,
+              6.0,
+              2
+            ],
+            "text": "PREVIEW CABLE ENTRANCE\nOne harness / three conductors;3mm outlet marker\nExit XYZ, direction and wire sizes are planning values; no default connector"
+          }
+        ],
+        "front_labels": [
+          {
+            "at_mm": [
+              36.5,
+              41
+            ],
+            "anchor_mm": [
+              6.0,
+              35
+            ],
+            "text": "MG92B PREVIEW - AXIS APPROX in case frame",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              29.8
+            ],
+            "anchor_mm": [
+              24.825,
+              24.8
+            ],
+            "text": "PREVIEW MOUNTS APPROX - 2 slots",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              25
+            ],
+            "anchor_mm": [
+              22.6,
+              27
+            ],
+            "text": "Published B22.6 xD12; COVER/SHOULDER APPROX",
+            "cable_port": null
+          },
+          {
+            "at_mm": [
+              36.5,
+              3
+            ],
+            "anchor_mm": [
+              0,
+              2
+            ],
+            "text": "PREVIEW EXIT APPROX -1 harness /3 wires, marker3mm",
+            "cable_port": "servo-lead"
+          },
+          {
+            "at_mm": [
+              36.5,
+              -7
+            ],
+            "anchor_mm": [
+              11.3,
+              0
+            ],
+            "text": "PREVIEW - verify MOUNT / AXIS / EXIT placement",
+            "cable_port": null
+          }
+        ]
+      }
+    }
+  ]
+}

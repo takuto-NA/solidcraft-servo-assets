@@ -1,0 +1,14 @@
+{
+  "entry": "servo-reference",
+  "params": {
+    "asset_id": "towerpro.sg90-analog.configure",
+    "horn_id": "aus.ta0132.horn-1",
+    "horn_angle_deg": 361
+  },
+  "expect": {
+    "error": "invalid_input",
+    "model": {
+      "body_count": 0
+    }
+  }
+}
