@@ -4,6 +4,10 @@ An offline Rust/WebAssembly plugin that inserts editable servo and horn referenc
 using ordinary SolidCraft commands. Body shapes, mounting references, output axes
 and cable entrances have separate evidence and explicit unknowns.
 
+[![FEETECH FS90 CAD reference with both mounting slots, the output axis and the approximate three-conductor cable entry. SG90, STS3215 and XM430 at one scale, with a detached SG90-style photo-estimated horn.](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-readme-hero-v2.png)](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-readme-hero-v2.png)
+
+[Image sources and the full comparison](docs/intro-image.md)
+
 **28 integrated servo references, 29 source profiles and 18 horn variants** are
 included. The catalog covers SG90, SG92R, MG90S, other common TowerPro/FEETECH/Hitec
 servos, STS3215 variants, XL330/XC330, XM430 and XM540. Horns include dimension
@@ -13,16 +17,6 @@ arms. Vendor, document and physical revisions remain separate identities.
 [Download a release](https://github.com/takuto-NA/solidcraft-servo-assets/releases)
 · [Usage and model limits](docs/usage.md)
 · [Add a servo or horn](docs/adding-assets.md)
-
-![Servo Assets overview: eight servo references at the same scale, mounting and output datums, cable entrance and rear socket details, and separately labelled horn evidence levels](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.png)
-
-Actual SolidCraft captures from v0.9.1: eight representative servo references use
-the same orthographic scale. Interface and horn details are enlarged separately.
-The captions distinguish source datums, planning geometry and photo estimates;
-the 18 horn variants include nine dimension-only records, seven partial source
-solids and two photo reconstructions. Outlet/socket geometry remains approximate;
-the photo horn's identity, spline fit and installed seat remain unknown.
-[Image provenance and reproduction](docs/intro-image.md).
 
 ## Install and use
 
