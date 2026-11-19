@@ -1,18 +1,46 @@
 # Introduction image
 
-The README overview presents the servo reference library, its useful interfaces
-and the different horn evidence levels. Every geometry image is an actual
-SolidCraft capture of the released v0.9.1 plugin. The original SVG supplies the
-layout and captions; the CAD captures are embedded without changing their shapes.
+## README cover
 
-- [PNG overview](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.png)
-- [Editable SVG with embedded captures and camera metadata](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.svg)
+The cover uses original SolidCraft renders of the v0.10.0 assets. The large
+FEETECH FS90 view identifies both open mounting slots, the output axis and the
+fixed cable entry. The [FS90 source record](sources.md) supplies the slot and
+shaft positions. Three conductors are shown with the default 3 mm marker. The
+location and wire size are approximate.
 
-The files are additional documentation assets. The existing release ZIPs,
-checksums and version tag retain their original contents. The image and its
-original layout use MIT OR Apache-2.0; see [ATTRIBUTION](../ATTRIBUTION.md).
+The three smaller views share an orthographic scale. They show SG90 Analog,
+STS3215-C001 old case and XM430-W350-T. The detached SG90-style double arm uses
+the [photo reconstruction](sg90-photo-reconstruction.md). Its spline fit and
+installed seat are unknown. The FS90 and horn views are enlarged independently.
 
-## What the image claims
+- [Full-size cover PNG](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-readme-hero-v2.png)
+- [Editable cover SVG with embedded renders and camera metadata](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-readme-hero-v2.svg)
+
+To reproduce a cover view, use the released v0.10.0 plugin from commit
+`35e38374e7cf16363c4f5249ce6252d3c26e4826`. The SVG metadata records the entry,
+parameters, asset ID, camera and render dimensions for each view. Start a fresh
+CLI script with `plugin.run` and follow it with `view.apply` using that camera.
+Use the recorded dimensions for `W` and `H` in the render command.
+
+```sh
+solidcraft-cli render capture.json --out capture.png --width W --height H \
+  --transparent --exposure 0.65
+```
+
+The SVG embeds the native renders and adds labels and leader lines. The leaders
+use the projection of the recorded FS90 reference points. The PNG is a 1440 × 804
+export from resvg 0.50.0 using the system Lato font. See
+[ATTRIBUTION](../ATTRIBUTION.md) for the media license.
+
+## Detailed gallery
+
+The earlier gallery presents eight examples and enlarged interface and horn
+views. The CAD captures come from the released v0.9.1 plugin.
+
+- [Detailed gallery PNG](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.png)
+- [Editable gallery SVG with embedded captures and camera metadata](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.9.1/servo-assets-overview-v1.svg)
+
+### What the image claims
 
 There are 28 integrated references, 29 servo source profiles and 18 horn variants.
 These counts include case, document and electrical variants; they are not a count
@@ -60,7 +88,7 @@ source solids and two photo estimates. The image does not advertise 18 complete
 manufacturing models. Part colors are display choices; the captions and source
 records carry the evidence meaning.
 
-## Reproduce the captures
+### Reproduce the captures
 
 Use a compatible SolidCraft CLI and the released v0.9.1 package. Its source commit
 is `a9b5044289ab16031cba912a729622fea39f9580`. Keep the package directory named
