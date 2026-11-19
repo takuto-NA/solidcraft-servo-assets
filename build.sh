@@ -8,7 +8,16 @@ target_root="${CARGO_TARGET_DIR:-$repo_root/target}"
 if [[ "$target_root" != /* ]]; then
     target_root="$repo_root/$target_root"
 fi
-nice "$cargo_bin" build --offline --locked --release --lib --target wasm32-unknown-unknown --target-dir "$target_root"
+wasm_rustflags="$(python3 - "$repo_root" "${CARGO_HOME:-$HOME/.cargo}" <<'PY'
+import os
+import sys
+encoded = os.environ.get("CARGO_ENCODED_RUSTFLAGS")
+flags = (encoded.split("\x1f") if encoded else []) if encoded is not None else os.environ.get("RUSTFLAGS", "").split()
+flags.extend(f"--remap-path-prefix={old}={new}" for old, new in ((sys.argv[1], "/source/solidcraft-servo-assets"), (os.path.abspath(sys.argv[2]), "/cargo")))
+sys.stdout.write("\x1f".join(flags))
+PY
+)"
+CARGO_ENCODED_RUSTFLAGS="$wasm_rustflags" nice "$cargo_bin" build --offline --locked --release --lib --target wasm32-unknown-unknown --target-dir "$target_root"
 nice "$cargo_bin" build --offline --locked --bin servo-assets --target-dir "$target_root"
 package_tmp="$(mktemp -d "$target_root/package-modern.XXXXXX")"
 trap 'rm -rf -- "$package_tmp"' EXIT

@@ -9,7 +9,16 @@ if [[ "$target_root" != /* ]]; then
     target_root="$repo_root/$target_root"
 fi
 legacy_target="$target_root/legacy"
-nice "$cargo_bin" build --offline --locked --release --lib --target wasm32-unknown-unknown --features legacy-host --target-dir "$legacy_target"
+wasm_rustflags="$(python3 - "$repo_root" "${CARGO_HOME:-$HOME/.cargo}" <<'PY'
+import os
+import sys
+encoded = os.environ.get("CARGO_ENCODED_RUSTFLAGS")
+flags = (encoded.split("\x1f") if encoded else []) if encoded is not None else os.environ.get("RUSTFLAGS", "").split()
+flags.extend(f"--remap-path-prefix={old}={new}" for old, new in ((sys.argv[1], "/source/solidcraft-servo-assets"), (os.path.abspath(sys.argv[2]), "/cargo")))
+sys.stdout.write("\x1f".join(flags))
+PY
+)"
+CARGO_ENCODED_RUSTFLAGS="$wasm_rustflags" nice "$cargo_bin" build --offline --locked --release --lib --target wasm32-unknown-unknown --features legacy-host --target-dir "$legacy_target"
 nice "$cargo_bin" build --offline --locked --bin servo-assets --features legacy-host --target-dir "$legacy_target"
 package_tmp="$(mktemp -d "$legacy_target/package-legacy.XXXXXX")"
 trap 'rm -rf -- "$package_tmp"' EXIT

@@ -26,7 +26,11 @@ Both scripts build with `--offline --locked`. They preserve `CARGO` and
 the legacy package is staged in `dist/legacy/servo-assets`. Each staging directory
 is replaced with a fresh package, so deleted fixtures and catalog files cannot
 survive from an older build. Build intermediates stay under `target`, including
-the component encoder's build directory.
+the component encoder's build directory. Wasm builds remap the checkout path to
+`/source/solidcraft-servo-assets` and the Cargo home to `/cargo`, including Rust
+dependencies, so local source paths are not embedded in the distributed module.
+Existing encoded compiler flags take precedence over whitespace-split
+`RUSTFLAGS`; remapping flags are appended using Cargo's unit-separator encoding.
 
 `cargo xtask ci` is the complete check gate and builds both editions. Local
 development builds may run before the first commit or with uncommitted changes;
