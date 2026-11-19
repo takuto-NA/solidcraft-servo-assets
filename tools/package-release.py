@@ -175,8 +175,9 @@ def write_zip(path, files, timestamp):
 
 
 def validate_manifest(data, module, edition, expected_version):
-    if len(data) > 16384:
-        raise ValueError("Manifest exceeds the host's 16 KiB limit")
+    limit_kib = 16 if edition == "legacy" else 64
+    if len(data) > limit_kib * 1024:
+        raise ValueError(f"Manifest exceeds the {edition} host's {limit_kib} KiB limit")
     manifest = json.loads(data)
     if manifest.get("id") != "servo-assets" or manifest.get("version") != expected_version:
         raise ValueError("Manifest identity/version does not match Cargo.toml")

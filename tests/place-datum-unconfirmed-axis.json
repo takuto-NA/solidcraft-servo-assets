@@ -1,0 +1,5 @@
+{
+  "entry": "place-datum",
+  "params": {"reference_id": "feetech.sts3215-c001.a0/output/main"},
+  "expect": {"error": "invalid_input", "model": {"body_count": 0}}
+}

@@ -139,6 +139,7 @@ impl Runner for Recorder {
         self.calls += 1;
         let feature = self.calls;
         match command {
+            "document.inspect" => Ok(json!({"timeline":[]})),
             "solid.box" | "solid.cylinder" | "solid.extrude" | "solid.move" => {
                 let operation = params.get("operation").and_then(Value::as_str).unwrap_or("new");
                 if command == "solid.move" || matches!(operation, "cut" | "join") {
@@ -224,6 +225,11 @@ fn execute(
             }
             solidcraft_servo_assets::insert(recorder, catalog, &params)
         }
+        "place-servo" => solidcraft_servo_assets::workflow::place_servo(
+            recorder,
+            catalog,
+            parse!(solidcraft_servo_assets::workflow::ServoPlacement),
+        ),
         "servo-reference" => solidcraft_servo_assets::models::insert_model(
             recorder,
             catalog,
@@ -233,6 +239,16 @@ fn execute(
             recorder,
             horns,
             &parse!(solidcraft_servo_assets::horns::HornParams),
+        ),
+        "place-horn" => solidcraft_servo_assets::workflow::place_horn(
+            recorder,
+            horns,
+            &parse!(solidcraft_servo_assets::workflow::Placement),
+        ),
+        "place-datum" => solidcraft_servo_assets::workflow::place_datum(
+            recorder,
+            catalog,
+            &parse!(solidcraft_servo_assets::workflow::Placement),
         ),
         "output-reference" => solidcraft_servo_assets::outputs::insert_output_reference(
             recorder,

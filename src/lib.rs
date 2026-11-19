@@ -16,6 +16,7 @@ mod insert;
 pub mod manifest;
 pub mod models;
 pub mod outputs;
+pub mod workflow;
 
 #[cfg(target_arch = "wasm32")]
 mod guest;
