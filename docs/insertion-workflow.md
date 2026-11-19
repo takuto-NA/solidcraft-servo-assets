@@ -20,8 +20,10 @@ optional interface callouts. Move an
 accepted reference with SolidCraft's normal tools. Closing the preview leaves the
 timeline alone. An accepted insertion is one undo step.
 
-The modern package needs a host that accepts 64 KiB plugin manifests and supports
-`commands@0.2` and `storage@0.1`. The legacy package fits the 16 KiB manifest cap.
+See the [installation and download guide](../README.md#install-and-use) for the
+matching ZIP. If the installer reports `manifest size exceeds 16 KiB`, use the
+compatibility ZIP. The modern package needs a host that accepts 64 KiB plugin
+manifests and supports `commands@0.2` and `storage@0.1`.
 Older hosts use a standard list for the same catalog choices, with visible offset
 fields. The host extension adds filtering and the summary above the preview. The
 plugin's forms work with or without that presentation extension.
