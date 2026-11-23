@@ -108,15 +108,7 @@ fn dimension_ok(dimension: &Dimension, sources: &BTreeSet<&str>) -> bool {
 
 impl HornCatalog {
     pub fn embedded() -> Result<Self, Error> {
-        Self::merge_packs(
-            "2026-11-19.10",
-            &[
-                include_str!("../catalog/horns-micro.json"),
-                include_str!("../catalog/horns-robotis-430.json"),
-                include_str!("../catalog/horns-robotis-540-sts.json"),
-                include_str!("../catalog/horns-user-reference.json"),
-            ],
-        )
+        Self::merge_packs("2026-11-19.10", crate::catalog_packs::HORN_PACKS)
     }
 
     pub fn parse(text: &str) -> Result<Self, Error> {
@@ -191,7 +183,7 @@ impl HornCatalog {
                         && (!matches!(horn.status.as_str(), "dimensions_only" | "photo_estimate")
                             || !key.starts_with("reported_"))
                 })
-                || (horn.status == "photo_estimate") != !horn.estimates.is_empty()
+                || (horn.status == "photo_estimate") == horn.estimates.is_empty()
                 || horn.estimates.len() > 128
                 || horn.estimates.iter().any(|(key, estimate)| {
                     !valid_id(key)
@@ -426,6 +418,10 @@ fn reference_horn<'a>(catalog: &'a HornCatalog, params: &HornParams) -> Result<&
 }
 
 pub fn horn_recipe(catalog: &HornCatalog, params: &HornParams) -> Result<Value, Error> {
+    horn_plan(catalog, params, true)
+}
+
+fn horn_plan(catalog: &HornCatalog, params: &HornParams, source_sketches: bool) -> Result<Value, Error> {
     catalog.validate()?;
     let horn = reference_horn(catalog, params)?;
     let (sin, cos) = params.angle_deg.to_radians().sin_cos();
@@ -458,6 +454,9 @@ pub fn horn_recipe(catalog: &HornCatalog, params: &HornParams) -> Result<Value, 
             crate::models::add_part(&mut steps, &part, &format!("{prefix} / {}", horn.model), [0.0; 3])?;
         }
         steps.push(json!({"command":"solid.move","params":{"matrix":matrix,"copy":false,"name":"Separate horn reference placement"},"target_roles":roles}));
+    }
+    if !source_sketches {
+        return Ok(Value::Array(steps));
     }
     let plane = json!({"origin":[params.x_mm,params.y_mm,params.z_mm],"x_dir":[cos,sin,0.0],"y_dir":[-sin,cos,0.0]});
     let outer_diameter = ["outer_diameter", "disc_outer_diameter", "flange_outer_diameter"]
@@ -521,7 +520,24 @@ pub fn insert_horn(
     catalog: &HornCatalog,
     params: &HornParams,
 ) -> Result<Value, Error> {
-    let plan = horn_recipe(catalog, params)?;
+    insert_horn_plan(runner, catalog, params, true)
+}
+
+pub(crate) fn insert_horn_solid(
+    runner: &mut impl crate::Runner,
+    catalog: &HornCatalog,
+    params: &HornParams,
+) -> Result<Value, Error> {
+    insert_horn_plan(runner, catalog, params, false)
+}
+
+fn insert_horn_plan(
+    runner: &mut impl crate::Runner,
+    catalog: &HornCatalog,
+    params: &HornParams,
+    source_sketches: bool,
+) -> Result<Value, Error> {
+    let plan = horn_plan(catalog, params, source_sketches)?;
     let horn = reference_horn(catalog, params)?;
     let mut parameters = serde_json::to_value(params).map_err(|error| invalid("params", error))?;
     if let Some(object) = parameters.as_object_mut() {

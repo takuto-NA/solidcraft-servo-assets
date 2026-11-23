@@ -1,0 +1,17 @@
+{
+  "entry": "insert-horn-model",
+  "params": {
+    "horn_id": "ref-62ed5843"
+  },
+  "expect": {
+    "model": {
+      "body_count": 1
+    },
+    "reply": {
+      "result": {
+        "asset_id": "robotis.hn12-n101.normal-2019",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

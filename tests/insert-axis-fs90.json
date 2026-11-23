@@ -1,0 +1,21 @@
+{
+  "entry": "insert-axis",
+  "params": {
+    "reference_id": "ref-b801dcae"
+  },
+  "expect": {
+    "model": {
+      "body_count": 0
+    },
+    "reply": {
+      "result": {
+        "asset_id": "feetech.fs90.akizuki-drawing",
+        "representation": "shaft-axis",
+        "reference_frame": "near_mount_center",
+        "output_interface": {
+          "id": "main"
+        }
+      }
+    }
+  }
+}

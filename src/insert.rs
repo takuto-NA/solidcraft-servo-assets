@@ -1,7 +1,5 @@
 //! One host transaction creates an envelope and saves its source snapshot in the design.
 
-#[cfg(not(feature = "legacy-host"))]
-use base64::{Engine as _, engine::general_purpose::STANDARD};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, BTreeSet};
@@ -33,6 +31,12 @@ fn default_representation() -> String {
 
 pub trait Runner {
     fn run(&mut self, command: &str, params: Value) -> Result<Value, Error>;
+
+    fn save_snapshot(&mut self, _name: &str, _data: &[u8]) -> Result<(), Error> {
+        Err(Error::Unsupported(
+            "this host adapter cannot save a source snapshot".into(),
+        ))
+    }
 }
 
 pub fn recipe(catalog: &Catalog, params: &InsertParams) -> Result<Value, Error> {
@@ -551,10 +555,7 @@ pub(crate) fn execute_asset_plan(
         "geometry_basis": match representation { "cable-space" => "user_specified_planning_envelopes", "servo-reference" => "mixed_dimensioned_assumed_and_approximate", "horn-reference" if parameters["mode"] == "dimensions" => "source_dimension_references_only", "horn-reference" if parameters["mode"] == "photo-solid" => "photo_reconstructed_estimated_geometry", "horn-reference" => "source_partial_outer_profile", _ => "catalog_nominal_reference" }
     });
     #[cfg(not(feature = "legacy-host"))]
-    runner.run(
-        "storage.put_blob",
-        json!({"name": snapshot_path, "data": STANDARD.encode(snapshot.to_string()), "cache": false}),
-    )?;
+    runner.save_snapshot(&snapshot_path, snapshot.to_string().as_bytes())?;
     #[cfg(not(feature = "legacy-host"))]
     let instance_id = format!("feature-{feature}");
     #[cfg(not(feature = "legacy-host"))]

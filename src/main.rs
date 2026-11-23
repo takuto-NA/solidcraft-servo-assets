@@ -2,7 +2,8 @@
 
 use serde_json::{Value, json};
 use solidcraft_servo_assets::cables::{CableSpaceParams, cable_recipe};
-use solidcraft_servo_assets::{InsertParams, catalog::Catalog, manifest::manifest, recipe};
+use solidcraft_servo_assets::manifest::{manifest, tooling_manifest};
+use solidcraft_servo_assets::{InsertParams, catalog::Catalog, recipe};
 use std::io::Read as _;
 
 fn main() -> std::process::ExitCode {
@@ -71,10 +72,11 @@ fn run() -> Result<Value, Box<dyn std::error::Error>> {
                 &serde_json::from_str::<solidcraft_servo_assets::horns::HornParams>(&file)?,
             )?
         }
-        "manifest" => manifest(&catalog)?,
+        "manifest" if id == "--tools" && args.len() == 2 => tooling_manifest(&catalog)?,
+        "manifest" if args.len() == 1 => manifest(&catalog)?,
         _ => {
             return Err(
-                "usage: servo-assets [catalog QUERY | describe ID | recipe ID [REPRESENTATION] | cable-recipe PARAMS.json | horn-describe ID | horn-recipe PARAMS.json | manifest]".into(),
+                "usage: servo-assets [catalog QUERY | describe ID | recipe ID [REPRESENTATION] | cable-recipe PARAMS.json | horn-describe ID | horn-recipe PARAMS.json | manifest [--tools]]".into(),
             );
         }
     })

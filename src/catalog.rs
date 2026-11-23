@@ -246,19 +246,7 @@ impl LookupQuery {
 
 impl Catalog {
     pub fn embedded() -> Result<Self, Error> {
-        let catalog = Self::merge_packs(
-            "2026-11-19.10",
-            &[
-                include_str!("../catalog/towerpro-micro.json"),
-                include_str!("../catalog/towerpro-standard.json"),
-                include_str!("../catalog/feetech-expansion.json"),
-                include_str!("../catalog/classic-servos.json"),
-                include_str!("../catalog/feetech-serial.json"),
-                include_str!("../catalog/robotis-330.json"),
-                include_str!("../catalog/robotis-xm430.json"),
-                include_str!("../catalog/robotis-xm540.json"),
-            ],
-        )?;
+        let catalog = Self::merge_packs("2026-11-19.10", crate::catalog_packs::SERVO_PACKS)?;
         crate::horns::HornCatalog::embedded()?.validate_for_catalog(&catalog)?;
         Ok(catalog)
     }
