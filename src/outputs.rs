@@ -203,6 +203,10 @@ pub fn summary(asset: &Asset, interface: &OutputInterface) -> Result<Value, Erro
 }
 
 pub fn output_recipe(catalog: &Catalog, params: &OutputParams) -> Result<Value, Error> {
+    output_plan(catalog, params, true)
+}
+
+fn output_plan(catalog: &Catalog, params: &OutputParams, include_context: bool) -> Result<Value, Error> {
     catalog.validate()?;
     let placement = InsertParams {
         asset_id: params.asset_id.clone(),
@@ -223,17 +227,20 @@ pub fn output_recipe(catalog: &Catalog, params: &OutputParams) -> Result<Value, 
     } else {
         "case-envelope"
     };
-    let base = recipe(
-        catalog,
-        &InsertParams {
-            representation: base_representation.into(),
-            ..placement
-        },
-    )?;
-    let mut steps = base
-        .as_array()
-        .ok_or_else(|| invalid("recipe", "expected command array"))?
-        .clone();
+    let mut steps = if include_context {
+        let base = recipe(
+            catalog,
+            &InsertParams {
+                representation: base_representation.into(),
+                ..placement
+            },
+        )?;
+        base.as_array()
+            .ok_or_else(|| invalid("recipe", "expected command array"))?
+            .clone()
+    } else {
+        Vec::new()
+    };
     let reference_height = interface
         .frame_height_dimension
         .as_ref()
@@ -246,7 +253,7 @@ pub fn output_recipe(catalog: &Catalog, params: &OutputParams) -> Result<Value, 
     let world_axis = [params.x_mm + ax, params.y_mm + ay, params.z_mm + az];
     let model = &asset.model;
     let mut marker_ids = Vec::new();
-    if axis.frame == "near_mount_center" {
+    if include_context && axis.frame == "near_mount_center" {
         let finish = steps.pop().ok_or_else(|| invalid("recipe", "missing sketch finish"))?;
         if finish.get("command").and_then(Value::as_str) != Some("sketch.finish") {
             return Err(invalid("recipe", "mounting recipe must finish its sketch"));
@@ -266,10 +273,11 @@ pub fn output_recipe(catalog: &Catalog, params: &OutputParams) -> Result<Value, 
         steps.push(json!({"command": "sketch.line", "params": {"points": points, "construction": true, "ids": [id], "connect": false}}));
         marker_ids.push(id);
     }
-    if let Some(diameter) = interface
-        .shaft_diameter_dimension
-        .as_ref()
-        .and_then(|key| asset.dimensions.get(key))
+    if include_context
+        && let Some(diameter) = interface
+            .shaft_diameter_dimension
+            .as_ref()
+            .and_then(|key| asset.dimensions.get(key))
     {
         let id = format!("output-{}-diameter", interface.id);
         steps.push(json!({"command": "sketch.circle.center", "params": {
@@ -283,10 +291,11 @@ pub fn output_recipe(catalog: &Catalog, params: &OutputParams) -> Result<Value, 
         "a": {"point": world_axis}, "b": {"point": [world_axis[0] + axis.direction[0], world_axis[1] + axis.direction[1], world_axis[2] + axis.direction[2]]},
         "name": format!("{model} output axis {} ref r{}", interface.id, asset.data_revision)
     }}));
-    if let Some(diameter) = interface
-        .shaft_diameter_dimension
-        .as_ref()
-        .and_then(|key| asset.dimensions.get(key))
+    if include_context
+        && let Some(diameter) = interface
+            .shaft_diameter_dimension
+            .as_ref()
+            .and_then(|key| asset.dimensions.get(key))
         && let Some((bottom, top)) = bottom.zip(top)
     {
         steps.push(json!({"command": "solid.cylinder", "params": {
@@ -303,14 +312,41 @@ pub fn insert_output_reference(
     catalog: &Catalog,
     params: &OutputParams,
 ) -> Result<Value, Error> {
-    let plan = output_recipe(catalog, params)?;
+    insert_output(runner, catalog, params, true)
+}
+
+pub(crate) fn insert_shaft_axis(
+    runner: &mut impl Runner,
+    catalog: &Catalog,
+    params: &OutputParams,
+) -> Result<Value, Error> {
+    insert_output(runner, catalog, params, false)
+}
+
+fn insert_output(
+    runner: &mut impl Runner,
+    catalog: &Catalog,
+    params: &OutputParams,
+    include_context: bool,
+) -> Result<Value, Error> {
+    let plan = output_plan(catalog, params, include_context)?;
     let (_, interface, axis) = output(catalog, params)?;
-    let warning = "Source-frame output-axis reference. A shaft cylinder is an outside envelope, not mating spline teeth. Horn seating height and neutral angular phase remain unknown. Case-corner and mounting frames are distinct.";
+    let (representation, warning) = if include_context {
+        (
+            "output-reference",
+            "Source-frame output-axis reference. A shaft cylinder is an outside envelope, not mating spline teeth. Horn seating height and neutral angular phase remain unknown. Case-corner and mounting frames are distinct.",
+        )
+    } else {
+        (
+            "shaft-axis",
+            "Documented shaft centerline and a center cross in the source frame.",
+        )
+    };
     let mut reply = execute_plan(
         runner,
         catalog,
         &params.asset_id,
-        "output-reference",
+        representation,
         serde_json::to_value(params).map_err(|e| invalid("params", e))?,
         plan,
         warning,

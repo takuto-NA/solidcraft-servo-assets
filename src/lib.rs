@@ -11,6 +11,7 @@
 
 pub mod cables;
 pub mod catalog;
+mod catalog_packs;
 pub mod horns;
 mod insert;
 pub mod manifest;
@@ -20,6 +21,9 @@ pub mod workflow;
 
 #[cfg(target_arch = "wasm32")]
 mod guest;
+
+#[cfg(all(not(feature = "legacy-host"), any(target_arch = "wasm32", test)))]
+mod picker_filter;
 
 pub use insert::{InsertParams, Runner, insert, recipe};
 

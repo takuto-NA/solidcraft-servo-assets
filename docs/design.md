@@ -424,7 +424,16 @@ from schemas; programmatic calls never open dialogs. Geometry comes from host
 commands rather than a plugin mesh. Owned cut/join targets and colors affect
 only bodies created by that insertion.
 
-The current edition writes a per-instance JSON snapshot with `storage.put_blob`,
+The standard manifest exposes two solid model pickers. The tooling manifest
+adds specialized source and reference commands for automation. Both use the
+same Wasm component and the same design storage ID.
+
+Each integrated servo has one named, ungrounded component occurrence. The host
+authors its features in that component and restores the previously active
+component after insertion. The occurrence's origin follows the requested
+position of the source datum, so rotating the servo preserves that pivot.
+
+The standard edition writes a per-instance JSON snapshot through WIT `storage.put-blob`,
 then references it from an index through `storage.patch`, within the host command
 transaction. The snapshot contains the selected asset, only its referenced source
 records, data revision, parameters, executed recipe and created feature/body IDs.
@@ -466,15 +475,16 @@ input is bounded to 16 packs/2 MiB, with record-count limits. Pack identities an
 releases remain data, while command IDs remain stable. Each per-asset description
 and insertion snapshot uses only referenced sources.
 
-The manifest/schema index is generated at build time, with the host's 16 KiB
-budget enforced; the current compact manifest is 16,260 bytes against 16,384.
+The manifest is generated at build time. The standard budget is 64 KiB and the
+compatibility budget is 16 KiB. Compact indexes from the same servo and horn
+packs let the 0.47 forms filter servo, horn, mounting face and shaft choices
+within the read-only dialog budget.
 Dropdowns show readable model names and use compact deterministic
 `ref-` selector keys. The catalog rejects key collisions and reserves that prefix.
 Canonical asset IDs remain accepted by direct calls and are always used in saved
 snapshots, instance indexes and replies. Selector keys do not imply mechanical
-compatibility. Larger future catalogs still need separate bounded UI catalogs or
-query-backed selectors before the manifest limit is reached. Separate schema
-resources and paginated installation are design directions, not current features.
+compatibility. If a catalog grows beyond the host budget, the form accepts source
+IDs as text for the affected selector.
 New geometry adapters need validation; adding data must not enable arbitrary
 external code or silently infer an undocumented interface.
 

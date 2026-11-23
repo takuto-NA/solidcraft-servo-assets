@@ -17,10 +17,11 @@ from pathlib import Path, PurePosixPath
 
 
 REPO = Path(__file__).resolve().parents[1]
-ROOT_REQUIRED = ("Cargo.toml", "Cargo.lock", "README.md", "ATTRIBUTION.md", "LICENSE-MIT", "LICENSE-APACHE", "rustfmt.toml", "build.sh", "build-legacy.sh")
-ROOT_OPTIONAL = (".gitignore", "AGENTS.md", "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", "CODE_OF_CONDUCT.md", "rust-toolchain.toml", ".cargo/config.toml", ".github/PULL_REQUEST_TEMPLATE.md", ".github/pull_request_template.md")
-SOURCE_TREES = {"src": {".rs"}, "catalog": {".json"}, "tests": {".json"}, "docs": {".md"}, "wit": {".wit"}, "wit-0.1": {".wit"}, "templates": {".json", ".md", ".toml"}, "xtask/src": {".rs"}, "tools/componentize/src": {".rs"}, ".github/workflows": {".yml", ".yaml"}, ".github/ISSUE_TEMPLATE": {".md", ".yml", ".yaml"}}
+ROOT_REQUIRED = ("Cargo.toml", "Cargo.lock", "README.md", "ATTRIBUTION.md", "LICENSE-MIT", "LICENSE-APACHE", "rustfmt.toml", "build.rs", "build.sh", "build-legacy.sh")
+ROOT_OPTIONAL = (".gitattributes", ".gitignore", "AGENTS.md", "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", "CODE_OF_CONDUCT.md", "rust-toolchain.toml", ".cargo/config.toml", ".github/PULL_REQUEST_TEMPLATE.md", ".github/pull_request_template.md")
+SOURCE_TREES = {"src": {".rs"}, "catalog": {".json"}, "tests": {".json"}, "docs": {".md"}, "icons": {".svg"}, "wit": {".wit"}, "wit-0.1": {".wit"}, "templates": {".json", ".md", ".toml"}, "xtask/src": {".rs"}, "tools/componentize/src": {".rs"}, ".github/workflows": {".yml", ".yaml"}, ".github/ISSUE_TEMPLATE": {".md", ".yml", ".yaml"}}
 SOURCE_EXACT = ("tools/build-lineup.py", "tools/build-horn-lineup.py", "tools/build-horn-references.py", "tools/update-photo-horns.py", "tools/package-release.py", "tools/componentize/Cargo.toml", "tools/componentize/Cargo.lock", "xtask/Cargo.toml")
+PLUGIN_TREES = (("docs", ".md"), ("catalog", ".json"), ("tests", ".json"), ("icons", ".svg"))
 BLOCKED_PARTS = {"target", "dist", "evidence", "vendor", ".git", "__pycache__", "node_modules"}
 COMPONENT_MAGIC = b"\0asm\x0d\0\x01\0"
 MAX_ARCHIVE_BYTES = 64 * 1024 * 1024
@@ -184,16 +185,17 @@ def validate_manifest(data, module, edition, expected_version):
     runtime = manifest.get("runtime", {})
     if runtime.get("module") != "servo-assets.wasm" or not module.startswith(COMPONENT_MAGIC):
         raise ValueError("Expected the component-encoded servo-assets.wasm module")
-    expected_caps = ["commands@0.2", "storage@0.1"] if edition == "modern" else ["commands@0.1"]
+    expected_caps = ["commands@0.2", "dialog@0.1", "storage@0.1"] if edition == "modern" else ["commands@0.1"]
     if sorted(manifest.get("capabilities", [])) != sorted(expected_caps):
         raise ValueError(f"Wrong SDK capabilities for the {edition} edition")
     storage = {name for name in runtime.get("commands", []) if name.startswith("storage.")}
-    if edition == "modern" and not {"storage.patch", "storage.put_blob"}.issubset(storage):
-        raise ValueError("Modern edition must retain design snapshot storage commands")
+    if edition == "modern" and storage != {"storage.patch"}:
+        raise ValueError("Modern edition uses storage.patch for the index and WIT for snapshot files")
     if edition == "legacy" and (storage or "data_format" in runtime):
         raise ValueError("Legacy edition cannot request design storage or data_format")
     if not runtime.get("entries"):
         raise ValueError("Plugin manifest has no entry points")
+    return {entry["name"] for entry in runtime["entries"]}
 
 
 def verify_archive(path):
@@ -228,7 +230,7 @@ def verify_archive(path):
         if any(digest(relative[name]) != value for name, value in expected.items()):
             raise ValueError("Plugin member digest mismatch")
         for name in relative:
-            allowed = name in {"plugin.json", "servo-assets.wasm", "BUILD-INFO.json", "README.md", "ATTRIBUTION.md", "LICENSE-MIT", "LICENSE-APACHE", "CONTRIBUTING.md"} or any(name.startswith(folder + "/") and name.endswith(suffix) for folder, suffix in [("docs", ".md"), ("catalog", ".json"), ("tests", ".json")])
+            allowed = name in {"plugin.json", "servo-assets.wasm", "BUILD-INFO.json", "README.md", "ATTRIBUTION.md", "LICENSE-MIT", "LICENSE-APACHE", "CONTRIBUTING.md"} or any(name.startswith(folder + "/") and name.endswith(suffix) for folder, suffix in PLUGIN_TREES)
             if not allowed:
                 raise ValueError(f"Unexpected plugin payload: {name}")
         validate_manifest(relative["plugin.json"], relative["servo-assets.wasm"], edition, metadata["version"])
@@ -296,10 +298,13 @@ def stage(repo, out, edition, manifest_path, module_path):
     package = payloads(repo, [repo / name for name in ("README.md", "ATTRIBUTION.md", "LICENSE-MIT", "LICENSE-APACHE")])
     if (repo / "CONTRIBUTING.md").exists():
         package.update(payloads(repo, [repo / "CONTRIBUTING.md"]))
-    for directory, suffix in [("docs", ".md"), ("catalog", ".json"), ("tests", ".json")]:
-        package.update(payloads(repo, tree_files(repo, directory, {suffix})))
     package["plugin.json"], package["servo-assets.wasm"] = manifest_path.read_bytes(), module_path.read_bytes()
-    validate_manifest(package["plugin.json"], package["servo-assets.wasm"], edition, release_version)
+    entries = validate_manifest(package["plugin.json"], package["servo-assets.wasm"], edition, release_version)
+    for directory, suffix in PLUGIN_TREES:
+        paths = tree_files(repo, directory, {suffix})
+        if directory == "tests":
+            paths = [path for path in paths if read_json(path)["entry"] in entries]
+        package.update(payloads(repo, paths))
     package["BUILD-INFO.json"] = encoded({"format": 1, "kind": "plugin", "edition": edition, "version": release_version, "git": provenance(repo), "source_files": {name: digest(data) for name, data in source.items()}, "files": {name: digest(data) for name, data in package.items()}})
     target = out / ("servo-assets" if edition == "modern" else "legacy/servo-assets")
     target.parent.mkdir(parents=True, exist_ok=True)

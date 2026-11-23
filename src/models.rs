@@ -603,13 +603,14 @@ pub(crate) fn add_part(steps: &mut Vec<Value>, part: &Part, model_name: &str, of
 
 pub fn model_recipe(catalog: &Catalog, p: &ModelParams) -> Result<Value, Error> {
     let selected = crate::horns::selection(catalog.asset(&p.asset_id)?, p)?;
-    model_plan(catalog, p, selected.as_ref())
+    model_plan(catalog, p, selected.as_ref(), true)
 }
 
 fn model_plan(
     catalog: &Catalog,
     p: &ModelParams,
     selected: Option<&crate::horns::SelectedHorn>,
+    output_axes: bool,
 ) -> Result<Value, Error> {
     catalog.validate()?;
     validate_placement(&InsertParams {
@@ -687,7 +688,8 @@ fn model_plan(
         }
     }
     for output in &asset.output_interfaces {
-        if let Some(axis) = &output.axis
+        if output_axes
+            && let Some(axis) = &output.axis
             && axis.frame == model.frame
         {
             let [x, y, z] = axis.origin_mm;
@@ -790,8 +792,22 @@ fn front_labels(
 }
 
 pub fn insert_model(runner: &mut impl Runner, catalog: &Catalog, p: &ModelParams) -> Result<Value, Error> {
-    let selected = crate::horns::selection(catalog.asset(&p.asset_id)?, p)?;
-    let plan = model_plan(catalog, p, selected.as_ref())?;
+    insert_component(runner, catalog, p, true)
+}
+
+pub(crate) fn insert_solid_model(runner: &mut impl Runner, catalog: &Catalog, p: &ModelParams) -> Result<Value, Error> {
+    insert_component(runner, catalog, p, false)
+}
+
+fn insert_component(
+    runner: &mut impl Runner,
+    catalog: &Catalog,
+    p: &ModelParams,
+    output_axes: bool,
+) -> Result<Value, Error> {
+    let asset = catalog.asset(&p.asset_id)?;
+    let selected = crate::horns::selection(asset, p)?;
+    let plan = model_plan(catalog, p, selected.as_ref(), output_axes)?;
     let mut parameters = serde_json::to_value(p).map_err(|e| invalid("params", e))?;
     if let Some(selected) = &selected
         && let Some(object) = parameters.as_object_mut()
@@ -803,6 +819,49 @@ pub fn insert_model(runner: &mut impl Runner, catalog: &Catalog, p: &ModelParams
         || base_warning.to_owned(),
         |selected| format!("{} {base_warning}", selected.warning()),
     );
+
+    // Author the whole servo in one movable occurrence. Keep the recipe's world coordinates so
+    // the host uses the same source datum even inside a translated or rotated parent.
+    let assembly = runner.run("component.list", json!({"compact":true}))?;
+    let active = assembly["active"]
+        .as_u64()
+        .ok_or_else(|| invalid("host.reply", "the host did not return the active component ID"))?;
+    let parent_path = assembly["active_path"].as_array().cloned().unwrap_or_default();
+    let names: BTreeSet<_> = assembly["components"]
+        .as_array()
+        .ok_or_else(|| invalid("host.reply", "the host did not return the component list"))?
+        .iter()
+        .filter_map(|component| component["name"].as_str())
+        .collect();
+    let mut name = format!("{} {}", asset.manufacturer, asset.model);
+    if names.contains(name.as_str()) {
+        name = (2..=names.len() + 1)
+            .map(|index| format!("{name} ({index})"))
+            .find(|candidate| !names.contains(candidate.as_str()))
+            .ok_or_else(|| invalid("host.reply", "no available component name"))?;
+    }
+    let component = runner.run("component.create", json!({"name":name,"grounded":false}))?;
+    let component_id = component["component"]
+        .as_u64()
+        .ok_or_else(|| invalid("host.reply", "the host did not return the new component ID"))?;
+    let occurrence = component["occurrence"]
+        .as_u64()
+        .ok_or_else(|| invalid("host.reply", "the host did not return the new occurrence ID"))?;
+    let position = [p.x_mm, p.y_mm, p.z_mm];
+    let mut restore = json!({"component":active});
+    if let Some(parent) = parent_path.last() {
+        restore["occurrence"] = parent.clone();
+        restore["path"] = json!(parent_path);
+    }
+    if active != 0 || position != [0.0; 3] {
+        let mut placement = json!({"occurrence":occurrence,"space":"world","to":{"position":position}});
+        if !parent_path.is_empty() {
+            let mut path = parent_path;
+            path.push(json!(occurrence));
+            placement["path"] = json!(path);
+        }
+        runner.run("occurrence.move", placement)?;
+    }
     let mut reply = execute_plan_context(
         runner,
         catalog,
@@ -815,16 +874,15 @@ pub fn insert_model(runner: &mut impl Runner, catalog: &Catalog, p: &ModelParams
         plan,
         &warning,
     )?;
+    runner.run("component.activate", restore)?;
     if let Some(object) = reply.as_object_mut() {
         object.insert(
+            "component".into(),
+            json!({"id":component_id,"name":name,"occurrence":occurrence}),
+        );
+        object.insert(
             "assumptions".into(),
-            json!(
-                catalog
-                    .asset(&p.asset_id)?
-                    .reference_model
-                    .as_ref()
-                    .map(|m| &m.assumptions)
-            ),
+            json!(asset.reference_model.as_ref().map(|model| &model.assumptions)),
         );
     }
     Ok(reply)

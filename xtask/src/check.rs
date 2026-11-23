@@ -139,6 +139,9 @@ impl Runner for Recorder {
         self.calls += 1;
         let feature = self.calls;
         match command {
+            "component.list" => Ok(json!({"active":0,"active_path":[],"components":[]})),
+            "component.create" => Ok(json!({"component":1,"occurrence":2,"name":params["name"]})),
+            "component.activate" | "occurrence.move" => Ok(json!({})),
             "document.inspect" => Ok(json!({"timeline":[]})),
             "solid.box" | "solid.cylinder" | "solid.extrude" | "solid.move" => {
                 let operation = params.get("operation").and_then(Value::as_str).unwrap_or("new");
@@ -198,10 +201,13 @@ impl Runner for Recorder {
             | "sketch.constraint.fix"
             | "sketch.text"
             | "sketch.finish"
-            | "storage.put_blob"
             | "storage.patch" => Ok(json!({})),
             _ => Err(invalid(format!("unrecognized recipe command {command}"))),
         }
+    }
+
+    fn save_snapshot(&mut self, _name: &str, _data: &[u8]) -> Result<(), Error> {
+        Ok(())
     }
 }
 
@@ -212,6 +218,10 @@ fn execute(
     entry: &str,
     params: &Value,
 ) -> Result<Value, Error> {
+    use solidcraft_servo_assets::workflow::{
+        DatumKind, picker_params, place_datum_kind, place_horn_model, place_servo_model,
+    };
+
     macro_rules! parse {
         ($kind:ty) => {
             serde_json::from_value::<$kind>(params.clone()).map_err(invalid)?
@@ -225,10 +235,27 @@ fn execute(
             }
             solidcraft_servo_assets::insert(recorder, catalog, &params)
         }
+        "insert-servo" => place_servo_model(
+            recorder,
+            catalog,
+            parse!(solidcraft_servo_assets::workflow::ServoPlacement),
+        ),
         "place-servo" => solidcraft_servo_assets::workflow::place_servo(
             recorder,
             catalog,
             parse!(solidcraft_servo_assets::workflow::ServoPlacement),
+        ),
+        "insert-horn-model" => place_horn_model(recorder, horns, &picker_params(params.clone())?),
+        "insert-horn" => solidcraft_servo_assets::horns::insert_horn(recorder, horns, &picker_params(params.clone())?),
+        "insert-mounts" | "insert-axis" => place_datum_kind(
+            recorder,
+            catalog,
+            &picker_params(params.clone())?,
+            if entry == "insert-mounts" {
+                DatumKind::Mounting
+            } else {
+                DatumKind::ShaftAxis
+            },
         ),
         "servo-reference" => solidcraft_servo_assets::models::insert_model(
             recorder,
@@ -526,7 +553,7 @@ fn source_files(repo: &Path) -> TaskResult {
     }
     let attribution = fs::read_to_string(repo.join("ATTRIBUTION.md"))?;
     for relative in &paths {
-        let path_text = relative.to_string_lossy();
+        let path_text = relative.to_string_lossy().replace('\\', "/");
         if relative.components().any(|part| {
             [".git", ".ssh", ".aws", "target", "dist", "evidence", "__pycache__"]
                 .iter()
@@ -559,7 +586,7 @@ fn source_files(repo: &Path) -> TaskResult {
             return Err(format!("raw PDF/CAD research assets must stay outside the repository: {path_text}").into());
         }
         if ["png", "jpg", "jpeg", "webp", "gif", "svg"].contains(&extension.as_str())
-            && !attribution.contains(path_text.as_ref())
+            && !attribution.contains(path_text.as_str())
         {
             return Err(
                 format!("image needs an explicit original/openly-licensed ATTRIBUTION.md entry: {path_text}").into(),

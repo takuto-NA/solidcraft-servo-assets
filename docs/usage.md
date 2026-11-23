@@ -1,14 +1,14 @@
 # Servo Assets for SolidCraft
 
-For the three primary insertion forms and the search workflow, see
-[Insert a servo, horn or datum](insertion-workflow.md). The commands below also
-serve the detailed setup forms and existing automation callers.
+For the standard two-button interface, see
+[Insert a 3D servo or horn](insertion-workflow.md). This guide also covers the
+tooling package for detailed geometry and existing automation calls.
 
 An offline Rust/WebAssembly plugin for placing source-labelled servo references
 through ordinary SolidCraft commands. It supplies schema-drawn forms and CLI/agent
 entries, and creates editable features with one undo per call.
 
-Version **0.10.0**, catalog **`2026-11-19.10`**, includes **28 integrated models and
+Version **0.13.0**, catalog **`2026-11-19.10`**, includes **28 integrated models and
 29 source profiles** across eight catalog packs. The additional SG90 TA0132 profile
 provides separate envelopes and an output-axis reference. These servo packs contain
 78 source records. Four separate horn packs add **18 horn source variants and 28
@@ -44,7 +44,7 @@ revision.
 | ROBOTIS XM430-W350-T / R | Four source-defined mounting faces, 14 M2.5 x 0.45 case references, main/idler axes and two three/four-contact bus sockets |
 | ROBOTIS XM540-W270-T / R | Five mounting faces, 16 M2.5 x 0.45 case references, main/idler axes and two three/four-contact bus sockets |
 
-**Start with `servo-reference` for a recognizable model.** The 15 fixed-pigtail
+**Start with the Servo button or `insert-servo` for a recognizable model.** The 15 fixed-pigtail
 profiles have a housing, two mounting ears, an upper cover, a plain output shaft
 and an optional cable outlet marker. Some ears have four slots; HS-55 has two
 round mounting holes. STS3215 profiles instead show the serial-servo case, main
@@ -64,9 +64,9 @@ are also editable planning values. Connector dimensions are catalog-specific
 planning defaults; use `cable-space` for caller-sized connector envelopes.
 The marker is separate from the published full lead length.
 
-`labels=notes` adds native model callouts, visible in the app. CLI snapshots omit
-note overlays. Use `labels=front` for actual CAD text and leaders in a separate
-front-view annotation sketch. Cable leaders follow the selected outlet height.
+`labels=notes` adds native workspace callouts anchored to fixed design coordinates.
+Use `labels=front` for CAD text and leaders in a sketch that moves with the servo.
+Cable leaders follow the selected outlet height.
 `labels=none` suppresses annotations. Labels and construction references do not
 add solid bodies.
 
@@ -96,9 +96,9 @@ range from 150 to 320 mm; their endpoint conventions are not established.
 flexing at the outlet and an optional connector box. Enter outlet XYZ, exit
 direction, bundle width/thickness and routing length from your measurement or
 layout plan. Flex space is a design allowance, not a factory minimum bend radius.
-The current route is one straight segment along a coordinate axis; it does not
-autoroute, simulate flexible motion or follow a moved servo. Put the servo and its
-planned cable spaces in the same component when they need to move together.
+The route is a straight segment along a coordinate axis. To move a servo and its
+planned cable spaces together, activate the servo component before adding the
+cable spaces.
 
 **STS3215 ports are separate from attached harnesses.** Each STS profile records two
 receptacles, each with `contact_count: 3` and `connector_count: 1`. Bundle and
@@ -242,11 +242,11 @@ SOLIDCRAFT_CLI=/path/to/current/solidcraft-cli
 
 The component wrapper uses the permissively licensed `wit-component` crate; no
 global `wasm-tools` installation is required. The current archive is
-`dist/servo-assets-0.10.0.zip`. It requires a host supporting `commands@0.2` and
-`storage@0.1`. Host fixtures are included under `tests/` in the archive.
+`dist/servo-assets-0.13.0.zip`. It uses the command, storage and dialog interfaces
+in SolidCraft 0.47. Host fixtures are included under `tests/` in the archive.
 
 For an older host, `bash build-legacy.sh` creates
-`dist/servo-assets-legacy-0.10.0.zip` using `commands@0.1`. It creates the same
+`dist/servo-assets-legacy-0.13.0.zip` using `commands@0.1`. It creates the same
 geometry and returns the source snapshot in its command reply. That host cannot
 save plugin storage in the design: `metadata_saved_in_design` is false. Keep the
 returned snapshot or source package alongside the design. Both editions have the
@@ -255,7 +255,8 @@ same plugin ID; install the edition appropriate to the host.
 Create a same-scale comparison through the real host:
 
 ```sh
-python3 tools/build-lineup.py --cli "$SOLIDCRAFT_CLI" --package dist/servo-assets --out evidence/lineup
+bash build.sh --tools
+python3 tools/build-lineup.py --cli "$SOLIDCRAFT_CLI" --package target/tooling/servo-assets --out evidence/lineup
 ```
 
 The helper selects all 28 integrated profiles by default, in five columns with
@@ -273,7 +274,7 @@ Repeat `--asset-id` to select profiles. Adjust `--columns`, `--column-spacing` a
 `--row-spacing` to suit the comparison, for example:
 
 ```sh
-python3 tools/build-lineup.py --cli "$SOLIDCRAFT_CLI" --package dist/servo-assets --out evidence/micro-pair --asset-id towerpro.sg90-analog.configure --asset-id feetech.fs90r.akizuki-drawing --columns 2 --column-spacing 75 --row-spacing 85
+python3 tools/build-lineup.py --cli "$SOLIDCRAFT_CLI" --package target/tooling/servo-assets --out evidence/micro-pair --asset-id towerpro.sg90-analog.configure --asset-id feetech.fs90r.akizuki-drawing --columns 2 --column-spacing 75 --row-spacing 85
 ```
 
 Use the legacy package path with an older installed CLI. If the app has no zip
@@ -283,16 +284,18 @@ required `servo-assets/` folder. The Linux default is
 
 ## Use
 
-Install the zip through **Preferences → Plugins → Install plugin…**.
-`servo-reference`, `horn-reference`, `insert`, `mount-pattern`, `output-reference` and `cable-space`
-appear in the Insert ribbon tab and Plugins menu. Every catalog choice is also
-available to CLI and MCP without opening dialogs. The plugin requests no network,
-folder, clock or application-management access.
+Install the ZIP through **Preferences → Plugins → Install plugin…**. The
+**Model** tab exposes **Servo model** (`insert-servo`) and **Horn model**
+(`insert-horn-model`). Both create 3D bodies from the selected catalog model.
+
+The commands below are available in the tooling build (`./build.sh --tools`).
+Use that package when calling the detailed commands through the CLI or MCP.
 
 | Entry | Effect | Input |
 |---|---|---|
 | `servo-assets.catalog` | Read | Optional `query` |
 | `servo-assets.describe` | Read | `asset_id` |
+| `servo-assets.place-servo` | Edit | `asset_id`; optional placement XYZ and `show_callouts` |
 | `servo-assets.servo-reference` | Edit | `asset_id`; optional `horn_id`, horn angle/axial adjustment, placement XYZ, cable/connector inclusion, outlet height, wire diameter/pitch/length and `labels` |
 | `servo-assets.horn-reference` | Edit | `horn_id`; optional `mode` (`dimensions`, `source-solid` or `photo-solid`), placement XYZ and `angle_deg` |
 | `servo-assets.insert` | Edit | `asset_id`; optional `representation`, `mount_group_id`, `clearance_mm`, placement XYZ |
@@ -303,6 +306,9 @@ folder, clock or application-management access.
 Placement parameters are `x_mm`, `y_mm`, `z_mm`. Integrated cable parameters are
 `include_cable`, `include_connector`, `outlet_height_mm`, `wire_diameter_mm`,
 `wire_pitch_mm`, `wire_length_mm`. Labels accept `notes`, `front` or `none`.
+The two integrated servo entries return `component` with the component ID,
+name and occurrence ID. Use the occurrence ID with SolidCraft's
+`occurrence.move` command to move the whole servo.
 Attached-horn parameters are `horn_id`, `horn_angle_deg` and
 `horn_axial_offset_mm`; `describe` reports whether a compatibility record permits
 automatic assembly. Unsupported attachments are rejected. For a separate source
