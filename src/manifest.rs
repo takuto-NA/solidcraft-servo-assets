@@ -4,9 +4,9 @@ use std::collections::BTreeSet;
 
 use serde_json::{Value, json};
 
-use crate::catalog::{Asset, Catalog, model_datum_status, selector_key};
+use crate::catalog::{Asset, Catalog, selector_key};
 use crate::horns::{HornCatalog, automatic_assembly_available};
-use crate::workflow::{Datum, datums, horn_modes, horn_reference_id, horn_title, servo_title};
+use crate::workflow::{DatumKind, datums, horn_modes, horn_solid_mode, servo_title};
 use crate::{Error, invalid};
 
 pub const LEGACY_MANIFEST_BYTES: usize = 16 * 1024;
@@ -22,8 +22,9 @@ fn number(title: &str, min: f64, max: f64, unit: &str, default: Option<f64>) -> 
 }
 
 fn positioned(mut properties: Value) -> Value {
+    let default = if cfg!(feature = "legacy-host") { None } else { Some(0.0) };
     for (key, label) in [("x_mm", "Offset X"), ("y_mm", "Offset Y"), ("z_mm", "Offset Z")] {
-        properties[key] = number(label, -100000.0, 100000.0, "mm", Some(0.0));
+        properties[key] = number(label, -100000.0, 100000.0, "mm", default);
     }
     properties
 }
@@ -32,12 +33,8 @@ fn option(value: &str, title: &str) -> Value {
     json!({"const":value,"title":title})
 }
 
-fn catalog_option(id: &str, title: &str, detail: String) -> Value {
-    let mut choice = option(&selector_key(id), title);
-    if !cfg!(feature = "legacy-host") {
-        choice["description"] = json!(detail);
-    }
-    choice
+fn catalog_option(id: &str, title: &str) -> Value {
+    option(&selector_key(id), title)
 }
 
 fn choice(title: &str, options: Vec<Value>, default: Option<&str>) -> Value {
@@ -64,11 +61,12 @@ fn id_field(title: &str, default: &str) -> Value {
     json!({"type":"string","title":title,"default":default})
 }
 
-fn entry(name: &str, title: &str, effect: &str, schema: Value, ribbon: Option<&str>) -> Value {
-    let mut slots = vec![json!({"kind":"menu","name":title})];
-    if let Some(tab) = ribbon {
-        slots.push(json!({"kind":"ribbon","name":tab}));
-    }
+fn entry(name: &str, title: &str, effect: &str, mut schema: Value, presentation: (&str, &str)) -> Value {
+    let (label, icon) = presentation;
+    // SolidCraft 0.47 uses the first ribbon slot for the Model button label.
+    // Naming another tab opts into that tab's generic plugin toolbar.
+    let slots = json!([{"kind":"menu","name":title},{"kind":"ribbon","name":label}]);
+    schema["x-solidcraft-icon"] = json!(format!("icons/{icon}.svg"));
     json!({"name":name,"effect":effect,"slots":slots,"input_schema":schema})
 }
 
@@ -76,172 +74,250 @@ fn fields(required: &[&str], properties: Value) -> Value {
     json!({"type":"object","additionalProperties":false,"required":required,"properties":properties})
 }
 
-fn quick_entry(name: &str, title: &str, tab: &str, key: &str, property: Value, instruction: &str) -> Value {
-    let mut schema = fields(&[key], positioned(json!({key:property})));
+fn picker_entry(name: &str, title: &str, presentation: (&str, &str), key: &str, property: Value) -> Value {
+    let mut schema = fields(&[key], json!({key:property}));
     schema["title"] = json!(title);
-    schema["description"] = json!(instruction);
-    schema["x-solidcraft-form"] = json!({"search":[key],"advanced":POSITION_FIELDS,"submit":"insert"});
-    entry(name, title, "edit", schema, Some(tab))
+    if cfg!(feature = "legacy-host") {
+        return entry(name, title, "edit", schema, presentation);
+    }
+    let filter = if key == "horn_id" {
+        "Filter by horn name"
+    } else {
+        "Filter by model or SKU"
+    };
+    schema["properties"]["model_filter"] = json!({"type":"string","title":filter,"maxLength":128});
+    let mut entry = entry(name, title, "edit", schema, presentation);
+    entry["dialog_hook"] = json!(true);
+    entry
 }
 
-fn origin(frame: &str) -> &str {
-    match frame {
-        "near_mount_center" => "near mounting centre on the ear underside",
-        "envelope_minimum" => "minimum corner of the source envelope",
-        _ => frame,
+fn quick_entry(
+    name: &str,
+    title: &str,
+    presentation: (&str, &str),
+    key: &str,
+    property: Value,
+    instruction: &str,
+) -> Value {
+    let mut entry = picker_entry(name, title, presentation, key, property);
+    let schema = &mut entry["input_schema"];
+    schema["description"] = json!(instruction);
+    let properties = &mut schema["properties"];
+    *properties = positioned(std::mem::take(properties));
+    if !cfg!(feature = "legacy-host") {
+        properties["placement_options"] = json!({"type":"boolean","title":"Set a position"});
+        for &field in POSITION_FIELDS {
+            properties[field]["x-solidcraft-visible-when"] = placement_visibility();
+        }
+    }
+    entry
+}
+
+fn placement_visibility() -> Value {
+    // The unchecked form hides these fields. A script can supply offsets without the form toggle.
+    json!({"not":{"field":"placement_options","eq":false}})
+}
+
+fn datum_field(assets: &[&Asset], kind: DatumKind, title: &str) -> Value {
+    let options = assets
+        .iter()
+        .flat_map(|asset| {
+            datums(asset)
+                .filter(move |datum| kind.includes(datum))
+                .map(move |datum| catalog_option(&datum.reference_id(asset), &datum.title(asset, kind)))
+        })
+        .collect();
+    catalog_field(title, options)
+}
+
+fn horns_by_name(horns: &HornCatalog) -> Value {
+    let mut sorted: Vec<_> = horns.horns.iter().collect();
+    sorted.sort_by_key(|horn| (&horn.manufacturer, &horn.model, &horn.id));
+    let choices = sorted
+        .iter()
+        .map(|horn| catalog_option(&horn.id, &horn.model))
+        .collect();
+    let mut picker = quick_entry(
+        "insert-horn",
+        "Insert a separate horn",
+        ("Horn", "place-horn"),
+        "horn_id",
+        choice("Horn model", choices, None),
+        "Choose a separate horn and what you want to insert.",
+    );
+    let legacy = cfg!(feature = "legacy-host");
+    let mut modes = vec![option("dimensions", "Dimensions and hole references")];
+    for (mode, label) in [
+        ("source-solid", "3D outline from drawing"),
+        ("photo-solid", "3D photo estimate"),
+    ] {
+        let available: Vec<_> = sorted
+            .iter()
+            .filter(|horn| horn_modes(horn).any(|value| value == mode))
+            .map(|horn| selector_key(&horn.id))
+            .collect();
+        if !available.is_empty() {
+            let mut variant = option(mode, label);
+            if !legacy {
+                variant["x-solidcraft-when"] = json!({"field":"horn_id","in":available});
+            }
+            modes.push(variant);
+        }
+    }
+    let mut mode = choice("Insert as", modes, Some("dimensions"));
+    if !legacy && !sorted.is_empty() {
+        let available: Vec<_> = sorted.iter().map(|horn| selector_key(&horn.id)).collect();
+        mode["x-solidcraft-visible-when"] = json!({"field":"horn_id","in":available});
+    }
+    picker["input_schema"]["properties"]["mode"] = mode;
+    picker
+}
+
+fn servo_extras(properties: &mut Value, assets: &[&Asset], horns: &HornCatalog) {
+    let leads: Vec<_> = assets
+        .iter()
+        .filter(|asset| {
+            asset
+                .reference_model
+                .as_ref()
+                .is_some_and(|model| !model.cables.is_empty())
+        })
+        .map(|asset| selector_key(&asset.id))
+        .collect();
+    let mut fitted = Vec::new();
+    let mut fitted_models = BTreeSet::new();
+    for horn in &horns.horns {
+        let models: Vec<_> = horns
+            .mounts
+            .iter()
+            .filter(|mount| mount.horn_id == horn.id && automatic_assembly_available(horn, mount))
+            .filter(|mount| {
+                assets
+                    .iter()
+                    .any(|asset| asset.id == mount.asset_id && asset.reference_model.is_some())
+            })
+            .map(|mount| selector_key(&mount.asset_id))
+            .collect();
+        if !models.is_empty() {
+            fitted_models.extend(models.iter().cloned());
+            let mut item = catalog_option(&horn.id, &horn.model);
+            item["x-solidcraft-when"] = json!({"field":"asset_id","in":models});
+            fitted.push(item);
+        }
+    }
+    if !leads.is_empty() {
+        properties["options"] = json!({
+            "type":"boolean","title":"Customize fixed cable","default":false,
+            "x-solidcraft-visible-when":{"field":"asset_id","in":leads}
+        });
+        properties["options_cable"] = json!({
+            "type":"boolean","title":"Show fixed cable marker","default":true,
+            "x-solidcraft-visible-when":{"field":"options","eq":true}
+        });
+        let cable = json!({"field":"options_cable","eq":true});
+        properties["options_connector"] = json!({
+            "type":"boolean","title":"Show connector marker","default":false,"x-solidcraft-visible-when":cable
+        });
+        properties["options_length_mm"] = number("Cable marker length", 2.0, 250.0, "mm", None);
+        properties["options_length_mm"]["description"] = json!("Leave blank to use the model's default marker length.");
+        properties["options_length_mm"]["x-solidcraft-visible-when"] = cable;
+    }
+    if !fitted.is_empty() {
+        fitted.insert(0, option("none", "No extra horn"));
+        properties["options_horn"] = choice("Fitted horn", fitted, Some("none"));
+        properties["options_horn"]["x-solidcraft-visible-when"] = json!({"field":"asset_id","in":fitted_models});
     }
 }
 
-fn servo_detail(asset: &Asset) -> String {
-    let Some(model) = &asset.reference_model else {
-        return String::new();
-    };
-    let mount_and_axis = match model_datum_status(asset) {
-        "mount_and_axis_datums" => "Mounting and axis datums from the source. Case details are simplified.",
-        "mount_datums" => "Mounting datums from the source. Output position is approximate.",
-        "axis_datum" => "Output axis from the source. Mounting positions are approximate.",
-        _ => "Mounting and output positions in this model are approximate.",
-    };
-    let case = asset
-        .representations
-        .get("case-envelope")
-        .and_then(|envelope| envelope.size_dimensions.as_ref())
-        .and_then(|keys| {
-            Some([
-                asset.dimensions.get(&keys[0])?.nominal_mm,
-                asset.dimensions.get(&keys[1])?.nominal_mm,
-                asset.dimensions.get(&keys[2])?.nominal_mm,
-            ])
-        })
-        .map_or_else(String::new, |[x, y, z]| format!("Case envelope {x} × {y} × {z} mm. "));
-    let cable = if let Some(lead) = model.cables.first() {
-        format!(
-            " Cable entry shows {} conductors over {} mm. Outlet location and size are approximate.",
-            lead.conductor_colors.len(),
-            lead.default_wire_length_mm
-        )
-    } else {
-        let sockets: Vec<_> = asset
-            .cable_ports
-            .iter()
-            .filter(|port| model.parts.iter().any(|part| part.id == format!("{}-socket", port.id)))
-            .collect();
-        if let [first, rest @ ..] = sockets.as_slice() {
-            let contacts = first.contact_count.as_ref().filter(|count| {
-                rest.iter().all(|port| {
-                    port.contact_count
-                        .as_ref()
-                        .is_some_and(|other| other.value == count.value)
-                })
-            });
-            let count = contacts.map_or_else(String::new, |count| format!(" with {} contacts each", count.value));
-            format!(
-                " {} detachable sockets{count}. Socket geometry is approximate.",
-                sockets.len()
-            )
-        } else {
-            String::new()
-        }
-    };
-    let seller = asset
-        .seller_items
-        .first()
-        .map_or_else(String::new, |item| format!("{} {}. ", item.seller, item.sku));
-    format!(
-        "{seller}{case}{mount_and_axis}{cable} Origin: {}.",
-        origin(&model.frame)
-    )
-}
-
-fn horn_choices(horns: &HornCatalog) -> Vec<Value> {
-    let mut sorted: Vec<_> = horns.horns.iter().collect();
-    sorted.sort_by_key(|horn| (&horn.manufacturer, &horn.model, &horn.id));
-    sorted
-        .into_iter()
-        .flat_map(|horn| {
-            horn_modes(horn).map(move |mode| {
-                let detail = match mode {
-                    "source-solid" => {
-                        "Source geometry with omitted details. Loose reference, independent of installed fit."
-                    }
-                    "photo-solid" => {
-                        "Shape inferred from a photo. Part identity, spline fit and installed seat are unknown."
-                    }
-                    _ => "Dimension and hole references from the source. This choice creates no solid.",
-                };
-                catalog_option(&horn_reference_id(horn, mode), &horn_title(horn, mode), detail.into())
-            })
-        })
-        .collect()
-}
-
-fn datum_field(assets: &[&Asset]) -> Value {
-    let options: Vec<_> = assets
-        .iter()
-        .flat_map(|asset| {
-            datums(asset).map(move |datum| {
-                let detail = match &datum {
-                    Datum::Mount(group) => format!(
-                            "{} source mounting centres. Circles mark holes or slots. See the selected profile for threads and tolerances. Origin: {}.",
-                            group.holes.len(), origin(&group.frame)
-                    ),
-                    Datum::Output(output) => {
-                        let frame = output.axis.as_ref().map_or("", |axis| axis.frame.as_str());
-                        let geometry = if frame == "near_mount_center" { "Includes mounting centres in this frame." } else { "Includes a case envelope." };
-                        format!("Source axis position. {geometry} A shaft envelope needs source diameter and extents. Origin: {}.", origin(frame))
-                    }
-                };
-                catalog_option(&datum.reference_id(asset), &datum.title(asset), detail)
-            })
-        })
-        .collect();
-    catalog_field("Model and reference", options)
-}
-
-/// The optional form hints affect presentation only. Older hosts still get ordinary forms.
-pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
-    let horns = HornCatalog::embedded()?;
-    let mut assets: Vec<_> = catalog.assets.iter().collect();
-    assets.sort_by_key(|asset| (&asset.manufacturer, &asset.model, &asset.id));
-    let servos: Vec<_> = assets
+fn servo_picker(assets: &[&Asset]) -> Value {
+    let choices = assets
         .iter()
         .filter(|asset| asset.reference_model.is_some())
-        .map(|asset| catalog_option(&asset.id, &servo_title(asset), servo_detail(asset)))
+        .map(|asset| catalog_option(&asset.id, &servo_title(asset)))
         .collect();
+    catalog_field("Servo model", choices)
+}
+
+fn model_entries(assets: &[&Asset], horns: &HornCatalog) -> Vec<Value> {
+    let mut available: Vec<_> = horns
+        .horns
+        .iter()
+        .filter_map(|horn| horn_solid_mode(horn).map(|mode| (horn, mode)))
+        .collect();
+    available.sort_by_key(|(horn, _)| (&horn.manufacturer, &horn.model, &horn.id));
+    let horn_choices = available
+        .into_iter()
+        .map(|(horn, mode)| {
+            let title = if mode == "photo-solid" {
+                if horn.model.ends_with(" / photo estimate") {
+                    horn.model.clone()
+                } else {
+                    format!("{} · photo estimate", horn.model)
+                }
+            } else {
+                format!("{} · partial 3D", horn.model)
+            };
+            catalog_option(&horn.id, &title)
+        })
+        .collect();
+    vec![
+        picker_entry(
+            "insert-servo",
+            "Insert servo model",
+            ("Servo model", "insert-servo"),
+            "asset_id",
+            servo_picker(assets),
+        ),
+        picker_entry(
+            "insert-horn-model",
+            "Insert horn model",
+            ("Horn model", "place-horn"),
+            "horn_id",
+            choice("Horn model", horn_choices, None),
+        ),
+    ]
+}
+
+fn tooling_entries(assets: &[&Asset], horns: &HornCatalog) -> Vec<Value> {
+    let legacy = cfg!(feature = "legacy-host");
     let fs90 = "feetech.fs90.akizuki-drawing";
     let sg90 = "towerpro.sg90-analog.configure";
     let first_photo = "unidentified.photo-se22ca210.double-arm";
     let mut primary = vec![
         quick_entry(
-            "place-servo",
+            "insert-servo",
             "Insert servo",
-            "Insert",
+            ("Servo", "insert-servo"),
             "asset_id",
-            catalog_field("Servo model", servos),
-            "Choose a model and check its mounting, shaft and cable entry in the viewport.",
+            servo_picker(assets),
+            "Choose a servo model to preview the housing, shaft and cable entry.",
+        ),
+        horns_by_name(horns),
+        quick_entry(
+            "insert-mounts",
+            "Sketch mounting holes",
+            ("Hole sketch", "place-datum"),
+            "reference_id",
+            datum_field(assets, DatumKind::Mounting, "Model and mounting face"),
+            "Creates a sketch at the documented hole and slot centers.",
         ),
         quick_entry(
-            "place-horn",
-            "Insert horn",
-            "Insert",
+            "insert-axis",
+            "Insert shaft axis",
+            ("Shaft axis", "shaft-axis"),
             "reference_id",
-            catalog_field("Horn and representation", horn_choices(&horns)),
-            "Choose a loose horn solid or its dimension references.",
-        ),
-        quick_entry(
-            "place-datum",
-            "Insert mounts or axis",
-            "Inspect",
-            "reference_id",
-            datum_field(&assets),
-            "Choose a mounting face or output axis with a source-defined position.",
+            datum_field(assets, DatumKind::ShaftAxis, "Model and shaft"),
+            "Creates a construction axis and marks the documented center in the sketch.",
         ),
     ];
     if let Some(servo) = primary.first_mut() {
         let schema = &mut servo["input_schema"];
         schema["properties"]["show_callouts"] =
-            json!({"type":"boolean","title":"Show interface callouts","default":false});
-        schema["x-solidcraft-form"]["advanced"] = json!(["show_callouts", "x_mm", "y_mm", "z_mm"]);
+            json!({"type":"boolean","title":"Add fixed-position notes","default":false});
+        if !legacy {
+            schema["properties"]["show_callouts"]["x-solidcraft-visible-when"] = placement_visibility();
+            servo_extras(&mut schema["properties"], assets, horns);
+        }
     }
     let identifiers = |key: &str| id_field("Servo profile ID", key);
     let margin = || number("Extra clearance per side", 0.0, 10.0, "mm", Some(0.0));
@@ -273,7 +349,7 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         "horn_angle_deg":angle("Horn visual angle"),
         "horn_axial_offset_mm":cord("Horn axial offset",-100.0,100.0,Some(0.0))
     }));
-    let cable_options = json!({
+    let mut cable_options = json!({
         "asset_id":identifiers(sg90), "port_id":id_field("Cable port ID","servo-lead"),
         "exit_x_mm":cord("Outlet X",-100000.0,100000.0,None),
         "exit_y_mm":cord("Outlet Y",-100000.0,100000.0,None),
@@ -287,17 +363,100 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         "connector_height_mm":cord("Connector thickness",0.0,100.0,Some(0.0)),
         "connector_length_mm":cord("Connector length",0.0,100.0,Some(0.0))
     });
-    let optional_fields = [
+    let mut envelope_model = identifiers(sg90);
+    if !legacy {
+        let envelope_models = assets
+            .iter()
+            .filter(|asset| asset.representations.contains_key("case-envelope"))
+            .map(|asset| option(&asset.id, &servo_title(asset)))
+            .collect();
+        envelope_model = choice("Servo model", envelope_models, None);
+        let cable_models = assets
+            .iter()
+            .filter(|asset| !asset.cable_ports.is_empty())
+            .map(|asset| option(&asset.id, &servo_title(asset)))
+            .collect();
+        cable_options["asset_id"] = choice("Servo model", cable_models, None);
+        let ports: BTreeSet<_> = assets
+            .iter()
+            .flat_map(|asset| asset.cable_ports.iter().map(|port| port.id.as_str()))
+            .collect();
+        cable_options["port_id"] = choice(
+            "Cable exit",
+            ports
+                .into_iter()
+                .map(|id| {
+                    let label = match id {
+                        "servo-lead" => "Fixed cable",
+                        "bus-a" => "Bus socket A",
+                        "bus-b" => "Bus socket B",
+                        "bus-negative-y" => "Bus socket on side −Y",
+                        "bus-positive-y" => "Bus socket on side +Y",
+                        "dual-joint" => "Dual-joint socket",
+                        "external-io" => "External I/O socket",
+                        "ttl-a" => "TTL socket A",
+                        "ttl-b" => "TTL socket B",
+                        id => id,
+                    };
+                    option(id, label)
+                })
+                .collect(),
+            None,
+        );
+    }
+    let mut envelope = fields(
+        &["asset_id"],
+        positioned(json!({
+            "asset_id":envelope_model,
+            "representation":choice("Envelope",vec![option("case-envelope","Case envelope"),option("overall-envelope","Overall envelope")],Some("case-envelope")),
+            "clearance_mm":margin()
+        })),
+    );
+    envelope["title"] = json!("Insert clearance envelope");
+    primary.push(entry(
+        "insert",
+        "Insert clearance envelope",
+        "edit",
+        envelope,
+        ("Size box", "envelope"),
+    ));
+    let mut cable_space = fields(
+        &[
+            "asset_id",
+            "port_id",
+            "exit_x_mm",
+            "exit_y_mm",
+            "exit_z_mm",
+            "direction",
+            "bundle_width_mm",
+            "bundle_height_mm",
+            "straight_length_mm",
+        ],
+        cable_options,
+    );
+    cable_space["title"] = json!("Create cable clearance");
+    cable_space["description"] = json!("Enter the planned cable exit, bundle size and routing length.");
+    primary.push(entry(
+        "cable-space",
+        "Create cable clearance",
+        "edit",
+        cable_space,
+        ("Cable space", "cable-space"),
+    ));
+
+    let detailed_entries = [
         (
             "servo-reference",
-            "Servo setup",
+            "Insert servo with manual dimensions",
             "edit",
+            ("Manual servo inputs", "options"),
             fields(&["asset_id"], model_options),
         ),
         (
             "horn-reference",
-            "Horn setup",
+            "Insert horn by source ID",
             "edit",
+            ("Horn source ID", "asset-id"),
             fields(
                 &["horn_id"],
                 positioned(json!({
@@ -309,8 +468,9 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         ),
         (
             "catalog",
-            "Find assets",
+            "Look up catalog data (JSON)",
             "read",
+            ("Catalog JSON", "search"),
             fields(
                 &[],
                 json!({"query":{"type":"string","title":"Model, manufacturer or SKU","default":"","maxLength":128}}),
@@ -318,27 +478,16 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         ),
         (
             "describe",
-            "Read servo sources",
+            "Read servo dimensions and sources (JSON)",
             "read",
+            ("Source data", "sources"),
             fields(&["asset_id"], json!({"asset_id":identifiers(sg90)})),
         ),
         (
-            "insert",
-            "Insert envelope",
-            "edit",
-            fields(
-                &["asset_id"],
-                positioned(json!({
-                    "asset_id":identifiers(sg90),
-                    "representation":choice("Envelope",vec![option("case-envelope","Case envelope"),option("overall-envelope","Overall envelope")],Some("case-envelope")),
-                    "clearance_mm":margin()
-                })),
-            ),
-        ),
-        (
             "mount-pattern",
-            "Mounting setup",
+            "Insert mounting sketch by ID",
             "edit",
+            ("Mounts by ID", "place-datum"),
             fields(
                 &["asset_id"],
                 positioned(
@@ -348,8 +497,9 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         ),
         (
             "output-reference",
-            "Output setup",
+            "Insert output reference by ID",
             "edit",
+            ("Output reference ID", "shaft-axis"),
             fields(
                 &["asset_id"],
                 positioned(
@@ -358,37 +508,82 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
             ),
         ),
         (
-            "cable-space",
-            "Plan cable space",
+            "place-servo",
+            "Insert servo by ID",
             "edit",
+            ("Servo by ID", "asset-id"),
             fields(
-                &[
-                    "asset_id",
-                    "port_id",
-                    "exit_x_mm",
-                    "exit_y_mm",
-                    "exit_z_mm",
-                    "direction",
-                    "bundle_width_mm",
-                    "bundle_height_mm",
-                    "straight_length_mm",
-                ],
-                cable_options,
+                &["asset_id"],
+                positioned(json!({
+                    "asset_id":{"type":"string","title":"Servo model or source ID"},
+                    "show_callouts":{"type":"boolean","title":"Add fixed-position notes","default":false}
+                })),
+            ),
+        ),
+        (
+            "place-horn",
+            "Insert horn by variant and representation ID",
+            "edit",
+            ("Horn variant ID", "asset-id"),
+            fields(
+                &["reference_id"],
+                positioned(json!({
+                    "reference_id":{"type":"string","title":"Horn ID and representation"}
+                })),
+            ),
+        ),
+        (
+            "place-datum",
+            "Insert a mounting or output reference by ID",
+            "edit",
+            ("Datum source ID", "asset-id"),
+            fields(
+                &["reference_id"],
+                positioned(json!({
+                    "reference_id":{"type":"string","title":"Mounting face or shaft source ID"}
+                })),
             ),
         ),
     ];
     primary.extend(
-        optional_fields
+        detailed_entries
             .into_iter()
-            .map(|(name, title, effect, schema)| entry(name, title, effect, schema, None)),
+            .map(|(name, title, effect, presentation, schema)| entry(name, title, effect, schema, presentation)),
     );
+    primary
+}
+
+pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
+    package_manifest(catalog, model_entries, "Insert editable 3D servo and horn models.")
+}
+
+pub fn tooling_manifest(catalog: &Catalog) -> Result<Value, Error> {
+    package_manifest(
+        catalog,
+        tooling_entries,
+        "Servo and horn references for assembly layout.",
+    )
+}
+
+fn package_manifest(
+    catalog: &Catalog,
+    entries: fn(&[&Asset], &HornCatalog) -> Vec<Value>,
+    description: &str,
+) -> Result<Value, Error> {
+    let horns = HornCatalog::embedded()?;
+    let mut assets: Vec<_> = catalog.assets.iter().collect();
+    assets.sort_by_key(|asset| (&asset.manufacturer, &asset.model, &asset.id));
     let legacy = cfg!(feature = "legacy-host");
     let mut commands = vec![
         "appearance.assign",
         "body.rename",
+        "component.activate",
+        "component.create",
+        "component.list",
         "construct.axis.two_points",
         "document.inspect",
         "note.add",
+        "occurrence.move",
         "sketch.arc.center_point",
         "sketch.circle.center",
         "sketch.constraint.fix",
@@ -402,20 +597,20 @@ pub fn manifest(catalog: &Catalog) -> Result<Value, Error> {
         "solid.move",
     ];
     if !legacy {
-        commands.extend(["storage.patch", "storage.put_blob"]);
+        commands.push("storage.patch");
     }
-    let mut runtime = json!({"module":"servo-assets.wasm","commands":commands,"entries":primary,"limits":{"fuel":500000000,"memory_mib":32,"deadline_ms":30000}});
+    let mut runtime = json!({"module":"servo-assets.wasm","commands":commands,"entries":entries(&assets, &horns),"limits":{"fuel":500000000,"memory_mib":32,"deadline_ms":30000}});
     if !legacy {
         runtime["data_format"] = json!(1);
     }
     let capabilities = if legacy {
         vec!["commands@0.1"]
     } else {
-        vec!["commands@0.2", "storage@0.1"]
+        vec!["commands@0.2", "dialog@0.1", "storage@0.1"]
     };
     let mut manifest = json!({
         "id":"servo-assets","name":"Servo Assets","version":env!("CARGO_PKG_VERSION"),
-        "description":"Servo and horn references for mounting and cable layout.",
+        "description":description,
         "capabilities":capabilities,"runtime":runtime
     });
     fit_host_budget(&mut manifest)?;
@@ -438,39 +633,60 @@ fn fit_host_budget(manifest: &mut Value) -> Result<(), Error> {
         compact_setup_forms(manifest);
     }
     for (entry_name, field, hint) in [
+        ("cable-space", "asset_id", "Enter the source profile ID for the servo."),
+        ("insert", "asset_id", "Enter the source profile ID for the servo."),
         (
-            "place-datum",
+            "insert-mounts",
             "reference_id",
-            "Use a source profile ID followed by /mount/GROUP or /output/OUTPUT.",
+            "Use a source profile ID followed by /mount/GROUP.",
         ),
         (
-            "place-horn",
+            "insert-axis",
             "reference_id",
-            "Use a horn ID followed by /dimensions, /source-solid or /photo-solid.",
+            "Use a source profile ID followed by /output/OUTPUT.",
         ),
+        ("insert-horn", "horn_id", "Enter the horn's source ID."),
         (
-            "place-servo",
-            "asset_id",
-            "Use Find assets to get the servo profile ID.",
+            "insert-horn-model",
+            "horn_id",
+            "Enter the source ID for a horn with a 3D model.",
         ),
+        ("insert-servo", "asset_id", "Enter the source profile ID for the servo."),
     ] {
         if encoded_size(manifest)? <= budget {
             return Ok(());
         }
-        let Some(schema) = manifest["runtime"]["entries"]
+        let Some(entry) = manifest["runtime"]["entries"]
             .as_array_mut()
             .and_then(|entries| entries.iter_mut().find(|entry| entry["name"] == entry_name))
-            .map(|entry| &mut entry["input_schema"])
         else {
             continue;
         };
-        let Some(field) = schema["properties"].get_mut(field).and_then(Value::as_object_mut) else {
+        let Some(properties) = entry["input_schema"]["properties"].as_object_mut() else {
             continue;
         };
-        field.remove("oneOf");
-        field.remove("enum");
-        field.insert("description".into(), json!(hint));
-        schema["x-solidcraft-form"]["search"] = json!([]);
+        if let Some(field) = properties.get_mut(field).and_then(Value::as_object_mut) {
+            field.remove("oneOf");
+            field.remove("enum");
+            field.insert("description".into(), json!(hint));
+        }
+        properties.remove("model_filter");
+        if entry_name == "insert-horn"
+            && let Some(mode) = properties.get_mut("mode").and_then(Value::as_object_mut)
+        {
+            mode.remove("x-solidcraft-visible-when");
+            if let Some(choices) = mode.get_mut("oneOf").and_then(Value::as_array_mut) {
+                for choice in choices.iter_mut().filter_map(Value::as_object_mut) {
+                    choice.remove("x-solidcraft-when");
+                }
+            }
+        }
+        if entry_name == "insert-servo" {
+            properties.retain(|key, _| key != "options" && !key.starts_with("options_"));
+        }
+        if let Some(object) = entry.as_object_mut() {
+            object.remove("dialog_hook");
+        }
     }
     if encoded_size(manifest)? > budget {
         return Err(invalid("manifest", "forms exceed the host manifest limit"));
@@ -482,12 +698,14 @@ fn compact_setup_forms(manifest: &mut Value) {
     let Some(entries) = manifest["runtime"]["entries"].as_array_mut() else {
         return;
     };
-    // The old host has a 16 KiB manifest limit. Keep named choices in the three
+    // The old host has a 16 KiB manifest limit. Keep named choices in the main
     // insertion forms and keep the types and limits of the detailed commands.
-    for entry in entries
-        .iter_mut()
-        .filter(|entry| !entry["name"].as_str().is_some_and(|name| name.starts_with("place-")))
-    {
+    for entry in entries.iter_mut().filter(|entry| {
+        !matches!(
+            entry["name"].as_str(),
+            Some("insert-servo" | "insert-horn-model" | "insert-horn" | "insert-mounts" | "insert-axis")
+        )
+    }) {
         if let Some(properties) = entry["input_schema"]["properties"].as_object_mut() {
             for field in properties.values_mut().filter_map(Value::as_object_mut) {
                 field.remove("title");

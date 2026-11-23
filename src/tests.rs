@@ -1,6 +1,5 @@
 #![allow(clippy::expect_used, clippy::panic, clippy::unwrap_used)]
 
-use base64::{Engine as _, engine::general_purpose::STANDARD};
 use serde_json::{Value, json};
 
 use crate::{Error, InsertParams, Runner, catalog::Catalog, insert, recipe};
@@ -24,6 +23,9 @@ struct Host {
     fallback_names: bool,
     sequential_sketch_ids: bool,
     feature_names: Vec<String>,
+    assembly: Option<Value>,
+    #[cfg(not(feature = "legacy-host"))]
+    snapshot: Vec<u8>,
 }
 
 impl Runner for Host {
@@ -57,6 +59,11 @@ impl Runner for Host {
             };
         }
         Ok(match command {
+            "component.list" => self
+                .assembly
+                .clone()
+                .unwrap_or_else(|| json!({"active":0,"active_path":[],"components":[]})),
+            "component.create" => json!({"component":11,"occurrence":21,"name":args["name"]}),
             "document.inspect" => {
                 json!({"timeline":self.feature_names.iter().map(|name| json!({"name":name})).collect::<Vec<_>>()})
             }
@@ -76,25 +83,26 @@ impl Runner for Host {
             _ => json!({}),
         })
     }
+
+    #[cfg(not(feature = "legacy-host"))]
+    fn save_snapshot(&mut self, name: &str, data: &[u8]) -> Result<(), Error> {
+        self.calls.push(("save_snapshot".into(), json!({"name":name})));
+        self.snapshot = data.to_vec();
+        Ok(())
+    }
 }
 
+#[cfg(feature = "legacy-host")]
 fn source_snapshot(host: &Host, reply: &Value) -> Value {
-    if cfg!(feature = "legacy-host") {
-        assert_eq!(reply["metadata_saved_in_design"], false);
-        assert!(!host.calls.iter().any(|(command, _)| command.starts_with("storage.")));
-        return reply["source_snapshot"].clone();
-    }
+    assert_eq!(reply["metadata_saved_in_design"], false);
+    assert!(!host.calls.iter().any(|(command, _)| command.starts_with("storage.")));
+    reply["source_snapshot"].clone()
+}
+
+#[cfg(not(feature = "legacy-host"))]
+fn source_snapshot(host: &Host, reply: &Value) -> Value {
     assert_eq!(reply["metadata_saved_in_design"], true);
-    let (_, blob) = host
-        .calls
-        .iter()
-        .rev()
-        .find(|(id, _)| id == "storage.put_blob")
-        .expect("snapshot");
-    let bytes = STANDARD
-        .decode(blob["data"].as_str().expect("encoded"))
-        .expect("base64");
-    serde_json::from_slice(&bytes).expect("snapshot JSON")
+    serde_json::from_slice(&host.snapshot).expect("snapshot JSON")
 }
 
 #[test]
@@ -687,7 +695,9 @@ fn default_outlet_markers_are_short_and_connectors_require_explicit_opt_in() {
 fn manifest_keeps_host_forms_bounded_when_contributors_expand_the_catalog() {
     let mut catalog = Catalog::embedded().expect("catalog");
     let current = crate::manifest::manifest(&catalog).expect("current manifest");
-    let original = entry_schema(&current, "place-servo");
+    let commands = current["runtime"]["commands"].as_array().expect("host commands");
+    assert!(!commands.contains(&json!("storage.put_blob")));
+    let original = entry_schema(&current, "insert-servo");
     let original_choice = &original["properties"]["asset_id"];
     assert_eq!(
         listed_values(original_choice).len(),
@@ -715,13 +725,148 @@ fn manifest_keeps_host_forms_bounded_when_contributors_expand_the_catalog() {
     }
     let expanded = crate::manifest::manifest(&catalog).expect("bounded expanded manifest");
     assert!(serde_json::to_vec(&expanded).expect("encoded expanded manifest").len() < budget);
-    let expanded_choice = &entry_schema(&expanded, "place-servo")["properties"]["asset_id"];
+    let expanded_choice = &entry_schema(&expanded, "insert-servo")["properties"]["asset_id"];
     assert_eq!(expanded_choice["type"], "string");
     assert!(expanded_choice.get("oneOf").is_none() && expanded_choice.get("enum").is_none());
-    assert_eq!(entry_schema(&expanded, "place-servo")["required"], original["required"]);
+    assert_eq!(
+        entry_schema(&expanded, "insert-servo")["required"],
+        original["required"]
+    );
     assert_eq!(expanded["capabilities"], current["capabilities"]);
     assert_eq!(expanded["runtime"]["commands"], current["runtime"]["commands"]);
     assert_eq!(expanded["runtime"]["limits"], current["runtime"]["limits"]);
+}
+
+#[test]
+fn standard_package_offers_only_solid_model_insertion() {
+    let catalog = Catalog::embedded().expect("catalog");
+    let manifest = crate::manifest::manifest(&catalog).expect("manifest");
+    let entries = manifest["runtime"]["entries"].as_array().expect("entries");
+    let names: Vec<_> = entries
+        .iter()
+        .map(|entry| entry["name"].as_str().expect("entry ID"))
+        .collect();
+    assert_eq!(names, ["insert-servo", "insert-horn-model"]);
+
+    for (entry, selector) in [("insert-servo", "asset_id"), ("insert-horn-model", "horn_id")] {
+        let schema = entry_schema(&manifest, entry);
+        let fields = schema["properties"].as_object().expect("properties");
+        let mut expected = vec![selector];
+        if !cfg!(feature = "legacy-host") {
+            expected.push("model_filter");
+        }
+        assert_eq!(fields.keys().map(String::as_str).collect::<Vec<_>>(), expected);
+        assert_eq!(schema["required"], json!([selector]));
+    }
+}
+
+#[test]
+fn servo_tools_have_one_model_label_and_a_packaged_icon() {
+    let catalog = Catalog::embedded().expect("catalog");
+    let manifest = crate::manifest::tooling_manifest(&catalog).expect("tooling manifest");
+    let entries = manifest["runtime"]["entries"].as_array().expect("entries");
+    let main: Vec<_> = entries
+        .iter()
+        .take(6)
+        .map(|entry| entry["name"].as_str().expect("entry ID"))
+        .collect();
+    assert_eq!(
+        main,
+        [
+            "insert-servo",
+            "insert-horn",
+            "insert-mounts",
+            "insert-axis",
+            "insert",
+            "cable-space"
+        ]
+    );
+    for entry in entries {
+        let ribbon: Vec<_> = entry["slots"]
+            .as_array()
+            .expect("slots")
+            .iter()
+            .filter(|slot| slot["kind"] == "ribbon")
+            .collect();
+        assert_eq!(ribbon.len(), 1, "one toolbar label for {}", entry["name"]);
+        assert!(!matches!(ribbon[0]["name"].as_str(), Some("Insert" | "Inspect")));
+        let icon = entry["input_schema"]["x-solidcraft-icon"].as_str().expect("icon path");
+        assert!(icon.starts_with("icons/"));
+        assert!(std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join(icon).is_file());
+    }
+}
+
+#[test]
+fn standard_horn_choices_are_solid_and_skip_source_sketches() {
+    use crate::workflow::{HornModelPlacement, place_horn_model};
+
+    let horns = crate::horns::HornCatalog::embedded().expect("horns");
+    let catalog = Catalog::embedded().expect("catalog");
+    let manifest = crate::manifest::manifest(&catalog).expect("manifest");
+    let choices = listed_values(&entry_schema(&manifest, "insert-horn-model")["properties"]["horn_id"]);
+    for horn in &horns.horns {
+        let key = crate::catalog::selector_key(&horn.id);
+        assert_eq!(choices.contains(&key.as_str()), !horn.parts.is_empty());
+        let mut host = Host {
+            model: true,
+            sequential_sketch_ids: true,
+            ..Host::default()
+        };
+        let inserted = place_horn_model(&mut host, &horns, &HornModelPlacement { horn_id: key });
+        if horn.parts.is_empty() {
+            assert!(inserted.is_err() && host.calls.is_empty(), "{}", horn.id);
+            continue;
+        }
+        let reply = inserted.expect("solid horn insertion");
+        assert!(
+            !reply["bodies"].as_array().expect("solid bodies").is_empty(),
+            "{}",
+            horn.id
+        );
+        assert!(
+            !host
+                .calls
+                .iter()
+                .any(|(command, _)| matches!(command.as_str(), "sketch.text" | "note.add"))
+        );
+    }
+}
+
+#[test]
+fn servo_placement_creates_an_ungrounded_component_and_restores_the_parent() {
+    let catalog = Catalog::embedded().expect("catalog");
+    let mut host = Host {
+        model: true,
+        sequential_sketch_ids: true,
+        assembly: Some(json!({"active":3,"active_path":[8],"components":[{"name":"FEETECH FS90"}]})),
+        ..Host::default()
+    };
+    let placement =
+        serde_json::from_value(json!({"asset_id":"feetech.fs90.akizuki-drawing","x_mm":35.0})).expect("placement");
+    let result = crate::workflow::place_servo_model(&mut host, &catalog, placement).expect("placed servo");
+    assert!(
+        !host
+            .calls
+            .iter()
+            .any(|(command, _)| command == "construct.axis.two_points")
+    );
+    assert_eq!(result["component"]["name"], "FEETECH FS90 (2)");
+    assert_eq!(result["component"]["occurrence"], 21);
+    assert_eq!(result["bodies"].as_array().expect("bodies").len(), 8);
+    assert_eq!(
+        host.calls[1],
+        (
+            "component.create".into(),
+            json!({"name":"FEETECH FS90 (2)","grounded":false})
+        )
+    );
+    assert_eq!(host.calls[2].0, "occurrence.move");
+    assert_eq!(host.calls[2].1["path"], json!([8, 21]));
+    assert_eq!(host.calls[2].1["to"]["position"], json!([35.0, 0.0, 0.0]));
+    assert_eq!(
+        host.calls.last().expect("restored activation").1,
+        json!({"component":3,"occurrence":8,"path":[8]})
+    );
 }
 
 fn entry_schema<'a>(manifest: &'a Value, name: &str) -> &'a Value {
@@ -750,15 +895,16 @@ fn listed_values(field: &Value) -> Vec<&str> {
 
 #[test]
 fn every_quick_picker_option_resolves_to_an_available_reference() {
-    use crate::workflow::{place_datum, place_horn, place_servo};
+    use crate::workflow::{DatumKind, place_datum_kind, place_servo};
 
     let catalog = Catalog::embedded().expect("catalog");
     let horns = crate::horns::HornCatalog::embedded().expect("horns");
-    let manifest = crate::manifest::manifest(&catalog).expect("manifest");
+    let manifest = crate::manifest::tooling_manifest(&catalog).expect("tooling manifest");
     for (name, key) in [
-        ("place-servo", "asset_id"),
-        ("place-horn", "reference_id"),
-        ("place-datum", "reference_id"),
+        ("insert-servo", "asset_id"),
+        ("insert-horn", "horn_id"),
+        ("insert-mounts", "reference_id"),
+        ("insert-axis", "reference_id"),
     ] {
         let schema = entry_schema(&manifest, name);
         assert_eq!(schema["required"], json!([key]));
@@ -772,20 +918,25 @@ fn every_quick_picker_option_resolves_to_an_available_reference() {
             };
             let params = json!({key:option});
             let result = match name {
-                "place-servo" => place_servo(
+                "insert-servo" => place_servo(
                     &mut host,
                     &catalog,
                     serde_json::from_value(params).expect("servo parameters"),
                 ),
-                "place-horn" => place_horn(
+                "insert-horn" => crate::horns::insert_horn(
                     &mut host,
                     &horns,
                     &serde_json::from_value(params).expect("horn parameters"),
                 ),
-                _ => place_datum(
+                _ => place_datum_kind(
                     &mut host,
                     &catalog,
                     &serde_json::from_value(params).expect("datum parameters"),
+                    if name == "insert-mounts" {
+                        DatumKind::Mounting
+                    } else {
+                        DatumKind::ShaftAxis
+                    },
                 ),
             };
             assert!(result.is_ok(), "{name} / {option}: {result:?}");
@@ -821,6 +972,81 @@ fn repeated_datum_insertion_keeps_the_source_caption_and_owns_a_new_sketch() {
             .iter()
             .all(|step| step["command"] != "document.inspect")
     );
+}
+
+#[cfg(not(feature = "legacy-host"))]
+#[test]
+fn model_filters_match_available_choices_without_choosing_one() {
+    use crate::picker_filter::filter;
+
+    let catalog = Catalog::embedded().expect("catalog");
+    let manifest = crate::manifest::tooling_manifest(&catalog).expect("current tooling manifest");
+    for (entry, field, query) in [
+        ("insert-servo", "asset_id", "feetech sts3215 c001"),
+        ("insert-horn", "horn_id", "SE22CA210"),
+        ("insert-mounts", "reference_id", "XM430-W350-R"),
+        ("insert-axis", "reference_id", "XM430-W350-R"),
+    ] {
+        let form = entry_schema(&manifest, entry);
+        let rows = listed_values(&form["properties"][field]);
+        let patch = filter(entry, query).expect("filter");
+        let choices = patch[field]["choices"].as_array().expect("filtered choices");
+        assert!(
+            !choices.is_empty() && choices.len() < rows.len(),
+            "{entry} {query}: {patch}"
+        );
+        if entry == "insert-servo" {
+            assert_eq!(choices.len(), 2);
+        }
+        assert!(choices.iter().all(|id| rows.contains(&id.as_str().expect("choice ID"))));
+        assert!(patch[field].get("default").is_none());
+        let empty = filter(entry, "unknown-model").expect("empty filter");
+        assert_eq!(empty[field]["choices"], json!([]));
+        assert_eq!(filter(entry, "").expect("clear filter"), json!({}));
+    }
+
+    let models = crate::manifest::manifest(&catalog).expect("model manifest");
+    let choices = listed_values(&entry_schema(&models, "insert-horn-model")["properties"]["horn_id"]);
+    let found = filter("insert-horn-model", "SE22CA210 double").expect("3D horn filter");
+    assert_eq!(
+        found["horn_id"]["choices"],
+        json!([crate::catalog::selector_key("unidentified.photo-se22ca210.double-arm")])
+    );
+    assert!(choices.contains(&found["horn_id"]["choices"][0].as_str().expect("selector key")));
+    let dimensions_only = filter("insert-horn-model", "TA0132 Horn #1").expect("3D horn filter");
+    assert_eq!(dimensions_only["horn_id"]["choices"], json!([]));
+
+    let xm430 = catalog.asset("robotis.xm430-w350-t.drawing").expect("TTL XM430");
+    for (entry, field, expected) in [
+        (
+            "insert-servo",
+            "asset_id",
+            vec![crate::catalog::selector_key(&xm430.id)],
+        ),
+        (
+            "insert-mounts",
+            "reference_id",
+            crate::workflow::datums(xm430)
+                .filter(|datum| crate::workflow::DatumKind::Mounting.includes(datum))
+                .map(|datum| crate::catalog::selector_key(&datum.reference_id(xm430)))
+                .collect(),
+        ),
+        (
+            "insert-axis",
+            "reference_id",
+            crate::workflow::datums(xm430)
+                .filter(|datum| crate::workflow::DatumKind::ShaftAxis.includes(datum))
+                .map(|datum| crate::catalog::selector_key(&datum.reference_id(xm430)))
+                .collect(),
+        ),
+    ] {
+        for query in ["XM430-W350-T", "ROBOTIS XM430 W350 T"] {
+            assert_eq!(
+                filter(entry, query).expect("complete model lookup")[field]["choices"],
+                json!(expected)
+            );
+        }
+    }
 }
 
 #[test]

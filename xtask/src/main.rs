@@ -20,6 +20,7 @@ fn run_command(repo: &Path, program: &std::ffi::OsStr, args: &[&str]) -> TaskRes
 
 fn ci(repo: &Path) -> TaskResult {
     let cargo = env::var_os("CARGO").unwrap_or_else(|| "cargo".into());
+    let bash = env::var_os("SERVO_ASSETS_BASH").unwrap_or_else(|| "bash".into());
     run_command(repo, &cargo, &["fmt", "--all", "--", "--check"])?;
     run_command(
         repo,
@@ -74,12 +75,16 @@ fn ci(repo: &Path) -> TaskResult {
         ],
     )?;
     check::all(repo)?;
-    run_command(repo, "bash".as_ref(), &["build.sh"])?;
-    run_command(repo, "bash".as_ref(), &["build-legacy.sh"])?;
+    run_command(repo, &bash, &["build.sh"])?;
+    run_command(repo, &bash, &["build-legacy.sh"])?;
     if let Some(cli) = env::var_os("SOLIDCRAFT_CLI").filter(|value| !value.is_empty()) {
+        run_command(repo, &bash, &["build.sh", "--tools"])?;
+        run_command(repo, &bash, &["build-legacy.sh", "--tools"])?;
         for (package, output) in [
-            ("dist/servo-assets", "target/host-tests/current"),
-            ("dist/legacy/servo-assets", "target/host-tests/legacy"),
+            ("dist/servo-assets", "target/host-tests/model-current"),
+            ("dist/legacy/servo-assets", "target/host-tests/model-legacy"),
+            ("target/tooling/servo-assets", "target/host-tests/current"),
+            ("target/tooling/legacy/servo-assets", "target/host-tests/legacy"),
         ] {
             run_command(repo, &cli, &["plugin", "check", package, "--json"])?;
             run_command(repo, &cli, &["plugin", "test", package, "--json", "--out", output])?;

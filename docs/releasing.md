@@ -32,27 +32,37 @@ dependencies, so local source paths are not embedded in the distributed module.
 Existing encoded compiler flags take precedence over whitespace-split
 `RUSTFLAGS`; remapping flags are appended using Cargo's unit-separator encoding.
 
+Pass `--tools` to either build script to build the detailed command manifest.
+These local packages go to `target/tooling/servo-assets` and
+`target/tooling/legacy/servo-assets`, with their corresponding archives under
+`target/tooling`. They use the same plugin ID. For local CLI work, point the
+command directly at the required package directory.
+
 `cargo xtask ci` is the complete check gate and builds both editions. Local
 development builds may run before the first commit or with uncommitted changes;
 their provenance records that state. Release verification requires a clean,
 committed checkout.
 
+On Windows, set `SERVO_ASSETS_BASH` to the Git Bash executable when the system
+`bash` starts WSL. For example, set `$env:SERVO_ASSETS_BASH = 'C:/Program
+Files/Git/bin/bash.exe'` in PowerShell before running the gate.
+
 ## Release files
 
-For version `0.10.0`, the generated files are:
+For version `0.13.0`, the generated files are:
 
 | File | Contents |
 | --- | --- |
-| `servo-assets-0.10.0.zip` | Modern `commands@0.2` and `storage@0.1` plugin; package files at ZIP root |
-| `servo-assets-legacy-0.10.0.zip` | `commands@0.1` plugin, with the existing `servo-assets/` ZIP wrapper |
-| `servo-assets-source-0.10.0.zip` | Explicit source tree under `solidcraft-servo-assets-0.10.0/` |
+| `servo-assets-0.13.0.zip` | Standard 0.47 plugin with `commands@0.2`, `storage@0.1` and `dialog@0.1`, with files at ZIP root |
+| `servo-assets-legacy-0.13.0.zip` | `commands@0.1` plugin with the `servo-assets/` ZIP wrapper |
+| `servo-assets-source-0.13.0.zip` | Explicit source tree under `solidcraft-servo-assets-0.13.0/` |
 | Each ZIP's `.zip.sha256` file | SHA256 of that ZIP |
 | `SHA256SUMS.txt` | Checksums for all three ZIPs |
 | `release-provenance.json` | Source commit and ZIP hashes for the batch |
 
 Plugin packages contain the Wasm component, compact manifest, licenses,
 attribution, README, contribution instructions when present, documentation,
-catalog JSON and test fixtures. Each contains `BUILD-INFO.json` with SDK edition,
+catalog JSON, command icons and test fixtures for the declared entries. Each contains `BUILD-INFO.json` with SDK edition,
 version, commit/dirty state, source-file hashes and payload hashes. Manifests can
 use up to 64 KiB on the modern host and 16 KiB on the older host. Legacy packages request no design storage commands;
 their source snapshots are returned to callers rather than embedded in designs.

@@ -1,0 +1,8 @@
+{
+  "entry": "insert-servo",
+  "params": {"asset_id": "ref-f86d9ad2"},
+  "expect": {
+    "model": {"body_count": 8},
+    "reply": {"result": {"asset_id": "feetech.fs90.akizuki-drawing", "component": {"name": "FEETECH FS90"}}}
+  }
+}

@@ -1,7 +1,7 @@
 //! WIT adapter. Host refusals retain their original typed errors.
 
 #[cfg(not(feature = "legacy-host"))]
-wit_bindgen::generate!({ path: "wit", world: "command-plugin" });
+wit_bindgen::generate!({ path: "wit", world: "command-dialog-plugin" });
 #[cfg(feature = "legacy-host")]
 wit_bindgen::generate!({ path: "wit-0.1", world: "command-plugin" });
 
@@ -16,7 +16,10 @@ use crate::catalog::Catalog;
 use crate::horns::{HornCatalog, HornParams, insert_horn};
 use crate::models::{ModelParams, insert_model};
 use crate::outputs::{OutputParams, insert_output_reference};
-use crate::workflow::{Placement, ServoPlacement, place_datum, place_horn, place_servo};
+use crate::workflow::{
+    DatumKind, Placement, ServoPlacement, picker_params, place_datum, place_datum_kind, place_horn, place_horn_model,
+    place_servo, place_servo_model,
+};
 use crate::{Error, InsertParams, Runner, insert, invalid};
 
 #[derive(Deserialize)]
@@ -66,6 +69,16 @@ impl Runner for Host {
             }
         }
     }
+
+    #[cfg(not(feature = "legacy-host"))]
+    fn save_snapshot(&mut self, name: &str, data: &[u8]) -> Result<(), Error> {
+        craft::plugin::storage::put_blob(name, data, false, false)
+            .map(|_| ())
+            .map_err(|error| {
+                self.error = Some(error);
+                invalid("snapshot", "SolidCraft could not save the source snapshot")
+            })
+    }
 }
 
 fn error(error: Error) -> PluginError {
@@ -95,6 +108,17 @@ fn parse<T: serde::de::DeserializeOwned>(text: &str) -> Result<T, Error> {
 
 struct Servos;
 
+#[cfg(not(feature = "legacy-host"))]
+impl exports::craft::plugin::dialog_provider::Guest for Servos {
+    fn update_fields(entry: String, values: String) -> Result<String, PluginError> {
+        let values: Value = parse(&values).map_err(error)?;
+        let query = values["model_filter"].as_str().unwrap_or_default();
+        crate::picker_filter::filter(&entry, query)
+            .map(|reply| reply.to_string())
+            .map_err(error)
+    }
+}
+
 impl Guest for Servos {
     fn execute(entry: String, params: String) -> Result<String, PluginError> {
         if params.len() > 16384 {
@@ -105,7 +129,22 @@ impl Guest for Servos {
         let result = (|| match entry.as_str() {
             "catalog" => catalog.search(&parse::<Query>(&params)?.query),
             "describe" => catalog.describe(&parse::<Describe>(&params)?.asset_id),
+            "insert-servo" => place_servo_model(&mut host, &catalog, parse::<ServoPlacement>(&params)?),
             "place-servo" => place_servo(&mut host, &catalog, parse::<ServoPlacement>(&params)?),
+            "insert-horn-model" => {
+                place_horn_model(&mut host, &HornCatalog::embedded()?, &picker_params(parse(&params)?)?)
+            }
+            "insert-horn" => insert_horn(&mut host, &HornCatalog::embedded()?, &picker_params(parse(&params)?)?),
+            "insert-mounts" | "insert-axis" => place_datum_kind(
+                &mut host,
+                &catalog,
+                &picker_params(parse(&params)?)?,
+                if entry == "insert-mounts" {
+                    DatumKind::Mounting
+                } else {
+                    DatumKind::ShaftAxis
+                },
+            ),
             "servo-reference" => insert_model(&mut host, &catalog, &parse::<ModelParams>(&params)?),
             "place-horn" => place_horn(&mut host, &HornCatalog::embedded()?, &parse::<Placement>(&params)?),
             "place-datum" => place_datum(&mut host, &catalog, &parse::<Placement>(&params)?),

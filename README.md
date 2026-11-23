@@ -20,31 +20,22 @@ arms. Vendor, document and physical revisions remain separate identities.
 
 ## Install and use
 
-If SolidCraft reports `manifest size exceeds 16 KiB`, use the **Compatibility
-ZIP** below. It includes the same servo and horn catalog.
+For **SolidCraft 0.47**, use the standard **`servo-assets-0.13.0.zip`**.
+`./build.sh` creates it in `dist/`. Open **Preferences → Plugins → Install
+plugin…** and choose the ZIP. The package embeds source snapshots in the saved
+design and uses model filters in the native insertion forms.
 
-| SolidCraft build | Download v0.10.0 | Source snapshots |
-| --- | --- | --- |
-| Plugin hosts with a 16 KiB manifest limit, including 0.41.0 and 0.44.0 | [Compatibility ZIP (`servo-assets-legacy-0.10.0.zip`)](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-legacy-0.10.0.zip) | Available in command results |
-| SolidCraft 0.45.0 or a build with 64 KiB manifest support, `commands@0.2` and `storage@0.1` | [Modern ZIP (`servo-assets-0.10.0.zip`)](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-0.10.0.zip) | Embedded in the saved design |
+For an older host, `./build-legacy.sh` builds the compatibility edition with a
+16 KiB manifest. For the published v0.10.0 release on 0.47, use the
+[v0.10.0 compatibility ZIP](https://github.com/takuto-NA/solidcraft-servo-assets/releases/download/v0.10.0/servo-assets-legacy-0.10.0.zip).
+[GitHub Releases](https://github.com/takuto-NA/solidcraft-servo-assets/releases)
+also provides source ZIPs and SHA-256 checksums.
 
-In SolidCraft, open **Preferences → Plugins → Install plugin…** and select the
-ZIP. [GitHub Releases](https://github.com/takuto-NA/solidcraft-servo-assets/releases)
-also provides a source ZIP and SHA-256 checksums. Packages are sandboxed and need
-no network or filesystem permissions at runtime.
-
-Open **Insert → Servo Assets → Insert servo** and choose the full model and
-variant. The default fixed cable shows three short conductors at the entry.
-Serial servos show their detachable sockets. **Insert horn** lets you choose a
-loose horn and its available representation together. In **Inspect**, use
-**Insert mounts or axis** for a source-defined mounting face or axis.
-
-Use **Preview** to check the placement before committing. Hosts with the catalog
-form extension also show a search box, a summary of the selection and an
-**Advanced** section for optional offsets. Existing hosts show the same catalog
-choices and the offset fields in a regular form. The Plugins menu has **Find
-assets**, **Read servo sources**, and the detailed setup commands.
-[Insertion guide and UX research](docs/insertion-workflow.md).
+On the **Model** tab, click **Servo model** in the **Plugins** group. Filter by
+model number, brand or SKU, select the exact variant and click **Run**. Select
+the named Browser component to move the housing, shaft and cable together.
+Use **Horn model** to insert a separate 3D horn by name.
+[Insertion guide and UX research](docs/insertion-workflow.md)
 
 Amber parts and PREVIEW/APPROX labels identify planning geometry. These are
 reference assets, with model-specific missing details; a partial model is not a
@@ -72,10 +63,9 @@ SOLIDCRAFT_CLI=/absolute/path/to/solidcraft-cli cargo xtask ci
 ```
 
 `./build.sh` and `./build-legacy.sh` build either edition separately. Artifacts go
-in `dist/`. See [releasing](docs/releasing.md) for reproducible packaging, source
-archives and tag/release verification. The forms are generated from the same
-catalog as the geometry. Fields switch to text input if their catalog exceeds
-the host manifest budget.
+in `dist/`. Add `--tools` for an automation package with the detailed commands
+under `target/tooling`. See [releasing](docs/releasing.md) for reproducible
+packaging, source archives and tag/release verification.
 
 ## Contribute
 

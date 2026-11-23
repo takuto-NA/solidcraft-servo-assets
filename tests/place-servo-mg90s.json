@@ -3,6 +3,6 @@
   "params": {"asset_id": "MG-90S", "x_mm": 35},
   "expect": {
     "model": {"body_count": 8},
-    "reply": {"result": {"asset_id": "towerpro.mg90s.configure", "representation": "servo-reference", "notes": []}}
+    "reply": {"result": {"asset_id": "towerpro.mg90s.configure", "representation": "servo-reference", "notes": [], "component": {"name": "TowerPro MG90S"}}}
   }
 }

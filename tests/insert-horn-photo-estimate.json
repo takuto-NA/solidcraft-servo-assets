@@ -1,0 +1,18 @@
+{
+  "entry": "insert-horn",
+  "params": {
+    "horn_id": "ref-2d88d2f1",
+    "mode": "photo-solid"
+  },
+  "expect": {
+    "model": {
+      "body_count": 1
+    },
+    "reply": {
+      "result": {
+        "asset_id": "unidentified.photo-se22ca210.double-arm",
+        "representation": "horn-reference"
+      }
+    }
+  }
+}

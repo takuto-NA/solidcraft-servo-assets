@@ -42,6 +42,8 @@ DEALINGS IN THE SOFTWARE.
 
 ## base64 0.22.1
 
+Retained notice for earlier releases that used base64 for design snapshots.
+
 Declared license: `MIT OR Apache-2.0`.
 
 Upstream: https://github.com/marshallpierce/rust-base64
